@@ -1,0 +1,233 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html><head><title>Report Designer</title>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1251">
+<meta http-equiv=description content="">
+<meta http-equiv=keywords content="">
+<meta http-equiv=generator content="MPS HTMLGATE FREE">
+<meta http-equiv=author content="">
+<meta content="MSHTML 6.00.2900.2180" name=generator>
+<style>
+p.main {margin-left: 18pt;}
+p.second {margin-left: 36pt;}
+ul.main {margin-left: 54pt;}
+ul.circle {margin-left: 18pt; list-style-type: circle;}
+</style>
+</head>
+<body><script language="JavaScript" type="text/JavaScript">
+function syn(){
+if(parent.nav.tree){
+ if(parent.nav.tree.loaded){
+  parent.nav.tree.selectNode(184);
+ }else{
+  setTimeout("syn()",500);
+}
+  }else{
+  setTimeout("syn()",500);
+  }}
+if(parent!=self){
+  setTimeout("syn()",100);
+}else{
+  document.write('<BR><table width="35%" border="0" align="center" cellpadding="5" cellspacing="1" bgcolor="#666666"><tr><td align="center" bgcolor="#FFFFFF">');
+  document.write('<a href="../index.htm#page=ReportDesigner.html">Show Navigation Frame</a>'); 
+  document.write('</td></tr></table><BR>');
+}
+</script>  
+
+<p class="main"><strong><font size=5>Report Designer</FONT></strong></p>
+<p class="main">Report Designer represents a mechanism for creating&nbsp;individuals reports, 
+depending on the needs of each client. After being created these reports appear 
+in the <strong><em>Custom Reports</em></strong> menu and not differ from the 
+standart reports.</p>
+<p class="main">To open <em><strong>Report designer</strong></em> 
+choose<em> Reports-&gt;User Reports-&gt;Edit 
+Reports-&gt;</em>button&nbsp;<em>New.</em> </p>
+<p class="main"></p>
+<p class="main"><img alt="" src="Pictures/ReportDesigner.png"></p>
+<p class="main">The module <strong><em>Report designer</em></strong> consists of five 
+sections - Result Preview, User Filters Preview, Sources, Fields and Properties. 
+You can disable and&nbsp;enable them&nbsp;from the menu <em>Other-&gt;Report 
+Designer.</em> It is active only when Report Designer is opened.</p>
+<p class="main"><img alt="" src="Pictures/RDMenu.png"></p>
+<p class="main"><strong>1.&nbsp;Sources</strong></p>
+<p class="main">Section <strong><em>Sources</em></strong> 
+contains list of all tables in the base which can be used for creating reports. 
+When you select a source only a part of all sources will&nbsp;remain visible. 
+With those sources the chosen one can make a connection. For example if you 
+select <em>Payment</em> source&nbsp;only <em>Partner</em>, <em>Location</em>, 
+<em>User</em> and <em>Payments type</em> will&nbsp;remain visible for 
+choice.</p>
+<p class="main"><strong>2.&nbsp;Fields</strong></p>
+<p class="main">Section <strong><em>Fields</em></strong> 
+contains all chosen sources and their fields. By default they are&nbsp;checked, 
+which means that&nbsp;they are visible in the report.&nbsp;Uncheck the 
+fileds&nbsp;which you don't want to see in your report&nbsp;and&nbsp;they will 
+be removed&nbsp;from the filter form. </p>
+<p class="main"></p>
+<p class="main"><strong>3.&nbsp;Properties</strong></p>
+<p class="main">In this section you can set different 
+properties&nbsp;of the filter like: level of visibility, filter 
+logic,&nbsp;filter type and grouping of the result.</p>
+<p class="second"><strong>3.1&nbsp;Visibility</strong> 
+<em>-</em> determines the filter level of visibility:</p>
+<ul class="main">
+  <li>
+  <em>Always visible</em> - the filter 
+  is without check box and always is visible in the result.</li>
+  <li>
+  <em>Always invisible</em> - the filed 
+  is visible in the&nbsp;filter form&nbsp;so that you can filter on it, but it 
+  is invisible in the result.</li>
+  <li>
+  <em>Visible by default</em> - the 
+  filter is with check box&nbsp;that is checked and you can choose 
+  whether&nbsp;to see the field in the result. </li>
+  <li>
+  <em>Invisible by default</em> - the 
+  filter is with check box&nbsp;that is not checked but you can choose 
+  whether&nbsp;to see the field in the result.</li></ul>
+<p class="second"><strong>3.2&nbsp;Grouping</strong></p>
+<ul class="main">
+  <li>
+  <em>No grouping -</em> the rows in 
+  the result are not grouped by equal values.</li>
+  <li>
+  <em>Group together same values -</em> 
+  the rows in the result are grouped by equal values.</li>
+  <li>
+  <em>The maximal value -</em> the rows 
+  are grouped by maximal value</li>
+  <li>
+  <em>The minimal value -</em> the rows 
+  are grouped by minimal value</li>
+  <li>
+  <em>The average value -</em> the rows 
+  are grouped by&nbsp;average value</li>
+  <li>
+  <em>The sum of all values - </em>the 
+  rows are grouped by taking the sum of all values</li>
+  <li>
+  <em>The number of all values - 
+  </em>the rows are grouped by taking the&nbsp;number of all 
+  values&nbsp;</li></ul>
+<p class="second"><strong>3.3&nbsp;User 
+filters</strong></p>
+<p class="second"><strong>&nbsp;Allow user filtering 
+-</strong> determines the type of the filter</p>
+<ul class="main">
+  <li>
+  &nbsp;<em>Filter type:</em>
+  <ul class="circle">
+    <li>
+    <em>Find</em> - finds result 
+    comparing typed text. It is used for text fields as name, code, barcode and 
+    others.</li>
+    <li>
+    <em>Compare</em> - filter with 
+    compare choice - greather,&nbsp;exact match, less. It is used for fields 
+    with amounts, quantities and prices.</li>
+    <li>
+    <em>Range</em> - filter with range 
+    from given start to given end value. It is used for fields with document 
+    numbers and date interval.</li>
+    <li>
+    <em>No filter</em> - the filter is 
+    inactive in order that you can not&nbsp;filter on it, but to be visible in 
+    the result.</li></ul>
+  <li>
+  &nbsp;<em>Filter logic for 
+  Find:</em>
+  <ul class="circle">
+    <li>
+    <em>Contains</em>&nbsp;- finds 
+    results that contain the&nbsp;entered&nbsp;text</li>
+    <li>
+    <em>Exact match </em>- finds exact 
+    match results </li>
+    <li>
+    <em>Starts with</em>&nbsp;- finds 
+    results that start with the entered text</li>
+    <li>
+    <em>Ends with</em>&nbsp;- finds 
+    results that end with the entered text</li></ul>
+  <li>
+  &nbsp;<em>Filter logic for 
+  Compare:</em>
+  <ul class="circle">
+    <li>
+    <em>Greater</em>&nbsp;</li>
+    <li>
+    <em>Greater or equal</em></li>
+    <li>
+    <em>Exact match</em></li>
+    <li>
+    <em>Less or equal</em></li>
+    <li>
+    <em>Less</em></li></ul></li></ul>
+<p class="second"><strong>&nbsp;Allow user ordering 
+-</strong> shows whether the selected field to be in the sort list and you can 
+sort the report by it.</p>
+<p class="second"><IMG alt="" src="Pictures/RDUserFilter.png"></p>
+<p class="second"><strong>3.4&nbsp;Static 
+filters</strong><em>&nbsp;-</em> you can create your own static filter&nbsp;if 
+you want&nbsp;to see results&nbsp;only for specific operation, for determined 
+period of time, for determined item, partner or user.&nbsp;</p>
+<p class="second">To add a static filter choose 
+<strong><em>Add</em></strong> button.</p>
+<ul class="main">
+  <li>
+  <em>Combine logic</em> - you can choose between And, And not, Or, Or not
+  <ul class="circle">
+    <li>
+    <strong>AND</strong>&nbsp;- finds 
+    the area where the conditions are recovered </li>
+    <li>
+    <strong>AND NOT</strong>&nbsp;- if 
+    the result does not satisfy the condition </li>
+    <li>
+    <strong>OR</strong>&nbsp;- if the 
+    result satisfies&nbsp;any of the conditions </li>
+    <li>
+    <strong>OR NOT</strong>&nbsp;- or 
+    if the result does not satisfy the condition</li></ul></li>
+  <li>
+  <em>Filter type</em> -&nbsp;It can be 
+  find text results type, filter with compare conditions or range intervals. If 
+  the chosen field has defined types in the database like operation type, item 
+  type or user level then the filter offers you&nbsp;to select between one of 
+  these types.</li>
+  <li>
+  <em>Filter logic</em> - If 
+  <em>Find</em> type is&nbsp;selected then in this option you can choose between 
+  <em>Contains</em>, <em>Exact match</em>, <em>Starts with</em>, <em>Ends with. 
+  </em>If <em>Compare</em> type&nbsp;is selected you can choose between 
+  <em>equals</em>, <em>more than</em>, <em>less than</em>. If <em>Range</em> 
+  type is selected you should enter&nbsp;start and end range values.&nbsp;</li>
+  <li>
+  <em>Values</em> -&nbsp;It can be 
+  listed types, fields for start and end values.</li></ul>
+  <p class="main"><IMG alt="" src="Pictures/RDStaticFilter.png"></p>
+<p class="main"><strong>4. Result Preview</strong> </p>
+<p class="main">This section shows what will be 
+visualized in the report result.</p>
+<p class="main"><strong>5. User filters preview</strong> 
+</p>
+<p class="main">User filter preview presents the filter 
+form of the report.</p>
+<p class="main"><strong>6. Preview and save the 
+report</strong></p>
+<p class="main">Use <strong><em>Test</em></strong> button 
+to&nbsp;preview you report and to generate test result. If you want to change 
+something you can&nbsp;turn back to the report designer. To save the report use 
+the <strong><em>Save</em></strong> button. In the <strong><em>General 
+information</em></strong> tab enter the report name and in the 
+<strong><em>Groups</em></strong> tab select&nbsp;a group where you want to put 
+your report or create a new one. To exit&nbsp;report designer without saving the 
+changes press <strong><em>Close</em></strong> button.</p>
+<p class="main"><img alt="" src="Pictures/NewCustomReport.png"></p>
+<p class="main">&nbsp;</p>
+<HR>
+
+<p align=center>�2006-2015 
+<strong><em>Microinvest</em></strong>, All rights reserved</p>
+</BODY>
+</html>

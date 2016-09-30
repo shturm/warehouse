@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+<Form formName="KitchenReceipt" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:///e:/Projects/Work/Warehouse/Warehouse.Component/Documenting/FormObjectTemplate.xsd">
+  <Section>
+    <VBox style="width:100%">
+      <TextBox sourceField="ReceiptTitle" style="width:100%;halign:center" font="size:11;bold:true" trimming="ellipsischaracter"/>
+      <Table style="width:100%;vfill:true;innerborder:0;border:0;halign:center" sourceTable="HeaderDetails">
+        <Columns>
+          <Column style="width:100%;halign:center" font="size:8" trimming="ellipsischaracter" sourceField="">
+            <Header />
+            <Footer />
+          </Column>
+        </Columns>
+      </Table>
+      <TextBox sourceField="ReceiptLabel" style="width:100%;halign:center" font="size:11;bold:true" trimming="ellipsischaracter"/>
+      <HBox style="width:100%;halign:center">
+        <TextBox sourceField="DateValue" font="size:8" style="width:100%"/>
+        <TextBox sourceField="TimeValue" font="size:8" style="width:1%;hfill:true"/>
+      </HBox>
+      
+      <Table style="width:100%;vfill:true;innerborder:0;border:0;halign:center" sourceTable="FreeText">
+        <Columns>
+          <Column style="width:100%;halign:left" font="size:8" trimming="ellipsischaracter" sourceField="">
+            <Header />
+            <Footer />
+          </Column>
+        </Columns>
+      </Table>
+      <Table style="width:100%;vfill:true;innerborder:0;border:0;halign:center" sourceTable="FreeKeyValueText">
+        <Columns>
+          <Column style="width:100%;halign:left" font="size:8" trimming="ellipsischaracter" sourceField="Key">
+            <Header />
+            <Footer />
+          </Column>
+          <Column style="width:100%;halign:right" font="size:8" trimming="ellipsischaracter" sourceField="Value">
+            <Header />
+            <Footer />
+          </Column>
+        </Columns>
+      </Table>
+    </VBox>
+  </Section>
+  <HBox style="height:10"/>
+  <HLine thickness="1" style="width:100%" />
+  <Section>
+    <VBox>
+      <Table style="innerborder:0;border:0;width:100%" headerStyle="width:100%;vfill:true;"
+             itemStyle="width:100%;vfill:true;allowvbreak:true" sourceTable="Details">
+        <Columns>
+          <Column>
+            <Template style="width:100%;allowvbreak:true;vpadding:4">
+              <VBox>
+                <TextBox sourceField="GoodsName" style="width:100%" font="size:8;underline:true;bold:true" trimming="ellipsischaracter" />
+                <HBox style="innerspacing:2;allowvbreak:false">
+                  <VBox style="width:100%;hfill:true;valign:top">
+                    <HBox style="innerspacing:2">
+                      <TextBox sourceField="Quantity" font="size:10" style="width:1%;hfill:true"/>
+                      <TextBox sourceField="MUnit" font="size:10" style="width:1%;hfill:true;halign:left"/>
+                    </HBox>
+                    <Table style="width:100%;vfill:true;innerborder:0;border:0;vpadding:4" sourceTable="Modifiers">
+                      <Columns>
+                        <Column style="width:100%;halign:left" font="size:8" trimming="ellipsischaracter" sourceField="">
+                          <Header />
+                          <Footer />
+                        </Column>
+                      </Columns>
+                    </Table>
+                  </VBox>
+                </HBox>
+              </VBox>
+            </Template>
+            <Header />
+            <Footer />
+          </Column>
+        </Columns>
+      </Table>
+    </VBox>
+  </Section>
+  <Section>
+    <VBox>
+      <TextBox sourceField="ModificationsLabel" style="width:100%;vpadding:2;halign:center" font="size:11;bold:true" trimming="ellipsischaracter" />
+      <Table style="innerborder:0;border:0;width:100%" headerStyle="width:100%;vfill:true;"
+             itemStyle="width:100%;vfill:true;allowvbreak:true" sourceTable="ModifiedDetails">
+        <Columns>
+          <Column>
+            <Template style="width:100%;allowvbreak:true">
+              <VBox>
+                <TextBox sourceField="GoodsName" style="width:100%" font="size:8;underline:true;bold:true" trimming="ellipsischaracter" />
+                <HBox style="innerspacing:2;allowvbreak:false">
+                  <TextBox sourceField="OldModLabel" font="size:10;bold:true" style="width:1%;hfill:true"/>
+                  <VBox style="width:100%;hfill:true;valign:top">
+                    <HBox style="innerspacing:2">
+                      <TextBox sourceField="OldQuantity" font="size:10" style="width:1%;hfill:true"/>
+                      <TextBox sourceField="MUnit" font="size:10" style="width:1%;hfill:true;halign:left"/>
+                    </HBox>
+                    <Table style="width:100%;vfill:true;innerborder:0;border:0;vpadding:0" sourceTable="OldModifiers">
+                      <Columns>
+                        <Column style="width:100%;halign:left" font="size:8" trimming="ellipsischaracter" sourceField="">
+                          <Header />
+                          <Footer />
+                        </Column>
+                      </Columns>
+                    </Table>
+                  </VBox>
+                </HBox>
+                <HBox style="innerspacing:2;allowvbreak:false">
+                  <TextBox sourceField="NewModLabel" font="size:10;bold:true" style="width:1%;hfill:true;valign:top"/>
+                  <VBox style="width:100%;hfill:true;valign:top">
+                    <HBox style="innerspacing:2">
+                      <TextBox sourceField="Quantity" font="size:10" style="width:1%;hfill:true"/>
+                      <TextBox sourceField="MUnit" font="size:10" style="width:1%;hfill:true;halign:left"/>
+                    </HBox>
+                    <Table style="width:100%;vfill:true;innerborder:0;border:0;vpadding:4" sourceTable="Modifiers">
+                      <Columns>
+                        <Column style="width:100%;halign:left" font="size:8" trimming="ellipsischaracter" sourceField="">
+                          <Header />
+                          <Footer />
+                        </Column>
+                      </Columns>
+                    </Table>
+                  </VBox>
+                </HBox>
+              </VBox>
+            </Template>
+            <Header />
+            <Footer />
+          </Column>
+        </Columns>
+      </Table>
+    </VBox>
+  </Section>
+  <HLine thickness="1" style="width:100%" />
+  <Picture sizeMode="Fit" style="xstart:10;width:20;height:10" resource="Warehouse.Hardware.Vladster;Logo.png" />
+</Form>

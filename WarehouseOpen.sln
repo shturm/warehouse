@@ -1,0 +1,100 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "References", "References", "{7B77CCED-BEEE-4989-9805-2AEDD85524D4}"
+	GlobalSection(PlasticSccProperties) = preSolution
+		ControlledByPlastic = True
+		SccProvider = Plastic SCM
+	EndGlobalSection
+	ProjectSection(SolutionItems) = preProject
+		References\Mono.Addins.CecilReflector.dll = References\Mono.Addins.CecilReflector.dll
+		References\Mono.Addins.dll = References\Mono.Addins.dll
+		References\Mono.Cairo.dll = References\Mono.Cairo.dll
+		References\MySql.Data.dll = References\MySql.Data.dll
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Warehouse.Data", "Warehouse.Data\Warehouse.Data.csproj", "{ECAC0A23-4304-47BD-A764-CF2B8202830A}"
+	GlobalSection(PlasticSccProperties) = preSolution
+		ControlledByPlastic = True
+		SccProvider = Plastic SCM
+	EndGlobalSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Warehouse.Business", "Warehouse.Business\Warehouse.Business.csproj", "{2E0A6AC3-B4FC-42EF-822B-ADAE73E0A7C1}"
+	GlobalSection(PlasticSccProperties) = preSolution
+		ControlledByPlastic = True
+		SccProvider = Plastic SCM
+	EndGlobalSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Warehouse.Component", "Warehouse.Component\Warehouse.Component.csproj", "{6F8A3473-0FCA-4F65-87E7-AF5E7BCF20DA}"
+	GlobalSection(PlasticSccProperties) = preSolution
+		ControlledByPlastic = True
+		SccProvider = Plastic SCM
+	EndGlobalSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Warehouse.Hardware", "Warehouse.Hardware\Warehouse.Hardware.csproj", "{009CE500-17A2-4C48-BEDE-9F5F88DCB7CC}"
+	GlobalSection(PlasticSccProperties) = preSolution
+		ControlledByPlastic = True
+		SccProvider = Plastic SCM
+	EndGlobalSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Warehouse.Presentation", "Warehouse.Presentation\Warehouse.Presentation.csproj", "{B361F270-CEED-4BA3-B044-33F1A30B984C}"
+	GlobalSection(PlasticSccProperties) = preSolution
+		ControlledByPlastic = True
+		SccProvider = Plastic SCM
+	EndGlobalSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WarehouseOpen.Resources", "WarehouseOpen.Resources\WarehouseOpen.Resources.csproj", "{B3890073-464F-455A-AA9C-83A4FD390932}"
+	GlobalSection(PlasticSccProperties) = preSolution
+		ControlledByPlastic = True
+		SccProvider = Plastic SCM
+	EndGlobalSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WarehouseOpen", "WarehouseOpen\WarehouseOpen.csproj", "{0EA47388-4B67-43BC-8E57-1B5814CC41FD}"
+	GlobalSection(PlasticSccProperties) = preSolution
+		ControlledByPlastic = True
+		SccProvider = Plastic SCM
+	EndGlobalSection
+EndProject
+Global
+	GlobalSection(PlasticSccProperties) = preSolution
+		ControlledByPlastic = True
+		SccProvider = Plastic SCM
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ECAC0A23-4304-47BD-A764-CF2B8202830A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECAC0A23-4304-47BD-A764-CF2B8202830A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECAC0A23-4304-47BD-A764-CF2B8202830A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECAC0A23-4304-47BD-A764-CF2B8202830A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E0A6AC3-B4FC-42EF-822B-ADAE73E0A7C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E0A6AC3-B4FC-42EF-822B-ADAE73E0A7C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E0A6AC3-B4FC-42EF-822B-ADAE73E0A7C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E0A6AC3-B4FC-42EF-822B-ADAE73E0A7C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F8A3473-0FCA-4F65-87E7-AF5E7BCF20DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F8A3473-0FCA-4F65-87E7-AF5E7BCF20DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F8A3473-0FCA-4F65-87E7-AF5E7BCF20DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F8A3473-0FCA-4F65-87E7-AF5E7BCF20DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{009CE500-17A2-4C48-BEDE-9F5F88DCB7CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{009CE500-17A2-4C48-BEDE-9F5F88DCB7CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{009CE500-17A2-4C48-BEDE-9F5F88DCB7CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{009CE500-17A2-4C48-BEDE-9F5F88DCB7CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B361F270-CEED-4BA3-B044-33F1A30B984C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B361F270-CEED-4BA3-B044-33F1A30B984C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B361F270-CEED-4BA3-B044-33F1A30B984C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B361F270-CEED-4BA3-B044-33F1A30B984C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3890073-464F-455A-AA9C-83A4FD390932}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3890073-464F-455A-AA9C-83A4FD390932}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3890073-464F-455A-AA9C-83A4FD390932}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3890073-464F-455A-AA9C-83A4FD390932}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0EA47388-4B67-43BC-8E57-1B5814CC41FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0EA47388-4B67-43BC-8E57-1B5814CC41FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0EA47388-4B67-43BC-8E57-1B5814CC41FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0EA47388-4B67-43BC-8E57-1B5814CC41FD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

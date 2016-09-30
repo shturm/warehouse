@@ -1,0 +1,373 @@
+<html>
+<head>
+<title>WarehouseOpen Help</title>
+<meta http-equiv="Content-Type" content="text/html; charset=Windows-1252">
+<style type="text/css"> 
+<!-- 
+.selected {font-weight: normal;background-color: #E2E2E2;padding:0px 2px 0px 2px;}
+.unselected { font-weight: normal;padding:0px 2px 0px 2px;}
+.hand { cursor: hand; }
+.p {height: 16px;width: 16px;vertical-align: middle;border: 0;}
+div,body { font-family: Tahoma, Verdana; font-size: 11px; }
+A:link {text-decoration: none; color:#000000}
+A:visited {text-decoration: none; color: #000000}
+A:active {text-decoration: none; color: #000000 }
+A:hover {text-decoration: none; color: #FF0000 }
+
+-->
+</style>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+var cl,pn,pm,bl;
+var path = 'icons/';
+var pos = 0;
+var icon;
+var tar = 'content';
+var display;
+var imgi;
+var AutoCollapse;
+var LastSelected = -1;
+var loaded = false;
+var max;
+var divlist;
+
+function SetEnv(v,a){
+
+if(v==0){ 
+	pn = [['daplus.gif','daminus.gif'],['tplus.gif','tminus.gif'],['uaplus.gif','uaminus.gif'],['splus.gif','sminus.gif']];
+	PreloadImg('downangle.gif','tshaped.gif','upangle.gif','sline.gif','daplus.gif','daminus.gif','tplus.gif','tminus.gif','uaplus.gif','uaminus.gif','splus.gif','sminus.gif','blank.gif','line.gif');
+}else{
+	pn = [['plus.gif','minus.gif']];
+	PreloadImg('plus.gif','minus.gif','blank.gif');
+
+}
+AutoCollapse = a;
+}
+
+ function PreloadImg(){
+if (document.images) { 
+	var imgs = PreloadImg.arguments; 
+	var pload = new Array();
+	for (var i=0; i<imgs.length; i++) { 
+		pload[i] = new Image; 
+		pload[i].src = path + imgs; 
+	} 
+} 
+ } 
+
+function get(o){
+var x;
+if(document.all) x=document.all[o]; 
+if(document.getElementById) x=document.getElementById(o);
+
+return x;
+}
+
+
+function pnImg(img){
+var i,j;
+for(i=0;i<=3;i++){
+	for(j=0;j<=1;j++){
+	if(img.substr(img.lastIndexOf('/') + 1)== pn[i][j]){
+		return i;
+	}
+	}
+}
+}
+function icon(img){
+var f;
+f = img.substr(img.lastIndexOf('/') + 1);
+if( f=='1.gif' || f=='2.gif'){
+	return ['1.gif','2.gif'];
+}
+if( f=='3.gif' || f=='4.gif'){
+	return ['3.gif','4.gif'];
+}
+if( f=='5.gif' || f=='6.gif'){
+	return ['5.gif','6.gif'];
+}
+if( f=='7.gif' || f=='8.gif'){
+	return ['7.gif','8.gif'];
+}
+return [f,f];
+}
+
+function show(id){
+get('d' + id).style.display='block';
+if(get('imgn' + id )) get('imgn' + id ).src= path + pn[pnImg(get('imgn' + id ).src)][1];
+get('img' + id ).src= path + icon(get('img' + id ).src)[1];
+
+}
+
+function collapse(id){
+get('d' + id ).style.display='none';
+if(get('imgn' + id )) get('imgn' + id ).src= path + pn[pnImg(get('imgn' + id ).src)][0];
+get('img' + id ).src= path + icon(get('img' + id ).src)[0];
+
+}
+
+function collapseAll(){
+var i;
+var o;
+for(i=0;i<=divlist.length-1;i++){
+	if(o=get('d' + divlist[i])){
+		if(o.style.display!='none'){ 
+			collapse(divlist[i]);
+		}
+	}
+}
+}
+
+function showAll(){
+var i;
+var o;
+for(i=0;i<=divlist.length-1;i++){
+	if(o=get('d' + divlist[i])){
+		if(o.style.display!='block'){ 
+			show(divlist[i]);
+		}
+	}
+}
+}
+
+function unselectAll(){
+var i=0;
+while(get("l" + i)){
+	get("l" + i).className = "unselected";
+	i++;
+}
+}
+
+function clickNode(index){
+var e;
+
+e = get("l" + index);
+if(e==null) return;
+e = e.parentNode;
+if(e.nodeName == 'A'){
+	if(e.href!= window.location.href + '#'){
+		parent.parent.content.location.href = e.href;
+	}else{
+		selectNode(index);
+	}
+	e.onclick;
+}
+}
+
+function showParent(ele){
+var e;
+e = ele.parentNode;
+
+if(e==null) return;
+
+if(e.nodeName == 'DIV'){
+	if(e.id!='') show(e.id.substring(1,e.id.length ));
+}else if(e.nodeName == 'A'){
+
+}
+showParent(e);
+}
+
+function showNode(index){
+showParent(get("l" + index));
+LinkClick(index);
+}
+
+function selectNode(index){
+if(LastSelected!=index){
+//collapseAll();
+showParent(get("l" + index));
+LinkClick(index);
+get('l' + index).scrollIntoView(true);
+
+
+//alert(get('l' + index).offsetHeight + '|' + document.body.clientHeight + '|' + document.body.offsetHeight);
+window.scrollTo(0,document.body.scrollTop); // - document.body.clientHeight /3);
+}
+}
+
+
+function NodeClick(id){
+if(get('d' + id ).style.display=='none'){
+	show(id);
+}else{
+	collapse(id);
+}
+return false;
+}
+
+function LinkDblClick(id){
+if(!AutoCollapse){
+	if(get('d' + id ).style.display=='none'){
+		show(id);
+	}else{
+		collapse(id);
+	}
+}
+return false;
+}
+
+function LinkClick(index,hasChild,r){
+if(AutoCollapse && hasChild){
+	if(get('d' + index ).style.display=='none'){
+		collapseAll()
+		showParent(get('l' + index));
+		show(index);
+	}else{
+		collapseAll()
+		showParent(get('l' + index));	
+		collapse(index);
+	}
+}
+if(LastSelected!=-1){
+	get('l' + LastSelected).className = "unselected";
+}
+get('l' + index).className = "selected";
+LastSelected = index;
+return r;
+}
+
+function body_onmousemove(event){
+if(typeof(document.body.scrollTop)!='undefined'){
+if(parseInt(event.clientX)<5){
+window.scroll(0,document.body.scrollTop);}}
+if(typeof(window.scrollY)!='undefined'){
+if(parseInt(event.clientX)<5){
+window.scrollTo(0,window.scrollY);}}
+}
+
+window.defaultStatus = '';
+
+function body_onload(){
+get('loading').style.display='none';
+loaded = true;
+if(parent.parent.content.document.readyState){
+	if(parent.parent.content.document.readyState == 'complete'){
+		try{parent.parent.content.syn();}catch(e){};
+	}
+}else{
+	if(parent.parent.contentLoaded){
+		try{parent.parent.content.syn();}catch(e){};
+	}
+}
+}
+
+//-->
+</SCRIPT>
+
+
+</head>
+
+<body bgcolor="#ffffff" leftmargin="5" topmargin="5" marginwidth="5" marginheight="5" onmousemove="body_onmousemove(event);" onload="body_onload();">
+<div id="loading"><font color="#FF0000" size="1"> Loading table of contents... 
+</font><br><br></div>
+<script>SetEnv(0,false)</script><div><nobr><img src="icons/downangle.gif" class="p"><a href="scr/WarehouseOpen.html" onclick="return LinkClick('0',false,true)" target="content" title="WarehouseOpen" onmousemove="window.status='WarehouseOpen'"><img src="icons/17.gif" class="p"> <span id="l0" class="unselected">WarehouseOpen</span></a></nobr></div>
+<div><nobr><a href="#" onClick="return NodeClick('1')"><img id="imgn1" src="icons/tplus.gif" class="p"></a><a href="#" onclick="return LinkClick('1',true,false)" onDblClick="return LinkDblClick('1')" target="content" title="Fisier" onmousemove="window.status='Fisier'"><img id="img1" src="icons/1.gif" class="p"> <span id="l1" class="unselected">Fisier</span></a></nobr></div>
+<div id="d1" style="display:none"><div><nobr><img src="icons/line.gif" class="p"><img src="icons/tshaped.gif" class="p"><a href="scr/EditDBConnection.html" onclick="return LinkClick('2',false,true)" target="content" title="Conctare la baza de date MySQL" onmousemove="window.status='Conctare la baza de date MySQL'"><img src="icons/11.gif" class="p"> <span id="l2" class="unselected">Conctare la baza de date MySQL</span></a></nobr></div>
+<div><nobr><img src="icons/line.gif" class="p"><img src="icons/upangle.gif" class="p"><a href="scr/UserLogin.html" onclick="return LinkClick('3',false,true)" target="content" title="Activare Utilizator" onmousemove="window.status='Activare Utilizator'"><img src="icons/11.gif" class="p"> <span id="l3" class="unselected">Activare Utilizator</span></a></nobr></div>
+</div><div><nobr><a href="#" onClick="return NodeClick('4')"><img id="imgn4" src="icons/tplus.gif" class="p"></a><a href="#" onclick="return LinkClick('4',true,false)" onDblClick="return LinkDblClick('4')" target="content" title="Operatii" onmousemove="window.status='Operatii'"><img id="img4" src="icons/1.gif" class="p"> <span id="l4" class="unselected">Operatii</span></a></nobr></div>
+<div id="d4" style="display:none"><div><nobr><img src="icons/line.gif" class="p"><img src="icons/tshaped.gif" class="p"><a href="scr/Sale.html" onclick="return LinkClick('5',false,true)" target="content" title="Vanzari" onmousemove="window.status='Vanzari'"><img src="icons/11.gif" class="p"> <span id="l5" class="unselected">Vanzari</span></a></nobr></div>
+<div><nobr><img src="icons/line.gif" class="p"><img src="icons/tshaped.gif" class="p"><a href="scr/Purchase.html" onclick="return LinkClick('6',false,true)" target="content" title="Achizitii" onmousemove="window.status='Achizitii'"><img src="icons/11.gif" class="p"> <span id="l6" class="unselected">Achizitii</span></a></nobr></div>
+<div><nobr><img src="icons/line.gif" class="p"><a href="#" onClick="return NodeClick('7')"><img id="imgn7" src="icons/tplus.gif" class="p"></a><a href="#" onclick="return LinkClick('7',true,false)" onDblClick="return LinkDblClick('7')" target="content" title="Productie" onmousemove="window.status='Productie'"><img id="img7" src="icons/5.gif" class="p"> <span id="l7" class="unselected">Productie</span></a></nobr></div>
+<div id="d7" style="display:none"><div><nobr><img src="icons/line.gif" class="p"><img src="icons/line.gif" class="p"><img src="icons/tshaped.gif" class="p"><a href="scr/ChooseEditComplexRecipe.html" onclick="return LinkClick('8',false,true)" target="content" title="Retete" onmousemove="window.status='Retete'"><img src="icons/11.gif" class="p"> <span id="l8" class="unselected">Retete</span></a></nobr></div>
+<div><nobr><img src="icons/line.gif" class="p"><img src="icons/line.gif" class="p"><img src="icons/tshaped.gif" class="p"><a href="scr/Production.html" onclick="return LinkClick('9',false,true)" target="content" title="Productie" onmousemove="window.status='Productie'"><img src="icons/11.gif" class="p"> <span id="l9" class="unselected">Productie</span></a></nobr></div>
+<div><nobr><img src="icons/line.gif" class="p"><img src="icons/line.gif" class="p"><img src="icons/upangle.gif" class="p"><a href="scr/EditNewComplexRecipe.html" onclick="return LinkClick('10',false,true)" target="content" title="Adaugare, editare si stergere retete" onmousemove="window.status='Adaugare, editare si stergere retete'"><img src="icons/11.gif" class="p"> <span id="l10" class="unselected">Adaugare, editare si stergere retete</span></a></nobr></div>
+</div><div><nobr><img src="icons/line.gif" class="p"><img src="icons/tshaped.gif" class="p"><a href="scr/Transfer.html" onclick="return LinkClick('11',false,true)" target="content" title="Transfer" onmousemove="window.status='Transfer'"><img src="icons/11.gif" class="p"> <span id="l11" class="unselected">Transfer</span></a></nobr></div>
+<div><nobr><img src="icons/line.gif" class="p"><img src="icons/tshaped.gif" class="p"><a href="scr/Waste.html" onclick="return LinkClick('12',false,true)" target="content" title="Rebut" onmousemove="window.status='Rebut'"><img src="icons/11.gif" class="p"> <span id="l12" class="unselected">Rebut</span></a></nobr></div>
+<div><nobr><img src="icons/line.gif" class="p"><a href="#" onClick="return NodeClick('13')"><img id="imgn13" src="icons/tplus.gif" class="p"></a><a href="#" onclick="return LinkClick('13',true,false)" onDblClick="return LinkDblClick('13')" target="content" title="Facturare" onmousemove="window.status='Facturare'"><img id="img13" src="icons/5.gif" class="p"> <span id="l13" class="unselected">Facturare</span></a></nobr></div>
+<div id="d13" style="display:none"><div><nobr><img src="icons/line.gif" class="p"><img src="icons/line.gif" class="p"><img src="icons/tshaped.gif" class="p"><a href="scr/NewInvoice.html" onclick="return LinkClick('14',false,true)" target="content" title="Emite Factura" onmousemove="window.status='Emite Factura'"><img src="icons/11.gif" class="p"> <span id="l14" class="unselected">Emite Factura</span></a></nobr></div>
+<div><nobr><img src="icons/line.gif" class="p"><img src="icons/line.gif" class="p"><img src="icons/tshaped.gif" class="p"><a href="scr/NewReceivedInvoice.html" onclick="return LinkClick('15',false,true)" target="content" title="Intrare Factura" onmousemove="window.status='Intrare Factura'"><img src="icons/11.gif" class="p"> <span id="l15" class="unselected">Intrare Factura</span></a></nobr></div>
+<div><nobr><img src="icons/line.gif" class="p"><img src="icons/line.gif" class="p"><img src="icons/tshaped.gif" class="p"><a href="scr/ChooseInvoice.html" onclick="return LinkClick('16',false,true)" target="content" title="Factura Anulata" onmousemove="window.status='Factura Anulata'"><img src="icons/11.gif" class="p"> <span id="l16" class="unselected">Factura Anulata</span></a></nobr></div>
+<div><nobr><img src="icons/line.gif" class="p"><img src="icons/line.gif" class="p"><img src="icons/upangle.gif" class="p"><a href="scr/ChooseReceivedInvoice.html" onclick="return LinkClick('17',false,true)" target="content" title="Stergere Factura Introdusa" onmousemove="window.status='Stergere Factura Introdusa'"><img src="icons/11.gif" class="p"> <span id="l17" class="unselected">Stergere Factura Introdusa</span></a></nobr></div>
+</div><div><nobr><img src="icons/line.gif" class="p"><img src="icons/tshaped.gif" class="p"><a href="scr/TradePoint.html" onclick="return LinkClick('18',false,true)" target="content" title="Punct de Vanzare" onmousemove="window.status='Punct de Vanzare'"><img src="icons/11.gif" class="p"> <span id="l18" class="unselected">Punct de Vanzare</span></a></nobr></div>
+<div><nobr><img src="icons/line.gif" class="p"><img src="icons/tshaped.gif" class="p"><a href="scr/TouchScreen.html" onclick="return LinkClick('19',false,true)" target="content" title="Ecran Senzitiv" onmousemove="window.status='Ecran Senzitiv'"><img src="icons/11.gif" class="p"> <span id="l19" class="unselected">Ecran Senzitiv</span></a></nobr></div>
+<div><nobr><img src="icons/line.gif" class="p"><img src="icons/tshaped.gif" class="p"><a href="scr/Dashboard.html" onclick="return LinkClick('20',false,true)" target="content" title="Tablou de bord" onmousemove="window.status='Tablou de bord'"><img src="icons/11.gif" class="p"> <span id="l20" class="unselected">Tablou de bord</span></a></nobr></div>
+<div><nobr><img src="icons/line.gif" class="p"><img src="icons/upangle.gif" class="p"><a href="scr/EditNewPayment.html" onclick="return LinkClick('21',false,true)" target="content" title="Finalizare vanzare" onmousemove="window.status='Finalizare vanzare'"><img src="icons/11.gif" class="p"> <span id="l21" class="unselected">Finalizare vanzare</span></a></nobr></div>
+</div><div><nobr><a href="#" onClick="return NodeClick('22')"><img id="imgn22" src="icons/tplus.gif" class="p"></a><a href="#" onclick="return LinkClick('22',true,false)" onDblClick="return LinkDblClick('22')" target="content" title="Programare" onmousemove="window.status='Programare'"><img id="img22" src="icons/1.gif" class="p"> <span id="l22" class="unselected">Programare</span></a></nobr></div>
+<div id="d22" style="display:none"><div><nobr><img src="icons/line.gif" class="p"><img src="icons/tshaped.gif" class="p"><a href="scr/ChooseEditPartner.html" onclick="return LinkClick('23',false,true)" target="content" title="Partneri" onmousemove="window.status='Partneri'"><img src="icons/11.gif" class="p"> <span id="l23" class="unselected">Partneri</span></a></nobr></div>
+<div><nobr><img src="icons/line.gif" class="p"><img src="icons/tshaped.gif" class="p"><a href="scr/EditNewPartner.html" onclick="return LinkClick('24',false,true)" target="content" title="Adaugare, Programare, Stergere Parteneri" onmousemove="window.status='Adaugare, Programare, Stergere Parteneri'"><img src="icons/11.gif" class="p"> <span id="l24" class="unselected">Adaugare, Programare, Stergere Parteneri</span></a></nobr></div>
+<div><nobr><img src="icons/line.gif" class="p"><img src="icons/tshaped.gif" class="p"><a href="scr/ChooseEditGoods.html" onclick="return LinkClick('25',false,true)" target="content" title="Articole" onmousemove="window.status='Articole'"><img src="icons/11.gif" class="p"> <span id="l25" class="unselected">Articole</span></a></nobr></div>
+<div><nobr><img src="icons/line.gif" class="p"><img src="icons/tshaped.gif" class="p"><a href="scr/EditNewGoods.html" onclick="return LinkClick('26',false,true)" target="content" title="Adaugare, editare si stergere articole" onmousemove="window.status='Adaugare, editare si stergere articole'"><img src="icons/11.gif" class="p"> <span id="l26" class="unselected">Adaugare, editare si stergere articole</span></a></nobr></div>
+<div><nobr><img src="icons/line.gif" class="p"><img src="icons/tshaped.gif" class="p"><a href="scr/ChooseEditUser.html" onclick="return LinkClick('27',false,true)" target="content" title="Utilizatori" onmousemove="window.status='Utilizatori'"><img src="icons/11.gif" class="p"> <span id="l27" class="unselected">Utilizatori</span></a></nobr></div>
+<div><nobr><img src="icons/line.gif" class="p"><img src="icons/tshaped.gif" class="p"><a href="scr/EditNewUser.html" onclick="return LinkClick('28',false,true)" target="content" title="Adaugare, Programare si Stergere utilizatori" onmousemove="window.status='Adaugare, Programare si Stergere utilizatori'"><img src="icons/11.gif" class="p"> <span id="l28" class="unselected">Adaugare, Programare si Stergere utilizatori</span></a></nobr></div>
+<div><nobr><img src="icons/line.gif" class="p"><img src="icons/tshaped.gif" class="p"><a href="scr/ChooseEditPOS.html" onclick="return LinkClick('29',false,true)" target="content" title="Locatie" onmousemove="window.status='Locatie'"><img src="icons/11.gif" class="p"> <span id="l29" class="unselected">Locatie</span></a></nobr></div>
+<div><nobr><img src="icons/line.gif" class="p"><img src="icons/tshaped.gif" class="p"><a href="scr/EditNewPOS.html" onclick="return LinkClick('30',false,true)" target="content" title="Adaugare, Programare si Stergere Locatii" onmousemove="window.status='Adaugare, Programare si Stergere Locatii'"><img src="icons/11.gif" class="p"> <span id="l30" class="unselected">Adaugare, Programare si Stergere Locatii</span></a></nobr></div>
+<div><nobr><img src="icons/line.gif" class="p"><img src="icons/tshaped.gif" class="p"><a href="scr/ChooseEditVATGroup.html" onclick="return LinkClick('31',false,true)" target="content" title="Programare TVA" onmousemove="window.status='Programare TVA'"><img src="icons/11.gif" class="p"> <span id="l31" class="unselected">Programare TVA</span></a></nobr></div>
+<div><nobr><img src="icons/line.gif" class="p"><img src="icons/tshaped.gif" class="p"><a href="scr/EditNewVATGroup.html" onclick="return LinkClick('32',false,true)" target="content" title="Adauga, programeaza sau sterge o cota TVA" onmousemove="window.status='Adauga, programeaza sau sterge o cota TVA'"><img src="icons/11.gif" class="p"> <span id="l32" class="unselected">Adauga, programeaza sau sterge o cota TVA</span></a></nobr></div>
+<div><nobr><img src="icons/line.gif" class="p"><img src="icons/tshaped.gif" class="p"><a href="scr/ChooseEditDevice.html" onclick="return LinkClick('33',false,true)" target="content" title="Setare Imprimante Fiscala / auxiliare / Cititor card" onmousemove="window.status='Setare Imprimante Fiscala / auxiliare / Cititor card'"><img src="icons/11.gif" class="p"> <span id="l33" class="unselected">Setare Imprimante Fiscala / auxiliare / Cititor card</span></a></nobr></div>
+<div><nobr><img src="icons/line.gif" class="p"><a href="#" onClick="return NodeClick('34')"><img id="imgn34" src="icons/tplus.gif" class="p"></a><a href="#" onclick="return LinkClick('34',true,false)" onDblClick="return LinkDblClick('34')" target="content" title="Plati" onmousemove="window.status='Plati'"><img id="img34" src="icons/5.gif" class="p"> <span id="l34" class="unselected">Plati</span></a></nobr></div>
+<div id="d34" style="display:none"><div><nobr><img src="icons/line.gif" class="p"><img src="icons/line.gif" class="p"><img src="icons/tshaped.gif" class="p"><a href="scr/ChooseEditPayment.html" onclick="return LinkClick('35',false,true)" target="content" title="Plati" onmousemove="window.status='Plati'"><img src="icons/11.gif" class="p"> <span id="l35" class="unselected">Plati</span></a></nobr></div>
+<div><nobr><img src="icons/line.gif" class="p"><img src="icons/line.gif" class="p"><img src="icons/upangle.gif" class="p"><a href="scr/ChooseEditPaymentType.html" onclick="return LinkClick('36',false,true)" target="content" title="Forme de plata" onmousemove="window.status='Forme de plata'"><img src="icons/11.gif" class="p"> <span id="l36" class="unselected">Forme de plata</span></a></nobr></div>
+</div><div><nobr><img src="icons/line.gif" class="p"><a href="#" onClick="return NodeClick('37')"><img id="imgn37" src="icons/tplus.gif" class="p"></a><a href="#" onclick="return LinkClick('37',true,false)" onDblClick="return LinkDblClick('37')" target="content" title="Documente" onmousemove="window.status='Documente'"><img id="img37" src="icons/5.gif" class="p"> <span id="l37" class="unselected">Documente</span></a></nobr></div>
+<div id="d37" style="display:none"><div><nobr><img src="icons/line.gif" class="p"><img src="icons/line.gif" class="p"><img src="icons/tshaped.gif" class="p"><a href="scr/ChooseSale.html" onclick="return LinkClick('38',false,true)" target="content" title="Editare si retiparire vanzari" onmousemove="window.status='Editare si retiparire vanzari'"><img src="icons/11.gif" class="p"> <span id="l38" class="unselected">Editare si retiparire vanzari</span></a></nobr></div>
+<div><nobr><img src="icons/line.gif" class="p"><img src="icons/line.gif" class="p"><img src="icons/tshaped.gif" class="p"><a href="scr/ChoosePurchase.html" onclick="return LinkClick('39',false,true)" target="content" title="Editare si retiparire achizitii" onmousemove="window.status='Editare si retiparire achizitii'"><img src="icons/11.gif" class="p"> <span id="l39" class="unselected">Editare si retiparire achizitii</span></a></nobr></div>
+<div><nobr><img src="icons/line.gif" class="p"><img src="icons/line.gif" class="p"><img src="icons/tshaped.gif" class="p"><a href="scr/ChooseComplexProduction.html" onclick="return LinkClick('40',false,true)" target="content" title="Editare si retiparire productie" onmousemove="window.status='Editare si retiparire productie'"><img src="icons/11.gif" class="p"> <span id="l40" class="unselected">Editare si retiparire productie</span></a></nobr></div>
+<div><nobr><img src="icons/line.gif" class="p"><img src="icons/line.gif" class="p"><img src="icons/tshaped.gif" class="p"><a href="scr/ChooseTransfer.html" onclick="return LinkClick('41',false,true)" target="content" title="Editare si retiparire transfer" onmousemove="window.status='Editare si retiparire transfer'"><img src="icons/11.gif" class="p"> <span id="l41" class="unselected">Editare si retiparire transfer</span></a></nobr></div>
+<div><nobr><img src="icons/line.gif" class="p"><img src="icons/line.gif" class="p"><img src="icons/tshaped.gif" class="p"><a href="scr/ChooseWaste.html" onclick="return LinkClick('42',false,true)" target="content" title="Editare si retiparire rebuturi" onmousemove="window.status='Editare si retiparire rebuturi'"><img src="icons/11.gif" class="p"> <span id="l42" class="unselected">Editare si retiparire rebuturi</span></a></nobr></div>
+<div><nobr><img src="icons/line.gif" class="p"><img src="icons/line.gif" class="p"><img src="icons/upangle.gif" class="p"><a href="scr/ChooseStockTaking.html" onclick="return LinkClick('43',false,true)" target="content" title="Editare si retiparire Diferente Stoc dupa Inventar" onmousemove="window.status='Editare si retiparire Diferente Stoc dupa Inventar'"><img src="icons/11.gif" class="p"> <span id="l43" class="unselected">Editare si retiparire Diferente Stoc dupa Inventar</span></a></nobr></div>
+</div><div><nobr><img src="icons/line.gif" class="p"><a href="#" onClick="return NodeClick('44')"><img id="imgn44" src="icons/uaplus.gif" class="p"></a><a href="#" onclick="return LinkClick('44',true,false)" onDblClick="return LinkDblClick('44')" target="content" title="Administrare" onmousemove="window.status='Administrare'"><img id="img44" src="icons/5.gif" class="p"> <span id="l44" class="unselected">Administrare</span></a></nobr></div>
+<div id="d44" style="display:none"><div><nobr><img src="icons/line.gif" class="p"><img src="icons/blank.gif" class="p"><img src="icons/tshaped.gif" class="p"><a href="scr/ChooseEditCompanyRecord.html" onclick="return LinkClick('45',false,true)" target="content" title="Informatii Companie" onmousemove="window.status='Informatii Companie'"><img src="icons/11.gif" class="p"> <span id="l45" class="unselected">Informatii Companie</span></a></nobr></div>
+<div><nobr><img src="icons/line.gif" class="p"><img src="icons/blank.gif" class="p"><img src="icons/tshaped.gif" class="p"><a href="scr/EditNewCompanyRecord.html" onclick="return LinkClick('46',false,true)" target="content" title="Adaugare, programare si stergere companii" onmousemove="window.status='Adaugare, programare si stergere companii'"><img src="icons/11.gif" class="p"> <span id="l46" class="unselected">Adaugare, programare si stergere companii</span></a></nobr></div>
+<div><nobr><img src="icons/line.gif" class="p"><img src="icons/blank.gif" class="p"><img src="icons/tshaped.gif" class="p"><a href="scr/EditPrices.html" onclick="return LinkClick('47',false,true)" target="content" title="Schimbare preturi" onmousemove="window.status='Schimbare preturi'"><img src="icons/11.gif" class="p"> <span id="l47" class="unselected">Schimbare preturi</span></a></nobr></div>
+<div><nobr><img src="icons/line.gif" class="p"><img src="icons/blank.gif" class="p"><img src="icons/tshaped.gif" class="p"><a href="scr/ChooseEditPriceRule.html" onclick="return LinkClick('48',false,true)" target="content" title="Reguli pentru pret" onmousemove="window.status='Reguli pentru pret'"><img src="icons/11.gif" class="p"> <span id="l48" class="unselected">Reguli pentru pret</span></a></nobr></div>
+<div><nobr><img src="icons/line.gif" class="p"><img src="icons/blank.gif" class="p"><img src="icons/tshaped.gif" class="p"><a href="scr/StockTaking.html" onclick="return LinkClick('49',false,true)" target="content" title="Introducere stoc fizic" onmousemove="window.status='Introducere stoc fizic'"><img src="icons/11.gif" class="p"> <span id="l49" class="unselected">Introducere stoc fizic</span></a></nobr></div>
+<div><nobr><img src="icons/line.gif" class="p"><img src="icons/blank.gif" class="p"><img src="icons/tshaped.gif" class="p"><a href="scr/EditUserRestrictions.html" onclick="return LinkClick('50',false,true)" target="content" title="Editare Drepturi acces pentru utilizatori" onmousemove="window.status='Editare Drepturi acces pentru utilizatori'"><img src="icons/11.gif" class="p"> <span id="l50" class="unselected">Editare Drepturi acces pentru utilizatori</span></a></nobr></div>
+<div><nobr><img src="icons/line.gif" class="p"><img src="icons/blank.gif" class="p"><img src="icons/upangle.gif" class="p"><a href="scr/EditDocumentNumbersPerLocation.html" onclick="return LinkClick('51',false,true)" target="content" title="Numar document per Locatia" onmousemove="window.status='Numar document per Locatia'"><img src="icons/11.gif" class="p"> <span id="l51" class="unselected">Numar document per Locatia</span></a></nobr></div>
+</div></div><div><nobr><a href="#" onClick="return NodeClick('52')"><img id="imgn52" src="icons/tplus.gif" class="p"></a><a href="#" onclick="return LinkClick('52',true,false)" onDblClick="return LinkDblClick('52')" target="content" title="Rapoarte" onmousemove="window.status='Rapoarte'"><img id="img52" src="icons/1.gif" class="p"> <span id="l52" class="unselected">Rapoarte</span></a></nobr></div>
+<div id="d52" style="display:none"><div><nobr><img src="icons/line.gif" class="p"><img src="icons/tshaped.gif" class="p"><a href="scr/ReportSales.html" onclick="return LinkClick('53',false,true)" target="content" title="Raport vanzari" onmousemove="window.status='Raport vanzari'"><img src="icons/11.gif" class="p"> <span id="l53" class="unselected">Raport vanzari</span></a></nobr></div>
+<div><nobr><img src="icons/line.gif" class="p"><img src="icons/tshaped.gif" class="p"><a href="scr/ReportPurchases.html" onclick="return LinkClick('54',false,true)" target="content" title="Raport achizitii" onmousemove="window.status='Raport achizitii'"><img src="icons/11.gif" class="p"> <span id="l54" class="unselected">Raport achizitii</span></a></nobr></div>
+<div><nobr><img src="icons/line.gif" class="p"><a href="#" onClick="return NodeClick('55')"><img id="imgn55" src="icons/tplus.gif" class="p"></a><a href="#" onclick="return LinkClick('55',true,false)" onDblClick="return LinkDblClick('55')" target="content" title="Productie" onmousemove="window.status='Productie'"><img id="img55" src="icons/5.gif" class="p"> <span id="l55" class="unselected">Productie</span></a></nobr></div>
+<div id="d55" style="display:none"><div><nobr><img src="icons/line.gif" class="p"><img src="icons/line.gif" class="p"><img src="icons/tshaped.gif" class="p"><a href="scr/ReportComplexRecipes.html" onclick="return LinkClick('56',false,true)" target="content" title="Raport Retete" onmousemove="window.status='Raport Retete'"><img src="icons/11.gif" class="p"> <span id="l56" class="unselected">Raport Retete</span></a></nobr></div>
+<div><nobr><img src="icons/line.gif" class="p"><img src="icons/line.gif" class="p"><img src="icons/upangle.gif" class="p"><a href="scr/ReportComplexProductions.html" onclick="return LinkClick('57',false,true)" target="content" title="Raport Productie" onmousemove="window.status='Raport Productie'"><img src="icons/11.gif" class="p"> <span id="l57" class="unselected">Raport Productie</span></a></nobr></div>
+</div><div><nobr><img src="icons/line.gif" class="p"><img src="icons/tshaped.gif" class="p"><a href="scr/ReportTransfers.html" onclick="return LinkClick('58',false,true)" target="content" title="Raport transferuri" onmousemove="window.status='Raport transferuri'"><img src="icons/11.gif" class="p"> <span id="l58" class="unselected">Raport transferuri</span></a></nobr></div>
+<div><nobr><img src="icons/line.gif" class="p"><img src="icons/tshaped.gif" class="p"><a href="scr/ReportWastes.html" onclick="return LinkClick('59',false,true)" target="content" title="Raport rebuturi" onmousemove="window.status='Raport rebuturi'"><img src="icons/11.gif" class="p"> <span id="l59" class="unselected">Raport rebuturi</span></a></nobr></div>
+<div><nobr><img src="icons/line.gif" class="p"><img src="icons/tshaped.gif" class="p"><a href="scr/ReportStockTakings.html" onclick="return LinkClick('60',false,true)" target="content" title="Raport diferente stoc la inventar" onmousemove="window.status='Raport diferente stoc la inventar'"><img src="icons/11.gif" class="p"> <span id="l60" class="unselected">Raport diferente stoc la inventar</span></a></nobr></div>
+<div><nobr><img src="icons/line.gif" class="p"><a href="#" onClick="return NodeClick('61')"><img id="imgn61" src="icons/tplus.gif" class="p"></a><a href="#" onclick="return LinkClick('61',true,false)" onDblClick="return LinkDblClick('61')" target="content" title="Liste" onmousemove="window.status='Liste'"><img id="img61" src="icons/5.gif" class="p"> <span id="l61" class="unselected">Liste</span></a></nobr></div>
+<div id="d61" style="display:none"><div><nobr><img src="icons/line.gif" class="p"><img src="icons/line.gif" class="p"><img src="icons/tshaped.gif" class="p"><a href="scr/ReportPartners.html" onclick="return LinkClick('62',false,true)" target="content" title="Raport parteneri" onmousemove="window.status='Raport parteneri'"><img src="icons/11.gif" class="p"> <span id="l62" class="unselected">Raport parteneri</span></a></nobr></div>
+<div><nobr><img src="icons/line.gif" class="p"><img src="icons/line.gif" class="p"><img src="icons/tshaped.gif" class="p"><a href="scr/ReportGoods.html" onclick="return LinkClick('63',false,true)" target="content" title="Raport articole" onmousemove="window.status='Raport articole'"><img src="icons/11.gif" class="p"> <span id="l63" class="unselected">Raport articole</span></a></nobr></div>
+<div><nobr><img src="icons/line.gif" class="p"><img src="icons/line.gif" class="p"><img src="icons/tshaped.gif" class="p"><a href="scr/ReportUsers.html" onclick="return LinkClick('64',false,true)" target="content" title="Raport utilizatori" onmousemove="window.status='Raport utilizatori'"><img src="icons/11.gif" class="p"> <span id="l64" class="unselected">Raport utilizatori</span></a></nobr></div>
+<div><nobr><img src="icons/line.gif" class="p"><img src="icons/line.gif" class="p"><img src="icons/upangle.gif" class="p"><a href="scr/ReportPointsOfSale.html" onclick="return LinkClick('65',false,true)" target="content" title="Raport locatii" onmousemove="window.status='Raport locatii'"><img src="icons/11.gif" class="p"> <span id="l65" class="unselected">Raport locatii</span></a></nobr></div>
+</div><div><nobr><img src="icons/line.gif" class="p"><a href="#" onClick="return NodeClick('66')"><img id="imgn66" src="icons/tplus.gif" class="p"></a><a href="#" onclick="return LinkClick('66',true,false)" onDblClick="return LinkDblClick('66')" target="content" title="Articole" onmousemove="window.status='Articole'"><img id="img66" src="icons/5.gif" class="p"> <span id="l66" class="unselected">Articole</span></a></nobr></div>
+<div id="d66" style="display:none"><div><nobr><img src="icons/line.gif" class="p"><img src="icons/line.gif" class="p"><img src="icons/tshaped.gif" class="p"><a href="scr/ReportGoodsMovement.html" onclick="return LinkClick('67',false,true)" target="content" title="Raport miscare articole" onmousemove="window.status='Raport miscare articole'"><img src="icons/11.gif" class="p"> <span id="l67" class="unselected">Raport miscare articole</span></a></nobr></div>
+<div><nobr><img src="icons/line.gif" class="p"><img src="icons/line.gif" class="p"><img src="icons/tshaped.gif" class="p"><a href="scr/ReportGoodsQuantities.html" onclick="return LinkClick('68',false,true)" target="content" title="Raport articole in stoc" onmousemove="window.status='Raport articole in stoc'"><img src="icons/11.gif" class="p"> <span id="l68" class="unselected">Raport articole in stoc</span></a></nobr></div>
+<div><nobr><img src="icons/line.gif" class="p"><img src="icons/line.gif" class="p"><img src="icons/tshaped.gif" class="p"><a href="scr/ReportGoodsQuantitiesAtDate.html" onclick="return LinkClick('69',false,true)" target="content" title="Raport Articole disponibile dupa cantitate" onmousemove="window.status='Raport Articole disponibile dupa cantitate'"><img src="icons/11.gif" class="p"> <span id="l69" class="unselected">Raport Articole disponibile dupa cantitate</span></a></nobr></div>
+<div><nobr><img src="icons/line.gif" class="p"><img src="icons/line.gif" class="p"><img src="icons/tshaped.gif" class="p"><a href="scr/ReportGoodsStockTaking.html" onclick="return LinkClick('70',false,true)" target="content" title="Raport Preluare Stoc Articol" onmousemove="window.status='Raport Preluare Stoc Articol'"><img src="icons/11.gif" class="p"> <span id="l70" class="unselected">Raport Preluare Stoc Articol</span></a></nobr></div>
+<div><nobr><img src="icons/line.gif" class="p"><img src="icons/line.gif" class="p"><img src="icons/tshaped.gif" class="p"><a href="scr/ReportInvoicedGoods.html" onclick="return LinkClick('71',false,true)" target="content" title="Raport articole facturate" onmousemove="window.status='Raport articole facturate'"><img src="icons/11.gif" class="p"> <span id="l71" class="unselected">Raport articole facturate</span></a></nobr></div>
+<div><nobr><img src="icons/line.gif" class="p"><img src="icons/line.gif" class="p"><img src="icons/tshaped.gif" class="p"><a href="scr/ReportPurchasesByGoods.html" onclick="return LinkClick('72',false,true)" target="content" title="Raport achizitii dupa articole" onmousemove="window.status='Raport achizitii dupa articole'"><img src="icons/11.gif" class="p"> <span id="l72" class="unselected">Raport achizitii dupa articole</span></a></nobr></div>
+<div><nobr><img src="icons/line.gif" class="p"><img src="icons/line.gif" class="p"><img src="icons/tshaped.gif" class="p"><a href="scr/ReportSalesByGoods.html" onclick="return LinkClick('73',false,true)" target="content" title="Raport vanzari dupa articole" onmousemove="window.status='Raport vanzari dupa articole'"><img src="icons/11.gif" class="p"> <span id="l73" class="unselected">Raport vanzari dupa articole</span></a></nobr></div>
+<div><nobr><img src="icons/line.gif" class="p"><img src="icons/line.gif" class="p"><img src="icons/upangle.gif" class="p"><a href="scr/ReportGoodsByProfit.html" onclick="return LinkClick('74',false,true)" target="content" title="Raport Profit dupa articole" onmousemove="window.status='Raport Profit dupa articole'"><img src="icons/11.gif" class="p"> <span id="l74" class="unselected">Raport Profit dupa articole</span></a></nobr></div>
+</div><div><nobr><img src="icons/line.gif" class="p"><a href="#" onClick="return NodeClick('75')"><img id="imgn75" src="icons/tplus.gif" class="p"></a><a href="#" onclick="return LinkClick('75',true,false)" onDblClick="return LinkDblClick('75')" target="content" title="Parteneri" onmousemove="window.status='Parteneri'"><img id="img75" src="icons/5.gif" class="p"> <span id="l75" class="unselected">Parteneri</span></a></nobr></div>
+<div id="d75" style="display:none"><div><nobr><img src="icons/line.gif" class="p"><img src="icons/line.gif" class="p"><img src="icons/tshaped.gif" class="p"><a href="scr/ReportPurchasesByPartners.html" onclick="return LinkClick('76',false,true)" target="content" title="Raport achizitii dupa partener" onmousemove="window.status='Raport achizitii dupa partener'"><img src="icons/11.gif" class="p"> <span id="l76" class="unselected">Raport achizitii dupa partener</span></a></nobr></div>
+<div><nobr><img src="icons/line.gif" class="p"><img src="icons/line.gif" class="p"><img src="icons/tshaped.gif" class="p"><a href="scr/ReportSalesByPartners.html" onclick="return LinkClick('77',false,true)" target="content" title="Raport vanzari dupa parteneri" onmousemove="window.status='Raport vanzari dupa parteneri'"><img src="icons/11.gif" class="p"> <span id="l77" class="unselected">Raport vanzari dupa parteneri</span></a></nobr></div>
+<div><nobr><img src="icons/line.gif" class="p"><img src="icons/line.gif" class="p"><img src="icons/upangle.gif" class="p"><a href="scr/ReportPartnersByProfit.html" onclick="return LinkClick('78',false,true)" target="content" title="Raport Profit dupa parteneri" onmousemove="window.status='Raport Profit dupa parteneri'"><img src="icons/11.gif" class="p"> <span id="l78" class="unselected">Raport Profit dupa parteneri</span></a></nobr></div>
+</div><div><nobr><img src="icons/line.gif" class="p"><a href="#" onClick="return NodeClick('79')"><img id="imgn79" src="icons/tplus.gif" class="p"></a><a href="#" onclick="return LinkClick('79',true,false)" onDblClick="return LinkDblClick('79')" target="content" title="Locatii" onmousemove="window.status='Locatii'"><img id="img79" src="icons/5.gif" class="p"> <span id="l79" class="unselected">Locatii</span></a></nobr></div>
+<div id="d79" style="display:none"><div><nobr><img src="icons/line.gif" class="p"><img src="icons/line.gif" class="p"><img src="icons/tshaped.gif" class="p"><a href="scr/ReportPurchasesByPointsOfSale.html" onclick="return LinkClick('80',false,true)" target="content" title="Raport achizitii dupa locatii" onmousemove="window.status='Raport achizitii dupa locatii'"><img src="icons/11.gif" class="p"> <span id="l80" class="unselected">Raport achizitii dupa locatii</span></a></nobr></div>
+<div><nobr><img src="icons/line.gif" class="p"><img src="icons/line.gif" class="p"><img src="icons/tshaped.gif" class="p"><a href="scr/ReportSalesByPointsOfSale.html" onclick="return LinkClick('81',false,true)" target="content" title="Raport vanzari dupa locatii" onmousemove="window.status='Raport vanzari dupa locatii'"><img src="icons/11.gif" class="p"> <span id="l81" class="unselected">Raport vanzari dupa locatii</span></a></nobr></div>
+<div><nobr><img src="icons/line.gif" class="p"><img src="icons/line.gif" class="p"><img src="icons/upangle.gif" class="p"><a href="scr/ReportPointsOfSaleByProfit.html" onclick="return LinkClick('82',false,true)" target="content" title="Raport profit dupa locatie" onmousemove="window.status='Raport profit dupa locatie'"><img src="icons/11.gif" class="p"> <span id="l82" class="unselected">Raport profit dupa locatie</span></a></nobr></div>
+</div><div><nobr><img src="icons/line.gif" class="p"><a href="#" onClick="return NodeClick('83')"><img id="imgn83" src="icons/tplus.gif" class="p"></a><a href="#" onclick="return LinkClick('83',true,false)" onDblClick="return LinkDblClick('83')" target="content" title="Plati" onmousemove="window.status='Plati'"><img id="img83" src="icons/5.gif" class="p"> <span id="l83" class="unselected">Plati</span></a></nobr></div>
+<div id="d83" style="display:none"><div><nobr><img src="icons/line.gif" class="p"><img src="icons/line.gif" class="p"><img src="icons/tshaped.gif" class="p"><a href="scr/ReportPaymentsByDocuments.html" onclick="return LinkClick('84',false,true)" target="content" title="Raport Plati prin Documente" onmousemove="window.status='Raport Plati prin Documente'"><img src="icons/11.gif" class="p"> <span id="l84" class="unselected">Raport Plati prin Documente</span></a></nobr></div>
+<div><nobr><img src="icons/line.gif" class="p"><img src="icons/line.gif" class="p"><img src="icons/tshaped.gif" class="p"><a href="scr/ReportPaymentsByPartners.html" onclick="return LinkClick('85',false,true)" target="content" title="Raport Plati prin Parteneri" onmousemove="window.status='Raport Plati prin Parteneri'"><img src="icons/11.gif" class="p"> <span id="l85" class="unselected">Raport Plati prin Parteneri</span></a></nobr></div>
+<div><nobr><img src="icons/line.gif" class="p"><img src="icons/line.gif" class="p"><img src="icons/tshaped.gif" class="p"><a href="scr/ReportPaymentsDueDates.html" onclick="return LinkClick('86',false,true)" target="content" title="Raport date pentru plati datorate" onmousemove="window.status='Raport date pentru plati datorate'"><img src="icons/11.gif" class="p"> <span id="l86" class="unselected">Raport date pentru plati datorate</span></a></nobr></div>
+<div><nobr><img src="icons/line.gif" class="p"><img src="icons/line.gif" class="p"><img src="icons/tshaped.gif" class="p"><a href="scr/ReportPaymentsHistory.html" onclick="return LinkClick('87',false,true)" target="content" title="Raport istoric plati" onmousemove="window.status='Raport istoric plati'"><img src="icons/11.gif" class="p"> <span id="l87" class="unselected">Raport istoric plati</span></a></nobr></div>
+<div><nobr><img src="icons/line.gif" class="p"><img src="icons/line.gif" class="p"><img src="icons/upangle.gif" class="p"><a href="scr/ReportIncome.html" onclick="return LinkClick('88',false,true)" target="content" title="Raport Venituri pe operatiuni" onmousemove="window.status='Raport Venituri pe operatiuni'"><img src="icons/11.gif" class="p"> <span id="l88" class="unselected">Raport Venituri pe operatiuni</span></a></nobr></div>
+</div><div><nobr><img src="icons/line.gif" class="p"><a href="#" onClick="return NodeClick('89')"><img id="imgn89" src="icons/tplus.gif" class="p"></a><a href="#" onclick="return LinkClick('89',true,false)" onDblClick="return LinkDblClick('89')" target="content" title="Documente" onmousemove="window.status='Documente'"><img id="img89" src="icons/5.gif" class="p"> <span id="l89" class="unselected">Documente</span></a></nobr></div>
+<div id="d89" style="display:none"><div><nobr><img src="icons/line.gif" class="p"><img src="icons/line.gif" class="p"><img src="icons/tshaped.gif" class="p"><a href="scr/ReportSalesByTotal.html" onclick="return LinkClick('90',false,true)" target="content" title="Raport vanzari dupa valoare" onmousemove="window.status='Raport vanzari dupa valoare'"><img src="icons/11.gif" class="p"> <span id="l90" class="unselected">Raport vanzari dupa valoare</span></a></nobr></div>
+<div><nobr><img src="icons/line.gif" class="p"><img src="icons/line.gif" class="p"><img src="icons/tshaped.gif" class="p"><a href="scr/ReportPurchasesByTotal.html" onclick="return LinkClick('91',false,true)" target="content" title="Raport achizitie dupa valoare" onmousemove="window.status='Raport achizitie dupa valoare'"><img src="icons/11.gif" class="p"> <span id="l91" class="unselected">Raport achizitie dupa valoare</span></a></nobr></div>
+<div><nobr><img src="icons/line.gif" class="p"><img src="icons/line.gif" class="p"><img src="icons/tshaped.gif" class="p"><a href="scr/ReportStockTakingsByTotal.html" onclick="return LinkClick('92',false,true)" target="content" title="Raport preluare-stoc dupa valoare" onmousemove="window.status='Raport preluare-stoc dupa valoare'"><img src="icons/11.gif" class="p"> <span id="l92" class="unselected">Raport preluare-stoc dupa valoare</span></a></nobr></div>
+<div><nobr><img src="icons/line.gif" class="p"><img src="icons/line.gif" class="p"><img src="icons/tshaped.gif" class="p"><a href="scr/ReportInvoicesIssued.html" onclick="return LinkClick('93',false,true)" target="content" title="Raport Facturi Emise" onmousemove="window.status='Raport Facturi Emise'"><img src="icons/11.gif" class="p"> <span id="l93" class="unselected">Raport Facturi Emise</span></a></nobr></div>
+<div><nobr><img src="icons/line.gif" class="p"><img src="icons/line.gif" class="p"><img src="icons/upangle.gif" class="p"><a href="scr/ReportInvoicesReceived.html" onclick="return LinkClick('94',false,true)" target="content" title="Raport Facturi Introduse" onmousemove="window.status='Raport Facturi Introduse'"><img src="icons/11.gif" class="p"> <span id="l94" class="unselected">Raport Facturi Introduse</span></a></nobr></div>
+</div><div><nobr><img src="icons/line.gif" class="p"><a href="#" onClick="return NodeClick('95')"><img id="imgn95" src="icons/tplus.gif" class="p"></a><a href="#" onclick="return LinkClick('95',true,false)" onDblClick="return LinkDblClick('95')" target="content" title="Administrare" onmousemove="window.status='Administrare'"><img id="img95" src="icons/5.gif" class="p"> <span id="l95" class="unselected">Administrare</span></a></nobr></div>
+<div id="d95" style="display:none"><div><nobr><img src="icons/line.gif" class="p"><img src="icons/line.gif" class="p"><img src="icons/upangle.gif" class="p"><a href="scr/ReportAppLogEntries.html" onclick="return LinkClick('96',false,true)" target="content" title="Aplicatie log" onmousemove="window.status='Aplicatie log'"><img src="icons/11.gif" class="p"> <span id="l96" class="unselected">Aplicatie log</span></a></nobr></div>
+</div><div><nobr><img src="icons/line.gif" class="p"><img src="icons/tshaped.gif" class="p"><a href="scr/PrintPreview.html" onclick="return LinkClick('97',false,true)" target="content" title="Previzualizare tiparire" onmousemove="window.status='Previzualizare tiparire'"><img src="icons/11.gif" class="p"> <span id="l97" class="unselected">Previzualizare tiparire</span></a></nobr></div>
+<div><nobr><img src="icons/line.gif" class="p"><img src="icons/tshaped.gif" class="p"><a href="scr/ChooseEditReports.html" onclick="return LinkClick('98',false,true)" target="content" title="Rapoarte personalizate" onmousemove="window.status='Rapoarte personalizate'"><img src="icons/11.gif" class="p"> <span id="l98" class="unselected">Rapoarte personalizate</span></a></nobr></div>
+<div><nobr><img src="icons/line.gif" class="p"><img src="icons/upangle.gif" class="p"><a href="scr/ReportDesigner.html" onclick="return LinkClick('99',false,true)" target="content" title="Report Designer" onmousemove="window.status='Report Designer'"><img src="icons/11.gif" class="p"> <span id="l99" class="unselected">Report Designer</span></a></nobr></div>
+</div><div><nobr><a href="#" onClick="return NodeClick('100')"><img id="imgn100" src="icons/tplus.gif" class="p"></a><a href="#" onclick="return LinkClick('100',true,false)" onDblClick="return LinkDblClick('100')" target="content" title="Unelte" onmousemove="window.status='Unelte'"><img id="img100" src="icons/1.gif" class="p"> <span id="l100" class="unselected">Unelte</span></a></nobr></div>
+<div id="d100" style="display:none"><div><nobr><img src="icons/line.gif" class="p"><img src="icons/upangle.gif" class="p"><a href="scr/Settings.html" onclick="return LinkClick('101',false,true)" target="content" title="Setari" onmousemove="window.status='Setari'"><img src="icons/11.gif" class="p"> <span id="l101" class="unselected">Setari</span></a></nobr></div>
+</div><div><nobr><a href="#" onClick="return NodeClick('102')"><img id="imgn102" src="icons/tplus.gif" class="p"></a><a href="#" onclick="return LinkClick('102',true,false)" onDblClick="return LinkDblClick('102')" target="content" title="Ajutor" onmousemove="window.status='Ajutor'"><img id="img102" src="icons/1.gif" class="p"> <span id="l102" class="unselected">Ajutor</span></a></nobr></div>
+<div id="d102" style="display:none"><div><nobr><img src="icons/line.gif" class="p"><img src="icons/upangle.gif" class="p"><a href="scr/About.html" onclick="return LinkClick('103',false,true)" target="content" title="Despre" onmousemove="window.status='Despre'"><img src="icons/11.gif" class="p"> <span id="l103" class="unselected">Despre</span></a></nobr></div>
+</div><div><nobr><img src="icons/tshaped.gif" class="p"><a href="scr/ChooseDate.html" onclick="return LinkClick('104',false,true)" target="content" title="Calendar" onmousemove="window.status='Calendar'"><img src="icons/11.gif" class="p"> <span id="l104" class="unselected">Calendar</span></a></nobr></div>
+<div><nobr><img src="icons/upangle.gif" class="p"><a href="scr/Modalitate de efectuare Inventar la WarehouseOpen.htm" onclick="return LinkClick('105',false,true)" target="content" title="Modalitate de efectuare Inventar la WarehouseOpen" onmousemove="window.status='Modalitate de efectuare Inventar la WarehouseOpen'"><img src="icons/11.gif" class="p"> <span id="l105" class="unselected">Modalitate de efectuare Inventar la WarehouseOpen</span></a></nobr></div>
+<script>divlist = [1,4,7,13,22,34,37,44,52,55,61,66,75,79,83,89,95,100,102]</script>
+</body>
+</html>

@@ -1,0 +1,206 @@
+<Form formName="PurchaseReceipt">
+  <Section style="width:50;height:20">
+    <HBox style="width:100%;height:20">
+      <TextBox text="PZ" font="size:24;underline:false;bold:true;italic:false" />
+      <VBox style="width:100%;height:100%">
+        <TextBox text="Przyjęcie z zewnatrz" font="underline:false;bold:true;italic:false" style="width:100%;height:20" />
+        <HBox style="width:100%;height:20">
+          <Table style="width:50;height:20" headerStyle="bgcolor:#D4D0C8" footerStyle="bgcolor:#D4D0C8">
+            <Columns>
+              <Column>
+                <Template>
+                  <TextBox text="Текстовое поле" />
+                </Template>
+                <Header>
+                  <TextBox text="Текстовое поле" />
+                </Header>
+                <Footer>
+                  <TextBox text="Текстовое поле" />
+                </Footer>
+              </Column>
+              <Column>
+                <Template>
+                  <TextBox text="Текстовое поле" />
+                </Template>
+                <Header>
+                  <TextBox text="Текстовое поле" />
+                </Header>
+                <Footer>
+                  <TextBox text="Текстовое поле" />
+                </Footer>
+              </Column>
+            </Columns>
+            <Rows>
+              <Row style="height:100%;innervborder:1;spacing:0;innerhspacing:1">
+                <Cell style="xstart:0;ystart:0;width:100%;height:100%;padding:0">
+                  <TextBox text="data dokumentu" style="hpadding:16;vpadding:8" />
+                </Cell>
+                <Cell style="xstart:0;ystart:0;width:100%;height:100%;padding:0">
+                  <TextBox sourceField="receiptDate" style="hpadding:16;vpadding:8" />
+                </Cell>
+              </Row>
+              <Row style="height:100%;innervborder:1;spacing:0;innerhspacing:1">
+                <Cell style="xstart:0;ystart:0;padding:0">
+                  <TextBox text="nr kolejny dokumentu" style="hpadding:16;vpadding:8" />
+                </Cell>
+                <Cell style="xstart:0;ystart:0;padding:0">
+                  <TextBox sourceField="receiptNumber" style="hpadding:16;vpadding:8" />
+                </Cell>
+              </Row>
+            </Rows>
+          </Table>
+          <TextBox style="width:50;height:20" />
+          <Picture style="width:100%;height:100%;border:1" />
+        </HBox>
+        <HBox style="width:87%;halign:center;valign:center">
+          <TextBox text="(pieczątka firmowa)" style="width:100%;halign:right;valign:center" />
+        </HBox>
+      </VBox>
+    </HBox>
+  </Section>
+  <Section style="width:627;height:20">
+    <VBox style="width:100%">
+      <HBox style="width:100%;height:50">
+        <TextBox text="dostawca:" font="underline:false;bold:true;italic:false" />
+        <TextBox sourceField="supplierName" wrap="true" style="width:100%;height:100%;hpadding:10" />
+      </HBox>
+      <Table style="width:60%" headerStyle="bgcolor:#D4D0C8" footerStyle="bgcolor:#D4D0C8">
+        <Columns>
+          <Column>
+            <Template>
+              <TextBox text="Текстовое поле" />
+            </Template>
+            <Header>
+              <TextBox text="Текстовое поле" />
+            </Header>
+            <Footer>
+              <TextBox text="Текстовое поле" />
+            </Footer>
+          </Column>
+          <Column>
+            <Template>
+              <TextBox text="Текстовое поле" />
+            </Template>
+            <Header>
+              <TextBox text="Текстовое поле" />
+            </Header>
+            <Footer>
+              <TextBox text="Текстовое поле" />
+            </Footer>
+          </Column>
+        </Columns>
+        <Rows>
+          <Row style="height:100%;innervborder:1;spacing:0;innerhspacing:1">
+            <Cell style="xstart:0;ystart:0;width:40%;height:100%;padding:0">
+              <TextBox text="nr faktury zakupu:" />
+            </Cell>
+            <Cell style="xstart:0;ystart:0;width:10%;height:100%;padding:0">
+              <TextBox sourceField="invoiceNumber" />
+            </Cell>
+          </Row>
+          <Row style="height:100%;innervborder:1;spacing:0;innerhspacing:1">
+            <Cell style="xstart:0;ystart:0;padding:0">
+              <TextBox text="data faktury zakupu:" />
+            </Cell>
+            <Cell style="xstart:0;ystart:0;padding:0">
+              <TextBox sourceField="invoiceDate" />
+            </Cell>
+          </Row>
+          <Row style="height:100%;innervborder:1;spacing:0;innerhspacing:1">
+            <Cell style="xstart:0;ystart:0;padding:0">
+              <TextBox text="tabela NBP nr" />
+            </Cell>
+            <Cell style="xstart:0;ystart:0;padding:0">
+              <TextBox />
+            </Cell>
+          </Row>
+          <Row style="height:100%;innervborder:1;spacing:0;innerhspacing:1">
+            <Cell style="xstart:0;ystart:0;padding:0">
+              <TextBox text=" z dnia" />
+            </Cell>
+            <Cell style="xstart:0;ystart:0;padding:0">
+              <TextBox sourceField="receiptDay" />
+            </Cell>
+          </Row>
+          <Row style="height:100%;innervborder:1;spacing:0;innerhspacing:1">
+            <Cell style="xstart:0;ystart:0;padding:0">
+              <TextBox text="wartość zakupu w PLN:" />
+            </Cell>
+            <Cell style="xstart:0;ystart:0;padding:0">
+              <TextBox sourceField="total" />
+            </Cell>
+          </Row>
+        </Rows>
+      </Table>
+    </VBox>
+  </Section>
+  <Section>
+    <VBox style="width:100%;halign:center;valign:center">
+      <TextBox text="specyfikacja według cen zakupu" font="underline:false;bold:true;italic:false" style="width:100%;height:20" />
+      <Table sourceTable="receiptDetails" style="width:100%;height:20" headerStyle="bgcolor:#D4D0C8" footerStyle="bgcolor:#D4D0C8">
+        <Columns>
+          <Column>
+            <Template style="xstart:0;ystart:0;padding:0">
+              <TextBox sourceField="Number" />
+            </Template>
+            <Header style="xstart:0;ystart:0;padding:0">
+              <TextBox sourceField="detailHeaderNumber" />
+            </Header>
+            <Footer>
+              <TextBox text="Текстовое поле" />
+            </Footer>
+          </Column>
+          <Column>
+            <Template style="xstart:0;ystart:0;width:100%;height:100%;padding:0">
+              <TextBox sourceField="GoodsName" wrap="true" />
+            </Template>
+            <Header style="xstart:0;ystart:0;padding:0">
+              <TextBox sourceField="detailHeaderGoods" />
+            </Header>
+            <Footer>
+              <TextBox text="Текстовое поле" />
+            </Footer>
+          </Column>
+          <Column>
+            <Template style="xstart:0;ystart:0;padding:0">
+              <TextBox sourceField="Quantity" />
+            </Template>
+            <Header style="xstart:0;ystart:0;padding:0">
+              <TextBox sourceField="detailHeaderQtty" />
+            </Header>
+            <Footer>
+              <TextBox text="Текстовое поле" />
+            </Footer>
+          </Column>
+          <Column>
+            <Template style="xstart:0;ystart:0;padding:0">
+              <TextBox sourceField="Price" />
+            </Template>
+            <Header style="xstart:0;ystart:0;padding:0">
+              <TextBox sourceField="detailHeaderPrice" />
+            </Header>
+            <Footer>
+              <TextBox text="Текстовое поле" />
+            </Footer>
+          </Column>
+          <Column>
+            <Template style="xstart:0;ystart:0;height:100%;padding:0">
+              <TextBox sourceField="Total" />
+            </Template>
+            <Header style="xstart:0;ystart:0;padding:0">
+              <TextBox sourceField="detailHeaderTotal" />
+            </Header>
+            <Footer>
+              <TextBox text="Текстовое поле" />
+            </Footer>
+          </Column>
+        </Columns>
+      </Table>
+      <HBox style="width:100%">
+        <TextBox text="razem" font="underline:false;bold:true;italic:false" style="width:100%;halign:center;valign:center" />
+        <TextBox style="width:50;height:100%;border:1" />
+        <TextBox sourceField="total" style="border:1;halign:right;valign:center" />
+      </HBox>
+    </VBox>
+  </Section>
+</Form>

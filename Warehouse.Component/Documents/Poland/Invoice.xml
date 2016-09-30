@@ -1,0 +1,546 @@
+<Forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:///e:/Projects/Work/Warehouse/Warehouse.Component/Documenting/FormObjectTemplate.xsd">
+  <Form formName="Invoice" landscape="true">
+    <Section style="width:0">
+      <VBox style="width:100%;bgcolor:#BFBFBF">
+        <HBox style="width:100%;halign:center;valign:center">
+          <HBox style="width:33%;height:100%;vpadding:1">
+            <TextBox style="width:33%;height:100%;border:3;bgcolor:#FFFFFE" />
+          </HBox>
+          <Table style="width:67%;height:0;border:0;innerborder:0" headerStyle="bgcolor:#D4D0C8" footerStyle="bgcolor:#D4D0C8">
+            <Columns>
+              <Column style="width:66%">
+                <Template style="width:66%">
+                  <TextBox text="Text Box" />
+                </Template>
+                <Header>
+                  <TextBox text="Text Box" />
+                </Header>
+                <Footer>
+                  <TextBox text="Text Box" />
+                </Footer>
+              </Column>
+              <Column style="width:34%">
+                <Template style="width:34%">
+                  <TextBox text="Text Box" />
+                </Template>
+                <Header>
+                  <TextBox text="Text Box" />
+                </Header>
+                <Footer>
+                  <TextBox text="Text Box" />
+                </Footer>
+              </Column>
+            </Columns>
+            <Rows>
+              <Row style="innervborder:0;spacing:0;innerhspacing:1">
+                <Cell style="xstart:2;width:66%;height:100%;hpadding:0;vpadding:1;halign:center;valign:center">
+                  <TextBox text="FAKTURA VAT NR" font="size:14;underline:false;bold:true;italic:false" style="width:100%;vpadding:4;border:3;halign:center;valign:center;bgcolor:#FFFFFE" />
+                </Cell>
+                <Cell style="xstart:1;width:34%;height:100%;hpadding:0;vpadding:1">
+                  <TextBox sourceField="number" style="xstart:0;width:100%;height:100%;border:3;halign:center;valign:center;bgcolor:#FFFFFE" />
+                </Cell>
+              </Row>
+              <Row style="innervborder:0;spacing:0;innerhspacing:1">
+                <Cell style="xstart:2;height:100%;hpadding:0;vpadding:1">
+                  <HBox style="width:100%;height:100%;border:3;bgcolor:#FFFFFE">
+                    <TextBox text="Miejscowość, data" style="height:100%" />
+                    <TextBox sourceField="pointOfSale" font="underline:false;bold:true;italic:false" style="xstart:3;ystart:0;width:0;height:100%" />
+                    <TextBox sourceField="date" font="underline:false;bold:true;italic:false" style="xstart:3;width:0;height:100%" />
+                  </HBox>
+                </Cell>
+                <Cell style="padding:0">
+                  <TextBox sourceField="original" font="size:12;underline:false;bold:false;italic:false" style="xstart:1;width:100%;height:100%;halign:center;valign:center;bgcolor:#BFBFBF" />
+                </Cell>
+              </Row>
+              <Row style="innervborder:0;spacing:0;innerhspacing:1">
+                <Cell style="xstart:2;hpadding:0;vpadding:1">
+                  <HBox style="width:100%;height:100%;border:3;bgcolor:#FFFFFE">
+                    <TextBox text="Data sprzedaży / zaliczki" style="height:100%" />
+                    <TextBox sourceField="taxDate" font="underline:false;bold:true;italic:false" style="height:100%;valign:center" />
+                  </HBox>
+                </Cell>
+                <Cell style="xstart:1;height:100%;hpadding:0;vpadding:1">
+                  <HBox style="width:100%;height:100%;border:3;bgcolor:#FFFFFE">
+                    <TextBox text=" Nr ewid." style="width:50;height:100%" />
+                  </HBox>
+                </Cell>
+              </Row>
+            </Rows>
+          </Table>
+        </HBox>
+        <HBox style="width:100%;vpadding:2;valign:bottom">
+          <Table style="width:49%;border:2;innerborder:0;bgcolor:#FFFFFE" headerStyle="bgcolor:#D4D0C8" itemStyle="height:20" footerStyle="bgcolor:#D4D0C8">
+            <Columns>
+              <Column>
+                <Template>
+                  <TextBox text="Text Box" />
+                </Template>
+                <Header>
+                  <TextBox text="Text Box" />
+                </Header>
+                <Footer>
+                  <TextBox text="Text Box" />
+                </Footer>
+              </Column>
+            </Columns>
+            <Rows>
+              <Row style="height:20;innervborder:0;spacing:0;innerhspacing:0">
+                <Cell style="width:100%;height:100%;padding:0">
+                  <HBox style="width:100%;height:100%">
+                    <TextBox text="Sprzedawca" style="width:0;height:100%;valign:center" />
+                    <HLine thickness="2" style="width:100%;height:100%;vfill:true;valign:bottom" />
+                  </HBox>
+                </Cell>
+              </Row>
+              <Row style="height:20;innervborder:0;spacing:0;innerhspacing:0">
+                <Cell style="width:100%;height:100%;padding:0">
+                  <VBox style="width:100%;height:100%">
+                    <TextBox sourceField="supplierName" font="underline:false;bold:true;italic:false;trimming:Character" style="width:100%;height:100%;valign:center" />
+                    <HLine thickness="2" style="width:100%;valign:bottom" />
+                  </VBox>
+                </Cell>
+              </Row>
+              <Row style="height:20;innervborder:0;spacing:0;innerhspacing:0">
+                <Cell style="height:100%;padding:0">
+                  <HLine thickness="2" style="width:100%;height:100%;vfill:true;valign:bottom" />
+                </Cell>
+              </Row>
+              <Row style="height:20;innervborder:0;spacing:0;innerhspacing:0">
+                <Cell style="height:100%;padding:0">
+                  <HBox style="width:100%;height:100%">
+                    <TextBox text="Nr identyf." style="height:100%;valign:center" />
+                    <VBox style="width:0;height:100%">
+                      <TextBox sourceField="supplierNumber" font="underline:false;bold:true;italic:false;trimming:Character" style="width:100%;height:100%;valign:center" />
+                      <HLine thickness="2" style="width:100%;vfill:true;valign:bottom" />
+                    </VBox>
+                  </HBox>
+                </Cell>
+              </Row>
+              <Row style="height:20;innervborder:0;spacing:0;innerhspacing:0">
+                <Cell style="height:100%;padding:0">
+                  <HBox style="width:100%;height:100%">
+                    <TextBox text="Nr rach. bank." style="height:100%;valign:center" />
+                    <VBox style="width:100%;height:100%">
+                      <TextBox sourceField="supplierBankAccount" font="underline:false;bold:true;italic:false" style="width:100%;height:100%;valign:center" />
+                      <HLine thickness="2" style="width:100%;vfill:true;valign:bottom" />
+                    </VBox>
+                  </HBox>
+                </Cell>
+              </Row>
+              <Row style="height:20;innervborder:0;spacing:0;innerhspacing:0">
+                <Cell style="width:100%;height:100%;padding:0;halign:right;valign:bottom">
+                  <HLine thickness="2" style="width:75%;height:100%;vfill:true;valign:bottom" />
+                </Cell>
+              </Row>
+            </Rows>
+          </Table>
+          <TextBox style="width:2;height:100%" />
+          <VBox style="width:51%;height:100%">
+            <Table style="width:100%;height:20;border:2;innerborder:0;bgcolor:#FFFFFE" headerStyle="bgcolor:#D4D0C8" itemStyle="height:20" footerStyle="bgcolor:#D4D0C8">
+              <Columns>
+                <Column>
+                  <Template>
+                    <TextBox text="Text Box" />
+                  </Template>
+                  <Header>
+                    <TextBox text="Text Box" />
+                  </Header>
+                  <Footer>
+                    <TextBox text="Text Box" />
+                  </Footer>
+                </Column>
+              </Columns>
+              <Rows>
+                <Row style="height:20;innervborder:0;spacing:0;innerhspacing:0">
+                  <Cell style="width:100%;height:100%;padding:0">
+                    <HBox style="width:100%;height:100%">
+                      <TextBox text="Nabywca" style="width:0;height:100%;valign:center" />
+                      <HLine thickness="2" style="width:100%;height:100%;valign:bottom" />
+                    </HBox>
+                  </Cell>
+                </Row>
+                <Row style="height:20;innervborder:0;spacing:0;innerhspacing:0">
+                  <Cell style="height:100%;padding:0">
+                    <VBox style="width:100%;height:100%;valign:bottom">
+                      <TextBox sourceField="recipientName" font="underline:false;bold:true;italic:false" style="width:100%;height:100%;valign:center" />
+                      <HLine thickness="2" style="width:100%;valign:bottom" />
+                    </VBox>
+                  </Cell>
+                </Row>
+                <Row style="height:20;innervborder:0;spacing:0;innerhspacing:0">
+                  <Cell style="height:100%;padding:0">
+                    <HLine thickness="2" style="width:100%;height:100%;valign:bottom" />
+                  </Cell>
+                </Row>
+                <Row style="height:20;innervborder:0;spacing:0;innerhspacing:0">
+                  <Cell style="height:100%;padding:0">
+                    <HBox style="width:100%;height:100%">
+                      <TextBox text="Nr identyf." style="width:0;height:100%;valign:center" />
+                      <VBox style="width:100%;height:100%">
+                        <TextBox sourceField="recipientNumber" font="underline:false;bold:true;italic:false" style="width:100%;height:100%;valign:center" />
+                        <HLine thickness="2" style="width:100%;valign:bottom" />
+                      </VBox>
+                    </HBox>
+                  </Cell>
+                </Row>
+              </Rows>
+            </Table>
+            <TextBox style="width:55%;height:2" />
+            <HBox style="width:100%;height:100%;border:2;halign:center;valign:bottom;bgcolor:#FFFFFE">
+              <TextBox text="Sposób zapłaty" style="height:100%" />
+              <TextBox sourceField="paymentType" font="underline:false;bold:true;italic:false" style="width:50%;height:100%" />
+              <VBox style="width:0;height:100%">
+                <TextBox text="Termin" style="width:25%;height:0" />
+                <TextBox text="płatnosci" style="width:100%;height:100%" />
+              </VBox>
+              <TextBox style="width:50%;height:100%" />
+            </HBox>
+          </VBox>
+        </HBox>
+      </VBox>
+    </Section>
+    <Section style="height:100%">
+      <VBox style="width:100%;height:100%">
+        <Table sourceTable="invoiceDetails" style="width:100%;border:2;innerborder:2" headerStyle="bgcolor:#FFFFFF" footerStyle="bgcolor:#D4D0C8">
+          <Columns>
+            <Column>
+              <Template style="height:100%;padding:0">
+                <TextBox sourceField="Number" font="underline:false;bold:false;italic:false;trimming:Character" />
+              </Template>
+              <Header style="width:2%;padding:0">
+                <TextBox text="Lp" font="underline:false;bold:true;italic:false" style="width:100%;height:100%;halign:center;valign:center" />
+              </Header>
+              <Footer>
+                <TextBox text="Text Box" />
+              </Footer>
+            </Column>
+            <Column>
+              <Template style="height:100%;padding:0">
+                <TextBox sourceField="GoodsName" font="underline:false;bold:false;italic:false;trimming:Character" />
+              </Template>
+              <Header style="width:26%;height:100%;padding:0;halign:center;valign:center">
+                <TextBox text="Nazwa" font="underline:false;bold:true;italic:false" style="width:100%;height:0;halign:center;valign:center" />
+              </Header>
+              <Footer>
+                <TextBox text="Text Box" />
+              </Footer>
+            </Column>
+            <Column>
+              <Template style="height:100%;padding:0">
+                <TextBox sourceField="GoodsCode" font="underline:false;bold:false;italic:false;trimming:Character" />
+              </Template>
+              <Header style="width:8%;height:100%;padding:0">
+                <TextBox text="PKWiU" font="underline:false;bold:true;italic:false" style="width:100%;height:100%;halign:center;valign:center" />
+              </Header>
+              <Footer>
+                <TextBox text="Text Box" />
+              </Footer>
+            </Column>
+            <Column>
+              <Template style="height:100%;padding:0">
+                <TextBox sourceField="MUnitName" font="underline:false;bold:false;italic:false;trimming:Character" />
+              </Template>
+              <Header style="width:3%;height:100%;padding:0;halign:center;valign:center">
+                <TextBox text="J.m." font="underline:false;bold:true;italic:false" />
+              </Header>
+              <Footer>
+                <TextBox text="Text Box" />
+              </Footer>
+            </Column>
+            <Column>
+              <Template style="height:100%;padding:0">
+                <TextBox sourceField="Quantity" font="underline:false;bold:false;italic:false;trimming:Character" />
+              </Template>
+              <Header style="width:9%;height:100%;padding:0;halign:center;valign:center">
+                <TextBox text="Ilość" font="underline:false;bold:true;italic:false" />
+              </Header>
+              <Footer>
+                <TextBox text="Text Box" />
+              </Footer>
+            </Column>
+            <Column>
+              <Template style="height:100%;padding:0">
+                <HBox style="width:100%">
+                  <TextBox sourceField="PriceNoTaxBankNotes" font="underline:false;bold:false;italic:false;trimming:Character" style="width:50%;halign:right;valign:center" />
+                  <TextBox sourceField="PriceNoTaxCoins" font="underline:false;bold:false;italic:false;trimming:Character" style="width:50%;halign:right;valign:center" />
+                </HBox>
+              </Template>
+              <Header style="width:10%;height:100%;padding:0">
+                <VBox style="width:100%;height:100%;halign:center;valign:center">
+                  <TextBox text="Cena" font="underline:false;bold:true;italic:false" style="width:100%;height:100%;halign:center;valign:bottom" />
+                  <TextBox text="netto" font="underline:false;bold:true;italic:false" style="width:100%;halign:center;valign:center" />
+                  <HBox style="width:100%;height:50%;valign:bottom">
+                    <TextBox text="zł" font="underline:false;bold:true;italic:false" style="width:50%;halign:right;valign:center" />
+                    <TextBox text="gr" font="underline:false;bold:true;italic:false" style="width:50%;halign:right;valign:center" />
+                  </HBox>
+                </VBox>
+              </Header>
+              <Footer>
+                <TextBox text="Text Box" />
+              </Footer>
+            </Column>
+            <Column>
+              <Template style="height:100%;padding:0">
+                <HBox style="width:100%">
+                  <TextBox sourceField="TotalNoTaxBankNotes" font="underline:false;bold:false;italic:false;trimming:Character" style="width:50%;halign:right;valign:center" />
+                  <TextBox sourceField="TotalNoTaxCoins" font="underline:false;bold:false;italic:false;trimming:Character" style="width:50%;halign:right;valign:center" />
+                </HBox>
+              </Template>
+              <Header style="width:13%;height:100%;padding:0">
+                <VBox style="width:100%;height:100%;halign:center;valign:center">
+                  <TextBox text="Wartość" font="underline:false;bold:true;italic:false" style="width:100%;halign:center;valign:center" />
+                  <TextBox text="towaru/usługi" font="underline:false;bold:true;italic:false" style="width:100%;halign:center;valign:center" />
+                  <TextBox text="netto" font="underline:false;bold:true;italic:false" style="width:100%;halign:center;valign:center" />
+                  <HBox style="width:100%;halign:center;valign:center">
+                    <TextBox text="zł" font="underline:false;bold:true;italic:false" style="width:50%;halign:right;valign:center" />
+                    <TextBox text="gr" font="underline:false;bold:true;italic:false" style="width:50%;halign:right;valign:center" />
+                  </HBox>
+                </VBox>
+              </Header>
+              <Footer>
+                <TextBox text="Text Box" />
+              </Footer>
+            </Column>
+            <Column>
+              <Template style="height:100%;padding:0">
+                <HBox style="width:100%;height:100%">
+                  <TextBox sourceField="VatRate" font="underline:false;bold:false;italic:false;trimming:Character" style="width:27%;height:100%" />
+                  <VLine thickness="2" style="width:0;height:100%" />
+                  <HBox style="width:73%;height:100%">
+                    <TextBox sourceField="TaxBankNotes" font="underline:false;bold:false;italic:false;trimming:Character" style="width:50%;height:100%;halign:right;valign:center" />
+                    <TextBox sourceField="TaxCoins" font="underline:false;bold:false;italic:false;trimming:Character" style="width:50%;height:100%;halign:right;valign:center" />
+                  </HBox>
+                </HBox>
+              </Template>
+              <Header style="width:15%;height:100%;padding:0;halign:center">
+                <VBox style="width:100%;height:100%;halign:center">
+                  <TextBox text="VAT" font="underline:false;bold:true;italic:false" style="width:100%;halign:center" />
+                  <HLine thickness="2" style="width:100%;height:0" />
+                  <HBox style="width:100%;height:100%;halign:right;valign:center">
+                    <TextBox text="%" font="underline:false;bold:true;italic:false" style="width:27%;height:50%;halign:center;valign:center" />
+                    <VLine thickness="2" style="width:0;height:100%" />
+                    <VBox style="width:73%;height:100%;halign:right;valign:bottom">
+                      <TextBox text="kwota" font="underline:false;bold:true;italic:false" style="width:100%;height:20;halign:center;valign:center" />
+                      <HBox style="width:100%;height:20;halign:center;valign:bottom">
+                        <TextBox text="zł" font="underline:false;bold:true;italic:false" style="width:50%;halign:right;valign:bottom" />
+                        <TextBox text="gr" font="underline:false;bold:true;italic:false" style="width:50%;halign:right;valign:bottom" />
+                      </HBox>
+                    </VBox>
+                  </HBox>
+                </VBox>
+              </Header>
+              <Footer>
+                <TextBox text="Text Box" />
+              </Footer>
+            </Column>
+            <Column>
+              <Template style="height:100%;padding:0">
+                <HBox style="width:100%;height:100%">
+                  <TextBox sourceField="TotalBankNotes" font="underline:false;bold:false;italic:false;trimming:Character" style="width:50%;height:100%;halign:right;valign:center" />
+                  <TextBox sourceField="TotalCoins" font="underline:false;bold:false;italic:false;trimming:Character" style="width:50%;height:100%;halign:right;valign:center" />
+                </HBox>
+              </Template>
+              <Header style="width:15%;height:100%;padding:0">
+                <VBox style="width:100%;height:100%;halign:center;valign:center">
+                  <TextBox text="Wartość" font="underline:false;bold:true;italic:false" style="width:100%;halign:center;valign:center" />
+                  <TextBox text="towaru/usługi" font="underline:false;bold:true;italic:false" style="width:100%;halign:center;valign:center" />
+                  <TextBox text="brutto" font="underline:false;bold:true;italic:false" style="width:100%;halign:center;valign:center" />
+                  <HBox style="width:100%;halign:right;valign:bottom">
+                    <TextBox text="zł" font="underline:false;bold:true;italic:false" style="width:50%;halign:right;valign:bottom" />
+                    <TextBox text="gr" font="underline:false;bold:true;italic:false" style="width:50%;halign:right;valign:bottom" />
+                  </HBox>
+                </VBox>
+              </Header>
+              <Footer>
+                <TextBox text="Text Box" />
+              </Footer>
+            </Column>
+          </Columns>
+        </Table>
+        <HBox style="width:100%;halign:center;valign:center">
+          <VBox style="width:59%;height:100%;halign:center">
+            <HBox style="width:100%;height:20;border:2">
+              <TextBox text="Słownie zł:" style="width:14%" />
+              <TextBox sourceField="totalInWords" style="xstart:5;width:67%;height:100%" />
+              <VLine thickness="2" style="height:100%" />
+              <VBox style="width:16%;halign:right">
+                <TextBox text="RAZEM" font="underline:false;bold:true;italic:false" style="width:100%;height:100%;halign:center;valign:bottom" />
+                <HLine thickness="2" style="width:100%" />
+                <TextBox text="W TYM" font="underline:false;bold:true;italic:false" style="width:100%;height:100%;halign:center;valign:center" />
+              </VBox>
+            </HBox>
+            <HBox style="width:100%;height:100%;border:2;halign:center;valign:bottom">
+              <VBox style="width:47%;height:100%;halign:center;valign:bottom">
+                <TextBox text="imię i nazwisko oraz podpis" font="size:6;underline:false;bold:false;italic:false" style="width:100%;halign:center;valign:bottom" />
+                <TextBox text="osoby upoważnionej do otrzymania faktury" font="size:6;underline:false;bold:false;italic:false" style="width:100%;halign:center;valign:bottom" />
+              </VBox>
+              <VLine thickness="2" style="height:100%" />
+              <VBox style="width:52%;height:100%;halign:center;valign:bottom">
+                <TextBox text="podpis i pieczeć imienna osoby" font="size:6;underline:false;bold:false;italic:false" style="width:100%;halign:center;valign:bottom" />
+                <TextBox text="uprawnionej do wystawienia faktury" font="size:6;underline:false;bold:false;italic:false" style="width:100%;halign:center;valign:bottom" />
+              </VBox>
+            </HBox>
+          </VBox>
+          <VBox style="width:42%;height:100%;border:2">
+            <Table style="width:100%;border:0;innerborder:2" headerStyle="bgcolor:#D4D0C8" footerStyle="bgcolor:#D4D0C8">
+              <Columns>
+                <Column>
+                  <Template>
+                    <TextBox text="Text Box" />
+                  </Template>
+                  <Header>
+                    <TextBox text="Text Box" />
+                  </Header>
+                  <Footer>
+                    <TextBox text="Text Box" />
+                  </Footer>
+                </Column>
+                <Column>
+                  <Template>
+                    <TextBox text="Text Box" />
+                  </Template>
+                  <Header>
+                    <TextBox text="Text Box" />
+                  </Header>
+                  <Footer>
+                    <TextBox text="Text Box" />
+                  </Footer>
+                </Column>
+                <Column>
+                  <Template>
+                    <TextBox text="Text Box" />
+                  </Template>
+                  <Header>
+                    <TextBox text="Text Box" />
+                  </Header>
+                  <Footer>
+                    <TextBox text="Text Box" />
+                  </Footer>
+                </Column>
+                <Column>
+                  <Template>
+                    <TextBox text="Text Box" />
+                  </Template>
+                  <Header>
+                    <TextBox text="Text Box" />
+                  </Header>
+                  <Footer>
+                    <TextBox text="Text Box" />
+                  </Footer>
+                </Column>
+              </Columns>
+              <Rows>
+                <Row style="height:100%;innervborder:2;spacing:0;innerhspacing:3">
+                  <Cell style="width:31%;height:100%;padding:0;halign:center;valign:bottom">
+                    <TextBox />
+                  </Cell>
+                  <Cell style="width:9%;height:100%;padding:0">
+                    <TextBox text="x" />
+                  </Cell>
+                  <Cell style="width:25%;height:100%;padding:0">
+                    <TextBox />
+                  </Cell>
+                  <Cell style="width:35%;height:100%;padding:0">
+                    <TextBox />
+                  </Cell>
+                </Row>
+                <Row style="height:100%;innervborder:2;spacing:0;innerhspacing:3">
+                  <Cell style="padding:0">
+                    <TextBox />
+                  </Cell>
+                  <Cell style="height:100%;padding:0">
+                    <TextBox text="zw" font="underline:false;bold:false;italic:false" />
+                  </Cell>
+                  <Cell style="height:100%;padding:0">
+                    <TextBox />
+                  </Cell>
+                  <Cell style="height:100%;padding:0">
+                    <TextBox />
+                  </Cell>
+                </Row>
+                <Row style="height:100%;innervborder:2;spacing:0;innerhspacing:3">
+                  <Cell style="padding:0">
+                    <TextBox />
+                  </Cell>
+                  <Cell style="height:100%;padding:0">
+                    <TextBox text="23" />
+                  </Cell>
+                  <Cell style="height:100%;padding:0">
+                    <TextBox />
+                  </Cell>
+                  <Cell style="height:100%;padding:0">
+                    <TextBox />
+                  </Cell>
+                </Row>
+                <Row style="height:100%;innervborder:2;spacing:0;innerhspacing:3">
+                  <Cell style="padding:0">
+                    <TextBox />
+                  </Cell>
+                  <Cell style="height:100%;padding:0">
+                    <TextBox text="8" />
+                  </Cell>
+                  <Cell style="height:100%;padding:0">
+                    <TextBox />
+                  </Cell>
+                  <Cell style="height:100%;padding:0">
+                    <TextBox />
+                  </Cell>
+                </Row>
+                <Row style="height:100%;innervborder:2;spacing:0;innerhspacing:3">
+                  <Cell style="padding:0">
+                    <TextBox />
+                  </Cell>
+                  <Cell style="height:100%;padding:0">
+                    <TextBox text="5" />
+                  </Cell>
+                  <Cell style="height:100%;padding:0">
+                    <TextBox />
+                  </Cell>
+                  <Cell style="height:100%;padding:0">
+                    <TextBox />
+                  </Cell>
+                </Row>
+                <Row style="height:100%;innervborder:2;spacing:0;innerhspacing:3">
+                  <Cell style="padding:0">
+                    <TextBox />
+                  </Cell>
+                  <Cell style="height:100%;padding:0">
+                    <TextBox text="0" />
+                  </Cell>
+                  <Cell style="height:100%;padding:0">
+                    <TextBox />
+                  </Cell>
+                  <Cell style="height:100%;padding:0">
+                    <TextBox />
+                  </Cell>
+                </Row>
+              </Rows>
+            </Table>
+            <HLine thickness="2" style="width:100%;height:0" />
+            <HBox style="width:100%;halign:center;valign:center">
+              <TextBox text="DO ZAPŁATY" font="underline:false;bold:true;italic:false" style="width:30%;height:100%;hfill:false;valign:bottom" />
+              <VLine thickness="2" style="width:0;height:100%" />
+              <TextBox sourceField="totalPlusVat" style="width:68%;halign:right;valign:center" />
+            </HBox>
+          </VBox>
+        </HBox>
+        <VBox style="ystart:25;width:100%">
+          <TextBox text="Dodatkowe informacje" style="width:100%;height:20" />
+          <TextBox text="...................................................................................................................................................................................................." font="underline:false;bold:false;italic:false;trimming:Character" style="width:100%;height:20;allowhbreak:false" />
+          <TextBox text="...................................................................................................................................................................................................." font="underline:false;bold:false;italic:false;trimming:Character" style="width:100%;height:20;allowhbreak:false" />
+          <TextBox text="...................................................................................................................................................................................................." font="underline:false;bold:false;italic:false;trimming:Character" style="width:100%;height:20;allowhbreak:false" />
+          <TextBox text="...................................................................................................................................................................................................." font="underline:false;bold:false;italic:false;trimming:Character" style="width:100%;height:20;allowhbreak:false" />
+        </VBox>
+      </VBox>
+    </Section>
+    <Section type="PageFooter">
+      <HBox style="width:100%;height:50">
+        <TextBox text="Wzór formularza zaprojektowany przez © www.signform.pl Sp. z o.o., e-mail: biuro@signform.pl, tel. (0-22) 337-11-51, fax: (0-22) 337-11-52" font="size:6;underline:false;bold:false;italic:false" style="width:100%;height:100%;valign:center"/>
+        <HBox style="width:100%;valign:center;height:100%;hpadding:10;hfill:true;halign:right">
+          <TextBox sourceField="%CurrentPage%" sourceFormat="currentPageFormat"/>
+          <TextBox sourceField="%TotalPages%" sourceFormat="totalPagesFormat" style="hpadding:2"/>
+        </HBox>
+      </HBox>
+    </Section>
+  </Form>
+</Forms>

@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6F8A3473-0FCA-4F65-87E7-AF5E7BCF20DA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Warehouse.Component</RootNamespace>
+    <AssemblyName>Warehouse.Component</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <SccProjectName>PlasticSCM</SccProjectName>
+    <SccLocalPath>PlasticSCM</SccLocalPath>
+    <SccAuxPath>PlasticSCM</SccAuxPath>
+    <SccProvider>Plastic SCM Source Control Service:{774e58ba-f1b9-40a7-b676-834fa2c220fe}</SccProvider>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\AnyCPU\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin\AnyCPU\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>..\bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <DebugType>full</DebugType>
+    <WarningLevel>4</WarningLevel>
+    <Optimize>false</Optimize>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>..\bin\Release\</OutputPath>
+    <DebugType>none</DebugType>
+    <WarningLevel>4</WarningLevel>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="atk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
+      <Package>gtk-sharp-2.0</Package>
+    </Reference>
+    <Reference Include="gdk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
+      <Package>gtk-sharp-2.0</Package>
+    </Reference>
+    <Reference Include="glade-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
+      <Package>glade-sharp-2.0</Package>
+    </Reference>
+    <Reference Include="glib-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
+      <Package>glib-sharp-2.0</Package>
+    </Reference>
+    <Reference Include="gtk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
+      <Package>gtk-sharp-2.0</Package>
+    </Reference>
+    <Reference Include="Mono.Addins, Version=0.6.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\Mono.Addins.dll</HintPath>
+    </Reference>
+    <Reference Include="NBarCodes, Version=1.0.0.371, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\NBarCodes.dll</HintPath>
+    </Reference>
+    <Reference Include="pango-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
+      <Package>gtk-sharp-2.0</Package>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Mono.Cairo" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Colors.cs" />
+    <Compile Include="ComponentHelper.cs" />
+    <Compile Include="Documenting\Barcode.cs" />
+    <Compile Include="Documenting\BoxItem.cs" />
+    <Compile Include="Documenting\CustomFormProvider.cs" />
+    <Compile Include="Documenting\DocumentHelper.cs" />
+    <Compile Include="Documenting\FontConverter.cs" />
+    <Compile Include="Documenting\Form.cs" />
+    <Compile Include="Documenting\FormDrawableContainer.cs" />
+    <Compile Include="Documenting\FormDrawableObject.cs" />
+    <Compile Include="Documenting\FormMember.cs" />
+    <Compile Include="Documenting\FormObject.cs" />
+    <Compile Include="Documenting\FormObjectCreator.cs" />
+    <Compile Include="Documenting\HBox.cs" />
+    <Compile Include="Documenting\HLine.cs" />
+    <Compile Include="Documenting\IDrawingProvider.cs" />
+    <Compile Include="Documenting\IFormObjectCreator.cs" />
+    <Compile Include="Documenting\Line.cs" />
+    <Compile Include="Documenting\MarginsI.cs" />
+    <Compile Include="Documenting\ObjectFont.cs" />
+    <Compile Include="Documenting\ObjectSize.cs" />
+    <Compile Include="Documenting\ObjectStyle.cs" />
+    <Compile Include="Documenting\PageDistribution.cs" />
+    <Compile Include="Documenting\PageSettings.cs" />
+    <Compile Include="Documenting\Picture.cs" />
+    <Compile Include="Documenting\Rectangle.cs" />
+    <Compile Include="Documenting\RectangleI.cs" />
+    <Compile Include="Documenting\RectangleD.cs" />
+    <Compile Include="Documenting\Section.cs" />
+    <Compile Include="Documenting\SizeI.cs" />
+    <Compile Include="Documenting\SizeD.cs" />
+    <Compile Include="Documenting\SizeMode.cs" />
+    <Compile Include="Documenting\Table.cs" />
+    <Compile Include="Documenting\TableCell.cs" />
+    <Compile Include="Documenting\TableColumn.cs" />
+    <Compile Include="Documenting\TableRow.cs" />
+    <Compile Include="Documenting\TextBox.cs" />
+    <Compile Include="Documenting\VBox.cs" />
+    <Compile Include="Documenting\VLine.cs" />
+    <Compile Include="ICustomKeyShortcut.cs" />
+    <Compile Include="IDocumentExporter.cs" />
+    <Compile Include="KeyShortcuts.cs" />
+    <Compile Include="ListView\CellContext.cs" />
+    <Compile Include="ListView\CellNotValidException.cs" />
+    <Compile Include="ListView\CellProgress.cs" />
+    <Compile Include="ListView\CellTextCurrency.cs" />
+    <Compile Include="ListView\CellTextEnumerator.cs" />
+    <Compile Include="ListView\CellTextItemQuantity.cs" />
+    <Compile Include="ListView\CellTextQuantity.cs" />
+    <Compile Include="ListView\CellTextPercent.cs" />
+    <Compile Include="ListView\GtkMacTheme.cs" />
+    <Compile Include="ListView\RowEventArgs.cs" />
+    <Compile Include="PangoStyle.cs" />
+    <Compile Include="ListView\CellStyleQueryEventArgs.cs" />
+    <Compile Include="ListView\CellTextDateTime.cs" />
+    <Compile Include="ListView\CellTextLookup.cs" />
+    <Compile Include="ListView\GtkColors.cs" />
+    <Compile Include="ListView\GtkTheme.cs" />
+    <Compile Include="ListView\ISizeRequestCell.cs" />
+    <Compile Include="ListView\ListView.Container.cs" />
+    <Compile Include="ListView\ListView.Footer.cs" />
+    <Compile Include="ListView\ListView.Model.cs" />
+    <Compile Include="ListView\ListView.Header.cs" />
+    <Compile Include="ListView\ListView.Interaction.cs" />
+    <Compile Include="ListView\ListView.Rendering.cs" />
+    <Compile Include="ListView\ListView.Windowing.cs" />
+    <Compile Include="ListView\ListView.DragAndDrop.cs" />
+    <Compile Include="PangoCairoHelper.cs" />
+    <Compile Include="ListView\RangeCollection.cs" />
+    <Compile Include="ListView\TextRequestEventArgs.cs" />
+    <Compile Include="ListView\Theme.cs" />
+    <Compile Include="ListView\ThemeContext.cs" />
+    <Compile Include="Printing\DrawingProviderCairo.cs" />
+    <Compile Include="Printing\GtkFormPrintDocument.cs" />
+    <Compile Include="Printing\PrintPreviewController.cs" />
+    <Compile Include="Printing\PrintLayout.cs" />
+    <Compile Include="Printing\StatusDialog.cs" />
+    <Compile Include="CairoExtensions.cs" />
+    <Compile Include="ListView\Cell.cs" />
+    <Compile Include="ListView\CellButtonPressEventArgs.cs" />
+    <Compile Include="ListView\CellEditBeginEventArgs.cs" />
+    <Compile Include="ListView\CellEditEndEventArgs.cs" />
+    <Compile Include="ListView\CellEventArgs.cs" />
+    <Compile Include="ListView\CellKeyPressEventArgs.cs" />
+    <Compile Include="ListView\CellPosition.cs" />
+    <Compile Include="ListView\CellText.cs" />
+    <Compile Include="ListView\CellTextDate.cs" />
+    <Compile Include="ListView\CellTextDouble.cs" />
+    <Compile Include="ListView\CellTextFooter.cs" />
+    <Compile Include="ListView\CellTextHeader.cs" />
+    <Compile Include="ListView\CellTextNumber.cs" />
+    <Compile Include="ListView\Column.cs" />
+    <Compile Include="ListView\ColumnController.cs" />
+    <Compile Include="ListView\ListView.cs" />
+    <Compile Include="ListView\ListViewGraphics.cs" />
+    <Compile Include="ListView\Selection.cs" />
+    <Compile Include="Printing\PrintPreview.cs" />
+    <Compile Include="SizeChooser.cs" />
+    <Compile Include="WorkBook\CurrentPageChangedArgs.cs" />
+    <Compile Include="WorkBook\WorkBookPage.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="WorkBook\WorkBook.cs" />
+    <Compile Include="WorkBook\WorkBookPageCloseArgs.cs" />
+    <Compile Include="WrapLabel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="WorkBook\Icon.Close12.png" />
+    <EmbeddedResource Include="Printing\InvoiceInternational.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Printing\Icon.Cancel24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Printing\FormObjectTemplate.xsd" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Warehouse.Business\Warehouse.Business.csproj">
+      <Project>{2E0A6AC3-B4FC-42EF-822B-ADAE73E0A7C1}</Project>
+      <Name>Warehouse.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Warehouse.Data\Warehouse.Data.csproj">
+      <Project>{ECAC0A23-4304-47BD-A764-CF2B8202830A}</Project>
+      <Name>Warehouse.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Documents\Georgia\PurchaseReceipt.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Documents\Romania\Invoice.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Documents\Romania\PurchaseReceipt.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Documents\Georgia\SaleReceipt.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Documents\Romania\SaleReceipt.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Documenting\PicturePlaceholder.jpg" />
+    <Content Include="Documents\Armenia\CashReceipt.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Documents\Armenia\KitchenReceipt.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Documents\Armenia\NonFiscalCashReceipt.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Documents\Poland\Invoice.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Documents\Poland\PurchaseReceipt.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Documents\Poland\SaleReceipt.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <Content Include="Documents\WithLots\CreditNote.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Documents\WithLots\Invoice.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Documents\WithLots\SaleReceipt.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Documents\WithSignature\Invoice.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="Printing\PaymentReceipt.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Printing\Invoice.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Printing\ProductionProtocol.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Printing\StockTakingProtocol.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Printing\WasteProtocol.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Printing\TransferReceipt.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Printing\PurchaseReceipt.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Printing\SaleReceipt.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Printing\Report.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

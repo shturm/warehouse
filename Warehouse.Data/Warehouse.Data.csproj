@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{ECAC0A23-4304-47BD-A764-CF2B8202830A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Warehouse.Data</RootNamespace>
+    <AssemblyName>Warehouse.Data</AssemblyName>
+    <SccProjectName>PlasticSCM</SccProjectName>
+    <SccLocalPath>PlasticSCM</SccLocalPath>
+    <SccAuxPath>PlasticSCM</SccAuxPath>
+    <SccProvider>Plastic SCM Source Control Service:{774e58ba-f1b9-40a7-b676-834fa2c220fe}</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\AnyCPU\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin\AnyCPU\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>..\bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <DebugType>full</DebugType>
+    <WarningLevel>4</WarningLevel>
+    <Optimize>false</Optimize>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>..\bin\Release\</OutputPath>
+    <DebugType>none</DebugType>
+    <WarningLevel>4</WarningLevel>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="glib-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
+      <Package>glib-sharp-2.0</Package>
+    </Reference>
+    <Reference Include="Mono.Addins">
+      <HintPath>..\References\Mono.Addins.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Data.Sqlite, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
+      <HintPath>..\References\Mono.Data.Sqlite.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.4.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\MySql.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.6\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Numerics">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Calculator\ExpressionErrorException.cs" />
+    <Compile Include="Calculator\Function.cs" />
+    <Compile Include="Number.cs" />
+    <Compile Include="Calculator\Operand.cs" />
+    <Compile Include="Calculator\Operator.cs" />
+    <Compile Include="Calculator\RPNCalculator.cs" />
+    <Compile Include="Calculator\Token.cs" />
+    <Compile Include="ColumnInfo.cs" />
+    <Compile Include="CommandTimeoutException.cs" />
+    <Compile Include="MixedPriceInItemException.cs" />
+    <Compile Include="DataBinding\BindColumn.cs" />
+    <Compile Include="DataBinding\BindColumnList.cs" />
+    <Compile Include="DataBinding\BindList.cs" />
+    <Compile Include="DataBinding\BindManager.cs" />
+    <Compile Include="DataBinding\BindRow.cs" />
+    <Compile Include="DataBinding\BindRowList.cs" />
+    <Compile Include="DataBinding\CustomListChangedEventArgs.cs" />
+    <Compile Include="DataProviderDescription.cs" />
+    <Compile Include="IErrorHandler.cs" />
+    <Compile Include="IStoragePaths.cs" />
+    <Compile Include="LocationAddedArgs.cs" />
+    <Compile Include="Model\BindingListModel.cs" />
+    <Compile Include="Model\IManageableListModel.cs" />
+    <Compile Include="Model\RowComparer.cs" />
+    <Compile Include="Model\RowMap.cs" />
+    <Compile Include="MySQL\DataProvider.Common.cs" />
+    <Compile Include="MySQL\MySQLDataReaderWrapper.cs" />
+    <Compile Include="ObjectsContainer.cs" />
+    <Compile Include="PlatformHelper.cs" />
+    <Compile Include="SQLite\DataProvider.Common.cs" />
+    <Compile Include="SQLite\RegexpFunction.cs" />
+    <Compile Include="SQLite\SQLiteDataReaderWrapper.cs" />
+    <Compile Include="SQLite\SQLiteHelper.cs" />
+    <Compile Include="SQL\DataProvider.Currency.cs" />
+    <Compile Include="SQL\DataProvider.ECRReceipt.cs" />
+    <Compile Include="SQL\DataProvider.InternalLog.cs" />
+    <Compile Include="SQL\DataProvider.Document.cs" />
+    <Compile Include="SQL\DataProvider.Reservation.cs" />
+    <Compile Include="SQL\DataProvider.Lots.cs" />
+    <Compile Include="SQL\DataProvider.Operation.cs" />
+    <Compile Include="DbMasterScope.cs" />
+    <Compile Include="DbTransaction.cs" />
+    <Compile Include="SQL\DataProvider.PriceRule.cs" />
+    <Compile Include="RowActivatedHandler.cs" />
+    <Compile Include="ServerContext.cs" />
+    <Compile Include="StoragePaths.cs" />
+    <Compile Include="StoragePathsAddin.cs" />
+    <Compile Include="ThreadPool\CustomThreadPool.cs" />
+    <Compile Include="DataCommandEventArgs.cs" />
+    <Compile Include="DataHelper.cs" />
+    <Compile Include="DataQuery.cs" />
+    <Compile Include="DataReaderDisposedEventArgs.cs" />
+    <Compile Include="DbConnectionLostException.cs" />
+    <Compile Include="DbField.cs" />
+    <Compile Include="Enums.cs" />
+    <Compile Include="ExchangePropertyAttribute.cs" />
+    <Compile Include="Model\BasicComparer.cs" />
+    <Compile Include="Model\ComparerBase.cs" />
+    <Compile Include="Model\DummyColumn.cs" />
+    <Compile Include="Model\FilterChangedEventArgs.cs" />
+    <Compile Include="Model\FilterRowEvenArgs.cs" />
+    <Compile Include="Model\FilterPropertiesCollection.cs" />
+    <Compile Include="Model\ICareAboutView.cs" />
+    <Compile Include="Model\ColumnBase.cs" />
+    <Compile Include="Model\IFilterable.cs" />
+    <Compile Include="Model\IListModel.cs" />
+    <Compile Include="Model\ISortable.cs" />
+    <Compile Include="Model\LazyTableColumnManager.cs" />
+    <Compile Include="Model\LazyTableDataRow.cs" />
+    <Compile Include="Model\LazyTableColumnDescriptor.cs" />
+    <Compile Include="Model\LazyTableModel.cs" />
+    <Compile Include="Model\LazyListModel.cs" />
+    <Compile Include="Model\SortChangedEventArgs.cs" />
+    <Compile Include="DbParam.cs" />
+    <Compile Include="FieldTranslationEntry.cs" />
+    <Compile Include="ITranslationProvider.cs" />
+    <Compile Include="Model\WaitingList.cs" />
+    <Compile Include="SQL\DataProvider.ComplexProduction.cs" />
+    <Compile Include="SQL\DataProvider.ComplexRecipe.cs" />
+    <Compile Include="SQL\DataProvider.Configuration.cs" />
+    <Compile Include="SQL\DataProvider.RestaurantOrder.cs" />
+    <Compile Include="SQL\DataProvider.PaymentType.cs" />
+    <Compile Include="SQL\DataProvider.VATGroup.cs" />
+    <Compile Include="SQL\DataProvider.LocationsGroup.cs" />
+    <Compile Include="SQL\DataProvider.PartnersGroup.cs" />
+    <Compile Include="SQL\DataProvider.UsersGroup.cs" />
+    <Compile Include="SQL\DataProvider.ItemsGroup.cs" />
+    <Compile Include="SQL\DataProvider.StockTaking.cs" />
+    <Compile Include="SQL\DataProvider.UsersSecurity.cs" />
+    <Compile Include="SQL\DataProvider.AppLog.cs" />
+    <Compile Include="SQL\DataProvider.CashBook.cs" />
+    <Compile Include="SQL\DataProvider.CompanyRecord.cs" />
+    <Compile Include="SQL\DataProvider.Purchase.cs" />
+    <Compile Include="SQL\DataProvider.Item.cs" />
+    <Compile Include="SQL\DataProvider.Invoice.cs" />
+    <Compile Include="SQL\DataProvider.MeasUnit.cs" />
+    <Compile Include="SQL\DataProvider.Partner.cs" />
+    <Compile Include="SQL\DataProvider.Payment.cs" />
+    <Compile Include="SQL\DataProvider.Location.cs" />
+    <Compile Include="SQL\DataProvider.Sale.cs" />
+    <Compile Include="SQL\DataProvider.Transfer.cs" />
+    <Compile Include="SQL\DataProvider.User.cs" />
+    <Compile Include="DataReaderWrapper.cs" />
+    <Compile Include="SQL\DataProvider.Waste.cs" />
+    <Compile Include="SerializableDictionary.cs" />
+    <Compile Include="SqlHelper.cs" />
+    <Compile Include="SqlSyntaxException.cs" />
+    <Compile Include="DbColumnManager.cs" />
+    <Compile Include="DbColumnAttribute.cs" />
+    <Compile Include="FieldTranslationCollection.cs" />
+    <Compile Include="InsufficientItemAvailabilityException.cs" />
+    <Compile Include="DataFilter.cs" />
+    <Compile Include="SQL\DataProvider.Common.cs" />
+    <Compile Include="DataProvider.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="DataProviderNotInitializedException.cs" />
+    <Compile Include="DataQueryResult.cs" />
+    <Compile Include="InvoiceNumberInUseException.cs" />
+    <Compile Include="SQL\SelectColumnInfo.cs" />
+    <Compile Include="SQL\SelectBuilder.cs" />
+    <Compile Include="SQL\SelectColumnInfoCollection.cs" />
+    <Compile Include="Str.cs" />
+    <Compile Include="ThreadPool\JobWrapper.cs" />
+    <Compile Include="ThreadPool\WorkerWrapper.cs" />
+    <Compile Include="ThreadPool\WorkFinishedEventArgs.cs" />
+    <Compile Include="TransactionContext.cs" />
+    <Compile Include="UpgradeEntry.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MySQL\Scripts\Upgrade_206_300.sql" />
+    <None Include="MySQL\Scripts\Upgrade_300_301.sql" />
+    <None Include="MySQL\Scripts\Upgrade_301_302.sql" />
+    <None Include="MySQL\Scripts\Upgrade_302_303.sql" />
+    <None Include="MySQL\Scripts\Upgrade_303_304.sql" />
+    <None Include="MySQL\Scripts\Upgrade_304_305.sql" />
+    <None Include="MySQL\Scripts\Upgrade_305_306.sql" />
+    <None Include="MySQL\Scripts\Upgrade_306_307.sql" />
+    <EmbeddedResource Include="SQLite\Scripts\Blank_307.sql.gz" />
+    <EmbeddedResource Include="SQLite\Scripts\SampleRestaurant_307.sql.gz" />
+    <EmbeddedResource Include="SQLite\Scripts\SampleStore_307.sql.gz" />
+    <EmbeddedResource Include="SQLite\Scripts\Blank_307.sql" />
+    <EmbeddedResource Include="SQLite\Scripts\SampleRestaurant_307.sql" />
+    <EmbeddedResource Include="SQLite\Scripts\SampleStore_307.sql" />
+    <EmbeddedResource Include="MySQL\Scripts\Blank_307.sql" />
+    <EmbeddedResource Include="MySQL\Scripts\SampleRestaurant_307.sql" />
+    <EmbeddedResource Include="MySQL\Scripts\SampleStore_307.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="sqlite3.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MySQL\Scripts\Blank_307.sql.gz" />
+    <EmbeddedResource Include="MySQL\Scripts\SampleRestaurant_307.sql.gz" />
+    <EmbeddedResource Include="MySQL\Scripts\SampleStore_307.sql.gz" />
+    <EmbeddedResource Include="MySQL\Scripts\Upgrade_206_300.sql.gz" />
+    <EmbeddedResource Include="MySQL\Scripts\Upgrade_300_301.sql.gz" />
+    <EmbeddedResource Include="MySQL\Scripts\Upgrade_301_302.sql.gz" />
+    <EmbeddedResource Include="MySQL\Scripts\Upgrade_302_303.sql.gz" />
+    <EmbeddedResource Include="MySQL\Scripts\Upgrade_303_304.sql.gz" />
+    <EmbeddedResource Include="MySQL\Scripts\Upgrade_304_305.sql.gz" />
+    <EmbeddedResource Include="MySQL\Scripts\Upgrade_305_306.sql.gz" />
+    <EmbeddedResource Include="MySQL\Scripts\Upgrade_306_307.sql.gz" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!--<Import Project="$(SolutionDir)\.nuget\nuget.targets" />-->
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

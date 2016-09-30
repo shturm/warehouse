@@ -1,0 +1,74 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>Change database</title>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1251">
+<META http-equiv=DESCRIPTION content="">
+<META http-equiv=KEYWORDS content="">
+<META http-equiv=GENERATOR content="MPS HTMLGATE FREE">
+<STYLE>
+A {COLOR: blue; TEXT-DECORATION: underline}
+A:hover {color: #ff8040; TEXT-DECORATION: underline}
+A:active {color: #ff8040; text-decoration: underline}
+</STYLE>
+</head>
+
+<body><script language="JavaScript" type="text/JavaScript">
+function syn(){
+if(parent.nav.tree){
+ if(parent.nav.tree.loaded){
+  parent.nav.tree.selectNode(3);
+ }else{
+  setTimeout("syn()",500);
+}
+  }else{
+  setTimeout("syn()",500);
+  }}
+if(parent!=self){
+  setTimeout("syn()",100);
+}else{
+  document.write('<BR><table width="35%" border="0" align="center" cellpadding="5" cellspacing="1" bgcolor="#666666"><tr><td align="center" bgcolor="#FFFFFF">');
+  document.write('<a href="../index.htm#page=EditDBConnection.html">Show Navigation Frame</a>'); 
+  document.write('</td></tr></table><BR>');
+}
+</script> 
+
+
+<P><STRONG><FONT size=5>Connecting to MySQL Database</FONT></STRONG></P>
+<P><STRONG>Use the Connecting to MySQL Database</STRONG> window to change the 
+active company. This feature allows you to change the company you are working 
+with and load data and operations of another company. Generally, each database 
+contains data of a single company, thus changing the database changes the active 
+company.</P>
+<P><IMG alt="" src="Pictures/EditDBConnection.png"></P>
+<P>The text field <EM><B>Server</B></EM> contains the location of the database 
+server (IP address or machine name) to be used. In the <EM><B>User </B></EM>and 
+<EM><B>Password</B></EM> fields fill in the corresponding username and password 
+for server access. The drop-down list <STRONG><I>Database</I></STRONG> contains 
+all databases on the selected server.</P>
+<P>Click the <STRONG><I>Test</I></STRONG> button to test the connection with the 
+server and to check whether the selected database is valid and can be loaded. 
+</P>
+<P>To create a new database, make sure you are connected to the server, type the 
+name of the new database in the <EM><B>Database</B></EM> field and click the 
+<EM><B>Create</B></EM> button.</P>
+<P><STRONG>Connecting to SQLite Database (Experimental)</STRONG></P>
+<P><IMG alt="" src="Pictures/Changedatabase_sqlite1.png"></P>
+<P>The <STRONG><EM>Create</EM></STRONG> button opens a window to creat a new 
+base. There are an opportunity for <EM>blank datebase, sample datebase and 
+restor from IncoCloud</EM>.</P>
+<P><STRONG>Creat a Blank datebase:</STRONG></P>
+<P><IMG alt="" src="Pictures/Changedatabase_sqlite2.png"></P>
+<P><STRONG>Creat a Sample database:</STRONG></P>
+<P><IMG alt="" src="Pictures/Changedatabase_sqlite3.png"></P>
+<P><STRONG>Restor from IncoCloud:</STRONG></P>
+<P><STRONG><IMG alt="" src="Pictures/Changedatabase_sqlite4.png"></STRONG></P>
+<P>&nbsp;</P>
+<HR>
+
+<P style="TEXT-ALIGN: center" align=center>�2006-2015 
+<EM><B>Microinvest</B></EM>, All rights reserved</P>
+
+</BODY>
+
+</html>

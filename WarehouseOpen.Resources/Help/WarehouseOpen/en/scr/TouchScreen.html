@@ -1,0 +1,402 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"> 
+ <html>
+<head>
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=windows-1251">
+  <title>Touch Screen</title>
+<STYLE>
+A {COLOR: blue; TEXT-DECORATION: underline}
+A:hover {color: #ff8040; TEXT-DECORATION: underline}
+A:active {color: #ff8040; text-decoration: underline}
+</STYLE></head>
+
+<body><script language="JavaScript" type="text/JavaScript">
+function syn(){
+if(parent.nav.tree){
+ if(parent.nav.tree.loaded){
+  parent.nav.tree.selectNode(39);
+ }else{
+  setTimeout("syn()",500);
+}
+  }else{
+  setTimeout("syn()",500);
+  }}
+if(parent!=self){
+  setTimeout("syn()",100);
+}else{
+  document.write('<BR><table width="35%" border="0" align="center" cellpadding="5" cellspacing="1" bgcolor="#666666"><tr><td align="center" bgcolor="#FFFFFF">');
+  document.write('<a href="../index.htm#page=TouchScreen.html">Show Navigation Frame</a>'); 
+  document.write('</td></tr></table><BR>');
+}
+</script>  
+
+<P><STRONG><FONT size=5>Touch Screen</FONT></STRONG></P>
+<P>The <STRONG>Touch Screen</STRONG> module is the easiest way to make sales 
+from a touch screen device. Using this module you can prepare a sale by first 
+selecting the location at which the sale will take place. Then select the 
+customer (partner) to which the items will be transferred, and then select the 
+items that will be transferred. The usage of this module is very similar to the 
+usage of the <A href="Sale.html">Sales</A> screen, but 
+it is much more convenient to use in restaurant or small shops environments 
+where sales must be done quickly and without the use of a keyboard.</P>
+<P>Touch Screen decreases quantities of chosen items in you warehouse and 
+transfers them to the customer. The operation is completed by payment and 
+issuing of a document. The operation represents the accounting term 
+�Expenses�.</P>
+<P 
+style="TEXT-INDENT: -0.25in; MARGIN-LEFT: 0.5in"><B>1.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</B><B>Launching</B></P>
+<P>To open the Touch Screen window choose from the menu Operations-&gt;Touch 
+Screen or choose from the Settings window (Other-&gt;Settings or click the <IMG alt=IconSetup.png src="Pictures/IconSetup.png" width=32 height=32 v:shapes="Picture_x0020_2">&nbsp;icon) 
+Special-&gt;Startup page to be Touch Screen. This way every time a user logs in 
+the Touch Screen window will open. This is very useful for restaurants where 
+many people use the same device and need to log in and out of the system 
+frequently.<B></B></P>
+<P 
+style="TEXT-INDENT: -0.25in; MARGIN-LEFT: 0.5in"><B>2.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</B><B>Configuration</B></P>
+<P>The first time the Touch Screen module is used you need to configure it with 
+which locations, customers (partners), and items the touch screen will be 
+working. The entities chosen will represent the sub set of all the available 
+entities in the system that will be used. There is no practical limitation on 
+how many of each of these entities can be used.</P>
+<P 
+style="TEXT-INDENT: -22.5pt; MARGIN-LEFT: 58.5pt"><B>2.1&nbsp;&nbsp;&nbsp;&nbsp; 
+</B><B>Permissions</B></P>
+<P style="TEXT-INDENT: -22.5pt; MARGIN-LEFT: 58.5pt">The first time the Touch 
+Screen is used it has to be configured. To do that you need to be logged with a 
+user that has the �Operations-&gt;Touch Screen-&gt;Edit User Interface� 
+permission enabled at the �Edit-&gt;Administration-&gt;Permissions ...� menu as 
+shown below.</P>
+<P style="TEXT-INDENT: -22.5pt; MARGIN-LEFT: 58.5pt"><IMG alt=TouchScreenPermissions.png src="Pictures/TouchScreenPermissions.png" v:shapes="_x0000_s1040"></P>
+<P style="TEXT-INDENT: -22.5pt; MARGIN-LEFT: 58.5pt">The �Edit User Interface� 
+permission allows the user to add, remove or edit how the Locations, Customers 
+and Items are presented. It is a good practise to remove this permission for 
+regular users that does not need it.</P>
+<P 
+style="TEXT-INDENT: -22.5pt; MARGIN-LEFT: 58.5pt"><B>2.2&nbsp;&nbsp;&nbsp;&nbsp; 
+</B><B>Locations</B></P>
+<P style="TEXT-INDENT: -22.5pt; MARGIN-LEFT: 58.5pt"><IMG alt="" src="Pictures/TSEditLocations.png"></P>
+<P style="TEXT-INDENT: -22.5pt; MARGIN-LEFT: 58.5pt">To edit the Locations open 
+the �Edit Locations� action tab. From there you can:</P>
+<P 
+style="TEXT-INDENT: -22.5pt; MARGIN-LEFT: 58.5pt">-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<B>Add</B> new location to the screen. Click Add and then click on the place you 
+want to add the location(s). After that a screen will let you pick the 
+location(s) you want to be added or create a new one and then choose it.</P>
+<P 
+style="TEXT-INDENT: -22.5pt; MARGIN-LEFT: 58.5pt">-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<B>Create a Location Group</B>. Create a location group out of a location by 
+clicking �Create Group� and clicking on a location that you want to be converted 
+to a group. This is useful for restaurants where you usually have one location 
+(the restaurant itself) and many tables. This way you can enter the group and a 
+new space will be open where the locations representing the tables can be added. 
+The bigger benefit here is that orders can be placed on each table but when they 
+are finished they are converted to sales and the location for the sale is the 
+location group at the beginning. This way the stock quantities and availability 
+doesn�t need to be tracked per table but per the restaurant. Location groups can 
+also be nested within each other. This is useful for scenarios like a restaurant 
+with two or more floors where you have a root group (the restaurant) and then a 
+group inside it for each floor and then locations in each floor group for each 
+table.</P>
+<P 
+style="TEXT-INDENT: -22.5pt; MARGIN-LEFT: 58.5pt">-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<B>Remove</B> a location. Remove a group or a location by clicking �Remove� and 
+then clicking on the location that needs to be removed. All the orders that use 
+the location being removed must be finished or cancelled before removing the 
+location. All locations from a group must be removed before removing the group 
+itself.</P>
+<P 
+style="TEXT-INDENT: -22.5pt; MARGIN-LEFT: 58.5pt">-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<B>Move</B> a location. Move or reorganize a group or a location by clicking 
+�Move� and then dragging the location or click on a location and then use the 
+move panel in the action tab to move the location.</P>
+<P 
+style="TEXT-INDENT: -22.5pt; MARGIN-LEFT: 58.5pt">-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<B>Rotate</B> a location. Rotate a group or a location by 90 degrees by clicking 
+�Rotate� and then clicking on the location you want rotated.</P>
+<P 
+style="TEXT-INDENT: -22.5pt; MARGIN-LEFT: 58.5pt">-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<B>Resize</B> a location. Resize a group or a location by clicking �Resize�, 
+then clicking on the location you want resized, and then change its size by 
+using the resize panel in the action tab.</P>
+<P style="TEXT-INDENT: -22.5pt; MARGIN-LEFT: 58.5pt">To continue to the 
+Customers screen you need to unselect any actions you may have chosen from the 
+actions tab and then select a location by clicking on it.</P>
+<P 
+style="TEXT-INDENT: -22.5pt; MARGIN-LEFT: 58.5pt"><B>2.3&nbsp;&nbsp;&nbsp;&nbsp; 
+</B><B>Customers</B></P>
+<P style="TEXT-INDENT: -22.5pt; MARGIN-LEFT: 58.5pt"><IMG alt="" src="Pictures/TSEditCustomers.png"></P>
+<P style="TEXT-INDENT: -22.5pt; MARGIN-LEFT: 58.5pt">To edit the Customers open 
+the �Edit Customers� action tab. From there you can:</P>
+<P 
+style="TEXT-INDENT: -22.5pt; MARGIN-LEFT: 58.5pt">-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<B>Add</B> new customer to the screen. Click Add after that a screen will let 
+you pick the customer(s) you want to be added or create a new one and then 
+choose it.</P>
+<P 
+style="TEXT-INDENT: -22.5pt; MARGIN-LEFT: 58.5pt">-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<B>Remove</B> a customer. Remove a customer by selecting the customer and 
+clicking �Remove�. All the orders that use the customer being removed must be 
+finished or cancelled before removing the customer.</P>
+<P 
+style="TEXT-INDENT: -22.5pt; MARGIN-LEFT: 58.5pt">-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<B>Move</B> a customer. Move or reorganize a customer by clicking �Move� click 
+on a customer and then use the move panel in the action tab to move the customer 
+up or down. The Customer that is on the top is marked as being the �Default 
+one�. The Default customer will be used automatically when a location is 
+selected if there are no other orders saved for the location. This behaviour can 
+be changed from the settings tab �Touch Screen�.</P>
+<P style="TEXT-INDENT: -22.5pt; MARGIN-LEFT: 58.5pt">To continue to the Items 
+screen you need to unselect any actions you may have chosen from the actions tab 
+and then select a customer by double clicking on it or by selecting it and then 
+pressing �Select�.</P>
+<P 
+style="TEXT-INDENT: -22.5pt; MARGIN-LEFT: 58.5pt"><B>2.4&nbsp;&nbsp;&nbsp;&nbsp; 
+</B><B>Items</B></P>
+<P style="TEXT-INDENT: -22.5pt; MARGIN-LEFT: 58.5pt"><IMG alt="" src="Pictures/TSEditItems.png"></P>
+<P style="TEXT-INDENT: -22.5pt; MARGIN-LEFT: 58.5pt">To edit the Items open the 
+�Edit Items� action tab. From there you can:</P>
+<P 
+style="TEXT-INDENT: -22.5pt; MARGIN-LEFT: 58.5pt">-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<B>Add</B> new item to the screen. Click Add and then click on the place you 
+want to add the item(s). After that a screen will let you pick the item(s) you 
+want to be added or create a new one and then choose it.</P>
+<P 
+style="TEXT-INDENT: -22.5pt; MARGIN-LEFT: 58.5pt">-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<B>Add Group</B>. Create an item group by clicking �Add Group� and clicking on 
+an empty place where you want the group to be placed. This is useful when there 
+needs to be many items on the screen. This way you can enter the group and a new 
+space will be open where more items or groups can be added. This is also useful 
+for scenarios when you want to organize the items in groups for example you can 
+have groups like: �alcoholic drinks�, �sandwiches� and so on.</P>
+<P style="MARGIN-LEFT: 58.5pt"><B>Note: </B>To change the name of already 
+created group select �Add Group� and then select the group you want to edit. The 
+�Create Group� dialog will be shown and the name of the selected group will be 
+entered. Then you can edit it and save the changes.</P>
+<P 
+style="TEXT-INDENT: -22.5pt; MARGIN-LEFT: 58.5pt">-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<B>Remove</B> an item. Remove a group or an item by clicking �Remove� and then 
+clicking on the item that needs to be removed. All items from a group must be 
+removed before removing the group itself.</P>
+<P 
+style="TEXT-INDENT: -22.5pt; MARGIN-LEFT: 58.5pt">-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<B>Move</B> an item. Move or reorganize a group or an item by clicking �Move� 
+and then dragging the item or click on a item and then use the move panel in the 
+action tab to move the item.</P>
+<P 
+style="TEXT-INDENT: -22.5pt; MARGIN-LEFT: 58.5pt">-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<B>Change the icon</B> of an item. Change the icon displayed on the item by 
+clicking �Icon� and then clicking on the item you want to change. After that a 
+screen will appear that will allow you to choose a new image file to be used or 
+don�t use any and show only the name of the item by clicking �None�.</P>
+<P 
+style="TEXT-INDENT: -22.5pt; MARGIN-LEFT: 58.5pt">-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<B>Change the colour</B> of an item. Change the colour of an item by clicking 
+�Color� and then clicking on the item you want to change. After that a screen 
+will appear that will allow you to choose a new background color for the item or 
+the group or use the default one by clicking �Default�.</P>
+<P 
+style="TEXT-INDENT: -22.5pt; MARGIN-LEFT: 58.5pt"><B>2.5&nbsp;&nbsp;&nbsp;&nbsp; 
+</B><B>Editing the grids</B></P>
+<P style="TEXT-INDENT: -22.5pt; MARGIN-LEFT: 58.5pt"><IMG alt="" src="Pictures/TSEditGrid.png"></P>
+<P style="TEXT-INDENT: -22.5pt; MARGIN-LEFT: 58.5pt">While the locations or the 
+items are shown there is another action tab available called �Edit Grid�. Inside 
+that tab there are controls to change the width and the height of the respective 
+grids.</P>
+<P 
+style="TEXT-INDENT: -22.5pt; MARGIN-LEFT: 58.5pt">-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+In the Locations window this will change the space available for locations on 
+the screen. Please note that this is a �virtual� space and can be bigger than 
+the space displayed. You can see the rest of the space by clicking on an empty 
+space and dragging around. This is useful when you want to place more locations 
+on the screen.</P>
+<P 
+style="TEXT-INDENT: -22.5pt; MARGIN-LEFT: 58.5pt">-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+In the Items window this will change the number of items shown on the screen. 
+This way the space shown can be adjusted so if you want to put more items you 
+can increase the size or to make the item buttons bigger or if you don�t have 
+many items you can make the grid smaller.</P>
+<P 
+style="TEXT-INDENT: -22.5pt; MARGIN-LEFT: 58.5pt"><B>2.6&nbsp;&nbsp;&nbsp;&nbsp; 
+</B><B>Other settings</B></P>
+<P style="TEXT-INDENT: -22.5pt; MARGIN-LEFT: 58.5pt">The rest of the module 
+settings are available in the �Other-&gt;Settings ...� screen in the �Touch 
+Screen� tab.</P>
+<P style="TEXT-INDENT: -22.5pt; MARGIN-LEFT: 58.5pt"><IMG alt=TouchScreenSettings.png src="Pictures/TouchScreenSettings.png" v:shapes="Picture_x0020_3"></P>
+<P 
+style="TEXT-INDENT: -0.25in; MARGIN-LEFT: 0.5in"><B>3.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</B><B>Usage</B></P>
+<P style="MARGIN-LEFT: 0.5in">Once the Touch Screen module is configured a 
+regular user which does not have the �Edit User Interface� permission can enter 
+the module and start working. When a user does not have the �Edit User 
+Interface� permission enabled the action tabs �Edit Locations�, �Edit 
+Customers�, �Edit Items� and �Edit Grid� will not be present. This way the user 
+interface is safe from accidental changes and the confusion for users that does 
+not need this functionality is minimized.</P>
+<P 
+style="TEXT-INDENT: 0in; MARGIN-LEFT: 0.5in"><B>3.1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</B><B>Selecting Location</B></P>
+<P style="MARGIN-LEFT: 0.5in">The first thing that needs to be selected is which 
+location will be used for the operation.</P>
+<P style="MARGIN-LEFT: 0.5in">If you have the option in the settings window 
+�Auto choose single locations� and there is only one location it is 
+automatically selected and the user is forwarded to the next screen, to choose a 
+customer. This is very useful for small shops that are making sales on behalf of 
+only one location and does not need to choose it every time the user logs 
+in.</P>
+<P style="MARGIN-LEFT: 0.5in">If there is a single location group on the main 
+screen and the option �Auto choose single locations� enabled in the settings 
+window the location group will be automatically entered and the locations that 
+are in it will be shown instead of showing a screen with only one location 
+group. This is a useful function for restaurants that have a location group for 
+the restaurant and locations in it that represent the tables, or optionally two 
+or more location groups for each floor with locations in them for the tables on 
+each of the floors.</P>
+<P style="MARGIN-LEFT: 0.5in"><B>Note:</B> If there is an order already placed 
+on a location and the currently logged user can see it (it is either ordered by 
+the current user or the current user has the �Manage Operators� permission set) 
+then the location will be marked with the partner icon&nbsp;<IMG alt=Partner16.png src="Pictures/Partner16.png" width=16 height=16 v:shapes="_x0000_s1038">.</P>
+<P style="MARGIN-LEFT: 0.5in">After the location is selected the next step is to 
+select a customer.</P>
+<P 
+style="TEXT-INDENT: 0in; MARGIN-LEFT: 0.5in"><B>3.2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</B><B>Selecting a customer</B></P>
+<P style="MARGIN-LEFT: 0.5in">A customer (partner) represents the person on 
+which behalf the sale will be finalized to. This can be a group of people with a 
+single bill in the restaurant case.</P>
+<P style="MARGIN-LEFT: 0.5in">If the option �Auto choose default customer� is 
+set and there are no other customers on the table that the current user can see 
+the default customer (the one ordered at the top of the list of customers) will 
+be used and the user will be forwarded to the next screen.</P>
+<P style="MARGIN-LEFT: 0.5in">If the option �Auto choose default customer� is 
+set and there is a single customers on the table that the current user can see 
+then this customer is used and the user is forwarded to the next screen.</P>
+<P style="MARGIN-LEFT: 0.5in">If there are more than one customer on the table 
+that the current user can see then the list of customers is shown to the user to 
+let him pick the customers he wants to work with.</P>
+<P style="MARGIN-LEFT: 0.5in">To add a new customer press the �New� button on 
+the �Customer� action tab. A list of the preselected customers will appear. If 
+you want to add a customer that is not present there press the �Other� button on 
+the dialog and a new dialog will appear with all the partners available in the 
+system. Additionally you can create a new partner from this dialog and use it by 
+pressing �OK�.</P>
+<P style="MARGIN-LEFT: 0.5in">To select the user and go to the next screen 
+double click on the user or select the user and press the �Select� button.</P>
+<P style="MARGIN-LEFT: 0.5in">Note: If the currently logged user has the �Manage 
+Operators� permission he can see and manage the orders made by other 
+operators.<IMG alt="" src="Pictures/TouchScreen.png"></P>
+<P 
+style="TEXT-INDENT: 0in; MARGIN-LEFT: 0.5in"><B>3.3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</B><B>Selecting items</B></P>
+<P style="TEXT-INDENT: 0in; MARGIN-LEFT: 0.5in">&nbsp;</P>
+<P style="MARGIN-LEFT: 0.5in">To add items to the operation press the button of 
+the item you want to add. If the item is contained in an item group then you can 
+enter the item group by pressing the button of the item group. If you want to go 
+back to the item group that contains the current group you can do that by 
+pressing the tab representing the name of the group located below the items.</P>
+<P style="MARGIN-LEFT: 0.5in">If the option �Combine operation details while 
+ordering� is enabled then when pressing on an item button multiple times the 
+items will be combined in to a single order detail and only the quantity of the 
+items ordered will be increased. If the option �Combine operation details while 
+ordering� is disabled then every time an item button is pressed a new item 
+detail will be created.</P>
+<P style="MARGIN-LEFT: 0.5in"><B>Note: </B>If the operation contains items from 
+previous orders and the user orders of the same item again the items will not be 
+combined with the items ordered before even if the �Combine operation details 
+while ordering� option is enabled. The reason for this is to make sure that if 
+the user has printed a non fiscal receipt for the saved order and he prints a 
+new non fiscal receipt for the newly ordered items the new non fiscal receipt 
+will not contain already printed items. This will guarantee that the sum of all 
+the non fiscal receipts is not greater than the operation total.</P>
+<P 
+style="TEXT-INDENT: 0in; MARGIN-LEFT: 0.5in"><B>3.4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</B><B>Editing operation details</B></P>
+<P style="TEXT-INDENT: 0in; MARGIN-LEFT: 0.5in"><IMG alt="" src="Pictures/TSEditDetails.png"></P>
+<P style="MARGIN-LEFT: 0.5in">To edit or delete an order detail press on the 
+detail you want to edit. A new screen will appear on the right allowing you to 
+edit the quantity and discount of the current item. To delete the item detail 
+you need to enter a quantity 0 for the detail and save the operation. If 
+you&nbsp; press on the Modifiers button you will be able to select&nbsp; from a 
+set of labels that allow you to add additional information to the order for the 
+kitchen personel . For example you can add&nbsp; labels like "No Salt" so the 
+coock in the kitchen will know not to add any salt to the selected item. There 
+are a set of predefined labels available to you but you can always add or remove 
+labels using the buttons on the bottom of the details screen.Once finished with 
+changing the modifiers you can press the Modifiers button again to show the 
+quantity and price information for the selected detail.</P>
+<P 
+style="TEXT-INDENT: 0in; MARGIN-LEFT: 0.5in"><B>3.5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</B><B>Saving and finishing the operation</B></P>
+<P style="MARGIN-LEFT: 0.5in">To save the order from the actions tab �Operation� 
+press the �Order� button.</P>
+<P style="MARGIN-LEFT: 0.5in">To save the order and print a non fiscal receipt 
+for the newly ordered items press �Order and Print�.</P>
+<P style="MARGIN-LEFT: 0.5in">To save the order as a sale, close the order and 
+print a fiscal receipt press �Finish�.</P>
+<P style="MARGIN-LEFT: 0.5in">To cancel the order press �Cancel�.</P>
+<P style="MARGIN-LEFT: 0.5in">To logout press �Logout�.</P>
+<P style="MARGIN-LEFT: 0.5in"><B>Note 1: </B>If the option �Combine operation 
+details on finish� is selected then all the same items ordered will be combined 
+before saving the sale and printing the non fiscal receipt.</P>
+<P style="MARGIN-LEFT: 0.5in"><B>Note 2:</B> If the option �Auto logout on 
+operation save� is selected then if any of the buttons �Order�, �Order and 
+Print�, �Finish� or �Cancel� is pressed and confirmed the current user will be 
+automatically logged out after the operation is saved. This is useful for 
+restaurants or other busy places where many operators use the same terminal and 
+need to save and logout their orders as fast as they can.</P>
+<P 
+style="TEXT-INDENT: 0in; MARGIN-LEFT: 0.5in"><B>3.6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</B><B>Transferring a customer</B></P>
+<P style="TEXT-INDENT: 0in; MARGIN-LEFT: 0.5in"><IMG alt="" src="Pictures/TSTransferCustomer.png"></P>
+<P style="MARGIN-LEFT: 0.5in">In some cases when there is already an order you 
+may want to change some of the order properties. For example you may want to 
+change the location if the customer has decided to move to another table. you 
+may want to join two orders if two customers want to pay the bill together or 
+you may want to split an order if the customers on the table have decided to pay 
+separately. you may want to change the customer if the customer has decided that 
+he needs an invoice and the customer details have to be entered. You may want to 
+change the user that is servicing a particular order if his or her shift has 
+ended or if the customer has moved to a table serviced by another user.</P>
+<P style="MARGIN-LEFT: 0.5in">In such cases a useful function is the �Transfer� 
+button from the �Customer� action tab. In order to use this functionality you 
+need to follow the following steps:</P>
+<P style="MARGIN-LEFT: 0.5in">- Select a customer that you want to transfer</P>
+<P style="MARGIN-LEFT: 0.5in">- Press the �Transfer� button</P>
+<P style="MARGIN-LEFT: 0.5in">- Select a destination location</P>
+<P style="MARGIN-LEFT: 0.5in">- Select a destination customer or add a new one 
+by pressing �New�</P>
+<P style="MARGIN-LEFT: 0.5in">- From the dialog shown select destination user 
+(if the currently logged user has the �Manage Operators� permission). Then use 
+the buttons <IMG alt=Right24.png src="Pictures/Right24.png" v:shapes="Picture_x0020_4"> and <IMG alt=Left24.png src="Pictures/Left24.png" v:shapes="Picture_x0020_5"> to move a single item between the selected operation 
+details. Or use the <IMG alt=RightRight24.png src="Pictures/RightRight24.png" v:shapes="Picture_x0020_6"> and <IMG alt=LeftLeft24.png src="Pictures/LeftLeft24.png" v:shapes="Picture_x0020_7"> to move all 
+the items from the selected operation details.</P>
+<P style="MARGIN-LEFT: 0.5in">- Press �OK� to save the changes</P>
+<P 
+style="TEXT-INDENT: 0in; MARGIN-LEFT: 0.5in"><B>3.7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</B><B>Creating reports</B></P>
+<P style="TEXT-INDENT: 0in; MARGIN-LEFT: 0.5in"><IMG alt="" src="Pictures/TSReports.png"></P>
+<P style="MARGIN-LEFT: 0.5in">The "Reports" action tab gives us the ability to 
+quickly display or print information about the recent activity on the system. 
+The reports available are:</P>
+<P 
+style="TEXT-INDENT: -22.5pt; MARGIN-LEFT: 58.5pt">-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<B>Orders</B> Get a list of all the currently pending orders. If the operator 
+has the "Manage Operators" permission then the report can be filtered by user or 
+a report for all users can be created. If the operator does not have that 
+permission enabled the the report shows only the orders for the current 
+user.</P>
+<P 
+style="TEXT-INDENT: -22.5pt; MARGIN-LEFT: 58.5pt">-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<B>Sales</B> Get a list of all the finalized sales. If the operator has the 
+"Manage Operators" permission then the report can be filtered by user or a 
+report for all users can be created. If the operator does not have that 
+permission enabled the the report shows only the sales made from the current 
+user.</P>
+<P style="TEXT-ALIGN: center" align=center>&nbsp;</P>
+<HR>
+
+<P style="TEXT-ALIGN: center" align=center>�2006-2015 <EM><B>Microinvest</B></EM>, 
+All rights reserved</P>
+</BODY>
+</html>

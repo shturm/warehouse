@@ -1,0 +1,240 @@
+<?xml version="1.0"?>
+<Form formName="PaymentReceipt" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:///e:/Projects/Work/Warehouse/Warehouse.Component/Documenting/FormObjectTemplate.xsd">
+  <Section style="vpadding:10">
+    <VBox style="width:100%;innervspacing:10">
+      <HBox style="width:100%">
+        <VBox style="width:50%">
+          <TextBox sourceField="receiptTitle" font="size:14;underline:true;bold:true" style="width:100%;halign:center"/>
+          <TextBox sourceField="receiptSubTitle" font="size:12;bold:true" style="width:100%;halign:center"/>
+        </VBox>
+        <HBox style="width:10" />
+        <HBox style="width:50%">
+          <HBox style="width:100%" />
+          <TextBox sourceField="receiptNumber" sourceFormat="numberFormat" font="size:10;bold:true" style="width:100%"/>
+          <HBox style="width:20" />
+          <TextBox sourceField="receiptDate" sourceFormat="dateFormat" font="size:10;bold:true" style="width:100%"/>
+        </HBox>
+      </HBox>
+      <HBox style="width:100%">
+        <Table style="width:50%;innerborder:0;innerhspacing:20" headerStyle="width:100%;vfill:true;bgcolor:#D4D0C8" 
+               itemStyle="width:100%;vfill:true;allowvbreak:false" footerStyle="width:100%;vfill:true;bgcolor:#D4D0C8">
+          <Columns>
+            <Column />
+            <Column style="width:100%" />
+          </Columns>
+          <Rows>
+            <Row style="innervborder:0;spacing:0;innerhspacing:20">
+              <Cell>
+                <TextBox sourceField="recipientNameLabel" />
+              </Cell>
+              <Cell style="width:100%">
+                <TextBox sourceField="recipientName" wrap="True" font="size:8;bold:true" style="width:100%" />
+              </Cell>
+            </Row>
+            <Row style="innervborder:0;spacing:0;innerhspacing:20">
+              <Cell>
+                <TextBox sourceField="recipientNumberLabel" />
+              </Cell>
+              <Cell style="width:100%">
+                <TextBox sourceField="recipientNumber" wrap="True" font="size:8;bold:true" style="width:100%" />
+              </Cell>
+            </Row>
+            <Row style="innervborder:0;spacing:0;innerhspacing:20">
+              <Cell>
+                <TextBox sourceField="recipientCityLabel" />
+              </Cell>
+              <Cell style="width:100%">
+                <TextBox sourceField="recipientCity" wrap="True" font="size:8;bold:true" style="width:100%" />
+              </Cell>
+            </Row>
+            <Row style="innervborder:0;spacing:0;innerhspacing:20">
+              <Cell>
+                <TextBox sourceField="recipientAddressLabel" />
+              </Cell>
+              <Cell style="width:100%">
+                <TextBox sourceField="recipientAddress" wrap="True" font="size:8;bold:true" style="width:100%" />
+              </Cell>
+            </Row>
+            <Row style="innervborder:0;spacing:0;innerhspacing:20">
+              <Cell>
+                <TextBox sourceField="recipientTelephoneLabel" />
+              </Cell>
+              <Cell style="width:100%">
+                <TextBox sourceField="recipientTelephone" wrap="True" font="size:8;bold:true" style="width:100%" />
+              </Cell>
+            </Row>
+            <Row style="innervborder:0;spacing:0;innerhspacing:20">
+              <Cell>
+                <TextBox sourceField="recipientLiablePersonLabel" />
+              </Cell>
+              <Cell style="width:100%">
+                <TextBox sourceField="recipientLiablePerson" wrap="True" font="size:8;bold:true" style="width:100%" />
+              </Cell>
+            </Row>
+          </Rows>
+        </Table>
+        <HBox style="width:10" />
+        <Table style="width:50%;innerborder:0;innerhspacing:20" headerStyle="width:100%;vfill:true;bgcolor:#D4D0C8" 
+               itemStyle="width:100%;vfill:true;allowvbreak:false" footerStyle="width:100%;vfill:true;bgcolor:#D4D0C8">
+          <Columns>
+            <Column />
+            <Column style="width:100%" />
+          </Columns>
+          <Rows>
+            <Row style="innervborder:0;spacing:0;innerhspacing:20">
+              <Cell>
+                <TextBox sourceField="supplierNameLabel" />
+              </Cell>
+              <Cell style="width:100%">
+                <TextBox sourceField="supplierName" wrap="True" font="size:8;bold:true" style="width:100%" />
+              </Cell>
+            </Row>
+            <Row style="innervborder:0;spacing:0;innerhspacing:20">
+              <Cell>
+                <TextBox sourceField="supplierNumberLabel" />
+              </Cell>
+              <Cell style="width:100%">
+                <TextBox sourceField="supplierNumber" wrap="True" font="size:8;bold:true" style="width:100%" />
+              </Cell>
+            </Row>
+            <Row style="innervborder:0;spacing:0;innerhspacing:20">
+              <Cell>
+                <TextBox sourceField="supplierCityLabel" />
+              </Cell>
+              <Cell style="width:100%">
+                <TextBox sourceField="supplierCity" wrap="True" font="size:8;bold:true" style="width:100%" />
+              </Cell>
+            </Row>
+            <Row style="innervborder:0;spacing:0;innerhspacing:20">
+              <Cell>
+                <TextBox sourceField="supplierAddressLabel" />
+              </Cell>
+              <Cell style="width:100%">
+                <TextBox sourceField="supplierAddress" wrap="True" font="size:8;bold:true" style="width:100%" />
+              </Cell>
+            </Row>
+            <Row style="innervborder:0;spacing:0;innerhspacing:20">
+              <Cell>
+                <TextBox sourceField="supplierTelephoneLabel" />
+              </Cell>
+              <Cell style="width:100%">
+                <TextBox sourceField="supplierTelephone" wrap="True" font="size:8;bold:true" style="width:100%" />
+              </Cell>
+            </Row>
+            <Row style="innervborder:0;spacing:0;innerhspacing:20">
+              <Cell>
+                <TextBox sourceField="supplierLiablePersonLabel" />
+              </Cell>
+              <Cell style="width:100%">
+                <TextBox sourceField="supplierLiablePerson" wrap="True" font="size:8;bold:true" style="width:100%" />
+              </Cell>
+            </Row>
+          </Rows>
+        </Table>
+      </HBox>
+      <TextBox sourceField="pointOfSale" sourceFormat="pointOfSaleFormat" font="size:8;bold:true" style="width:100%;padding:2"/>
+    </VBox>
+  </Section>
+  <Section>
+    <VBox style="width:100%">
+      <HBox style="width:100%">
+        <Table style="width:100%;height:100%;hfill:false;border:0;innerborder:0;innerhspacing:4"
+            headerStyle="bgcolor:#D4D0C8" footerStyle="bgcolor:#D4D0C8">
+            <Columns>
+              <Column />
+              <Column style="width:100%" />
+            </Columns>
+            <Rows>
+              <Row style="innervborder:0;spacing:0;innerhspacing:4">
+                <Cell>
+                  <TextBox sourceField="bankLabel" />
+                </Cell>
+                <Cell style="width:100%">
+                  <TextBox sourceField="supplierBankName" wrap="True" font="bold:true" style="width:100%" />
+                </Cell>
+              </Row>
+              <Row style="innervborder:0;spacing:0;innerhspacing:4">
+                <Cell>
+                  <TextBox sourceField="bicLabel" />
+                </Cell>
+                <Cell style="width:100%">
+                  <TextBox sourceField="supplierBankBIC" wrap="True" font="bold:true" style="width:100%" />
+                </Cell>
+              </Row>
+              <Row style="innervborder:0;spacing:0;innerhspacing:4">
+                <Cell>
+                  <TextBox sourceField="ibanLabel" />
+                </Cell>
+                <Cell style="width:100%">
+                  <TextBox sourceField="supplierBankAccount" wrap="True" font="bold:true" style="width:100%" />
+                </Cell>
+              </Row>
+            </Rows>
+          </Table>
+        <Table style="border:0;innerborder:0;innerhspacing:20" headerStyle="width:100%;vfill:true;bgcolor:#D4D0C8" 
+            itemStyle="width:100%;vfill:true;allowvbreak:false;hfill:true" footerStyle="width:100%;vfill:true;bgcolor:#D4D0C8">
+        <Columns>
+          <Column />
+          <Column />
+        </Columns>
+        <Rows>
+          <Row style="innervborder:0;spacing:0;innerhspacing:20">
+            <Cell>
+              <TextBox sourceField="debtLabel" font="size:10;italic:true" />
+            </Cell>
+            <Cell style="halign:right">
+              <TextBox sourceField="debt" font="size:10;bold:true" />
+            </Cell>
+          </Row>
+          <Row style="innervborder:0;spacing:0;innerhspacing:20">
+            <Cell>
+              <TextBox sourceField="totalLabel" font="size:10;italic:true" />
+            </Cell>
+            <Cell style="halign:right">
+              <TextBox sourceField="total" font="size:10;bold:true" />
+            </Cell>
+          </Row>
+          <Row style="innervborder:0;spacing:0;innerhspacing:20">
+            <Cell>
+              <TextBox sourceField="balanceLabel" font="size:10;underline:false;bold:false;italic:true" />
+            </Cell>
+            <Cell style="halign:right">
+              <TextBox sourceField="balance" font="size:10;underline:false;bold:true;italic:false" />
+            </Cell>
+          </Row>
+        </Rows>
+      </Table>
+      </HBox>
+      <HBox style="width:100%;vpadding:10">
+        <TextBox sourceField="totalInWordsLabel" font="size:10;underline:false;bold:false;italic:true" />
+        <TextBox sourceField="totalInWords" font="size:10;underline:false;bold:true;italic:false" wrap="true" style="width:100%;height:100%" />
+      </HBox>
+      <HBox style="width:100%;height:20" />
+      <HBox style="width:100%">
+        <HBox style="width:100%;hfill:true">
+          <TextBox sourceField="recipientSignLabel" font="size:10;bold:true" />
+          <HLine style="width:100%;height:100%;valign:bottom" />
+        </HBox>
+        <BoxItem style="width:10;height:100%" />
+        <HBox style="width:100%;hfill:true">
+          <TextBox sourceField="creatorSignLabel" font="size:10;bold:true" />
+          <HLine style="width:100%;height:100%;valign:bottom" />
+        </HBox>
+        <BoxItem style="width:10;height:100%" />
+        <HBox style="width:100%;hfill:true">
+          <TextBox sourceField="supplierSignLabel" font="size:10;bold:true" />
+          <HLine style="width:100%;height:100%;valign:bottom" />
+        </HBox>
+      </HBox>
+    </VBox>
+  </Section>
+  <Section type="PageFooter">
+    <HBox style="width:100%;height:50">
+      <TextBox sourceField="productId" font="size:8;italic:true" style="width:100%;height:100%;valign:center"/>
+      <HBox style="valign:center;height:100%;hpadding:10;hfill:true;halign:right">
+        <TextBox sourceField="%CurrentPage%" sourceFormat="currentPageFormat"/>
+        <TextBox sourceField="%TotalPages%" sourceFormat="totalPagesFormat" style="hpadding:2"/>
+      </HBox>
+    </HBox>
+  </Section>
+</Form>

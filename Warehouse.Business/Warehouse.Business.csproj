@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2E0A6AC3-B4FC-42EF-822B-ADAE73E0A7C1}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <AssemblyKeyContainerName />
+    <AssemblyName>Warehouse.Business</AssemblyName>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Warehouse.Business</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation />
+    <SccProjectName>PlasticSCM</SccProjectName>
+    <SccLocalPath>PlasticSCM</SccLocalPath>
+    <SccAuxPath>PlasticSCM</SccAuxPath>
+    <SccProvider>Plastic SCM Source Control Service:{774e58ba-f1b9-40a7-b676-834fa2c220fe}</SccProvider>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\bin\AnyCPU\Debug\</OutputPath>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile />
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile />
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>..\bin\AnyCPU\Release\</OutputPath>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile />
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile />
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>..\bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <DebugType>full</DebugType>
+    <WarningLevel>4</WarningLevel>
+    <Optimize>false</Optimize>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>..\bin\Release\</OutputPath>
+    <DebugType>none</DebugType>
+    <WarningLevel>4</WarningLevel>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="AccountingFilters.cs" />
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BarcodeGenerators\BarcodeEAN13Generator.cs" />
+    <Compile Include="BarcodeGenerators\BarcodeEAN8Generator.cs" />
+    <Compile Include="BarcodeGenerators\BarcodeEANGenerator.cs" />
+    <Compile Include="BarcodeGenerators\BarcodeGenerator.cs" />
+    <Compile Include="BarcodeGenerators\IBarcodeGenerator.cs" />
+    <Compile Include="BusinessBaseProvider.cs" />
+    <Compile Include="CodeAnnotations.cs" />
+    <Compile Include="CodeGenerator.cs" />
+    <Compile Include="ColorSetting.cs" />
+    <Compile Include="ColumnSettings.cs" />
+    <Compile Include="DesktopBusinessBaseProvider.cs" />
+    <Compile Include="Devices\DeviceInfo.cs" />
+    <Compile Include="Entities\OperationNumbersUsage.cs" />
+    <Compile Include="Entities\OperationNumberingInfo.cs" />
+    <Compile Include="Entities\PriceRuleAskAdvanceEventArgs.cs" />
+    <Compile Include="Entities\CustomConfig.cs" />
+    <Compile Include="Entities\IIdentifiableEntity.cs" />
+    <Compile Include="Entities\PriceRuleAction.cs" />
+    <Compile Include="Entities\PriceRuleCondition.cs" />
+    <Compile Include="ICardPaymentAddon.cs" />
+    <Compile Include="ICardPaymentProcessor.cs" />
+    <Compile Include="DeviceManagerBase.cs" />
+    <Compile Include="DatabaseConnectedArgs.cs" />
+    <Compile Include="Devices\IBarcodeScannerController.cs" />
+    <Compile Include="Devices\EmptyDeviceConnector.cs" />
+    <Compile Include="Devices\IAddinDriver.cs" />
+    <Compile Include="Devices\ISalesDataController.cs" />
+    <Compile Include="Devices\ICardReaderController.cs" />
+    <Compile Include="Devices\IElectronicScaleController.cs" />
+    <Compile Include="Devices\IExternalDisplayController.cs" />
+    <Compile Include="Devices\ICashReceiptPrinterController.cs" />
+    <Compile Include="Devices\IKitchenPrinterController.cs" />
+    <Compile Include="Entities\CurrencyObject.cs" />
+    <Compile Include="Entities\ECRReceipt.cs" />
+    <Compile Include="IAccountingExporter.cs" />
+    <Compile Include="IConfigurationAddin.cs" />
+    <Compile Include="ConfigurationHolderBase.cs" />
+    <Compile Include="Devices\ConnectFailedException.cs" />
+    <Compile Include="Devices\ConnectParametersCollection.cs" />
+    <Compile Include="Devices\DeviceCommandAttribute.cs" />
+    <Compile Include="Devices\DeviceConnector.cs" />
+    <Compile Include="Devices\DriverBase.cs" />
+    <Compile Include="Devices\DriverHelper.cs" />
+    <Compile Include="Devices\DriverInfo.cs" />
+    <Compile Include="Devices\DriversLoadedArgs.cs" />
+    <Compile Include="Devices\ErrorState.cs" />
+    <Compile Include="Devices\ErrorStateEventArgs.cs" />
+    <Compile Include="Devices\EthernetDeviceConnector.cs" />
+    <Compile Include="Devices\HardwareErrorException.cs" />
+    <Compile Include="Devices\IConnectableDevice.cs" />
+    <Compile Include="Devices\KitchenPrinterErrorEventArgs.cs" />
+    <Compile Include="Devices\SerialDeviceConnector.cs" />
+    <Compile Include="Documenting\FormMemberMappingAttribute.cs" />
+    <Compile Include="Documenting\FormMemberType.cs" />
+    <Compile Include="Documenting\IDocument.cs" />
+    <Compile Include="DummyFeedbackProvider.cs" />
+    <Compile Include="Entities\InternalLogEntry.cs" />
+    <Compile Include="Entities\SaleSignature.cs" />
+    <Compile Include="ErrorHandlingGlib.cs" />
+    <Compile Include="CurrencyTranslation\ArmenianNumberTranslator.cs" />
+    <Compile Include="CurrencyTranslation\BulgarianNumberTranslator.cs" />
+    <Compile Include="CurrencyTranslation\NumberTranslator.cs" />
+    <Compile Include="CurrencyTranslation\CzechNumberTranslator.cs" />
+    <Compile Include="CurrencyTranslation\EnglishNumberTranslator.cs" />
+    <Compile Include="CurrencyTranslation\GeorgianNumberTranslator.cs" />
+    <Compile Include="CurrencyTranslation\GermanNumberTranslator.cs" />
+    <Compile Include="CurrencyTranslation\PolishNumberTranslator.cs" />
+    <Compile Include="CurrencyTranslation\RomanianNumberTranslator.cs" />
+    <Compile Include="CurrencyTranslation\RussianNumberTranslator.cs" />
+    <Compile Include="CurrencyTranslation\UkrainianNumberTranslator.cs" />
+    <Compile Include="EmailResult.cs" />
+    <Compile Include="EmailServer.cs" />
+    <Compile Include="Entities\Document.cs" />
+    <Compile Include="Entities\DocumentBase.cs" />
+    <Compile Include="Entities\EmptyGroup.cs" />
+    <Compile Include="Entities\PaymentReceipt.cs" />
+    <Compile Include="Entities\InternationalInvoice.cs" />
+    <Compile Include="Entities\PurchaseReceipt.cs" />
+    <Compile Include="Entities\SaleReceipt.cs" />
+    <Compile Include="Entities\StockTakingProtocol.cs" />
+    <Compile Include="Entities\StockTakingProtocolDetail.cs" />
+    <Compile Include="Entities\WasteProtocol.cs" />
+    <Compile Include="ExchangeHelper.cs" />
+    <Compile Include="ExeConfigurationHolder.cs" />
+    <Compile Include="Entities\ICacheableEntity.cs" />
+    <Compile Include="Entities\CacheEntityCollection.cs" />
+    <Compile Include="Entities\CacheEntry.cs" />
+    <Compile Include="Entities\DevicesGroup.cs" />
+    <Compile Include="Entities\DeviceFields.cs" />
+    <Compile Include="Entities\DocumentDetail.cs" />
+    <Compile Include="Entities\Lot.cs" />
+    <Compile Include="Entities\PriceRule.cs" />
+    <Compile Include="Entities\XmlEntityBase.cs" />
+    <Compile Include="Entities\TreeNodeBase.cs" />
+    <Compile Include="Entities\ProductionProtocol.cs" />
+    <Compile Include="Entities\XmlEntityFields.cs" />
+    <Compile Include="FinalizeOperationOptions.cs" />
+    <Compile Include="IDataExchanger.cs" />
+    <Compile Include="IDataExtender.cs" />
+    <Compile Include="IDataExtenderAddin.cs" />
+    <Compile Include="IDBCustomizer.cs" />
+    <Compile Include="CurrencyTranslation\NumberToWords.cs" />
+    <Compile Include="IFeedbackProvider.cs" />
+    <Compile Include="IHirarchicalEntity.cs" />
+    <Compile Include="ImportEventArgs.cs" />
+    <Compile Include="IPersistableEntity.cs" />
+    <Compile Include="ISyncStatusProvider.cs" />
+    <Compile Include="Licensing\License.cs" />
+    <Compile Include="MOTranslator\MOParser.cs" />
+    <Compile Include="MOTranslator\MOTranslationProvider.cs" />
+    <Compile Include="Operations\AfterPriceInEvaluateArgs.cs" />
+    <Compile Include="Operations\AfterItemEvaluateArgs.cs" />
+    <Compile Include="Operations\BeforeItemEvaluateArgs.cs" />
+    <Compile Include="Operations\ComplexRecipe.cs" />
+    <Compile Include="Operations\ComplexRecipeDetail.cs" />
+    <Compile Include="Operations\ComplexProductionDetail.cs" />
+    <Compile Include="Operations\ComplexProduction.cs" />
+    <Compile Include="Operations\IAdditionalOperation.cs" />
+    <Compile Include="Operations\OperationDetailArgs.cs" />
+    <Compile Include="Operations\OperationImportDescription.cs" />
+    <Compile Include="Operations\PriceInOperationDetail.cs" />
+    <Compile Include="Operations\PriceOutOperationDetail.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Operations\Reservation.cs" />
+    <Compile Include="Entities\PriceRuleMessageEventArgs.cs" />
+    <Compile Include="PaneSettings.cs" />
+    <Compile Include="Devices\ProgressStartEventArgs.cs" />
+    <Compile Include="IDataImporter.cs" />
+    <Compile Include="DataExchangeSet.cs" />
+    <Compile Include="DeviceManager.cs" />
+    <Compile Include="Entities\ApplicationLogEntry.cs" />
+    <Compile Include="Entities\ConfigEntry.cs" />
+    <Compile Include="Entities\Update.cs" />
+    <Compile Include="Entities\Percent.cs" />
+    <Compile Include="Entities\Device.cs" />
+    <Compile Include="Entities\PaymentType.cs" />
+    <Compile Include="Entities\LocationsGroup.cs" />
+    <Compile Include="Entities\PartnersGroup.cs" />
+    <Compile Include="Entities\UsersGroup.cs" />
+    <Compile Include="Entities\Item.cs" />
+    <Compile Include="Entities\ItemsGroup.cs" />
+    <Compile Include="Entities\GroupBase.cs" />
+    <Compile Include="Entities\RestrictionNode.cs" />
+    <Compile Include="Entities\UserRestriction.cs" />
+    <Compile Include="Entities\TransferReceipt.cs" />
+    <Compile Include="Entities\VATGroup.cs" />
+    <Compile Include="Entities\ViewProfile.cs" />
+    <Compile Include="IDataExporter.cs" />
+    <Compile Include="IStrongEntity.cs" />
+    <Compile Include="Licensing\ILicenseConsumer.cs" />
+    <Compile Include="Licensing\InvalidLicenseException.cs" />
+    <Compile Include="Licensing\RSAKeyInfo.cs" />
+    <Compile Include="Licensing\LicenseLimitationException.cs" />
+    <Compile Include="Operations\RestaurantOrder.cs" />
+    <Compile Include="Operations\RestaurantOrderDetail.cs" />
+    <Compile Include="Operations\OperationDetail.cs" />
+    <Compile Include="Operations\Purchase.cs" />
+    <Compile Include="Operations\PurchaseDetail.cs" />
+    <Compile Include="Operations\StockTaking.cs" />
+    <Compile Include="Operations\StockTakingDetail.cs" />
+    <Compile Include="Operations\TransferDetail.cs" />
+    <Compile Include="Operations\Transfer.cs" />
+    <Compile Include="DBFormatException.cs" />
+    <Compile Include="DBVersionException.cs" />
+    <Compile Include="DBConnectException.cs" />
+    <Compile Include="BusinessDomain.cs" />
+    <Compile Include="Entities\CashBookEntry.cs" />
+    <Compile Include="ConfigurationHolder.cs" />
+    <Compile Include="ConfigurationMemberAttribute.cs" />
+    <Compile Include="ConfigurationProvider.cs" />
+    <Compile Include="Entities\CompanyRecord.cs" />
+    <Compile Include="Entities\Protocol.cs" />
+    <Compile Include="Entities\ProtocolDetail.cs" />
+    <Compile Include="Entities\InvoiceDetail.cs" />
+    <Compile Include="Entities\Invoice.cs" />
+    <Compile Include="Encryption.cs" />
+    <Compile Include="ErrorHandling.cs" />
+    <Compile Include="Entities\MesUnit.cs" />
+    <Compile Include="Operations\Operation.cs" />
+    <Compile Include="Entities\Partner.cs" />
+    <Compile Include="Entities\Payment.cs" />
+    <Compile Include="Entities\Location.cs" />
+    <Compile Include="Entities\Currency.cs" />
+    <Compile Include="Entities\Quantity.cs" />
+    <Compile Include="Entities\Receipt.cs" />
+    <Compile Include="Entities\ReceiptDetail.cs" />
+    <Compile Include="Entities\Report.cs" />
+    <Compile Include="Operations\Waste.cs" />
+    <Compile Include="Operations\WasteDetail.cs" />
+    <Compile Include="Devices\ProgressStepEventArgs.cs" />
+    <Compile Include="QuickItemsCollection.cs" />
+    <Compile Include="Reporting\FilterChooseLong.cs" />
+    <Compile Include="Reporting\ReportQueryDrafts.cs" />
+    <Compile Include="Reporting\ReportQueryOperations.cs" />
+    <Compile Include="Reporting\ReceiptReportReturns.cs" />
+    <Compile Include="Reporting\FilterDateTimeCompare.cs" />
+    <Compile Include="Reporting\FilterGroupFind.cs" />
+    <Compile Include="Reporting\FilterBase.cs" />
+    <Compile Include="Reporting\FilterChoose.cs" />
+    <Compile Include="Reporting\FilterCompare.cs" />
+    <Compile Include="Reporting\FilterDateRange.cs" />
+    <Compile Include="Reporting\FilterDateTimeRange.cs" />
+    <Compile Include="Reporting\FilterEmpty.cs" />
+    <Compile Include="Reporting\FilterFind.cs" />
+    <Compile Include="Reporting\FilterRange.cs" />
+    <Compile Include="Reporting\Order.cs" />
+    <Compile Include="Reporting\ReceiptReport.cs" />
+    <Compile Include="Reporting\ReceiptReportOperations.cs" />
+    <Compile Include="Reporting\ReceiptReportSales.cs" />
+    <Compile Include="Reporting\ReceiptReportTurnover.cs" />
+    <Compile Include="Reporting\ReportEntryNode.cs" />
+    <Compile Include="Reporting\ReportQueryItemsMinimalQuantities.cs" />
+    <Compile Include="Reporting\ReportQueryPartnersDebt.cs" />
+    <Compile Include="Reporting\ReportQueryPaymentsAdvance.cs" />
+    <Compile Include="Reporting\ReportQueryAppLogEntries.cs" />
+    <Compile Include="Reporting\ReportQueryComplexProductions.cs" />
+    <Compile Include="Reporting\ReportQueryComplexRecipes.cs" />
+    <Compile Include="Reporting\ReportQueryItems.cs" />
+    <Compile Include="Reporting\ReportQueryItemsByProfit.cs" />
+    <Compile Include="Reporting\ReportQueryItemsFlow.cs" />
+    <Compile Include="Reporting\ReportQueryItemsAvailability.cs" />
+    <Compile Include="Reporting\ReportQueryItemsAvailabilityAtDate.cs" />
+    <Compile Include="Reporting\ReportQueryItemsStockTaking.cs" />
+    <Compile Include="Reporting\ReportQueryIncome.cs" />
+    <Compile Include="Reporting\ReportQueryInvoicedItems.cs" />
+    <Compile Include="Reporting\ReportQueryInvoicesIssued.cs" />
+    <Compile Include="Reporting\ReportQueryInvoicesReceived.cs" />
+    <Compile Include="Reporting\ReportQueryPartners.cs" />
+    <Compile Include="Reporting\ReportQueryBase.cs" />
+    <Compile Include="Reporting\ReportQueryPartnersByProfit.cs" />
+    <Compile Include="Reporting\ReportQueryPaymentsByDocuments.cs" />
+    <Compile Include="Reporting\ReportQueryPaymentsByPartners.cs" />
+    <Compile Include="Reporting\ReportQueryPaymentsDueDates.cs" />
+    <Compile Include="Reporting\ReportQueryPaymentsHistory.cs" />
+    <Compile Include="Reporting\ReportQueryLocations.cs" />
+    <Compile Include="Reporting\ReportQueryLocationsByProfit.cs" />
+    <Compile Include="Reporting\ReportQueryPurchases.cs" />
+    <Compile Include="Reporting\ReportQueryPurchasesByItems.cs" />
+    <Compile Include="Reporting\ReportQueryPurchasesByPartners.cs" />
+    <Compile Include="Reporting\ReportQueryPurchasesByLocations.cs" />
+    <Compile Include="Reporting\ReportQueryPurchasesByTotal.cs" />
+    <Compile Include="Reporting\ReportQuerySales.cs" />
+    <Compile Include="Reporting\ReportQuerySalesByItem.cs" />
+    <Compile Include="Reporting\ReportQuerySalesByPartners.cs" />
+    <Compile Include="Reporting\ReportQuerySalesByLocations.cs" />
+    <Compile Include="Reporting\ReportQuerySalesByTotal.cs" />
+    <Compile Include="Reporting\ReportQueryStockTakings.cs" />
+    <Compile Include="Reporting\ReportQueryStockTakingsByTotal.cs" />
+    <Compile Include="Reporting\ReportQueryTransfers.cs" />
+    <Compile Include="Reporting\ReportQueryUsers.cs" />
+    <Compile Include="Reporting\ReportQueryWastes.cs" />
+    <Compile Include="SettingsBackup.cs" />
+    <Compile Include="Translator.cs" />
+    <Compile Include="Transliterator.cs" />
+    <Compile Include="Validator.cs" />
+    <Compile Include="ReportProvider.cs" />
+    <Compile Include="Operations\Sale.cs" />
+    <Compile Include="Operations\SaleDetail.cs" />
+    <Compile Include="StateHolder.cs" />
+    <Compile Include="Entities\User.cs" />
+    <Compile Include="ValidateEventArgs.cs" />
+    <Compile Include="WindowSettings.cs" />
+    <Compile Include="WorkflowManager.cs" />
+    <Compile Include="WorkflowManagerBase.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Warehouse.Data\Warehouse.Data.csproj">
+      <Project>{ECAC0A23-4304-47BD-A764-CF2B8202830A}</Project>
+      <Name>Warehouse.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="glib-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
+      <Package>glib-sharp-2.0</Package>
+    </Reference>
+    <Reference Include="Mono.Addins">
+      <HintPath>..\References\Mono.Addins.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Addins.CecilReflector">
+      <HintPath>..\References\Mono.Addins.CecilReflector.dll</HintPath>
+    </Reference>
+    <Reference Include="NBarCodes, Version=1.0.0.37446, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\NBarCodes.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.6\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\packages\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Mono.Addins.dll.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent />
+    <PostBuildEvent />
+  </PropertyGroup>
+<!--  <Import Project="$(SolutionDir)\.nuget\nuget.targets" />-->
+</Project>

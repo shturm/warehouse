@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B361F270-CEED-4BA3-B044-33F1A30B984C}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>Warehouse.Presentation</AssemblyName>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Warehouse.Presentation</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <SccProjectName>PlasticSCM</SccProjectName>
+    <SccLocalPath>PlasticSCM</SccLocalPath>
+    <SccAuxPath>PlasticSCM</SccAuxPath>
+    <SccProvider>Plastic SCM Source Control Service:{774e58ba-f1b9-40a7-b676-834fa2c220fe}</SccProvider>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\bin\AnyCPU\Debug\</OutputPath>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>..\bin\AnyCPU\Release\</OutputPath>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>..\bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <DebugType>full</DebugType>
+    <WarningLevel>4</WarningLevel>
+    <Optimize>false</Optimize>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>..\bin\Release\</OutputPath>
+    <DebugType>none</DebugType>
+    <WarningLevel>4</WarningLevel>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="atk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
+      <Package>gtk-sharp-2.0</Package>
+    </Reference>
+    <Reference Include="gdk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
+      <Package>gtk-sharp-2.0</Package>
+    </Reference>
+    <Reference Include="glade-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
+      <Package>glade-sharp-2.0</Package>
+    </Reference>
+    <Reference Include="glib-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
+      <Package>glib-sharp-2.0</Package>
+    </Reference>
+    <Reference Include="gtk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
+      <Package>gtk-sharp-2.0</Package>
+    </Reference>
+    <Reference Include="pango-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
+      <Package>gtk-sharp-2.0</Package>
+    </Reference>
+    <Reference Include="Mono.Addins, Version=0.6.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\Mono.Addins.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoMac">
+      <HintPath>..\References\MonoMac.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Mono.Cairo" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationAbortException.cs" />
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ColumnSerializer.cs" />
+    <Compile Include="Dialogs\ChoosePaymentTypes.cs" />
+    <Compile Include="Preview\PreviewInvoice.cs" />
+    <Compile Include="QuittingEventArgs.cs" />
+    <Compile Include="Reporting\ReportFilterChooseLong.cs" />
+    <Compile Include="Suggestion\PartnerByCard.cs" />
+    <Compile Include="Suggestion\PartnerByName.cs" />
+    <Compile Include="Suggestion\PartnerByVAT.cs" />
+    <Compile Include="Suggestion\PartnerByBulstat.cs" />
+    <Compile Include="Suggestion\PartnerAlwaysBrowse.cs" />
+    <Compile Include="Suggestion\PartnerBrowse.cs" />
+    <Compile Include="Suggestion\ItemAlwaysBrowse.cs" />
+    <Compile Include="Suggestion\ItemBrowse.cs" />
+    <Compile Include="Suggestion\ItemByCode.cs" />
+    <Compile Include="Suggestion\ItemByBarcode.cs" />
+    <Compile Include="Suggestion\EntityMissing.cs" />
+    <Compile Include="Dialogs\EditNewPaymentBase.cs" />
+    <Compile Include="Dialogs\MessageEntry.cs" />
+    <Compile Include="IDatabaseCreator.cs" />
+    <Compile Include="Dialogs\AddAdvancePercentage.cs" />
+    <Compile Include="Dialogs\ChooseAdvancePayment.cs" />
+    <Compile Include="Dialogs\ChooseBankNotesAndCoins.cs" />
+    <Compile Include="Dialogs\ChooseEditPartnersGroup.cs" />
+    <Compile Include="Dialogs\ChooseEditItemsGroup.cs" />
+    <Compile Include="Dialogs\ChooseEditLocationsGroup.cs" />
+    <Compile Include="Dialogs\ChooseEditUsersGroup.cs" />
+    <Compile Include="Dialogs\AddServiceCharge.cs" />
+    <Compile Include="Dialogs\ChooseDateInterval.cs" />
+    <Compile Include="Dialogs\ChooseEditPayment.cs" />
+    <Compile Include="Dialogs\ChooseEditPriceRule.cs" />
+    <Compile Include="Dialogs\ChooseItemsForPromotion.cs" />
+    <Compile Include="Dialogs\ChooseMessage.cs" />
+    <Compile Include="Dialogs\ChooseNumericInterval.cs" />
+    <Compile Include="Dialogs\ChooseOperation.cs" />
+    <Compile Include="Dialogs\ChoosePrice.cs" />
+    <Compile Include="Dialogs\ChooseTimeInterval.cs" />
+    <Compile Include="Dialogs\ChooseWeekDays.cs" />
+    <Compile Include="Dialogs\ChooseLocalization.cs" />
+    <Compile Include="Dialogs\ConfirmPriceRules.cs" />
+    <Compile Include="Dialogs\ChooseLot.cs" />
+    <Compile Include="Dialogs\ChooseIssuedInvoice.cs" />
+    <Compile Include="Dialogs\ChooseReceivedInvoice.cs" />
+    <Compile Include="Dialogs\EditNew.cs" />
+    <Compile Include="EntityEditor.cs" />
+    <Compile Include="IOperationEditor.cs" />
+    <Compile Include="Suggestion\EntitySuggestedEventArgs.cs" />
+    <Compile Include="Suggestion\ISuggestionProvider.cs" />
+    <Compile Include="OS\FileChooserFilter.cs" />
+    <Compile Include="Preview\PreviewSale.cs" />
+    <Compile Include="Preview\PreviewStockTaking.cs" />
+    <Compile Include="Preview\PreviewTransfer.cs" />
+    <Compile Include="Preview\PreviewWaste.cs" />
+    <Compile Include="Reporting\ReportFilterDateTimeCompare.cs" />
+    <Compile Include="RowReader.cs" />
+    <Compile Include="SetupAssistant\BackgroundJob.cs" />
+    <Compile Include="SetupAssistant\PartnersRetail.cs" />
+    <Compile Include="SetupAssistant\PartnersSetup.cs" />
+    <Compile Include="SetupAssistant\StepPartners.cs" />
+    <Compile Include="SetupAssistant\ItemsSetup.cs" />
+    <Compile Include="SetupAssistant\StepDBFinish.cs" />
+    <Compile Include="SetupAssistant\LocationsSetup.cs" />
+    <Compile Include="SetupAssistant\LocationsRetail.cs" />
+    <Compile Include="SetupAssistant\StepItems.cs" />
+    <Compile Include="SetupAssistant\StepLocations.cs" />
+    <Compile Include="SetupAssistant\StepCompanyInfo.cs" />
+    <Compile Include="SetupAssistant\StepTaxes.cs" />
+    <Compile Include="SetupAssistant\StepUsers.cs" />
+    <Compile Include="SourceItemId.cs" />
+    <Compile Include="SplashScreen.cs" />
+    <Compile Include="Suggestion\ItemByName.cs" />
+    <Compile Include="WbpOperationWithPriceRules.cs" />
+    <Compile Include="Widgets\PictureToggleButton.cs" />
+    <Compile Include="Widgets\CustomStatusBar.cs" />
+    <Compile Include="Widgets\EditNewCompanyRecordPanel.cs" />
+    <Compile Include="Dialogs\EditNewAdvancePayment.cs" />
+    <Compile Include="Dialogs\EditNewDocument.cs" />
+    <Compile Include="Dialogs\EditDocumentNumbersPerLocation.cs" />
+    <Compile Include="Dialogs\EditKeyShortcuts.cs" />
+    <Compile Include="Dialogs\EditQuickItems.cs" />
+    <Compile Include="Dialogs\EditNewPriceRule.cs" />
+    <Compile Include="Dialogs\ExportDocuments.cs" />
+    <Compile Include="Dialogs\NewDatabase.cs" />
+    <Compile Include="Dialogs\ReceiptReports.cs" />
+    <Compile Include="GridNavigator.cs" />
+    <Compile Include="DocumentChoiceType.cs" />
+    <Compile Include="HardwareErrorResponse.cs" />
+    <Compile Include="IDocumentDesigner.cs" />
+    <Compile Include="OperationSavedEventArgs.cs" />
+    <Compile Include="SetupAssistant\Assistant.cs" />
+    <Compile Include="SetupAssistant\StepAddDevices.cs" />
+    <Compile Include="SetupAssistant\PurposeBOGeneric.cs" />
+    <Compile Include="SetupAssistant\PurposeCustom.cs" />
+    <Compile Include="SetupAssistant\PurposeFORetail.cs" />
+    <Compile Include="SetupAssistant\PurposeBase.cs" />
+    <Compile Include="SetupAssistant\StepDBSetup.cs" />
+    <Compile Include="SetupAssistant\StepBase.cs" />
+    <Compile Include="SetupAssistant\StepPurpose.cs" />
+    <Compile Include="SetupAssistant\StepTag.cs" />
+    <Compile Include="SetupAssistant\StepAppSetup.cs" />
+    <Compile Include="Widgets\IStatusWidget.cs" />
+    <Compile Include="Widgets\PaymentWidget.cs" />
+    <Compile Include="Reporting\ReportFilterDateRange.cs" />
+    <Compile Include="Dialogs\ChooseComplexProduction.cs" />
+    <Compile Include="Dialogs\ExportObjects.cs" />
+    <Compile Include="Dialogs\ImportObjects.cs" />
+    <Compile Include="Dialogs\ExchangeObjects.cs" />
+    <Compile Include="Reporting\ReportFilterDateTimeRange.cs" />
+    <Compile Include="Reporting\ReportFilterGroupFind.cs" />
+    <Compile Include="Visualization\CurrentVisualizerSettings.cs" />
+    <Compile Include="Visualization\RequiredColumnMissingException.cs" />
+    <Compile Include="Visualization\TableVisualizerSettings.cs" />
+    <Compile Include="Visualization\VisualizerSettingsBase.cs" />
+    <Compile Include="Visualization\VisualizerSettingsDialog.cs" />
+    <Compile Include="Visualization\TableVisualizerSettingsPage.cs" />
+    <Compile Include="Visualization\VisualizerSettingsPageBase.cs" />
+    <Compile Include="Visualization\TableVisualizer.cs" />
+    <Compile Include="Visualization\DataQueryVisualizer.cs" />
+    <Compile Include="Visualization\VisualizerSettingsCollection.cs" />
+    <Compile Include="Visualization\VisualizerSettingsWraper.cs" />
+    <Compile Include="WbpProduction.cs" />
+    <Compile Include="Dialogs\ChooseEditComplexRecipe.cs" />
+    <Compile Include="Dialogs\EditNewComplexRecipe.cs" />
+    <Compile Include="Reporting\ReportFilterEmpty.cs" />
+    <Compile Include="Dialogs\ImportObjectsMapping.cs" />
+    <Compile Include="IStartupLauncher.cs" />
+    <Compile Include="SettingsPage.cs" />
+    <Compile Include="Dialogs\ChooseEditVATGroup.cs" />
+    <Compile Include="Dialogs\ChoosePurchase.cs" />
+    <Compile Include="Dialogs\ChooseStockTaking.cs" />
+    <Compile Include="Dialogs\ChooseWaste.cs" />
+    <Compile Include="Dialogs\ChooseEditPaymentType.cs" />
+    <Compile Include="Dialogs\ChooseEditDevice.cs" />
+    <Compile Include="Dialogs\ChooseMoney.cs" />
+    <Compile Include="Dialogs\AddDiscount.cs" />
+    <Compile Include="Dialogs\ChooseEditGroup.cs" />
+    <Compile Include="Dialogs\ChooseColor.cs" />
+    <Compile Include="Dialogs\ChooseNumber.cs" />
+    <Compile Include="Dialogs\EditNewDevice.cs" />
+    <Compile Include="Dialogs\FiscalRegisterCash.cs" />
+    <Compile Include="Dialogs\FiscalReports.cs" />
+    <Compile Include="Dialogs\EditNewPaymentType.cs" />
+    <Compile Include="Dialogs\EditNewGroup.cs" />
+    <Compile Include="Dialogs\EditNewVATGroup.cs" />
+    <Compile Include="Dialogs\EditUserRestrictions.cs" />
+    <Compile Include="Widgets\ChooseMoneyPanel.cs" />
+    <Compile Include="Widgets\ChooseNumberPanel.cs" />
+    <Compile Include="Widgets\PictureButton.cs" />
+    <Compile Include="Widgets\EditNewItemPage.cs" />
+    <Compile Include="Widgets\UsersGroupsEditPanel.cs" />
+    <Compile Include="Widgets\LocationsGroupsEditPanel.cs" />
+    <Compile Include="Widgets\PartnersGroupsEditPanel.cs" />
+    <Compile Include="Widgets\GroupsEditPanel.cs" />
+    <Compile Include="Widgets\GroupsPanel.cs" />
+    <Compile Include="IMenuLauncher.cs" />
+    <Compile Include="ResourcesProviderBase.cs" />
+    <Compile Include="StartupPage.cs" />
+    <Compile Include="ToolItemCollection.cs" />
+    <Compile Include="ToolItemWrapper.cs" />
+    <Compile Include="Dialogs\ChooseInvoice.cs" />
+    <Compile Include="MenuItemCollection.cs" />
+    <Compile Include="MenuItemWrapper.cs" />
+    <Compile Include="Dialogs\EditNewPayment.cs" />
+    <Compile Include="WbpBase.cs" />
+    <Compile Include="WbpPurchase.cs" />
+    <Compile Include="WbpStockTaking.cs" />
+    <Compile Include="WbpTradePoint.cs" />
+    <Compile Include="Dialogs\ChooseTransfer.cs" />
+    <Compile Include="WbpTransfer.cs" />
+    <Compile Include="Reporting\ReportFilterChoose.cs" />
+    <Compile Include="Dialogs\ChooseEditCompanyRecord.cs" />
+    <Compile Include="Dialogs\EditPrices.cs" />
+    <Compile Include="Dialogs\DialogBase.cs" />
+    <Compile Include="Dialogs\EditNewInvoice.cs" />
+    <Compile Include="Dialogs\MessageYesNoRemember.cs" />
+    <Compile Include="Dialogs\EditNewCompanyRecord.cs" />
+    <Compile Include="WbpPrintPreview.cs" />
+    <Compile Include="Dialogs\MessageProgress.cs" />
+    <Compile Include="Dialogs\Settings.cs" />
+    <Compile Include="Dialogs\About.cs" />
+    <Compile Include="Dialogs\ChooseEditLocation.cs" />
+    <Compile Include="Dialogs\ChooseEditUser.cs" />
+    <Compile Include="Dialogs\EditNewLocation.cs" />
+    <Compile Include="Dialogs\EditNewUser.cs" />
+    <Compile Include="Dialogs\Message.cs" />
+    <Compile Include="Dialogs\EditDBConnection.cs" />
+    <Compile Include="Dialogs\ChooseDate.cs" />
+    <Compile Include="Dialogs\Choose.cs" />
+    <Compile Include="Dialogs\ChooseEdit.cs" />
+    <Compile Include="Dialogs\ChooseEditItem.cs" />
+    <Compile Include="Dialogs\ChooseEditPartner.cs" />
+    <Compile Include="Dialogs\ChooseSale.cs" />
+    <Compile Include="Dialogs\MessageError.cs" />
+    <Compile Include="Dialogs\MessageOkCancel.cs" />
+    <Compile Include="Dialogs\EditNewItem.cs" />
+    <Compile Include="Dialogs\EditNewPartner.cs" />
+    <Compile Include="Dialogs\ReportFilter.cs" />
+    <Compile Include="Dialogs\UserLogin.cs" />
+    <Compile Include="FormHelper.cs" />
+    <Compile Include="FrmMain.cs" />
+    <Compile Include="WbpOperationBase.cs" />
+    <Compile Include="WbpSale.cs" />
+    <Compile Include="WbpReportResult.cs" />
+    <Compile Include="PresentationDomain.cs" />
+    <Compile Include="Reporting\ReportEntryBase.cs" />
+    <Compile Include="Reporting\ReportFilterBase.cs" />
+    <Compile Include="Reporting\ReportFilterCompare.cs" />
+    <Compile Include="Reporting\ReportFilterFind.cs" />
+    <Compile Include="Reporting\ReportFilterRange.cs" />
+    <Compile Include="Reporting\ReportOrder.cs" />
+    <Compile Include="WbpWaste.cs" />
+    <Compile Include="Widgets\ItemsGroupsEditPanel.cs" />
+    <Compile Include="Preview\PreviewOperation.cs" />
+    <Compile Include="Preview\PreviewPurchase.cs" />
+    <Compile Include="Preview\PreviewProduction.cs" />
+    <Compile Include="WorkPageAddException.cs" />
+    <EmbeddedResource Include="FrmMain.glade">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ChooseLocalization.glade" />
+    <Compile Include="OS\MacOSX\IgeMacMenuGlobal.cs" />
+    <Compile Include="OS\OSIntegration.cs" />
+    <Compile Include="OS\MacOSXIntegration.cs" />
+    <Compile Include="OS\LinuxIntegration.cs" />
+    <Compile Include="OS\WindowsIntegration.cs" />
+    <Compile Include="OS\MacOSX\AppDelegate.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Warehouse.Business\Warehouse.Business.csproj">
+      <Project>{2E0A6AC3-B4FC-42EF-822B-ADAE73E0A7C1}</Project>
+      <Name>Warehouse.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Warehouse.Component\Warehouse.Component.csproj">
+      <Project>{6F8A3473-0FCA-4F65-87E7-AF5E7BCF20DA}</Project>
+      <Name>Warehouse.Component</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Warehouse.Data\Warehouse.Data.csproj">
+      <Project>{ECAC0A23-4304-47BD-A764-CF2B8202830A}</Project>
+      <Name>Warehouse.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dialogs\EditKeyShortcuts.glade" />
+    <EmbeddedResource Include="Dialogs\EditQuickItems.glade" />
+    <EmbeddedResource Include="Dialogs\Settings.glade" />
+    <EmbeddedResource Include="Dialogs\AddServiceCharge.glade" />
+    <EmbeddedResource Include="Dialogs\ChooseEdit.glade">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditNewDocument.glade" />
+    <EmbeddedResource Include="Dialogs\EditNewItem.glade" />
+    <EmbeddedResource Include="Dialogs\Choose.glade" />
+    <EmbeddedResource Include="Dialogs\ExchangeObjects.glade" />
+    <EmbeddedResource Include="Dialogs\UserLogin.glade" />
+    <EmbeddedResource Include="Dialogs\ChooseNumber.glade" />
+    <EmbeddedResource Include="WbpOperationBase.glade" />
+    <EmbeddedResource Include="Dialogs\EditNewLocation.glade" />
+    <EmbeddedResource Include="Dialogs\EditNewUser.glade" />
+    <EmbeddedResource Include="Dialogs\EditNewPartner.glade" />
+    <EmbeddedResource Include="Dialogs\EditNewPayment.glade" />
+    <EmbeddedResource Include="Dialogs\ChooseMoney.glade" />
+    <EmbeddedResource Include="Dialogs\ChooseColor.glade" />
+    <EmbeddedResource Include="Dialogs\EditNewAdvancePayment.glade" />
+    <EmbeddedResource Include="Dialogs\EditNew.glade" />
+    <EmbeddedResource Include="Dialogs\ChooseBankNotesAndCoins.glade">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ChoosePrice.glade" />
+    <EmbeddedResource Include="Dialogs\AddDiscount.glade" />
+    <EmbeddedResource Include="Dialogs\EditNewVATGroup.glade">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ChooseItemsForPromotion.glade" />
+    <EmbeddedResource Include="Dialogs\ConfirmPriceRules.glade" />
+    <EmbeddedResource Include="Dialogs\EditUserRestrictions.glade" />
+    <EmbeddedResource Include="Dialogs\Message.glade">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewDatabase.glade" />
+    <EmbeddedResource Include="Dialogs\FiscalReports.glade" />
+    <EmbeddedResource Include="Dialogs\MessageProgress.glade" />
+    <EmbeddedResource Include="Dialogs\EditDBConnection.glade" />
+    <EmbeddedResource Include="Dialogs\About.glade" />
+    <EmbeddedResource Include="Dialogs\EditNewDevice.glade" />
+    <EmbeddedResource Include="Dialogs\ImportObjectsMapping.glade" />
+    <EmbeddedResource Include="Dialogs\EditDocumentNumbersPerLocation.glade" />
+    <EmbeddedResource Include="Dialogs\ReportFilter.glade" />
+    <EmbeddedResource Include="Dialogs\ReceiptReports.glade" />
+    <EmbeddedResource Include="Dialogs\EditNewComplexRecipe.glade" />
+    <EmbeddedResource Include="Dialogs\EditNewGroup.glade" />
+    <EmbeddedResource Include="Dialogs\ChooseDate.glade" />
+    <EmbeddedResource Include="Dialogs\EditNewPaymentType.glade" />
+    <EmbeddedResource Include="Dialogs\FiscalRegisterCash.glade" />
+    <EmbeddedResource Include="Dialogs\EditNewPriceRule.glade" />
+    <EmbeddedResource Include="Dialogs\ChooseNumericInterval.glade" />
+    <EmbeddedResource Include="Dialogs\ChooseDateInterval.glade" />
+    <EmbeddedResource Include="Dialogs\ChooseTimeInterval.glade" />
+    <EmbeddedResource Include="Dialogs\ChooseMessage.glade" />
+    <EmbeddedResource Include="Dialogs\ChooseWeekDays.glade" />
+    <EmbeddedResource Include="Suggestion\EntityMissing.glade">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ChoosePaymentTypes.glade" />
+    <None Include="locale\az\LC_MESSAGES\Warehouse.mo">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="locale\az\LC_MESSAGES\Warehouse.po">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="locale\bg\LC_MESSAGES\Warehouse.mo">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="locale\bg\LC_MESSAGES\Warehouse.po">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="locale\cs\LC_MESSAGES\Warehouse.mo">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="locale\cs\LC_MESSAGES\Warehouse.po">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="locale\de\LC_MESSAGES\Warehouse.mo">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="locale\de\LC_MESSAGES\Warehouse.po">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="locale\en_au\LC_MESSAGES\Warehouse.mo">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="locale\en_au\LC_MESSAGES\Warehouse.po">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="locale\es\LC_MESSAGES\Warehouse.mo">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="locale\es\LC_MESSAGES\Warehouse.po">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="locale\fr\LC_MESSAGES\Warehouse.mo">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="locale\fr\LC_MESSAGES\Warehouse.po">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="locale\hy\LC_MESSAGES\Warehouse.mo">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="locale\hy\LC_MESSAGES\Warehouse.po">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="locale\ka\LC_MESSAGES\Warehouse.mo">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="locale\ka\LC_MESSAGES\Warehouse.po">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="locale\pl\LC_MESSAGES\Warehouse.mo">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="locale\pl\LC_MESSAGES\Warehouse.po">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="locale\ro\LC_MESSAGES\Warehouse.mo">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="locale\ro\LC_MESSAGES\Warehouse.po">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="locale\ru\LC_MESSAGES\Warehouse.mo">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="locale\ru\LC_MESSAGES\Warehouse.po">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <EmbeddedResource Include="WbpPrintPreview.glade" />
+    <None Include="locale\uk\LC_MESSAGES\Warehouse.mo">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="locale\uk\LC_MESSAGES\Warehouse.po">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <EmbeddedResource Include="WbpReportResult.glade" />
+    <EmbeddedResource Include="Widgets\ChooseNumberPanel.glade" />
+    <EmbeddedResource Include="Widgets\ChooseMoneyPanel.glade" />
+    <EmbeddedResource Include="Widgets\PaymentWidget.glade" />
+    <EmbeddedResource Include="SetupAssistant\Assistant.glade" />
+    <EmbeddedResource Include="SetupAssistant\StepAddDevices.glade" />
+    <EmbeddedResource Include="Widgets\EditNewCompanyRecordPanel.glade" />
+    <EmbeddedResource Include="WbpTradePoint.glade" />
+    <EmbeddedResource Include="Preview\PreviewOperation.glade" />
+    <EmbeddedResource Include="Visualization\VisualizerSettingsDialog.glade" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SetupAssistant\Icons\Completed16.png" />
+    <EmbeddedResource Include="SetupAssistant\Icons\Failed16.png" />
+    <EmbeddedResource Include="SetupAssistant\Icons\Pause16.png" />
+    <EmbeddedResource Include="SetupAssistant\Icons\Question16.png" />
+    <EmbeddedResource Include="SetupAssistant\Icons\Working16.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SetupAssistant\Icons\GenericPurpose170.png" />
+    <EmbeddedResource Include="SetupAssistant\Icons\RetailPurpose170.png" />
+  </ItemGroup>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <!--<Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>-->
+</Project>

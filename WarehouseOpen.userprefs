@@ -1,0 +1,22 @@
+﻿<Properties StartupItem="WarehouseOpen/WarehouseOpen.csproj">
+  <MonoDevelop.Ide.ItemProperties.WarehouseOpen PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Warehouse.Data/SQLite/DataProvider.Common.cs">
+    <Files>
+      <File FileName="Warehouse.Data/MySQL/DataProvider.Common.cs" Line="156" Column="1" />
+      <File FileName="Warehouse.Presentation/Dialogs/NewDatabase.cs" Line="239" Column="46" />
+      <File FileName="Warehouse.Data/SQL/DataProvider.Common.cs" Line="161" Column="1" />
+      <File FileName="Warehouse.Business/BusinessDomain.cs" Line="680" Column="68" />
+      <File FileName="Warehouse.Data/SQLite/DataProvider.Common.cs" Line="169" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/home/alx/src/warehouseopen/Warehouse.Data/MySQL/DataProvider.Common.cs" line="156" column="31" />
+      <Breakpoint enabled="false" file="/home/alx/src/warehouseopen/Warehouse.Presentation/Dialogs/NewDatabase.cs" line="242" column="1" />
+      <Breakpoint file="/home/alx/src/warehouseopen/Warehouse.Data/SQL/DataProvider.Common.cs" line="166" column="1" />
+      <Breakpoint file="/home/alx/src/warehouseopen/Warehouse.Data/SQL/DataProvider.Common.cs" line="180" column="16" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

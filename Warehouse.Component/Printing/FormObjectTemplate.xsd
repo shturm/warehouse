@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="Forms">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="Form"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Form">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="Section"/>
+      </xs:sequence>
+      <xs:attribute name="formName" use="required" type="xs:string"/>
+      <xs:attribute name="style" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Section">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element minOccurs="0" maxOccurs="unbounded" ref="HBox"/>
+          <xs:element minOccurs="0" maxOccurs="unbounded" ref="VBox"/>
+          <xs:element minOccurs="0" maxOccurs="unbounded" ref="Rectangle"/>
+          <xs:element minOccurs="0" maxOccurs="unbounded" ref="TextBox"/>
+          <xs:element minOccurs="0" maxOccurs="unbounded" ref="HLine"/>
+          <xs:element minOccurs="0" maxOccurs="unbounded" ref="VLine"/>
+          <xs:element minOccurs="0" maxOccurs="unbounded" ref="Table"/>
+        </xs:choice>
+      </xs:sequence>
+      <xs:attribute name="style" type="xs:string"/>
+      <xs:attribute name="type" type="sectionType"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HBox">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:choice maxOccurs="unbounded" minOccurs="0">
+          <xs:element ref="BoxItem"/>
+        </xs:choice>
+      </xs:sequence>
+      <xs:attribute name="style" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VBox">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:choice maxOccurs="unbounded" minOccurs="0">
+          <xs:element ref="BoxItem"/>
+        </xs:choice>
+      </xs:sequence>
+      <xs:attribute name="style" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BoxItem">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element minOccurs="0" maxOccurs="unbounded" ref="HBox"/>
+          <xs:element minOccurs="0" maxOccurs="unbounded" ref="VBox"/>
+          <xs:element minOccurs="0" maxOccurs="unbounded" ref="Rectangle"/>
+          <xs:element minOccurs="0" maxOccurs="unbounded" ref="TextBox"/>
+          <xs:element minOccurs="0" maxOccurs="unbounded" ref="HLine"/>
+          <xs:element minOccurs="0" maxOccurs="unbounded" ref="VLine"/>
+          <xs:element minOccurs="0" maxOccurs="unbounded" ref="Table"/>
+        </xs:choice>
+      </xs:sequence>
+      <xs:attribute name="style" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Rectangle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element minOccurs="0" maxOccurs="unbounded" ref="HBox"/>
+          <xs:element minOccurs="0" maxOccurs="unbounded" ref="VBox"/>
+          <xs:element minOccurs="0" maxOccurs="unbounded" ref="Rectangle"/>
+          <xs:element minOccurs="0" maxOccurs="unbounded" ref="TextBox"/>
+          <xs:element minOccurs="0" maxOccurs="unbounded" ref="HLine"/>
+          <xs:element minOccurs="0" maxOccurs="unbounded" ref="VLine"/>
+          <xs:element minOccurs="0" maxOccurs="unbounded" ref="Table"/>
+        </xs:choice>
+      </xs:sequence>
+      <xs:attribute name="fill" default="false" type="xs:boolean"/>
+      <xs:attribute name="fillcolor" type="xs:string" default="#000000"/>
+      <xs:attribute name="style" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TextBox">
+    <xs:complexType>
+      <xs:attribute name="style" type="xs:string"/>
+      <xs:attribute name="font" type="xs:string"/>
+      <xs:attribute name="text" type="xs:string"/>
+      <xs:attribute name="sourceField" type="xs:string"/>
+      <xs:attribute name="format" type="xs:string"/>
+      <xs:attribute name="sourceFormat" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HLine">
+    <xs:complexType>
+      <xs:attribute name="length" type="xs:float"/>
+      <xs:attribute name="thickness" type="xs:float"/>
+      <xs:attribute name="style" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VLine">
+    <xs:complexType>
+      <xs:attribute name="length" type="xs:float"/>
+      <xs:attribute name="thickness" type="xs:float"/>
+      <xs:attribute name="style" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Table">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Columns" minOccurs="0"/>
+        <xs:element ref="Rows" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute name="sourceTable" type="xs:string"/>
+      <xs:attribute name="sourceTableHasFooter" type="xs:boolean"/>
+      <xs:attribute name="sourceTableHasFooterSource" type="xs:string"/>
+      <xs:attribute name="style" type="xs:string"/>
+      <xs:attribute name="headerStyle" type="xs:string"/>
+      <xs:attribute name="footerStyle" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Columns">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="Column"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Column">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Template" maxOccurs="1" minOccurs="0"/>
+        <xs:element ref="Header" maxOccurs="1" minOccurs="0"/>
+        <xs:element ref="Footer" maxOccurs="1" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute name="sourceField" type="xs:string"/>
+      <xs:attribute name="sourceType" type="xs:string"/>
+      <xs:attribute name="sourceFormat" type="xs:string"/>
+      <xs:attribute name="style" type="xs:string"/>
+      <xs:attribute name="font" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Template">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element minOccurs="0" maxOccurs="unbounded" ref="HBox"/>
+          <xs:element minOccurs="0" maxOccurs="unbounded" ref="VBox"/>
+          <xs:element minOccurs="0" maxOccurs="unbounded" ref="Rectangle"/>
+          <xs:element minOccurs="0" maxOccurs="unbounded" ref="TextBox"/>
+          <xs:element minOccurs="0" maxOccurs="unbounded" ref="HLine"/>
+          <xs:element minOccurs="0" maxOccurs="unbounded" ref="VLine"/>
+          <xs:element minOccurs="0" maxOccurs="unbounded" ref="Table"/>
+        </xs:choice>
+      </xs:sequence>
+      <xs:attribute name="style" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Header">
+    <xs:complexType>
+      <xs:sequence minOccurs="0">
+        <xs:choice maxOccurs="unbounded" minOccurs="0">
+          <xs:element minOccurs="0" maxOccurs="unbounded" ref="HBox"/>
+          <xs:element minOccurs="0" maxOccurs="unbounded" ref="VBox"/>
+          <xs:element minOccurs="0" maxOccurs="unbounded" ref="Rectangle"/>
+          <xs:element minOccurs="0" maxOccurs="unbounded" ref="TextBox"/>
+          <xs:element minOccurs="0" maxOccurs="unbounded" ref="HLine"/>
+          <xs:element minOccurs="0" maxOccurs="unbounded" ref="VLine"/>
+          <xs:element minOccurs="0" maxOccurs="unbounded" ref="Table"/>
+        </xs:choice>
+      </xs:sequence>
+      <xs:attribute name="sourceField" type="xs:string"/>
+      <xs:attribute name="sourceType" type="xs:string"/>
+      <xs:attribute name="sourceFormat" type="xs:string"/>
+      <xs:attribute name="style" type="xs:string"/>
+      <xs:attribute name="font" type="xs:string"/>
+      <xs:attribute name="text" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Footer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:choice maxOccurs="unbounded" minOccurs="0">
+          <xs:element minOccurs="0" maxOccurs="unbounded" ref="HBox"/>
+          <xs:element minOccurs="0" maxOccurs="unbounded" ref="VBox"/>
+          <xs:element minOccurs="0" maxOccurs="unbounded" ref="Rectangle"/>
+          <xs:element minOccurs="0" maxOccurs="unbounded" ref="TextBox"/>
+          <xs:element minOccurs="0" maxOccurs="unbounded" ref="HLine"/>
+          <xs:element minOccurs="0" maxOccurs="unbounded" ref="VLine"/>
+          <xs:element minOccurs="0" maxOccurs="unbounded" ref="Table"/>
+        </xs:choice>
+      </xs:sequence>
+      <xs:attribute name="sourceField" type="xs:string"/>
+      <xs:attribute name="sourceType" type="xs:string"/>
+      <xs:attribute name="sourceFormat" type="xs:string"/>
+      <xs:attribute name="style" type="xs:string"/>
+      <xs:attribute name="font" type="xs:string"/>
+      <xs:attribute name="text" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Rows">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="Row"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Row">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="Cell"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Cell">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:choice maxOccurs="unbounded" minOccurs="0">
+          <xs:element minOccurs="0" maxOccurs="unbounded" ref="HBox"/>
+          <xs:element minOccurs="0" maxOccurs="unbounded" ref="VBox"/>
+          <xs:element minOccurs="0" maxOccurs="unbounded" ref="Rectangle"/>
+          <xs:element minOccurs="0" maxOccurs="unbounded" ref="TextBox"/>
+          <xs:element minOccurs="0" maxOccurs="unbounded" ref="HLine"/>
+          <xs:element minOccurs="0" maxOccurs="unbounded" ref="VLine"/>
+          <xs:element minOccurs="0" maxOccurs="unbounded" ref="Table"/>
+        </xs:choice>
+      </xs:sequence>
+      <xs:attribute name="style" type="xs:string"/>
+      <xs:attribute name="text" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:simpleType name="sectionType">
+    <xs:annotation>
+      <xs:documentation>Section types</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="General">
+        <xs:annotation>
+          <xs:documentation>This section contains general content</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="PageHeader">
+        <xs:annotation>
+          <xs:documentation>This section will be shown on the top of each page</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="PageFooter">
+        <xs:annotation>
+          <xs:documentation>This section will be shown on the bottom of each page</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="PageBreak">
+        <xs:annotation>
+          <xs:documentation>This section will move all the content after it to the next page</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<Form formName="Report" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:///e:/Projects/Work/Warehouse/Warehouse.Component/Documenting/FormObjectTemplate.xsd">
+  <Section type="PageHeader">
+    <HBox style="width:100%;height:50">
+      <TextBox sourceFormat="dateFormat" sourceField="reportDate" font="size:10" style="valign:center;height:100%;hfill:true"/>
+      <TextBox sourceField="reportName" font="size:14" style="valign:center;halign:center;width:100%;height:100%"/>
+      <HBox style="width:80px"/>
+    </HBox>
+  </Section>
+  <Section>
+    <Table sourceTable="reportDetails" sourceTableHasFooterSource="reportHasFooter" style="width:100%" />
+  </Section>
+  <Section type="PageFooter">
+    <HBox style="width:100%;height:50">
+      <TextBox sourceField="productId" font="size:8;italic:true" style="valign:center;halign:left;width:100%;height:100%"/>
+      <HBox style="valign:center;hpadding:10;hfill:true;height:100%;halign:right">
+        <TextBox sourceFormat="currentPageFormat" sourceField="%CurrentPage%" font="size:8" />
+        <TextBox sourceFormat="totalPagesFormat" sourceField="%TotalPages%" font="size:8" style="hpadding:2"/>
+      </HBox>
+    </HBox>
+  </Section>
+</Form>

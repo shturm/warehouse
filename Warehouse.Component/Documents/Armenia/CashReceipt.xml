@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<Form formName="CashReceipt" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:///e:/Projects/Work/Warehouse/Warehouse.Component/Documenting/FormObjectTemplate.xsd">
+  <Section>
+    <VBox style="width:100%">
+      <TextBox sourceField="ReceiptTitle" style="width:100%;halign:center" font="size:11;bold:true" trimming="ellipsischaracter"/>
+      <Table style="width:100%;vfill:true;innerborder:0;border:0;halign:center" sourceTable="HeaderDetails">
+        <Columns>
+          <Column style="width:100%;halign:center" font="size:8" trimming="ellipsischaracter" sourceField="">
+            <Header />
+            <Footer />
+          </Column>
+        </Columns>
+      </Table>
+      <TextBox sourceField="ReceiptLabel" style="width:100%;halign:center" font="size:11;bold:true;vpadding:10" trimming="ellipsischaracter"/>
+      <HLine thickness="2" style="width:100%" />
+      <HBox style="height:10" />
+      <HBox style="width:100%;halign:center">
+        <TextBox sourceField="DateValue" font="size:8" style="width:100%"/>
+	<TextBox sourceField="TimeValue" font="size:8" style="width:1%;hfill:true"/>
+      </HBox>
+      <Table style="width:100%;vfill:true;innerborder:0;border:0;vpadding:0;halign:center" sourceTable="FreeText">
+        <Columns>
+          <Column style="width:100%;halign:left" font="size:8" trimming="ellipsischaracter" sourceField="">
+            <Header />
+            <Footer />
+          </Column>
+        </Columns>
+      </Table>
+    </VBox>
+  </Section>
+  <Section style="vpadding:5">
+    <HLine thickness="1" style="width:100%" />
+	<Table style="innerborder:0;border:0;width:100%" headerStyle="width:100%;vfill:true;" sourceTable="Details">
+      <Columns>
+        <Column>
+          <Template style="width:100%">
+            <VBox>
+              <HBox>
+                <TextBox sourceField="GoodsName" style="width:100%" font="size:8;bold:true:underline:true" trimming="ellipsischaracter" wrap="true" />
+                <TextBox sourceField="GoodsCode" font="size:6;underline:true" style="width:1%;hfill:true"/>
+              </HBox>
+              <HBox style="innerspacing:2">
+                <HBox style="width:100%"/>
+                <TextBox sourceField="Quantity" font="size:8" style="width:1%;hfill:true"/>
+                <TextBox sourceField="MUnit" font="size:8" style="width:1%;hfill:true"/>
+                <TextBox text="x" font="size:8" style="width:1%;hfill:true"/>
+                <TextBox sourceField="Price" font="size:8" style="width:1%;hfill:true"/>
+                <TextBox text="=" font="size:8" style="width:1%;hfill:true"/>
+                <TextBox sourceField="Total" font="size:8" style="width:1%;hfill:true"/>
+              </HBox>
+              <HBox style="innerspacing:2">
+                <HBox style="width:100%"/>
+                <TextBox sourceField="Discount" font="size:8" style="width:1%;hfill:true"/>
+              </HBox>
+	      <HLine thickness="1" style="width:100%" />
+            </VBox>
+          </Template>
+          <Header />
+          <Footer />
+        </Column>
+      </Columns>
+    </Table>
+  </Section>
+  <Section style="vpadding:8">
+    <VBox>
+      <HBox style="width:100%">
+        <TextBox sourceField="SubTotalLabel" font="size:8;bold:true" style="width:100%"/>
+        <TextBox sourceField="SubTotalValue" font="size:8;bold:true" style="width:1%;hfill:true"/>
+      </HBox>
+      <HBox style="width:100%">
+        <TextBox sourceField="TotalDiscountLabel" font="size:8;bold:true" style="width:100%"/>
+        <TextBox sourceField="TotalDiscountValue" font="size:8;bold:true" style="width:1%;hfill:true"/>
+      </HBox>
+      <HBox style="width:100%">
+        <TextBox sourceField="TotalLabel" font="size:11;bold:true" style="width:100%"/>
+        <TextBox sourceField="TotalValue" font="size:11;bold:true" style="width:1%;hfill:true"/>
+      </HBox>
+      <HBox style="width:100%">
+        <TextBox sourceField="TotalVATLabel" font="size:9" style="width:100%" />
+        <TextBox sourceField="TotalVATValue" font="size:9" />
+      </HBox>
+      <HBox style="width:100%">
+        <TextBox sourceField="TotalNetAmountLabel" font="size:9" style="width:100%" />
+        <TextBox sourceField="TotalNetAmountValue" font="size:9" />
+      </HBox>
+      <Table style="width:100%;innerborder:0;border:0" headerStyle="width:100%;" sourceTable="PaymentValues">
+        <Columns>
+          <Column>
+            <Template style="width:100%">
+              <VBox>
+                <HBox style="innerspacing:2;width:100%">
+                  <TextBox sourceField="Key" font="size:8" style="width:100%"/>
+                  <TextBox sourceField="Value" font="size:8" style="width:1%;hfill:true"/>
+                </HBox>
+              </VBox>
+            </Template>
+            <Header />
+            <Footer />
+          </Column>
+        </Columns>
+      </Table>
+    </VBox>
+  </Section>
+  <Section>
+    <VBox>
+      <Table style="width:100%;vfill:true;innerborder:0;border:0" sourceTable="FooterDetails">
+        <Columns>
+          <Column style="width:100%;halign:center;vpadding:4" font="size:8" sourceField="">
+            <Header />
+            <Footer />
+          </Column>
+        </Columns>
+      </Table>
+      <TextBox text="--------------------" font="size:9" style="width:100%" />
+      <Picture sizeMode="Fit" style="xstart:10;width:20;height:10" resource="Warehouse.Hardware.Vladster;Logo.png" />
+      <HBox style="height:10" />
+    </VBox>
+  </Section>
+</Form>

@@ -1,0 +1,2162 @@
+<?xml version="1.0"?>
+<Forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:///e:/Projects/Work/Warehouse/Warehouse.Component/Documenting/FormObjectTemplate.xsd">
+  <Form formName="SaleReceipt">
+    <Section style="vpadding:10">
+      <VBox style="width:100%;innervspacing:10">
+        <HBox style="width:100%">
+          <TextBox text="სასაქონლო ზედნადები   №" font="size:10" />
+          <HBox style="width:50%;halign:center">
+            <TextBox sourceField="receiptNumber" font="size:10" />
+          </HBox>
+          <VBox style="width:100%">
+            <HBox style="width:100%;halign:right">
+              <TextBox text="1" style="width:20;height:17;border:3;valign:center" />
+              <HBox style="width:153;height:100%;halign:right;valign:center">
+                <!--Экземпляр-->
+                <TextBox text="ე გ ზ ე მ პ ლ ა რ ი" style="width:100%;border:1;halign:center;valign:center" />
+                <TextBox text="1" style="width:17;height:17;border:1;valign:center" />
+              </HBox>
+            </HBox>
+            <HBox style="width:100%;height:10" />
+            <HBox style="width:100%;halign:right">
+              <TextBox text="2" style="width:20;height:17;border:3;halign:right;valign:center" />
+              <HBox style="width:153;height:100%;halign:right;valign:center">
+                <TextBox sourceField="receiptDay" style="width:17;border:1" />
+                <HBox style="width:102">
+                  <TextBox sourceField="receiptMonthName" style="width:100%;border:1;halign:center" />
+                </HBox>
+                <HBox style="width:34">
+                  <TextBox sourceField="receiptYear" style="width:100%;border:1;halign:center" />
+                </HBox>
+              </HBox>
+            </HBox>
+          </VBox>
+        </HBox>
+        <VBox style="width:100%">
+          <HBox style="width:100%">
+            <VBox style="width:50%">
+              <VBox style="width:100%">
+                <HBox style="width:100%">
+                  <!--Продавец-->
+                  <TextBox text="გამყიდველი" style="width:100%" />
+                  <HBox style="width:100%;height:100%;halign:right">
+                    <TextBox text="3" style="width:20;height:17;border:3;halign:right;valign:center" />
+                    <HBox style="height:100%;halign:right;valign:center">
+                      <TextBox sourceField="supplierNumber" format="{0:0:1}" style="width:17;height:17;border:1;halign:right;valign:center" />
+                      <TextBox sourceField="supplierNumber" format="{0:1:1}" style="width:17;height:17;border:1;halign:right;valign:center" />
+                      <TextBox sourceField="supplierNumber" format="{0:2:1}" style="width:17;height:17;border:1;halign:right;valign:center" />
+                      <TextBox sourceField="supplierNumber" format="{0:3:1}" style="width:17;height:17;border:1;halign:right;valign:center" />
+                      <TextBox sourceField="supplierNumber" format="{0:4:1}" style="width:17;height:17;border:1;halign:right;valign:center" />
+                      <TextBox sourceField="supplierNumber" format="{0:5:1}" style="width:17;height:17;border:1;halign:right;valign:center" />
+                      <TextBox sourceField="supplierNumber" format="{0:6:1}" style="width:17;height:17;border:1;halign:right;valign:center" />
+                      <TextBox sourceField="supplierNumber" format="{0:7:1}" style="width:17;height:17;border:1;halign:right;valign:center" />
+                      <TextBox sourceField="supplierNumber" format="{0:8:1}" style="width:17;height:17;border:1;halign:right;valign:center" />
+                    </HBox>
+                  </HBox>
+                </HBox>
+                <HBox style="width:100%">
+                  <TextBox />
+                  <!--Идентификационный номер-->
+                  <TextBox text="საიდენტიფიკაციო ნომერი" style="width:100%;halign:right" />
+                </HBox>
+              </VBox>
+              <VBox style="width:100%">
+                <TextBox sourceField="supplierName" />
+                <HLine thickness="1" style="width:100%" />
+                <!--Название или ФИО-->
+                <TextBox text="დასახელება ან სახელი და გვარი" font="size:7" />
+              </VBox>
+              <HBox style="width:100%">
+                <VBox style="width:100%">
+                  <HBox style="width:100%;height:16">
+                    <TextBox sourceField="supplierCity" format="{0}, " style="width:1%" />
+                    <TextBox sourceField="supplierAddress" style="width:100%;hfill:false" />
+                  </HBox>
+                  <HLine thickness="1" style="width:90%" />
+                  <!--Аддресс, Номер удостоверения физического лица, номер и место выдачи удостоверения-->
+                  <VBox style="ystart:5;width:100%;halign:center">
+                    <TextBox text="მისამართი, ფიზიკური პირის პირადობის მოწმობა ნომერი და გაცემის " font="size:4" />
+                    <TextBox text="ადგილი" font="size:4" style="width:100%;halign:center" />
+                  </VBox>
+                </VBox>
+                <VBox style="width:100%">
+                  <HBox style="width:100%;halign:right">
+                    <TextBox sourceField="supplierTelephone" format="{0:0:1}" style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <TextBox sourceField="supplierTelephone" format="{0:1:1}" style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <TextBox sourceField="supplierTelephone" format="{0:2:1}" style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <TextBox sourceField="supplierTelephone" format="{0:3:1}" style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <TextBox sourceField="supplierTelephone" format="{0:4:1}" style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <TextBox sourceField="supplierTelephone" format="{0:5:1}" style="width:17;height:17;border:1;halign:right;valign:center" />
+                  </HBox>
+                  <!--Телефон-->
+                  <TextBox text="ტელეფონი" font="size:5" style="width:100%;halign:center" />
+                </VBox>
+              </HBox>
+              <VBox style="width:100%">
+                <HBox style="width:100%">
+                  <!--Отправитель груза-->
+                  <VBox style="width:100%">
+                    <TextBox text="ტვირთის" />
+                    <TextBox text="გამგზავნი" />
+                  </VBox>
+                  <VBox style="width:100%">
+                    <HBox style="width:100%;height:10" />
+                    <HBox style="width:100%">
+                      <TextBox text="5" style="width:20;height:17;border:3;halign:right;valign:center" />
+                      <VBox style="width:100%">
+                        <HBox style="width:100%;height:2" />
+                        <HBox style="width:100%">
+                          <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                          <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                          <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                          <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                          <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                          <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                          <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                          <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                          <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                        </HBox>
+                      </VBox>
+                    </HBox>
+                  </VBox>
+                </HBox>
+                <HBox style="width:100%">
+                  <TextBox />
+                  <!--Идентификационный номер-->
+                  <TextBox text="საიდენტიფიკაციო ნომერი" style="width:100%;halign:right" />
+                </HBox>
+              </VBox>
+              <VBox style="width:100%">
+                <HBox style="width:100%;height:16" />
+                <HLine thickness="1" style="width:100%" />
+                <!--Название или ФИО-->
+                <TextBox text="დასახელება ან სახელი და გვარი" font="size:7" />
+              </VBox>
+              <HBox style="width:100%">
+                <VBox style="width:100%">
+                  <HBox style="width:100%;height:16" />
+                  <HLine thickness="1" style="width:90%" />
+                  <!--Аддресс, Номер удостоверения физического лица, номер и место выдачи удостоверения-->
+                  <VBox style="ystart:5;width:100%;halign:center">
+                    <TextBox text="მისამართი, ფიზიკური პირის პირადობის მოწმობა ნომერი და გაცემის " font="size:4" />
+                    <TextBox text="ადგილი" font="size:4" style="width:100%;halign:center" />
+                  </VBox>
+                </VBox>
+                <VBox style="width:100%">
+                  <HBox style="width:100%;halign:right">
+                    <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                  </HBox>
+                  <!--Телефон-->
+                  <TextBox text="ტელეფონი" font="size:5" style="width:100%;halign:center" />
+                </VBox>
+              </HBox>
+              <VBox style="ystart:10;width:100%">
+                <HBox style="width:100%">
+                  <!--Транспортировщик-->
+                  <TextBox text="გადამზიდველი" style="width:100%" />
+                  <HBox style="width:100%;height:100%;halign:right">
+                    <TextBox text="7" style="width:20;height:17;border:3;halign:right;valign:center" />
+                    <HBox style="height:100%;vpadding:2;halign:right">
+                      <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                      <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                      <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                      <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                      <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                      <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                      <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                      <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                      <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                    </HBox>
+                  </HBox>
+                </HBox>
+                <HBox style="width:100%">
+                  <TextBox />
+                  <!--Идентификационный номер-->
+                  <TextBox text="საიდენტიფიკაციო ნომერი" style="width:100%;halign:right" />
+                </HBox>
+              </VBox>
+              <VBox style="width:100%">
+                <HBox style="width:100%;height:17" />
+                <HLine thickness="1" style="width:100%" />
+                <TextBox text="დასახელება ან სახელი და გვარი" font="size:7" />
+              </VBox>
+              <HBox style="width:100%">
+                <VBox style="width:100%">
+                  <HBox style="width:100%;height:16" />
+                  <HLine thickness="1" style="width:90%" />
+                  <!--Аддресс, Номер удостоверения физического лица, номер и место выдачи удостоверения-->
+                  <VBox style="ystart:5;width:100%;halign:center">
+                    <TextBox text="მისამართი, ფიზიკური პირის პირადობის მოწმობა ნომერი და გაცემის " font="size:4" />
+                    <TextBox text="ადგილი" font="size:4" style="width:100%;halign:center" />
+                  </VBox>
+                </VBox>
+                <VBox style="width:100%">
+                  <HBox style="width:100%;halign:right">
+                    <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                  </HBox>
+                  <!--Телефон-->
+                  <TextBox text="ტელეფონი" font="size:5" style="width:100%;halign:center" />
+                </VBox>
+              </HBox>
+            </VBox>
+            <HBox style="width:29" />
+            <VBox style="width:50%">
+              <VBox style="width:100%">
+                <HBox style="width:100%">
+                  <!--Покупатель-->
+                  <TextBox text="მყიდველი" style="width:100%" />
+                  <HBox style="width:100%;halign:right">
+                    <TextBox text="4" style="width:20;height:17;border:3;halign:right;valign:center" />
+                    <HBox style="height:100%;hfill:true;halign:right;valign:center">
+                      <TextBox sourceField="recipientNumber" format="{0:0:1}" style="width:17;height:17;border:1;halign:right;valign:center" />
+                      <TextBox sourceField="recipientNumber" format="{0:1:1}" style="width:17;height:17;border:1;halign:right;valign:center" />
+                      <TextBox sourceField="recipientNumber" format="{0:2:1}" style="width:17;height:17;border:1;halign:right;valign:center" />
+                      <TextBox sourceField="recipientNumber" format="{0:3:1}" style="width:17;height:17;border:1;halign:right;valign:center" />
+                      <TextBox sourceField="recipientNumber" format="{0:4:1}" style="width:17;height:17;border:1;halign:right;valign:center" />
+                      <TextBox sourceField="recipientNumber" format="{0:5:1}" style="width:17;height:17;border:1;halign:right;valign:center" />
+                      <TextBox sourceField="recipientNumber" format="{0:6:1}" style="width:17;height:17;border:1;halign:right;valign:center" />
+                      <TextBox sourceField="recipientNumber" format="{0:7:1}" style="width:17;height:17;border:1;halign:right;valign:center" />
+                      <TextBox sourceField="recipientNumber" format="{0:8:1}" style="width:17;height:17;border:1;halign:right;valign:center" />
+                    </HBox>
+                  </HBox>
+                </HBox>
+                <HBox style="width:100%">
+                  <TextBox />
+                  <!--Идентификационный номер-->
+                  <TextBox text="საიდენტიფიკაციო ნომერი" style="width:100%;halign:right" />
+                </HBox>
+              </VBox>
+              <VBox style="width:100%">
+                <TextBox sourceField="recipientName" />
+                <HLine thickness="1" style="width:100%" />
+                <!--Название или ФИО-->
+                <TextBox text="დასახელება ან სახელი და გვარი" font="size:7" />
+              </VBox>
+              <HBox style="width:100%">
+                <VBox style="width:100%">
+                  <TextBox sourceField="recipientAddress" style="height:16;hfill:false" />
+                  <HLine thickness="1" style="width:90%" />
+                  <TextBox text="მისამართი" font="size:5" style="ystart:1;width:100%;halign:center" />
+                </VBox>
+                <VBox style="width:25%">
+                  <HBox style="width:100%">
+                    <TextBox sourceField="recipientTelephone" format="{0:0:1}" style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <TextBox sourceField="recipientTelephone" format="{0:1:1}" style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <TextBox sourceField="recipientTelephone" format="{0:2:1}" style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <TextBox sourceField="recipientTelephone" format="{0:3:1}" style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <TextBox sourceField="recipientTelephone" format="{0:4:1}" style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <TextBox sourceField="recipientTelephone" format="{0:5:1}" style="width:17;height:17;border:1;halign:right;valign:center" />
+                  </HBox>
+                  <!--Телефон-->
+                  <TextBox text="ტელეფონი" font="size:5" style="width:100%;halign:center" />
+                </VBox>
+              </HBox>
+              <VBox style="ystart:11;width:100%">
+                <HBox style="width:100%">
+                  <!--Грузополучатель-->
+                  <VBox style="width:100%">
+
+                    <TextBox text="ტვირთის" />
+                    <TextBox text="მიმღები" />
+                  </VBox>
+                  <VBox style="width:100%">
+                    <HBox style="width:100%;height:10" />
+                    <HBox style="width:100%">
+                      <TextBox text="6" style="width:20;height:17;border:3;halign:right;valign:center" />
+                      <VBox style="width:100%">
+                        <HBox style="width:100%;height:2" />
+                        <HBox style="width:100%">
+                          <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                          <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                          <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                          <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                          <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                          <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                          <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                          <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                          <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                        </HBox>
+                      </VBox>
+                    </HBox>
+                  </VBox>
+                </HBox>
+                <HBox style="width:100%">
+                  <TextBox />
+                  <!--Идентификационный номер-->
+                  <TextBox text="საიდენტიფიკაციო ნომერი" style="width:100%;halign:right" />
+                </HBox>
+              </VBox>
+              <VBox style="width:100%">
+                <HBox style="width:100%;height:16" />
+                <HLine thickness="1" style="width:100%" />
+                <!--Название или ФИО-->
+                <TextBox text="დასახელება ან სახელი და გვარი" font="size:7" />
+              </VBox>
+              <HBox style="width:100%">
+                <VBox style="width:100%">
+                  <HBox style="width:100%;height:16" />
+                  <HLine thickness="1" style="width:90%" />
+                  <!--Аддресс-->
+                  <TextBox text="მისამართი" font="size:5" style="width:100%;halign:center" />
+                </VBox>
+                <VBox style="width:25%">
+                  <HBox style="width:100%">
+                    <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                  </HBox>
+                  <!--Телефон-->
+                  <TextBox text="ტელეფონი" font="size:5" style="width:100%;halign:center" />
+                </VBox>
+              </HBox>
+              <HBox style="ystart:21;width:100%">
+                <VBox style="width:100%">
+                  <TextBox style="height:17" />
+                  <HLine thickness="1" style="ystart:1;width:100%" />
+                  <TextBox style="height:17" />
+                  <HLine thickness="1" style="ystart:1;width:100%" />
+                  <!--Мат. Ответственное лицо-->
+                  <TextBox text="ნდობით აღჭურვილი პირი" font="size:5" style="width:100%;halign:center" />
+                </VBox>
+                <VBox style="width:25%">
+                  <HBox style="width:100%">
+                    <TextBox text="8" style="width:20;height:17;border:3;halign:right;valign:center" />
+                    <VBox style="width:100%">
+                      <HBox style="width:100%;height:2" />
+                      <TextBox style="width:51;height:17;border:1" />
+                    </VBox>
+                  </HBox>
+                  <!--Номер доверенности-->
+                  <TextBox text="მინდობ.ნომერი" font="size:5" style="width:100%;halign:right" />
+                </VBox>
+                <HBox style="width:15" />
+                <VBox style="width:25%">
+                  <HBox style="width:100%">
+                    <TextBox text="9" style="width:20;height:17;border:3;halign:right;valign:center" />
+                    <VBox style="width:100%">
+                      <HBox style="width:100%;height:2" />
+                      <TextBox style="width:68;height:17;border:1" />
+                    </VBox>
+                  </HBox>
+                  <!--число, месяц, год (по соответствующему документу )-->
+                  <TextBox text="რიც. თვე და წელი" font="size:5" style="width:100%;halign:right" />
+                </VBox>
+              </HBox>
+            </VBox>
+          </HBox>
+          <HBox style="ystart:5;width:100%">
+            <VBox style="width:90%">
+              <!--Вид (тип) транспорта-->
+              <TextBox text="ტრანსპორტის სახე" style="halign:center" />
+              <!--Выделите знаком Х-->
+              <TextBox text="(აღნიშნეთ X ნიშნით)" font="size:5" style="width:80%;halign:center" />
+            </VBox>
+            <Table style="height:100%;border:0;innerborder:0" headerStyle="bgcolor:#D4D0C8" footerStyle="bgcolor:#D4D0C8">
+              <Rows>
+                <Row style="height:100%;innervborder:0;spacing:0;innerhspacing:1">
+                  <Cell style="xstart:0;ystart:0;width:100%;height:100%;padding:0">
+                    <TextBox text="10" style="width:20;height:17;border:3;halign:right;valign:center" />
+                  </Cell>
+                  <Cell style="xstart:0;ystart:0;width:100%;padding:0;valign:center">
+                    <TextBox style="width:34;height:17;border:1" />
+                  </Cell>
+                  <Cell style="xstart:0;ystart:0;width:100%;padding:0;valign:center">
+                    <TextBox style="width:34;height:17;border:1" />
+                  </Cell>
+                  <Cell style="xstart:0;ystart:0;width:100%;padding:0;valign:center">
+                    <TextBox style="width:34;height:17;border:1" />
+                  </Cell>
+                </Row>
+                <Row style="height:100%;innervborder:0;spacing:0;innerhspacing:1">
+                  <Cell style="xstart:0;ystart:0;padding:0" />
+                  <Cell style="xstart:0;ystart:0;padding:0">
+                	<!--Автомобильный-->
+                    <VBox style="width:100%">
+                      <TextBox text="საავტო-" font="size:5" style="width:100%;halign:center" />
+                      <TextBox text="მობილო" font="size:5" style="width:100%;halign:center" />
+                    </VBox>
+                  </Cell>
+                  <Cell style="xstart:0;ystart:0;padding:0">
+                	<!--Железнодорожный-->
+                    <VBox style="width:100%">
+                      <TextBox text="სარკინი-" font="size:5" style="width:100%;halign:center" />
+                      <TextBox text="გზო" font="size:5" style="width:100%;halign:center" />
+                    </VBox>
+                  </Cell>
+                  <Cell style="xstart:0;ystart:0;padding:0">
+                	<!--Другой-->
+                    <TextBox text="სხვა" font="size:5" style="width:100%;halign:center" />
+                  </Cell>
+                </Row>
+              </Rows>
+            </Table>
+            <HBox style="width:19" />
+            <VBox style="width:100%">
+              <HBox style="width:100%">
+                <TextBox text="11" style="width:20;height:17;border:3;halign:right;valign:center" />
+                <VBox style="width:100%">
+                  <HBox style="width:100%;height:2" />
+                  <HBox style="width:100%">
+                    <TextBox style="height:17;border:1" />
+                    <TextBox style="width:50%;height:17;border:1" />
+                  </HBox>
+                </VBox>
+              </HBox>
+              <!--Марка и номер транспортного средства-->
+              <VBox style="width:100%">
+                <HBox style="width:17" />
+                <TextBox text="სატრანსპორტო საშუალების მარკა და " font="size:5" style="width:98%;halign:right" />
+                <TextBox text="ნომერი" font="size:5" style="width:99%;halign:center" />
+              </VBox>
+            </VBox>
+            <HBox style="width:34" />
+            <VBox style="width:100%">
+              <HBox style="width:100%">
+                <TextBox text="12" style="width:20;height:17;border:3;halign:right;valign:center" />
+                <VBox style="width:100%">
+                  <HBox style="width:100%;height:2" />
+                  <HBox style="width:100%">
+                    <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                  </HBox>
+                </VBox>
+              </HBox>
+              <!--Серия и номер водительских прав-->
+              <TextBox text="მძღოლის მოწმობის სერია და ნომერი" font="size:5" style="width:90%;halign:right" />
+            </VBox>
+          </HBox>
+        </VBox>
+      </VBox>
+    </Section>
+    <Section style="vpadding:8">
+      <VBox style="width:100%">
+        <Table sourceTable="receiptDetails" style="width:100%" headerStyle="bgcolor:#D4D0C8" footerStyle="bgcolor:#D4D0C8">
+          <Columns>
+            <Column>
+              <Template style="height:100%;padding:2;halign:center;valign:center">
+                <TextBox sourceField="Number" />
+              </Template>
+              <Header style="padding:2;halign:center;valign:center">
+                <TextBox text="№" />
+              </Header>
+            </Column>
+            <Column>
+              <Template style="width:100%;padding:2;hfill:false;valign:center">
+                <TextBox sourceField="GoodsName" wrap="true" />
+              </Template>
+              <Header style="width:100%;padding:2;hfill:false;valign:center">
+                <!--Наименование груза (товара) или номер контейнера-->
+                <VBox style="width:100%;halign:center;valign:center">
+                  <TextBox text="საქონლის (ტვირთის) დასახელება " />
+                  <TextBox text="ან კონტეინერის ნომერი, " style="halign:center" />
+                  <TextBox text="მ.შ. დანართის მიხედვით" style="halign:center" />
+                </VBox>
+              </Header>
+            </Column>
+            <Column>
+              <Template style="padding:2;halign:center;valign:center">
+                <TextBox sourceField="MUnit" />
+              </Template>
+              <Header style="xstart:0;ystart:0;padding:2;valign:center">
+                <VBox style="width:100%">
+                  <TextBox text="ზომის " style="width:100%;halign:center" />
+                  <TextBox text="ერთ" style="width:100%;halign:center" />
+                </VBox>
+              </Header>
+            </Column>
+            <Column>
+              <Template style="padding:2;halign:right;valign:center">
+                <TextBox sourceField="Quantity" />
+              </Template>
+              <Header style="xstart:0;ystart:0;padding:2;valign:center">
+                <VBox style="width:100%;halign:center">
+                  <TextBox text="რაოდენ" style="width:100%;halign:center" />
+                  <TextBox text="ობა" style="width:100%;halign:center" />
+                </VBox>
+              </Header>
+            </Column>
+            <Column>
+              <Template style="halign:right;valign:center">
+                <HBox style="width:100%;valign:center">
+                  <TextBox sourceField="PriceBankNotes" style="ystart:2;width:50;halign:right;valign:center" />
+                  <VLine thickness="1" style="height:19" />
+                  <TextBox sourceField="PriceCoins" style="ystart:2;halign:right;valign:center" />
+                </HBox>
+              </Template>
+              <Header style="xstart:0;ystart:0;padding:0;halign:center;valign:center">
+                <!--Единичная стоимость с учётом НДС и акциза-->
+                <VBox style="width:100%">
+                  <TextBox text="ერთ-ის ფასი დღგ-ს " style="width:100%;halign:center" />
+                  <TextBox text="აქციზის " style="width:100%;halign:center" />
+                  <TextBox text="ჩათვლით" style="width:100%;halign:center" />
+                  <HLine thickness="1" style="width:100%" />
+                  <HBox style="width:100%">
+                    <!--Лар (нац валюта) прим: рубль-->
+                    <TextBox text="ლარი" style="width:50" />
+                    <VLine thickness="1" style="height:15" />
+                    <!--Тетри (нац валюта) прим: коп-->
+                    <TextBox text="თეთრი" style="width:55" />
+                  </HBox>
+                </VBox>
+              </Header>
+            </Column>
+            <Column>
+              <Template style="halign:right;valign:center">
+                <HBox style="width:100%;valign:center">
+                  <TextBox sourceField="TotalBankNotes" style="ystart:2;width:34;halign:right;valign:center" />
+                  <VLine thickness="1" style="height:19" />
+                  <TextBox sourceField="TotalCoins" style="ystart:2;halign:right;valign:center" />
+                </HBox>
+              </Template>
+              <Header style="xstart:0;ystart:0;padding:0;halign:center;valign:center">
+                <!--Стоимость-->
+                <VBox style="width:100%">
+                  <VBox style="width:100%;height:45">
+                    <TextBox text="თანხა" style="width:100%;height:100%;halign:center;valign:center" />
+                  </VBox>
+                  <HLine thickness="1" style="width:100%" />
+                  <HBox style="width:100%;height:25%">
+                    <!--Лар (нац валюта) прим: рубль-->
+                    <TextBox text="ლარი" />
+                    <VLine thickness="1" style="height:15" />
+                    <!--Тетри (нац валюта) прим: коп-->
+                    <TextBox text="თეთრი" style="width:100%" />
+                  </HBox>
+                </VBox>
+              </Header>
+            </Column>
+            <Column>
+              <Template style="padding:2;halign:center;valign:center">
+                <TextBox />
+              </Template>
+              <Header style="xstart:0;ystart:0;padding:2;valign:center">
+                <!--Вид упаковки-->
+                <VBox style="width:100%">
+                  <TextBox text="შეფუთვის " />
+                  <TextBox text="სახე" style="width:100%;halign:center" />
+                </VBox>
+              </Header>
+            </Column>
+            <Column>
+              <Template style="padding:2;halign:center;valign:center">
+                <TextBox />
+              </Template>
+              <Header style="padding:2;valign:center">
+                <!--Масса брутто нетто-->
+                <VBox style="width:100%">
+                  <TextBox text="მასა ბრუტო " />
+                  <TextBox text="ნეტო" style="halign:center" />
+                </VBox>
+              </Header>
+            </Column>
+          </Columns>
+        </Table>
+        <VBox style="xstart:20;width:100%;hfill:true">
+          <HBox style="width:100%">
+            <VBox style="width:100%">
+              <TextBox text="სულ:" font="bold:true" />
+              <HLine thickness="1" style="ystart:1;width:100%" />
+            </VBox>
+            <TextBox text="13" style="width:17;height:17;border:3;halign:right;valign:center" />
+            <TextBox sourceField="totalPlusVATBankNotes" style="width:34;height:17;border:1;halign:right;valign:center" />
+            <TextBox sourceField="totalPlusVATCoins" style="width:44;height:17;border:1;halign:right;valign:center" />
+            <HBox style="width:41" />
+            <TextBox text="14" style="width:17;height:17;border:3;halign:right;valign:center" />
+            <HBox style="width:72;height:17;border:1" />
+          </HBox>
+        </VBox>
+        <HBox style="ystart:5;width:100%">
+          <TextBox text="თანხა სულ" style="width:30%" />
+          <TextBox sourceField="totalInWords" wrap="true" />
+        </HBox>
+        <HLine thickness="1" style="width:50%;halign:center" />
+        <TextBox text="სიტყვიერად" style="width:100%;halign:center" />
+        <VBox style="width:100%">
+          <TextBox font="size:10" style="height:17;halign:center" />
+          <HLine thickness="1" style="width:50%;halign:center" />
+          <!--Отпуск разрешил (Позиция, Подпись)-->
+          <TextBox text="გაშვების ნება დართო (თანამდებობა, ხელმოწერა)" style="width:100%;halign:center" />
+        </VBox>
+      </VBox>
+    </Section>
+    <Section>
+      <HBox style="width:100%">
+        <VBox style="width:50%;border:2">
+            <!--Для перевозки данного груза-->
+          <TextBox text="აღნიშნული ტვირთი გადასატანად" />
+          <HBox style="ystart:17;width:100%;allowvbreak:false">
+            <VBox style="width:100%">
+              <!--С тарой или в упаковке-->
+              <!--С массой-->
+              <TextBox text="ტარით ან შეფუთვით, მასით" />
+              <!--Брутто - тонна-->
+              <TextBox text="ბრუტო ტონა" />
+              <HBox style="width:100%;height:17" />
+            </VBox>
+            <VBox style="width:100%">
+              <HBox style="width:100%;height:17" />
+              <HLine thickness="1" style="width:100%" />
+              <!--прописью-->
+              <TextBox text="სიტყვიერად" style="width:100%;halign:center" />
+            </VBox>
+          </HBox>
+          <HBox style="width:100%;allowvbreak:false">
+            <VBox style="width:100%">
+              <!--Сдал продавец-->
+              <TextBox text="ჩააბარა გამყიდველმა" />
+              <!--(отправитель груза)-->
+              <TextBox text="(ტვირთის გამგზავნმა)" />
+            </VBox>
+            <VBox style="width:100%">
+              <HBox style="width:100%;height:17" />
+              <HLine thickness="1" style="width:100%" />
+              <!--должность, фамилия, имя, подпись, печать (штамп)-->
+              <VBox style="width:100%">
+                <TextBox text="თანამდებობა სახელი გვარი და " font="size:5" style="width:100%;halign:center" />
+                <TextBox text="შტამპი (ბეჭედი)" font="size:5" style="width:100%;halign:center" />
+              </VBox>
+            </VBox>
+          </HBox>
+          <HBox style="width:100%;allowvbreak:false">
+            <!--Приняло доверенное лицо-->
+            <VBox style="width:100%">
+              <TextBox text="მიიღო ნდობით აღჭურვილმა " style="halign:center" />
+              <TextBox text="პირმა ან გადამზიდველმა" style="halign:center" />
+            </VBox>
+            <VBox style="width:100%;halign:center">
+              <HBox style="width:100%;height:17" />
+              <HLine thickness="1" style="width:100%" />
+              <!--фамилия, имя, подпись поставщика-->
+              <TextBox text="სახელი, გვარი, ხელმოწერა, ბეჭედი / შტამპი" font="size:5" style="width:100%;halign:center" />
+              <HBox style="width:100%">
+                <HBox style="width:100%" />
+                <HBox style="width:100%" />
+                <TextBox text="201    წ" style="width:100%" />
+              </HBox>
+              <HBox style="width:100%">
+                <HLine thickness="1" style="width:75%" />
+                <HLine thickness="1" style="width:100%" />
+                <HBox style="width:100%" />
+              </HBox>
+              <HBox style="width:100%;height:12" />
+            </VBox>
+          </HBox>
+        </VBox>
+        <VBox style="width:50%;border:2">
+            <!--Данный груз для покупателя (принимателя груза)-->
+          <TextBox text="აღნიშნული ტვირთი მყიდველს (ტვირთის მიმღებს)" />
+          <HBox style="ystart:17;width:100%;allowvbreak:false">
+            <VBox style="width:100%">
+              <!--С тарой или в упаковке-->
+              <!--С массой-->
+              <TextBox text="ტარით ან შეფუთვით, მასით" />
+              <!--Брутто - тонна-->
+              <TextBox text="ბრუტო ტონა" />
+              <HBox style="width:100%;height:17" />
+            </VBox>
+            <VBox style="width:100%">
+              <HBox style="width:100%;height:17" />
+              <HLine thickness="1" style="width:100%" />
+              <!--прописью-->
+              <TextBox text="სიტყვიერად" style="width:100%;halign:center" />
+            </VBox>
+          </HBox>
+          <HBox style="width:100%;allowvbreak:false">
+            <VBox style="width:100%;halign:center">
+              <!--Сдало доверенное лицо-->
+              <TextBox text="ჩააბარა ნდობით აღჭ." />
+              <!--(транспортировщик)-->
+              <TextBox text="პირმა (გადამზიდველმა)" />
+            </VBox>
+            <VBox style="width:100%">
+              <HBox style="width:100%;height:17" />
+              <HLine thickness="1" style="width:100%" />
+              <!--фамилия, имя, подпись поставщика-->
+              <TextBox text="სახელი გვარი ხელმოწერა" font="size:5" style="width:100%;halign:center" />
+            </VBox>
+          </HBox>
+          <HBox style="ystart:11;width:100%;allowvbreak:false">
+            <!--Груз получил покупатель-->
+            <TextBox text="მიიღო მყიდველმა" />
+            <VBox style="width:100%">
+              <HBox style="width:100%;height:9" />
+              <HLine thickness="1" style="width:100%" />
+              <!--фамилия, имя,подпись, печать (штамп)-->
+              <TextBox text="სახელი, გვარი, ხელმოწერა, ბეჭედი / შტამპი" font="size:5" style="width:100%;halign:center" />
+              <HBox style="width:100%;halign:center">
+                <HBox style="width:100%" />
+                <HBox style="width:100%" />
+                <TextBox text="201    წ" style="width:100%" />
+              </HBox>
+              <HBox style="width:100%">
+                <HLine thickness="1" style="width:75%" />
+                <HLine thickness="1" style="width:100%" />
+                <HBox style="width:100%" />
+              </HBox>
+              <HBox style="width:100%;height:14" />
+            </VBox>
+          </HBox>
+        </VBox>
+      </HBox>
+    </Section>
+    <Section type="PageBreak" />
+    <Section style="vpadding:10">
+      <VBox style="width:100%;innervspacing:10">
+        <HBox style="width:100%">
+          <TextBox text="სასაქონლო ზედნადები   №" font="size:10" />
+          <HBox style="width:50%;halign:center">
+            <TextBox sourceField="receiptNumber" font="size:10" />
+          </HBox>
+          <VBox style="width:100%">
+            <HBox style="width:100%;halign:right">
+              <TextBox text="1" style="width:20;height:17;border:3;valign:center" />
+              <HBox style="width:153;height:100%;halign:right;valign:center">
+                <!--Экземпляр-->
+                <TextBox text="ე გ ზ ე მ პ ლ ა რ ი" style="width:100%;border:1;halign:center;valign:center" />
+                <TextBox text="2" style="width:17;height:17;border:1;valign:center" />
+              </HBox>
+            </HBox>
+            <HBox style="width:100%;height:10" />
+            <HBox style="width:100%;halign:right">
+              <TextBox text="2" style="width:20;height:17;border:3;halign:right;valign:center" />
+              <HBox style="width:153;height:100%;halign:right;valign:center">
+                <TextBox sourceField="receiptDay" style="width:17;border:1" />
+                <HBox style="width:102">
+                  <TextBox sourceField="receiptMonthName" style="width:100%;border:1;halign:center" />
+                </HBox>
+                <HBox style="width:34">
+                  <TextBox sourceField="receiptYear" style="width:100%;border:1;halign:center" />
+                </HBox>
+              </HBox>
+            </HBox>
+          </VBox>
+        </HBox>
+        <VBox style="width:100%">
+          <HBox style="width:100%">
+            <VBox style="width:50%">
+              <VBox style="width:100%">
+                <HBox style="width:100%">
+                  <!--Продавец-->
+                  <TextBox text="გამყიდველი" style="width:100%" />
+                  <HBox style="width:100%;height:100%;halign:right">
+                    <TextBox text="3" style="width:20;height:17;border:3;halign:right;valign:center" />
+                    <HBox style="height:100%;halign:right;valign:center">
+                      <TextBox sourceField="supplierNumber" format="{0:0:1}" style="width:17;height:17;border:1;halign:right;valign:center" />
+                      <TextBox sourceField="supplierNumber" format="{0:1:1}" style="width:17;height:17;border:1;halign:right;valign:center" />
+                      <TextBox sourceField="supplierNumber" format="{0:2:1}" style="width:17;height:17;border:1;halign:right;valign:center" />
+                      <TextBox sourceField="supplierNumber" format="{0:3:1}" style="width:17;height:17;border:1;halign:right;valign:center" />
+                      <TextBox sourceField="supplierNumber" format="{0:4:1}" style="width:17;height:17;border:1;halign:right;valign:center" />
+                      <TextBox sourceField="supplierNumber" format="{0:5:1}" style="width:17;height:17;border:1;halign:right;valign:center" />
+                      <TextBox sourceField="supplierNumber" format="{0:6:1}" style="width:17;height:17;border:1;halign:right;valign:center" />
+                      <TextBox sourceField="supplierNumber" format="{0:7:1}" style="width:17;height:17;border:1;halign:right;valign:center" />
+                      <TextBox sourceField="supplierNumber" format="{0:8:1}" style="width:17;height:17;border:1;halign:right;valign:center" />
+                    </HBox>
+                  </HBox>
+                </HBox>
+                <HBox style="width:100%">
+                  <TextBox />
+                  <!--Идентификационный номер-->
+                  <TextBox text="საიდენტიფიკაციო ნომერი" style="width:100%;halign:right" />
+                </HBox>
+              </VBox>
+              <VBox style="width:100%">
+                <TextBox sourceField="supplierName" />
+                <HLine thickness="1" style="width:100%" />
+                <!--Название или ФИО-->
+                <TextBox text="დასახელება ან სახელი და გვარი" font="size:7" />
+              </VBox>
+              <HBox style="width:100%">
+                <VBox style="width:100%">
+                  <HBox style="width:100%;height:16">
+                    <TextBox sourceField="supplierCity" format="{0}, " style="width:1%" />
+                    <TextBox sourceField="supplierAddress" style="width:100%;hfill:false" />
+                  </HBox>
+                  <HLine thickness="1" style="width:90%" />
+                  <!--Аддресс, Номер удостоверения физического лица, номер и место выдачи удостоверения-->
+                  <VBox style="ystart:5;width:100%;halign:center">
+                    <TextBox text="მისამართი, ფიზიკური პირის პირადობის მოწმობა ნომერი და გაცემის " font="size:4" />
+                    <TextBox text="ადგილი" font="size:4" style="width:100%;halign:center" />
+                  </VBox>
+                </VBox>
+                <VBox style="width:100%">
+                  <HBox style="width:100%;halign:right">
+                    <TextBox sourceField="supplierTelephone" format="{0:0:1}" style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <TextBox sourceField="supplierTelephone" format="{0:1:1}" style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <TextBox sourceField="supplierTelephone" format="{0:2:1}" style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <TextBox sourceField="supplierTelephone" format="{0:3:1}" style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <TextBox sourceField="supplierTelephone" format="{0:4:1}" style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <TextBox sourceField="supplierTelephone" format="{0:5:1}" style="width:17;height:17;border:1;halign:right;valign:center" />
+                  </HBox>
+                  <!--Телефон-->
+                  <TextBox text="ტელეფონი" font="size:5" style="width:100%;halign:center" />
+                </VBox>
+              </HBox>
+              <VBox style="width:100%">
+                <HBox style="width:100%">
+                  <!--Отправитель груза-->
+                  <VBox style="width:100%">
+                    <TextBox text="ტვირთის" />
+                    <TextBox text="გამგზავნი" />
+                  </VBox>
+                  <VBox style="width:100%">
+                    <HBox style="width:100%;height:10" />
+                    <HBox style="width:100%">
+                      <TextBox text="5" style="width:20;height:17;border:3;halign:right;valign:center" />
+                      <VBox style="width:100%">
+                        <HBox style="width:100%;height:2" />
+                        <HBox style="width:100%">
+                          <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                          <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                          <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                          <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                          <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                          <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                          <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                          <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                          <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                        </HBox>
+                      </VBox>
+                    </HBox>
+                  </VBox>
+                </HBox>
+                <HBox style="width:100%">
+                  <TextBox />
+                  <!--Идентификационный номер-->
+                  <TextBox text="საიდენტიფიკაციო ნომერი" style="width:100%;halign:right" />
+                </HBox>
+              </VBox>
+              <VBox style="width:100%">
+                <HBox style="width:100%;height:16" />
+                <HLine thickness="1" style="width:100%" />
+                <!--Название или ФИО-->
+                <TextBox text="დასახელება ან სახელი და გვარი" font="size:7" />
+              </VBox>
+              <HBox style="width:100%">
+                <VBox style="width:100%">
+                  <HBox style="width:100%;height:16" />
+                  <HLine thickness="1" style="width:90%" />
+                  <!--Аддресс, Номер удостоверения физического лица, номер и место выдачи удостоверения-->
+                  <VBox style="ystart:5;width:100%;halign:center">
+                    <TextBox text="მისამართი, ფიზიკური პირის პირადობის მოწმობა ნომერი და გაცემის " font="size:4" />
+                    <TextBox text="ადგილი" font="size:4" style="width:100%;halign:center" />
+                  </VBox>
+                </VBox>
+                <VBox style="width:100%">
+                  <HBox style="width:100%;halign:right">
+                    <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                  </HBox>
+                  <!--Телефон-->
+                  <TextBox text="ტელეფონი" font="size:5" style="width:100%;halign:center" />
+                </VBox>
+              </HBox>
+              <VBox style="ystart:10;width:100%">
+                <HBox style="width:100%">
+                  <!--Транспортировщик-->
+                  <TextBox text="გადამზიდველი" style="width:100%" />
+                  <HBox style="width:100%;height:100%;halign:right">
+                    <TextBox text="7" style="width:20;height:17;border:3;halign:right;valign:center" />
+                    <HBox style="height:100%;vpadding:2;halign:right">
+                      <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                      <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                      <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                      <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                      <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                      <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                      <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                      <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                      <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                    </HBox>
+                  </HBox>
+                </HBox>
+                <HBox style="width:100%">
+                  <TextBox />
+                  <!--Идентификационный номер-->
+                  <TextBox text="საიდენტიფიკაციო ნომერი" style="width:100%;halign:right" />
+                </HBox>
+              </VBox>
+              <VBox style="width:100%">
+                <HBox style="width:100%;height:17" />
+                <HLine thickness="1" style="width:100%" />
+                <TextBox text="დასახელება ან სახელი და გვარი" font="size:7" />
+              </VBox>
+              <HBox style="width:100%">
+                <VBox style="width:100%">
+                  <HBox style="width:100%;height:16" />
+                  <HLine thickness="1" style="width:90%" />
+                  <!--Аддресс, Номер удостоверения физического лица, номер и место выдачи удостоверения-->
+                  <VBox style="ystart:5;width:100%;halign:center">
+                    <TextBox text="მისამართი, ფიზიკური პირის პირადობის მოწმობა ნომერი და გაცემის " font="size:4" />
+                    <TextBox text="ადგილი" font="size:4" style="width:100%;halign:center" />
+                  </VBox>
+                </VBox>
+                <VBox style="width:100%">
+                  <HBox style="width:100%;halign:right">
+                    <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                  </HBox>
+                  <!--Телефон-->
+                  <TextBox text="ტელეფონი" font="size:5" style="width:100%;halign:center" />
+                </VBox>
+              </HBox>
+            </VBox>
+            <HBox style="width:29" />
+            <VBox style="width:50%">
+              <VBox style="width:100%">
+                <HBox style="width:100%">
+                  <!--Покупатель-->
+                  <TextBox text="მყიდველი" style="width:100%" />
+                  <HBox style="width:100%;halign:right">
+                    <TextBox text="4" style="width:20;height:17;border:3;halign:right;valign:center" />
+                    <HBox style="height:100%;hfill:true;halign:right;valign:center">
+                      <TextBox sourceField="recipientNumber" format="{0:0:1}" style="width:17;height:17;border:1;halign:right;valign:center" />
+                      <TextBox sourceField="recipientNumber" format="{0:1:1}" style="width:17;height:17;border:1;halign:right;valign:center" />
+                      <TextBox sourceField="recipientNumber" format="{0:2:1}" style="width:17;height:17;border:1;halign:right;valign:center" />
+                      <TextBox sourceField="recipientNumber" format="{0:3:1}" style="width:17;height:17;border:1;halign:right;valign:center" />
+                      <TextBox sourceField="recipientNumber" format="{0:4:1}" style="width:17;height:17;border:1;halign:right;valign:center" />
+                      <TextBox sourceField="recipientNumber" format="{0:5:1}" style="width:17;height:17;border:1;halign:right;valign:center" />
+                      <TextBox sourceField="recipientNumber" format="{0:6:1}" style="width:17;height:17;border:1;halign:right;valign:center" />
+                      <TextBox sourceField="recipientNumber" format="{0:7:1}" style="width:17;height:17;border:1;halign:right;valign:center" />
+                      <TextBox sourceField="recipientNumber" format="{0:8:1}" style="width:17;height:17;border:1;halign:right;valign:center" />
+                    </HBox>
+                  </HBox>
+                </HBox>
+                <HBox style="width:100%">
+                  <TextBox />
+                  <!--Идентификационный номер-->
+                  <TextBox text="საიდენტიფიკაციო ნომერი" style="width:100%;halign:right" />
+                </HBox>
+              </VBox>
+              <VBox style="width:100%">
+                <TextBox sourceField="recipientName" />
+                <HLine thickness="1" style="width:100%" />
+                <!--Название или ФИО-->
+                <TextBox text="დასახელება ან სახელი და გვარი" font="size:7" />
+              </VBox>
+              <HBox style="width:100%">
+                <VBox style="width:100%">
+                  <TextBox sourceField="recipientAddress" style="height:16;hfill:false" />
+                  <HLine thickness="1" style="width:90%" />
+                  <TextBox text="მისამართი" font="size:5" style="ystart:1;width:100%;halign:center" />
+                </VBox>
+                <VBox style="width:25%">
+                  <HBox style="width:100%">
+                    <TextBox sourceField="recipientTelephone" format="{0:0:1}" style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <TextBox sourceField="recipientTelephone" format="{0:1:1}" style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <TextBox sourceField="recipientTelephone" format="{0:2:1}" style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <TextBox sourceField="recipientTelephone" format="{0:3:1}" style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <TextBox sourceField="recipientTelephone" format="{0:4:1}" style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <TextBox sourceField="recipientTelephone" format="{0:5:1}" style="width:17;height:17;border:1;halign:right;valign:center" />
+                  </HBox>
+                  <!--Телефон-->
+                  <TextBox text="ტელეფონი" font="size:5" style="width:100%;halign:center" />
+                </VBox>
+              </HBox>
+              <VBox style="ystart:11;width:100%">
+                <HBox style="width:100%">
+                  <!--Грузополучатель-->
+                  <VBox style="width:100%">
+
+                    <TextBox text="ტვირთის" />
+                    <TextBox text="მიმღები" />
+                  </VBox>
+                  <VBox style="width:100%">
+                    <HBox style="width:100%;height:10" />
+                    <HBox style="width:100%">
+                      <TextBox text="6" style="width:20;height:17;border:3;halign:right;valign:center" />
+                      <VBox style="width:100%">
+                        <HBox style="width:100%;height:2" />
+                        <HBox style="width:100%">
+                          <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                          <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                          <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                          <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                          <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                          <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                          <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                          <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                          <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                        </HBox>
+                      </VBox>
+                    </HBox>
+                  </VBox>
+                </HBox>
+                <HBox style="width:100%">
+                  <TextBox />
+                  <!--Идентификационный номер-->
+                  <TextBox text="საიდენტიფიკაციო ნომერი" style="width:100%;halign:right" />
+                </HBox>
+              </VBox>
+              <VBox style="width:100%">
+                <HBox style="width:100%;height:16" />
+                <HLine thickness="1" style="width:100%" />
+                <!--Название или ФИО-->
+                <TextBox text="დასახელება ან სახელი და გვარი" font="size:7" />
+              </VBox>
+              <HBox style="width:100%">
+                <VBox style="width:100%">
+                  <HBox style="width:100%;height:16" />
+                  <HLine thickness="1" style="width:90%" />
+                  <!--Аддресс-->
+                  <TextBox text="მისამართი" font="size:5" style="width:100%;halign:center" />
+                </VBox>
+                <VBox style="width:25%">
+                  <HBox style="width:100%">
+                    <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                  </HBox>
+                  <!--Телефон-->
+                  <TextBox text="ტელეფონი" font="size:5" style="width:100%;halign:center" />
+                </VBox>
+              </HBox>
+              <HBox style="ystart:21;width:100%">
+                <VBox style="width:100%">
+                  <TextBox style="height:17" />
+                  <HLine thickness="1" style="ystart:1;width:100%" />
+                  <TextBox style="height:17" />
+                  <HLine thickness="1" style="ystart:1;width:100%" />
+                  <!--Мат. Ответственное лицо-->
+                  <TextBox text="ნდობით აღჭურვილი პირი" font="size:5" style="width:100%;halign:center" />
+                </VBox>
+                <VBox style="width:25%">
+                  <HBox style="width:100%">
+                    <TextBox text="8" style="width:20;height:17;border:3;halign:right;valign:center" />
+                    <VBox style="width:100%">
+                      <HBox style="width:100%;height:2" />
+                      <TextBox style="width:51;height:17;border:1" />
+                    </VBox>
+                  </HBox>
+                  <!--Номер доверенности-->
+                  <TextBox text="მინდობ.ნომერი" font="size:5" style="width:100%;halign:right" />
+                </VBox>
+                <HBox style="width:15" />
+                <VBox style="width:25%">
+                  <HBox style="width:100%">
+                    <TextBox text="9" style="width:20;height:17;border:3;halign:right;valign:center" />
+                    <VBox style="width:100%">
+                      <HBox style="width:100%;height:2" />
+                      <TextBox style="width:68;height:17;border:1" />
+                    </VBox>
+                  </HBox>
+                  <!--число, месяц, год (по соответствующему документу )-->
+                  <TextBox text="რიც. თვე და წელი" font="size:5" style="width:100%;halign:right" />
+                </VBox>
+              </HBox>
+            </VBox>
+          </HBox>
+          <HBox style="ystart:5;width:100%">
+            <VBox style="width:90%">
+              <!--Вид (тип) транспорта-->
+              <TextBox text="ტრანსპორტის სახე" style="halign:center" />
+              <!--Выделите знаком Х-->
+              <TextBox text="(აღნიშნეთ X ნიშნით)" font="size:5" style="width:80%;halign:center" />
+            </VBox>
+            <Table style="height:100%;border:0;innerborder:0" headerStyle="bgcolor:#D4D0C8" footerStyle="bgcolor:#D4D0C8">
+              <Rows>
+                <Row style="height:100%;innervborder:0;spacing:0;innerhspacing:1">
+                  <Cell style="xstart:0;ystart:0;width:100%;height:100%;padding:0">
+                    <TextBox text="10" style="width:20;height:17;border:3;halign:right;valign:center" />
+                  </Cell>
+                  <Cell style="xstart:0;ystart:0;width:100%;padding:0;valign:center">
+                    <TextBox style="width:34;height:17;border:1" />
+                  </Cell>
+                  <Cell style="xstart:0;ystart:0;width:100%;padding:0;valign:center">
+                    <TextBox style="width:34;height:17;border:1" />
+                  </Cell>
+                  <Cell style="xstart:0;ystart:0;width:100%;padding:0;valign:center">
+                    <TextBox style="width:34;height:17;border:1" />
+                  </Cell>
+                </Row>
+                <Row style="height:100%;innervborder:0;spacing:0;innerhspacing:1">
+                  <Cell style="xstart:0;ystart:0;padding:0" />
+                  <Cell style="xstart:0;ystart:0;padding:0">
+                    <!--Автомобильный-->
+                    <VBox style="width:100%">
+                      <TextBox text="საავტო-" font="size:5" style="width:100%;halign:center" />
+                      <TextBox text="მობილო" font="size:5" style="width:100%;halign:center" />
+                    </VBox>
+                  </Cell>
+                  <Cell style="xstart:0;ystart:0;padding:0">
+                    <!--Железнодорожный-->
+                    <VBox style="width:100%">
+                      <TextBox text="სარკინი-" font="size:5" style="width:100%;halign:center" />
+                      <TextBox text="გზო" font="size:5" style="width:100%;halign:center" />
+                    </VBox>
+                  </Cell>
+                  <Cell style="xstart:0;ystart:0;padding:0">
+                    <!--Другой-->
+                    <TextBox text="სხვა" font="size:5" style="width:100%;halign:center" />
+                  </Cell>
+                </Row>
+              </Rows>
+            </Table>
+            <HBox style="width:19" />
+            <VBox style="width:100%">
+              <HBox style="width:100%">
+                <TextBox text="11" style="width:20;height:17;border:3;halign:right;valign:center" />
+                <VBox style="width:100%">
+                  <HBox style="width:100%;height:2" />
+                  <HBox style="width:100%">
+                    <TextBox style="height:17;border:1" />
+                    <TextBox style="width:50%;height:17;border:1" />
+                  </HBox>
+                </VBox>
+              </HBox>
+              <!--Марка и номер транспортного средства-->
+              <VBox style="width:100%">
+                <HBox style="width:17" />
+                <TextBox text="სატრანსპორტო საშუალების მარკა და " font="size:5" style="width:98%;halign:right" />
+                <TextBox text="ნომერი" font="size:5" style="width:99%;halign:center" />
+              </VBox>
+            </VBox>
+            <HBox style="width:34" />
+            <VBox style="width:100%">
+              <HBox style="width:100%">
+                <TextBox text="12" style="width:20;height:17;border:3;halign:right;valign:center" />
+                <VBox style="width:100%">
+                  <HBox style="width:100%;height:2" />
+                  <HBox style="width:100%">
+                    <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                  </HBox>
+                </VBox>
+              </HBox>
+              <!--Серия и номер водительских прав-->
+              <TextBox text="მძღოლის მოწმობის სერია და ნომერი" font="size:5" style="width:90%;halign:right" />
+            </VBox>
+          </HBox>
+        </VBox>
+      </VBox>
+    </Section>
+    <Section style="vpadding:8">
+      <VBox style="width:100%">
+        <Table sourceTable="receiptDetails" style="width:100%" headerStyle="bgcolor:#D4D0C8" footerStyle="bgcolor:#D4D0C8">
+          <Columns>
+            <Column>
+              <Template style="height:100%;padding:2;halign:center;valign:center">
+                <TextBox sourceField="Number" />
+              </Template>
+              <Header style="padding:2;halign:center;valign:center">
+                <TextBox text="№" />
+              </Header>
+            </Column>
+            <Column>
+              <Template style="width:100%;padding:2;hfill:false;valign:center">
+                <TextBox sourceField="GoodsName" wrap="true" />
+              </Template>
+              <Header style="width:100%;padding:2;hfill:false;valign:center">
+                <!--Наименование груза (товара) или номер контейнера-->
+                <VBox style="width:100%;halign:center;valign:center">
+                  <TextBox text="საქონლის (ტვირთის) დასახელება " />
+                  <TextBox text="ან კონტეინერის ნომერი, " style="halign:center" />
+                  <TextBox text="მ.შ. დანართის მიხედვით" style="halign:center" />
+                </VBox>
+              </Header>
+            </Column>
+            <Column>
+              <Template style="padding:2;halign:center;valign:center">
+                <TextBox sourceField="MUnit" />
+              </Template>
+              <Header style="xstart:0;ystart:0;padding:2;valign:center">
+                <VBox style="width:100%">
+                  <TextBox text="ზომის " style="width:100%;halign:center" />
+                  <TextBox text="ერთ" style="width:100%;halign:center" />
+                </VBox>
+              </Header>
+            </Column>
+            <Column>
+              <Template style="padding:2;halign:right;valign:center">
+                <TextBox sourceField="Quantity" />
+              </Template>
+              <Header style="xstart:0;ystart:0;padding:2;valign:center">
+                <VBox style="width:100%;halign:center">
+                  <TextBox text="რაოდენ" style="width:100%;halign:center" />
+                  <TextBox text="ობა" style="width:100%;halign:center" />
+                </VBox>
+              </Header>
+            </Column>
+            <Column>
+              <Template style="halign:right;valign:center">
+                <HBox style="width:100%;valign:center">
+                  <TextBox sourceField="PriceBankNotes" style="ystart:2;width:50;halign:right;valign:center" />
+                  <VLine thickness="1" style="height:19" />
+                  <TextBox sourceField="PriceCoins" style="ystart:2;halign:right;valign:center" />
+                </HBox>
+              </Template>
+              <Header style="xstart:0;ystart:0;padding:0;halign:center;valign:center">
+                <!--Единичная стоимость с учётом НДС и акциза-->
+                <VBox style="width:100%">
+                  <TextBox text="ერთ-ის ფასი დღგ-ს " style="width:100%;halign:center" />
+                  <TextBox text="აქციზის " style="width:100%;halign:center" />
+                  <TextBox text="ჩათვლით" style="width:100%;halign:center" />
+                  <HLine thickness="1" style="width:100%" />
+                  <HBox style="width:100%">
+                    <!--Лар (нац валюта) прим: рубль-->
+                    <TextBox text="ლარი" style="width:50" />
+                    <VLine thickness="1" style="height:15" />
+                    <!--Тетри (нац валюта) прим: коп-->
+                    <TextBox text="თეთრი" style="width:55" />
+                  </HBox>
+                </VBox>
+              </Header>
+            </Column>
+            <Column>
+              <Template style="halign:right;valign:center">
+                <HBox style="width:100%;valign:center">
+                  <TextBox sourceField="TotalBankNotes" style="ystart:2;width:34;halign:right;valign:center" />
+                  <VLine thickness="1" style="height:19" />
+                  <TextBox sourceField="TotalCoins" style="ystart:2;halign:right;valign:center" />
+                </HBox>
+              </Template>
+              <Header style="xstart:0;ystart:0;padding:0;halign:center;valign:center">
+                <!--Стоимость-->
+                <VBox style="width:100%">
+                  <VBox style="width:100%;height:45">
+                    <TextBox text="თანხა" style="width:100%;height:100%;halign:center;valign:center" />
+                  </VBox>
+                  <HLine thickness="1" style="width:100%" />
+                  <HBox style="width:100%;height:25%">
+                    <!--Лар (нац валюта) прим: рубль-->
+                    <TextBox text="ლარი" />
+                    <VLine thickness="1" style="height:15" />
+                    <!--Тетри (нац валюта) прим: коп-->
+                    <TextBox text="თეთრი" style="width:100%" />
+                  </HBox>
+                </VBox>
+              </Header>
+            </Column>
+            <Column>
+              <Template style="padding:2;halign:center;valign:center">
+                <TextBox />
+              </Template>
+              <Header style="xstart:0;ystart:0;padding:2;valign:center">
+                <!--Вид упаковки-->
+                <VBox style="width:100%">
+                  <TextBox text="შეფუთვის " />
+                  <TextBox text="სახე" style="width:100%;halign:center" />
+                </VBox>
+              </Header>
+            </Column>
+            <Column>
+              <Template style="padding:2;halign:center;valign:center">
+                <TextBox />
+              </Template>
+              <Header style="padding:2;valign:center">
+                <!--Масса брутто нетто-->
+                <VBox style="width:100%">
+                  <TextBox text="მასა ბრუტო " />
+                  <TextBox text="ნეტო" style="halign:center" />
+                </VBox>
+              </Header>
+            </Column>
+          </Columns>
+        </Table>
+        <VBox style="xstart:20;width:100%;hfill:true">
+          <HBox style="width:100%">
+            <VBox style="width:100%">
+              <TextBox text="სულ:" font="bold:true" />
+              <HLine thickness="1" style="ystart:1;width:100%" />
+            </VBox>
+            <TextBox text="13" style="width:17;height:17;border:3;halign:right;valign:center" />
+            <TextBox sourceField="totalPlusVATBankNotes" style="width:34;height:17;border:1;halign:right;valign:center" />
+            <TextBox sourceField="totalPlusVATCoins" style="width:44;height:17;border:1;halign:right;valign:center" />
+            <HBox style="width:41" />
+            <TextBox text="14" style="width:17;height:17;border:3;halign:right;valign:center" />
+            <HBox style="width:72;height:17;border:1" />
+          </HBox>
+        </VBox>
+        <HBox style="ystart:5;width:100%">
+          <TextBox text="თანხა სულ" style="width:30%" />
+          <TextBox sourceField="totalInWords" wrap="true" />
+        </HBox>
+        <HLine thickness="1" style="width:50%;halign:center" />
+        <TextBox text="სიტყვიერად" style="width:100%;halign:center" />
+        <VBox style="width:100%">
+          <TextBox font="size:10" style="height:17;halign:center" />
+          <HLine thickness="1" style="width:50%;halign:center" />
+          <!--Отпуск разрешил (Позиция, Подпись)-->
+          <TextBox text="გაშვების ნება დართო (თანამდებობა, ხელმოწერა)" style="width:100%;halign:center" />
+        </VBox>
+      </VBox>
+    </Section>
+    <Section>
+      <HBox style="width:100%">
+        <VBox style="width:50%;border:2">
+          <!--Для перевозки данного груза-->
+          <TextBox text="აღნიშნული ტვირთი გადასატანად" />
+          <HBox style="ystart:17;width:100%;allowvbreak:false">
+            <VBox style="width:100%">
+              <!--С тарой или в упаковке-->
+              <!--С массой-->
+              <TextBox text="ტარით ან შეფუთვით, მასით" />
+              <!--Брутто - тонна-->
+              <TextBox text="ბრუტო ტონა" />
+              <HBox style="width:100%;height:17" />
+            </VBox>
+            <VBox style="width:100%">
+              <HBox style="width:100%;height:17" />
+              <HLine thickness="1" style="width:100%" />
+              <!--прописью-->
+              <TextBox text="სიტყვიერად" style="width:100%;halign:center" />
+            </VBox>
+          </HBox>
+          <HBox style="width:100%;allowvbreak:false">
+            <VBox style="width:100%">
+              <!--Сдал продавец-->
+              <TextBox text="ჩააბარა გამყიდველმა" />
+              <!--(отправитель груза)-->
+              <TextBox text="(ტვირთის გამგზავნმა)" />
+            </VBox>
+            <VBox style="width:100%">
+              <HBox style="width:100%;height:17" />
+              <HLine thickness="1" style="width:100%" />
+              <!--должность, фамилия, имя, подпись, печать (штамп)-->
+              <VBox style="width:100%">
+                <TextBox text="თანამდებობა სახელი გვარი და " font="size:5" style="width:100%;halign:center" />
+                <TextBox text="შტამპი (ბეჭედი)" font="size:5" style="width:100%;halign:center" />
+              </VBox>
+            </VBox>
+          </HBox>
+          <HBox style="width:100%;allowvbreak:false">
+            <!--Приняло доверенное лицо-->
+            <VBox style="width:100%">
+              <TextBox text="მიიღო ნდობით აღჭურვილმა " style="halign:center" />
+              <TextBox text="პირმა ან გადამზიდველმა" style="halign:center" />
+            </VBox>
+            <VBox style="width:100%;halign:center">
+              <HBox style="width:100%;height:17" />
+              <HLine thickness="1" style="width:100%" />
+              <!--фамилия, имя, подпись поставщика-->
+              <TextBox text="სახელი, გვარი, ხელმოწერა, ბეჭედი / შტამპი" font="size:5" style="width:100%;halign:center" />
+              <HBox style="width:100%">
+                <HBox style="width:100%" />
+                <HBox style="width:100%" />
+                <TextBox text="201    წ" style="width:100%" />
+              </HBox>
+              <HBox style="width:100%">
+                <HLine thickness="1" style="width:75%" />
+                <HLine thickness="1" style="width:100%" />
+                <HBox style="width:100%" />
+              </HBox>
+              <HBox style="width:100%;height:12" />
+            </VBox>
+          </HBox>
+        </VBox>
+        <VBox style="width:50%;border:2">
+          <!--Данный груз для покупателя (принимателя груза)-->
+          <TextBox text="აღნიშნული ტვირთი მყიდველს (ტვირთის მიმღებს)" />
+          <HBox style="ystart:17;width:100%;allowvbreak:false">
+            <VBox style="width:100%">
+              <!--С тарой или в упаковке-->
+              <!--С массой-->
+              <TextBox text="ტარით ან შეფუთვით, მასით" />
+              <!--Брутто - тонна-->
+              <TextBox text="ბრუტო ტონა" />
+              <HBox style="width:100%;height:17" />
+            </VBox>
+            <VBox style="width:100%">
+              <HBox style="width:100%;height:17" />
+              <HLine thickness="1" style="width:100%" />
+              <!--прописью-->
+              <TextBox text="სიტყვიერად" style="width:100%;halign:center" />
+            </VBox>
+          </HBox>
+          <HBox style="width:100%;allowvbreak:false">
+            <VBox style="width:100%;halign:center">
+              <!--Сдало доверенное лицо-->
+              <TextBox text="ჩააბარა ნდობით აღჭ." />
+              <!--(транспортировщик)-->
+              <TextBox text="პირმა (გადამზიდველმა)" />
+            </VBox>
+            <VBox style="width:100%">
+              <HBox style="width:100%;height:17" />
+              <HLine thickness="1" style="width:100%" />
+              <!--фамилия, имя, подпись поставщика-->
+              <TextBox text="სახელი გვარი ხელმოწერა" font="size:5" style="width:100%;halign:center" />
+            </VBox>
+          </HBox>
+          <HBox style="ystart:11;width:100%;allowvbreak:false">
+            <!--Груз получил покупатель-->
+            <TextBox text="მიიღო მყიდველმა" />
+            <VBox style="width:100%">
+              <HBox style="width:100%;height:9" />
+              <HLine thickness="1" style="width:100%" />
+              <!--фамилия, имя,подпись, печать (штамп)-->
+              <TextBox text="სახელი, გვარი, ხელმოწერა, ბეჭედი / შტამპი" font="size:5" style="width:100%;halign:center" />
+              <HBox style="width:100%;halign:center">
+                <HBox style="width:100%" />
+                <HBox style="width:100%" />
+                <TextBox text="201    წ" style="width:100%" />
+              </HBox>
+              <HBox style="width:100%">
+                <HLine thickness="1" style="width:75%" />
+                <HLine thickness="1" style="width:100%" />
+                <HBox style="width:100%" />
+              </HBox>
+              <HBox style="width:100%;height:14" />
+            </VBox>
+          </HBox>
+        </VBox>
+      </HBox>
+    </Section>
+    <Section type="PageBreak" />
+    <Section style="vpadding:10">
+      <VBox style="width:100%;innervspacing:10">
+        <HBox style="width:100%">
+          <TextBox text="სასაქონლო ზედნადები   №" font="size:10" />
+          <HBox style="width:50%;halign:center">
+            <TextBox sourceField="receiptNumber" font="size:10" />
+          </HBox>
+          <VBox style="width:100%">
+            <HBox style="width:100%;halign:right">
+              <TextBox text="1" style="width:20;height:17;border:3;valign:center" />
+              <HBox style="width:153;height:100%;halign:right;valign:center">
+                <!--Экземпляр-->
+                <TextBox text="ე გ ზ ე მ პ ლ ა რ ი" style="width:100%;border:1;halign:center;valign:center" />
+                <TextBox text="3" style="width:17;height:17;border:1;valign:center" />
+              </HBox>
+            </HBox>
+            <HBox style="width:100%;height:10" />
+            <HBox style="width:100%;halign:right">
+              <TextBox text="2" style="width:20;height:17;border:3;halign:right;valign:center" />
+              <HBox style="width:153;height:100%;halign:right;valign:center">
+                <TextBox sourceField="receiptDay" style="width:17;border:1" />
+                <HBox style="width:102">
+                  <TextBox sourceField="receiptMonthName" style="width:100%;border:1;halign:center" />
+                </HBox>
+                <HBox style="width:34">
+                  <TextBox sourceField="receiptYear" style="width:100%;border:1;halign:center" />
+                </HBox>
+              </HBox>
+            </HBox>
+          </VBox>
+        </HBox>
+        <VBox style="width:100%">
+          <HBox style="width:100%">
+            <VBox style="width:50%">
+              <VBox style="width:100%">
+                <HBox style="width:100%">
+                  <!--Продавец-->
+                  <TextBox text="გამყიდველი" style="width:100%" />
+                  <HBox style="width:100%;height:100%;halign:right">
+                    <TextBox text="3" style="width:20;height:17;border:3;halign:right;valign:center" />
+                    <HBox style="height:100%;halign:right;valign:center">
+                      <TextBox sourceField="supplierNumber" format="{0:0:1}" style="width:17;height:17;border:1;halign:right;valign:center" />
+                      <TextBox sourceField="supplierNumber" format="{0:1:1}" style="width:17;height:17;border:1;halign:right;valign:center" />
+                      <TextBox sourceField="supplierNumber" format="{0:2:1}" style="width:17;height:17;border:1;halign:right;valign:center" />
+                      <TextBox sourceField="supplierNumber" format="{0:3:1}" style="width:17;height:17;border:1;halign:right;valign:center" />
+                      <TextBox sourceField="supplierNumber" format="{0:4:1}" style="width:17;height:17;border:1;halign:right;valign:center" />
+                      <TextBox sourceField="supplierNumber" format="{0:5:1}" style="width:17;height:17;border:1;halign:right;valign:center" />
+                      <TextBox sourceField="supplierNumber" format="{0:6:1}" style="width:17;height:17;border:1;halign:right;valign:center" />
+                      <TextBox sourceField="supplierNumber" format="{0:7:1}" style="width:17;height:17;border:1;halign:right;valign:center" />
+                      <TextBox sourceField="supplierNumber" format="{0:8:1}" style="width:17;height:17;border:1;halign:right;valign:center" />
+                    </HBox>
+                  </HBox>
+                </HBox>
+                <HBox style="width:100%">
+                  <TextBox />
+                  <!--Идентификационный номер-->
+                  <TextBox text="საიდენტიფიკაციო ნომერი" style="width:100%;halign:right" />
+                </HBox>
+              </VBox>
+              <VBox style="width:100%">
+                <TextBox sourceField="supplierName" />
+                <HLine thickness="1" style="width:100%" />
+                <!--Название или ФИО-->
+                <TextBox text="დასახელება ან სახელი და გვარი" font="size:7" />
+              </VBox>
+              <HBox style="width:100%">
+                <VBox style="width:100%">
+                  <HBox style="width:100%;height:16">
+                    <TextBox sourceField="supplierCity" format="{0}, " style="width:1%" />
+                    <TextBox sourceField="supplierAddress" style="width:100%;hfill:false" />
+                  </HBox>
+                  <HLine thickness="1" style="width:90%" />
+                  <!--Аддресс, Номер удостоверения физического лица, номер и место выдачи удостоверения-->
+                  <VBox style="ystart:5;width:100%;halign:center">
+                    <TextBox text="მისამართი, ფიზიკური პირის პირადობის მოწმობა ნომერი და გაცემის " font="size:4" />
+                    <TextBox text="ადგილი" font="size:4" style="width:100%;halign:center" />
+                  </VBox>
+                </VBox>
+                <VBox style="width:100%">
+                  <HBox style="width:100%;halign:right">
+                    <TextBox sourceField="supplierTelephone" format="{0:0:1}" style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <TextBox sourceField="supplierTelephone" format="{0:1:1}" style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <TextBox sourceField="supplierTelephone" format="{0:2:1}" style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <TextBox sourceField="supplierTelephone" format="{0:3:1}" style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <TextBox sourceField="supplierTelephone" format="{0:4:1}" style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <TextBox sourceField="supplierTelephone" format="{0:5:1}" style="width:17;height:17;border:1;halign:right;valign:center" />
+                  </HBox>
+                  <!--Телефон-->
+                  <TextBox text="ტელეფონი" font="size:5" style="width:100%;halign:center" />
+                </VBox>
+              </HBox>
+              <VBox style="width:100%">
+                <HBox style="width:100%">
+                  <!--Отправитель груза-->
+                  <VBox style="width:100%">
+                    <TextBox text="ტვირთის" />
+                    <TextBox text="გამგზავნი" />
+                  </VBox>
+                  <VBox style="width:100%">
+                    <HBox style="width:100%;height:10" />
+                    <HBox style="width:100%">
+                      <TextBox text="5" style="width:20;height:17;border:3;halign:right;valign:center" />
+                      <VBox style="width:100%">
+                        <HBox style="width:100%;height:2" />
+                        <HBox style="width:100%">
+                          <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                          <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                          <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                          <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                          <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                          <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                          <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                          <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                          <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                        </HBox>
+                      </VBox>
+                    </HBox>
+                  </VBox>
+                </HBox>
+                <HBox style="width:100%">
+                  <TextBox />
+                  <!--Идентификационный номер-->
+                  <TextBox text="საიდენტიფიკაციო ნომერი" style="width:100%;halign:right" />
+                </HBox>
+              </VBox>
+              <VBox style="width:100%">
+                <HBox style="width:100%;height:16" />
+                <HLine thickness="1" style="width:100%" />
+                <!--Название или ФИО-->
+                <TextBox text="დასახელება ან სახელი და გვარი" font="size:7" />
+              </VBox>
+              <HBox style="width:100%">
+                <VBox style="width:100%">
+                  <HBox style="width:100%;height:16" />
+                  <HLine thickness="1" style="width:90%" />
+                  <!--Аддресс, Номер удостоверения физического лица, номер и место выдачи удостоверения-->
+                  <VBox style="ystart:5;width:100%;halign:center">
+                    <TextBox text="მისამართი, ფიზიკური პირის პირადობის მოწმობა ნომერი და გაცემის " font="size:4" />
+                    <TextBox text="ადგილი" font="size:4" style="width:100%;halign:center" />
+                  </VBox>
+                </VBox>
+                <VBox style="width:100%">
+                  <HBox style="width:100%;halign:right">
+                    <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                  </HBox>
+                  <!--Телефон-->
+                  <TextBox text="ტელეფონი" font="size:5" style="width:100%;halign:center" />
+                </VBox>
+              </HBox>
+              <VBox style="ystart:10;width:100%">
+                <HBox style="width:100%">
+                  <!--Транспортировщик-->
+                  <TextBox text="გადამზიდველი" style="width:100%" />
+                  <HBox style="width:100%;height:100%;halign:right">
+                    <TextBox text="7" style="width:20;height:17;border:3;halign:right;valign:center" />
+                    <HBox style="height:100%;vpadding:2;halign:right">
+                      <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                      <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                      <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                      <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                      <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                      <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                      <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                      <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                      <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                    </HBox>
+                  </HBox>
+                </HBox>
+                <HBox style="width:100%">
+                  <TextBox />
+                  <!--Идентификационный номер-->
+                  <TextBox text="საიდენტიფიკაციო ნომერი" style="width:100%;halign:right" />
+                </HBox>
+              </VBox>
+              <VBox style="width:100%">
+                <HBox style="width:100%;height:17" />
+                <HLine thickness="1" style="width:100%" />
+                <TextBox text="დასახელება ან სახელი და გვარი" font="size:7" />
+              </VBox>
+              <HBox style="width:100%">
+                <VBox style="width:100%">
+                  <HBox style="width:100%;height:16" />
+                  <HLine thickness="1" style="width:90%" />
+                  <!--Аддресс, Номер удостоверения физического лица, номер и место выдачи удостоверения-->
+                  <VBox style="ystart:5;width:100%;halign:center">
+                    <TextBox text="მისამართი, ფიზიკური პირის პირადობის მოწმობა ნომერი და გაცემის " font="size:4" />
+                    <TextBox text="ადგილი" font="size:4" style="width:100%;halign:center" />
+                  </VBox>
+                </VBox>
+                <VBox style="width:100%">
+                  <HBox style="width:100%;halign:right">
+                    <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                  </HBox>
+                  <!--Телефон-->
+                  <TextBox text="ტელეფონი" font="size:5" style="width:100%;halign:center" />
+                </VBox>
+              </HBox>
+            </VBox>
+            <HBox style="width:29" />
+            <VBox style="width:50%">
+              <VBox style="width:100%">
+                <HBox style="width:100%">
+                  <!--Покупатель-->
+                  <TextBox text="მყიდველი" style="width:100%" />
+                  <HBox style="width:100%;halign:right">
+                    <TextBox text="4" style="width:20;height:17;border:3;halign:right;valign:center" />
+                    <HBox style="height:100%;hfill:true;halign:right;valign:center">
+                      <TextBox sourceField="recipientNumber" format="{0:0:1}" style="width:17;height:17;border:1;halign:right;valign:center" />
+                      <TextBox sourceField="recipientNumber" format="{0:1:1}" style="width:17;height:17;border:1;halign:right;valign:center" />
+                      <TextBox sourceField="recipientNumber" format="{0:2:1}" style="width:17;height:17;border:1;halign:right;valign:center" />
+                      <TextBox sourceField="recipientNumber" format="{0:3:1}" style="width:17;height:17;border:1;halign:right;valign:center" />
+                      <TextBox sourceField="recipientNumber" format="{0:4:1}" style="width:17;height:17;border:1;halign:right;valign:center" />
+                      <TextBox sourceField="recipientNumber" format="{0:5:1}" style="width:17;height:17;border:1;halign:right;valign:center" />
+                      <TextBox sourceField="recipientNumber" format="{0:6:1}" style="width:17;height:17;border:1;halign:right;valign:center" />
+                      <TextBox sourceField="recipientNumber" format="{0:7:1}" style="width:17;height:17;border:1;halign:right;valign:center" />
+                      <TextBox sourceField="recipientNumber" format="{0:8:1}" style="width:17;height:17;border:1;halign:right;valign:center" />
+                    </HBox>
+                  </HBox>
+                </HBox>
+                <HBox style="width:100%">
+                  <TextBox />
+                  <!--Идентификационный номер-->
+                  <TextBox text="საიდენტიფიკაციო ნომერი" style="width:100%;halign:right" />
+                </HBox>
+              </VBox>
+              <VBox style="width:100%">
+                <TextBox sourceField="recipientName" />
+                <HLine thickness="1" style="width:100%" />
+                <!--Название или ФИО-->
+                <TextBox text="დასახელება ან სახელი და გვარი" font="size:7" />
+              </VBox>
+              <HBox style="width:100%">
+                <VBox style="width:100%">
+                  <TextBox sourceField="recipientAddress" style="height:16;hfill:false" />
+                  <HLine thickness="1" style="width:90%" />
+                  <TextBox text="მისამართი" font="size:5" style="ystart:1;width:100%;halign:center" />
+                </VBox>
+                <VBox style="width:25%">
+                  <HBox style="width:100%">
+                    <TextBox sourceField="recipientTelephone" format="{0:0:1}" style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <TextBox sourceField="recipientTelephone" format="{0:1:1}" style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <TextBox sourceField="recipientTelephone" format="{0:2:1}" style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <TextBox sourceField="recipientTelephone" format="{0:3:1}" style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <TextBox sourceField="recipientTelephone" format="{0:4:1}" style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <TextBox sourceField="recipientTelephone" format="{0:5:1}" style="width:17;height:17;border:1;halign:right;valign:center" />
+                  </HBox>
+                  <!--Телефон-->
+                  <TextBox text="ტელეფონი" font="size:5" style="width:100%;halign:center" />
+                </VBox>
+              </HBox>
+              <VBox style="ystart:11;width:100%">
+                <HBox style="width:100%">
+                  <!--Грузополучатель-->
+                  <VBox style="width:100%">
+
+                    <TextBox text="ტვირთის" />
+                    <TextBox text="მიმღები" />
+                  </VBox>
+                  <VBox style="width:100%">
+                    <HBox style="width:100%;height:10" />
+                    <HBox style="width:100%">
+                      <TextBox text="6" style="width:20;height:17;border:3;halign:right;valign:center" />
+                      <VBox style="width:100%">
+                        <HBox style="width:100%;height:2" />
+                        <HBox style="width:100%">
+                          <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                          <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                          <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                          <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                          <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                          <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                          <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                          <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                          <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                        </HBox>
+                      </VBox>
+                    </HBox>
+                  </VBox>
+                </HBox>
+                <HBox style="width:100%">
+                  <TextBox />
+                  <!--Идентификационный номер-->
+                  <TextBox text="საიდენტიფიკაციო ნომერი" style="width:100%;halign:right" />
+                </HBox>
+              </VBox>
+              <VBox style="width:100%">
+                <HBox style="width:100%;height:16" />
+                <HLine thickness="1" style="width:100%" />
+                <!--Название или ФИО-->
+                <TextBox text="დასახელება ან სახელი და გვარი" font="size:7" />
+              </VBox>
+              <HBox style="width:100%">
+                <VBox style="width:100%">
+                  <HBox style="width:100%;height:16" />
+                  <HLine thickness="1" style="width:90%" />
+                  <!--Аддресс-->
+                  <TextBox text="მისამართი" font="size:5" style="width:100%;halign:center" />
+                </VBox>
+                <VBox style="width:25%">
+                  <HBox style="width:100%">
+                    <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                  </HBox>
+                  <!--Телефон-->
+                  <TextBox text="ტელეფონი" font="size:5" style="width:100%;halign:center" />
+                </VBox>
+              </HBox>
+              <HBox style="ystart:21;width:100%">
+                <VBox style="width:100%">
+                  <TextBox style="height:17" />
+                  <HLine thickness="1" style="ystart:1;width:100%" />
+                  <TextBox style="height:17" />
+                  <HLine thickness="1" style="ystart:1;width:100%" />
+                  <!--Мат. Ответственное лицо-->
+                  <TextBox text="ნდობით აღჭურვილი პირი" font="size:5" style="width:100%;halign:center" />
+                </VBox>
+                <VBox style="width:25%">
+                  <HBox style="width:100%">
+                    <TextBox text="8" style="width:20;height:17;border:3;halign:right;valign:center" />
+                    <VBox style="width:100%">
+                      <HBox style="width:100%;height:2" />
+                      <TextBox style="width:51;height:17;border:1" />
+                    </VBox>
+                  </HBox>
+                  <!--Номер доверенности-->
+                  <TextBox text="მინდობ.ნომერი" font="size:5" style="width:100%;halign:right" />
+                </VBox>
+                <HBox style="width:15" />
+                <VBox style="width:25%">
+                  <HBox style="width:100%">
+                    <TextBox text="9" style="width:20;height:17;border:3;halign:right;valign:center" />
+                    <VBox style="width:100%">
+                      <HBox style="width:100%;height:2" />
+                      <TextBox style="width:68;height:17;border:1" />
+                    </VBox>
+                  </HBox>
+                  <!--число, месяц, год (по соответствующему документу )-->
+                  <TextBox text="რიც. თვე და წელი" font="size:5" style="width:100%;halign:right" />
+                </VBox>
+              </HBox>
+            </VBox>
+          </HBox>
+          <HBox style="ystart:5;width:100%">
+            <VBox style="width:90%">
+              <!--Вид (тип) транспорта-->
+              <TextBox text="ტრანსპორტის სახე" style="halign:center" />
+              <!--Выделите знаком Х-->
+              <TextBox text="(აღნიშნეთ X ნიშნით)" font="size:5" style="width:80%;halign:center" />
+            </VBox>
+            <Table style="height:100%;border:0;innerborder:0" headerStyle="bgcolor:#D4D0C8" footerStyle="bgcolor:#D4D0C8">
+              <Rows>
+                <Row style="height:100%;innervborder:0;spacing:0;innerhspacing:1">
+                  <Cell style="xstart:0;ystart:0;width:100%;height:100%;padding:0">
+                    <TextBox text="10" style="width:20;height:17;border:3;halign:right;valign:center" />
+                  </Cell>
+                  <Cell style="xstart:0;ystart:0;width:100%;padding:0;valign:center">
+                    <TextBox style="width:34;height:17;border:1" />
+                  </Cell>
+                  <Cell style="xstart:0;ystart:0;width:100%;padding:0;valign:center">
+                    <TextBox style="width:34;height:17;border:1" />
+                  </Cell>
+                  <Cell style="xstart:0;ystart:0;width:100%;padding:0;valign:center">
+                    <TextBox style="width:34;height:17;border:1" />
+                  </Cell>
+                </Row>
+                <Row style="height:100%;innervborder:0;spacing:0;innerhspacing:1">
+                  <Cell style="xstart:0;ystart:0;padding:0" />
+                  <Cell style="xstart:0;ystart:0;padding:0">
+                    <!--Автомобильный-->
+                    <VBox style="width:100%">
+                      <TextBox text="საავტო-" font="size:5" style="width:100%;halign:center" />
+                      <TextBox text="მობილო" font="size:5" style="width:100%;halign:center" />
+                    </VBox>
+                  </Cell>
+                  <Cell style="xstart:0;ystart:0;padding:0">
+                    <!--Железнодорожный-->
+                    <VBox style="width:100%">
+                      <TextBox text="სარკინი-" font="size:5" style="width:100%;halign:center" />
+                      <TextBox text="გზო" font="size:5" style="width:100%;halign:center" />
+                    </VBox>
+                  </Cell>
+                  <Cell style="xstart:0;ystart:0;padding:0">
+                    <!--Другой-->
+                    <TextBox text="სხვა" font="size:5" style="width:100%;halign:center" />
+                  </Cell>
+                </Row>
+              </Rows>
+            </Table>
+            <HBox style="width:19" />
+            <VBox style="width:100%">
+              <HBox style="width:100%">
+                <TextBox text="11" style="width:20;height:17;border:3;halign:right;valign:center" />
+                <VBox style="width:100%">
+                  <HBox style="width:100%;height:2" />
+                  <HBox style="width:100%">
+                    <TextBox style="height:17;border:1" />
+                    <TextBox style="width:50%;height:17;border:1" />
+                  </HBox>
+                </VBox>
+              </HBox>
+              <!--Марка и номер транспортного средства-->
+              <VBox style="width:100%">
+                <HBox style="width:17" />
+                <TextBox text="სატრანსპორტო საშუალების მარკა და " font="size:5" style="width:98%;halign:right" />
+                <TextBox text="ნომერი" font="size:5" style="width:99%;halign:center" />
+              </VBox>
+            </VBox>
+            <HBox style="width:34" />
+            <VBox style="width:100%">
+              <HBox style="width:100%">
+                <TextBox text="12" style="width:20;height:17;border:3;halign:right;valign:center" />
+                <VBox style="width:100%">
+                  <HBox style="width:100%;height:2" />
+                  <HBox style="width:100%">
+                    <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                    <HBox style="width:17;height:17;border:1;halign:right;valign:center" />
+                  </HBox>
+                </VBox>
+              </HBox>
+              <!--Серия и номер водительских прав-->
+              <TextBox text="მძღოლის მოწმობის სერია და ნომერი" font="size:5" style="width:90%;halign:right" />
+            </VBox>
+          </HBox>
+        </VBox>
+      </VBox>
+    </Section>
+    <Section style="vpadding:8">
+      <VBox style="width:100%">
+        <Table sourceTable="receiptDetails" style="width:100%" headerStyle="bgcolor:#D4D0C8" footerStyle="bgcolor:#D4D0C8">
+          <Columns>
+            <Column>
+              <Template style="height:100%;padding:2;halign:center;valign:center">
+                <TextBox sourceField="Number" />
+              </Template>
+              <Header style="padding:2;halign:center;valign:center">
+                <TextBox text="№" />
+              </Header>
+            </Column>
+            <Column>
+              <Template style="width:100%;padding:2;hfill:false;valign:center">
+                <TextBox sourceField="GoodsName" wrap="true" />
+              </Template>
+              <Header style="width:100%;padding:2;hfill:false;valign:center">
+                <!--Наименование груза (товара) или номер контейнера-->
+                <VBox style="width:100%;halign:center;valign:center">
+                  <TextBox text="საქონლის (ტვირთის) დასახელება " />
+                  <TextBox text="ან კონტეინერის ნომერი, " style="halign:center" />
+                  <TextBox text="მ.შ. დანართის მიხედვით" style="halign:center" />
+                </VBox>
+              </Header>
+            </Column>
+            <Column>
+              <Template style="padding:2;halign:center;valign:center">
+                <TextBox sourceField="MUnit" />
+              </Template>
+              <Header style="xstart:0;ystart:0;padding:2;valign:center">
+                <VBox style="width:100%">
+                  <TextBox text="ზომის " style="width:100%;halign:center" />
+                  <TextBox text="ერთ" style="width:100%;halign:center" />
+                </VBox>
+              </Header>
+            </Column>
+            <Column>
+              <Template style="padding:2;halign:right;valign:center">
+                <TextBox sourceField="Quantity" />
+              </Template>
+              <Header style="xstart:0;ystart:0;padding:2;valign:center">
+                <VBox style="width:100%;halign:center">
+                  <TextBox text="რაოდენ" style="width:100%;halign:center" />
+                  <TextBox text="ობა" style="width:100%;halign:center" />
+                </VBox>
+              </Header>
+            </Column>
+            <Column>
+              <Template style="halign:right;valign:center">
+                <HBox style="width:100%;valign:center">
+                  <TextBox sourceField="PriceBankNotes" style="ystart:2;width:50;halign:right;valign:center" />
+                  <VLine thickness="1" style="height:19" />
+                  <TextBox sourceField="PriceCoins" style="ystart:2;halign:right;valign:center" />
+                </HBox>
+              </Template>
+              <Header style="xstart:0;ystart:0;padding:0;halign:center;valign:center">
+                <!--Единичная стоимость с учётом НДС и акциза-->
+                <VBox style="width:100%">
+                  <TextBox text="ერთ-ის ფასი დღგ-ს " style="width:100%;halign:center" />
+                  <TextBox text="აქციზის " style="width:100%;halign:center" />
+                  <TextBox text="ჩათვლით" style="width:100%;halign:center" />
+                  <HLine thickness="1" style="width:100%" />
+                  <HBox style="width:100%">
+                    <!--Лар (нац валюта) прим: рубль-->
+                    <TextBox text="ლარი" style="width:50" />
+                    <VLine thickness="1" style="height:15" />
+                    <!--Тетри (нац валюта) прим: коп-->
+                    <TextBox text="თეთრი" style="width:55" />
+                  </HBox>
+                </VBox>
+              </Header>
+            </Column>
+            <Column>
+              <Template style="halign:right;valign:center">
+                <HBox style="width:100%;valign:center">
+                  <TextBox sourceField="TotalBankNotes" style="ystart:2;width:34;halign:right;valign:center" />
+                  <VLine thickness="1" style="height:19" />
+                  <TextBox sourceField="TotalCoins" style="ystart:2;halign:right;valign:center" />
+                </HBox>
+              </Template>
+              <Header style="xstart:0;ystart:0;padding:0;halign:center;valign:center">
+                <!--Стоимость-->
+                <VBox style="width:100%">
+                  <VBox style="width:100%;height:45">
+                    <TextBox text="თანხა" style="width:100%;height:100%;halign:center;valign:center" />
+                  </VBox>
+                  <HLine thickness="1" style="width:100%" />
+                  <HBox style="width:100%;height:25%">
+                    <!--Лар (нац валюта) прим: рубль-->
+                    <TextBox text="ლარი" />
+                    <VLine thickness="1" style="height:15" />
+                    <!--Тетри (нац валюта) прим: коп-->
+                    <TextBox text="თეთრი" style="width:100%" />
+                  </HBox>
+                </VBox>
+              </Header>
+            </Column>
+            <Column>
+              <Template style="padding:2;halign:center;valign:center">
+                <TextBox />
+              </Template>
+              <Header style="xstart:0;ystart:0;padding:2;valign:center">
+                <!--Вид упаковки-->
+                <VBox style="width:100%">
+                  <TextBox text="შეფუთვის " />
+                  <TextBox text="სახე" style="width:100%;halign:center" />
+                </VBox>
+              </Header>
+            </Column>
+            <Column>
+              <Template style="padding:2;halign:center;valign:center">
+                <TextBox />
+              </Template>
+              <Header style="padding:2;valign:center">
+                <!--Масса брутто нетто-->
+                <VBox style="width:100%">
+                  <TextBox text="მასა ბრუტო " />
+                  <TextBox text="ნეტო" style="halign:center" />
+                </VBox>
+              </Header>
+            </Column>
+          </Columns>
+        </Table>
+        <VBox style="xstart:20;width:100%;hfill:true">
+          <HBox style="width:100%">
+            <VBox style="width:100%">
+              <TextBox text="სულ:" font="bold:true" />
+              <HLine thickness="1" style="ystart:1;width:100%" />
+            </VBox>
+            <TextBox text="13" style="width:17;height:17;border:3;halign:right;valign:center" />
+            <TextBox sourceField="totalPlusVATBankNotes" style="width:34;height:17;border:1;halign:right;valign:center" />
+            <TextBox sourceField="totalPlusVATCoins" style="width:44;height:17;border:1;halign:right;valign:center" />
+            <HBox style="width:41" />
+            <TextBox text="14" style="width:17;height:17;border:3;halign:right;valign:center" />
+            <HBox style="width:72;height:17;border:1" />
+          </HBox>
+        </VBox>
+        <HBox style="ystart:5;width:100%">
+          <TextBox text="თანხა სულ" style="width:30%" />
+          <TextBox sourceField="totalInWords" wrap="true" />
+        </HBox>
+        <HLine thickness="1" style="width:50%;halign:center" />
+        <TextBox text="სიტყვიერად" style="width:100%;halign:center" />
+        <VBox style="width:100%">
+          <TextBox font="size:10" style="height:17;halign:center" />
+          <HLine thickness="1" style="width:50%;halign:center" />
+          <!--Отпуск разрешил (Позиция, Подпись)-->
+          <TextBox text="გაშვების ნება დართო (თანამდებობა, ხელმოწერა)" style="width:100%;halign:center" />
+        </VBox>
+      </VBox>
+    </Section>
+    <Section>
+      <HBox style="width:100%">
+        <VBox style="width:50%;border:2">
+          <!--Для перевозки данного груза-->
+          <TextBox text="აღნიშნული ტვირთი გადასატანად" />
+          <HBox style="ystart:17;width:100%;allowvbreak:false">
+            <VBox style="width:100%">
+              <!--С тарой или в упаковке-->
+              <!--С массой-->
+              <TextBox text="ტარით ან შეფუთვით, მასით" />
+              <!--Брутто - тонна-->
+              <TextBox text="ბრუტო ტონა" />
+              <HBox style="width:100%;height:17" />
+            </VBox>
+            <VBox style="width:100%">
+              <HBox style="width:100%;height:17" />
+              <HLine thickness="1" style="width:100%" />
+              <!--прописью-->
+              <TextBox text="სიტყვიერად" style="width:100%;halign:center" />
+            </VBox>
+          </HBox>
+          <HBox style="width:100%;allowvbreak:false">
+            <VBox style="width:100%">
+              <!--Сдал продавец-->
+              <TextBox text="ჩააბარა გამყიდველმა" />
+              <!--(отправитель груза)-->
+              <TextBox text="(ტვირთის გამგზავნმა)" />
+            </VBox>
+            <VBox style="width:100%">
+              <HBox style="width:100%;height:17" />
+              <HLine thickness="1" style="width:100%" />
+              <!--должность, фамилия, имя, подпись, печать (штамп)-->
+              <VBox style="width:100%">
+                <TextBox text="თანამდებობა სახელი გვარი და " font="size:5" style="width:100%;halign:center" />
+                <TextBox text="შტამპი (ბეჭედი)" font="size:5" style="width:100%;halign:center" />
+              </VBox>
+            </VBox>
+          </HBox>
+          <HBox style="width:100%;allowvbreak:false">
+            <!--Приняло доверенное лицо-->
+            <VBox style="width:100%">
+              <TextBox text="მიიღო ნდობით აღჭურვილმა " style="halign:center" />
+              <TextBox text="პირმა ან გადამზიდველმა" style="halign:center" />
+            </VBox>
+            <VBox style="width:100%;halign:center">
+              <HBox style="width:100%;height:17" />
+              <HLine thickness="1" style="width:100%" />
+              <!--фамилия, имя, подпись поставщика-->
+              <TextBox text="სახელი, გვარი, ხელმოწერა, ბეჭედი / შტამპი" font="size:5" style="width:100%;halign:center" />
+              <HBox style="width:100%">
+                <HBox style="width:100%" />
+                <HBox style="width:100%" />
+                <TextBox text="201    წ" style="width:100%" />
+              </HBox>
+              <HBox style="width:100%">
+                <HLine thickness="1" style="width:75%" />
+                <HLine thickness="1" style="width:100%" />
+                <HBox style="width:100%" />
+              </HBox>
+              <HBox style="width:100%;height:12" />
+            </VBox>
+          </HBox>
+        </VBox>
+        <VBox style="width:50%;border:2">
+          <!--Данный груз для покупателя (принимателя груза)-->
+          <TextBox text="აღნიშნული ტვირთი მყიდველს (ტვირთის მიმღებს)" />
+          <HBox style="ystart:17;width:100%;allowvbreak:false">
+            <VBox style="width:100%">
+              <!--С тарой или в упаковке-->
+              <!--С массой-->
+              <TextBox text="ტარით ან შეფუთვით, მასით" />
+              <!--Брутто - тонна-->
+              <TextBox text="ბრუტო ტონა" />
+              <HBox style="width:100%;height:17" />
+            </VBox>
+            <VBox style="width:100%">
+              <HBox style="width:100%;height:17" />
+              <HLine thickness="1" style="width:100%" />
+              <!--прописью-->
+              <TextBox text="სიტყვიერად" style="width:100%;halign:center" />
+            </VBox>
+          </HBox>
+          <HBox style="width:100%;allowvbreak:false">
+            <VBox style="width:100%;halign:center">
+              <!--Сдало доверенное лицо-->
+              <TextBox text="ჩააბარა ნდობით აღჭ." />
+              <!--(транспортировщик)-->
+              <TextBox text="პირმა (გადამზიდველმა)" />
+            </VBox>
+            <VBox style="width:100%">
+              <HBox style="width:100%;height:17" />
+              <HLine thickness="1" style="width:100%" />
+              <!--фамилия, имя, подпись поставщика-->
+              <TextBox text="სახელი გვარი ხელმოწერა" font="size:5" style="width:100%;halign:center" />
+            </VBox>
+          </HBox>
+          <HBox style="ystart:11;width:100%;allowvbreak:false">
+            <!--Груз получил покупатель-->
+            <TextBox text="მიიღო მყიდველმა" />
+            <VBox style="width:100%">
+              <HBox style="width:100%;height:9" />
+              <HLine thickness="1" style="width:100%" />
+              <!--фамилия, имя,подпись, печать (штамп)-->
+              <TextBox text="სახელი, გვარი, ხელმოწერა, ბეჭედი / შტამპი" font="size:5" style="width:100%;halign:center" />
+              <HBox style="width:100%;halign:center">
+                <HBox style="width:100%" />
+                <HBox style="width:100%" />
+                <TextBox text="201    წ" style="width:100%" />
+              </HBox>
+              <HBox style="width:100%">
+                <HLine thickness="1" style="width:75%" />
+                <HLine thickness="1" style="width:100%" />
+                <HBox style="width:100%" />
+              </HBox>
+              <HBox style="width:100%;height:14" />
+            </VBox>
+          </HBox>
+        </VBox>
+      </HBox>
+    </Section>
+    <Section type="PageBreak" />
+  </Form>
+</Forms>

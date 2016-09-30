@@ -1,0 +1,283 @@
+<Form formName="ProductionProtocol">
+  <Section style="vpadding:10">
+    <VBox style="width:100%;innervspacing:10">
+      <HBox style="width:100%">
+        <VBox style="width:50%;height:50%;border:1">
+          <TextBox sourceField="protocolTitle" font="size:14;underline:true;bold:true" style="width:100%;halign:center"/>
+          <TextBox sourceField="protocolSubTitle" font="size:12;bold:true" style="width:100%;halign:center"/>
+          <HBox style="width:100%;padding:7">
+            <HLine thickness="1" style="width:100%" />
+          </HBox>
+          <HBox style="width:100%" />
+          <HBox style="width:100%;padding:7">
+            <TextBox sourceField="protocolNumber" sourceFormat="numberFormat" font="size:10;bold:true" style="width:50%"/>
+            <HBox style="width:15" />
+            <TextBox sourceField="protocolDate" sourceFormat="dateFormat" font="size:10;bold:true" style="width:50%"/>
+          </HBox>
+        </VBox>
+        <HBox style="width:10" />
+        <Table style="width:50%;innerborder:0;innerhspacing:20" headerStyle="bgcolor:#D4D0C8" footerStyle="bgcolor:#D4D0C8">
+          <Columns>
+            <Column />
+            <Column style="width:100%" />
+          </Columns>
+          <Rows>
+            <Row style="innervborder:0;spacing:0;innerhspacing:20">
+              <Cell>
+                <TextBox sourceField="companyNameLabel" />
+              </Cell>
+              <Cell style="width:100%">
+                <TextBox sourceField="companyName" font="bold:true" wrap="true" style="width:100%" />
+              </Cell>
+            </Row>
+            <Row style="innervborder:0;spacing:0;innerhspacing:20">
+              <Cell>
+                <TextBox sourceField="companyNumberLabel" />
+              </Cell>
+              <Cell>
+                <TextBox sourceField="companyNumber" font="bold:true" wrap="true" style="width:100%" />
+              </Cell>
+            </Row>
+            <Row style="innervborder:0;spacing:0;innerhspacing:20">
+              <Cell>
+                <TextBox sourceField="companyCityLabel" />
+              </Cell>
+              <Cell>
+                <TextBox sourceField="companyCity" font="bold:true" wrap="true" style="width:100%" />
+              </Cell>
+            </Row>
+            <Row style="innervborder:0;spacing:0;innerhspacing:20">
+              <Cell>
+                <TextBox sourceField="companyAddressLabel" />
+              </Cell>
+              <Cell>
+                <TextBox sourceField="companyAddress" font="bold:true" wrap="true" style="width:100%" />
+              </Cell>
+            </Row>
+            <Row style="innervborder:0;spacing:0;innerhspacing:20">
+              <Cell>
+                <TextBox sourceField="companyTelephoneLabel" />
+              </Cell>
+              <Cell>
+                <TextBox sourceField="companyTelephone" font="bold:true" wrap="true" style="width:100%" />
+              </Cell>
+            </Row>
+            <Row style="innervborder:0;spacing:0;innerhspacing:20">
+              <Cell>
+                <TextBox sourceField="companyLiablePersonLabel" />
+              </Cell>
+              <Cell>
+                <TextBox sourceField="companyLiablePerson" font="bold:true" wrap="true" style="width:100%" />
+              </Cell>
+            </Row>
+          </Rows>
+        </Table>
+      </HBox>
+      <TextBox sourceField="pointOfSale" sourceFormat="pointOfSaleFormat" font="bold:true" style="width:100%"/>
+    </VBox>
+  </Section>
+  <Section style="vpadding:8">
+    <VBox style="width:100%">
+      <TextBox sourceField="materialsLabel" font="bold:true" style="width:100%"/>
+      <Table sourceTable="protocolDetailsMaterials" style="width:100%" headerStyle="bgcolor:#D4D0C8" footerStyle="bgcolor:#D4D0C8">
+        <Columns>
+          <Column>
+            <Template style="height:100%;padding:2;halign:center;valign:center">
+              <TextBox sourceField="Number" />
+            </Template>
+            <Header style="padding:2">
+              <TextBox sourceField="detailHeaderNumber" />
+            </Header>
+          </Column>
+          <Column>
+            <Template style="padding:2;valign:center">
+              <TextBox sourceField="GoodsCode" />
+            </Template>
+            <Header style="padding:2">
+              <TextBox sourceField="detailHeaderCode" />
+            </Header>
+          </Column>
+          <Column>
+            <Template style="width:100%;padding:2;valign:center">
+              <TextBox sourceField="GoodsName" wrap="true" />
+            </Template>
+            <Header style="width:100%;padding:2;hfill:false">
+              <TextBox sourceField="detailHeaderGoods" />
+            </Header>
+          </Column>
+          <Column>
+            <Template style="padding:2;halign:center;valign:center">
+              <TextBox sourceField="MUnit" />
+            </Template>
+            <Header style="padding:2">
+              <TextBox sourceField="detailHeaderMUnit" />
+            </Header>
+          </Column>
+          <Column>
+            <Template style="padding:2;halign:right;valign:center">
+              <TextBox sourceField="Quantity" />
+            </Template>
+            <Header style="padding:2">
+              <TextBox sourceField="detailHeaderQtty" />
+            </Header>
+          </Column>
+          <Column>
+            <Template style="padding:2;halign:right;valign:center">
+              <TextBox sourceField="Price" />
+            </Template>
+            <Header style="padding:2">
+              <TextBox sourceField="detailHeaderPrice" />
+            </Header>
+          </Column>
+          <Column>
+            <Template style="padding:2;halign:right;valign:center">
+              <TextBox sourceField="Total" />
+            </Template>
+            <Header style="padding:2">
+              <TextBox sourceField="detailHeaderTotal" />
+            </Header>
+          </Column>
+        </Columns>
+      </Table>
+    </VBox>
+  </Section>
+  <Section style="vpadding:8">
+    <VBox style="width:100%">
+      <TextBox sourceField="productsLabel" font="bold:true" style="width:100%"/>
+      <Table sourceTable="protocolDetailsProducts" style="width:100%" headerStyle="bgcolor:#D4D0C8" footerStyle="bgcolor:#D4D0C8">
+        <Columns>
+          <Column>
+            <Template style="height:100%;padding:2;halign:center;valign:center">
+              <TextBox sourceField="Number" />
+            </Template>
+            <Header style="padding:2">
+              <TextBox sourceField="detailHeaderNumber" />
+            </Header>
+          </Column>
+          <Column>
+            <Template style="padding:2;valign:center">
+              <TextBox sourceField="GoodsCode" />
+            </Template>
+            <Header style="padding:2">
+              <TextBox sourceField="detailHeaderCode" />
+            </Header>
+          </Column>
+          <Column>
+            <Template style="width:100%;padding:2;valign:center">
+              <TextBox sourceField="GoodsName" wrap="true" />
+            </Template>
+            <Header style="width:100%;padding:2;hfill:false">
+              <TextBox sourceField="detailHeaderGoods" />
+            </Header>
+          </Column>
+          <Column>
+            <Template style="padding:2;halign:center;valign:center">
+              <TextBox sourceField="MUnit" />
+            </Template>
+            <Header style="padding:2">
+              <TextBox sourceField="detailHeaderMUnit" />
+            </Header>
+          </Column>
+          <Column>
+            <Template style="padding:2;halign:right;valign:center">
+              <TextBox sourceField="Quantity" />
+            </Template>
+            <Header style="padding:2">
+              <TextBox sourceField="detailHeaderQtty" />
+            </Header>
+          </Column>
+          <Column>
+            <Template style="padding:2;halign:right;valign:center">
+              <TextBox sourceField="Price" />
+            </Template>
+            <Header style="padding:2">
+              <TextBox sourceField="detailHeaderPrice" />
+            </Header>
+          </Column>
+          <Column>
+            <Template style="padding:2;halign:right;valign:center">
+              <TextBox sourceField="Total" />
+            </Template>
+            <Header style="padding:2">
+              <TextBox sourceField="detailHeaderTotal" />
+            </Header>
+          </Column>
+        </Columns>
+      </Table>
+      <HBox style="width:100%;height:20" />
+      <HBox style="width:100%">
+        <HBox style="width:100%" />
+        <Table style="border:0;innerborder:0;innerhspacing:20;hfill:true" headerStyle="bgcolor:#D4D0C8" footerStyle="bgcolor:#D4D0C8">
+          <Columns>
+            <Column />
+            <Column />
+          </Columns>
+          <Rows>
+            <Row style="innervborder:0;spacing:0;innerhspacing:20">
+              <Cell>
+                <TextBox sourceField="totalLabel" font="size:10;italic:true" />
+              </Cell>
+              <Cell style="halign:right">
+                <TextBox sourceField="total" font="size:10;bold:true" style="halign:right" />
+              </Cell>
+            </Row>
+            <Row style="innervborder:0;spacing:0;innerhspacing:20">
+              <Cell>
+                <TextBox sourceField="vatLabel" font="size:10;italic:true" />
+              </Cell>
+              <Cell style="halign:right">
+                <TextBox sourceField="vat" font="size:10;bold:true" style="halign:right" />
+              </Cell>
+            </Row>
+            <Row style="innervborder:0;spacing:0;innerhspacing:20">
+              <Cell />
+              <Cell style="height:7;valign:center">
+                <HLine thickness="2" style="width:100%" />
+              </Cell>
+            </Row>
+            <Row style="innervborder:0;spacing:0;innerhspacing:20">
+              <Cell>
+                <TextBox sourceField="totalPlusVatLabel" font="size:10;italic:true" />
+              </Cell>
+              <Cell style="halign:right">
+                <TextBox sourceField="totalPlusVat" font="size:10;bold:true" style="halign:right" />
+              </Cell>
+            </Row>
+          </Rows>
+        </Table>
+      </HBox>
+    </VBox>
+  </Section>
+  <Section>
+    <VBox style="width:100%">
+      <HBox style="width:100%;vpadding:10">
+        <TextBox sourceField="totalInWordsLabel" font="size:10;underline:false;bold:false;italic:true" />
+        <TextBox sourceField="totalInWords" font="size:10;underline:false;bold:true;italic:false" wrap="true" style="width:100%;height:100%" />
+      </HBox>
+      <VBox style="width:100%;height:100%;vpadding:20">
+        <TextBox sourceField="noteLabel" font="underline:true;bold:true;italic:false" />
+        <TextBox sourceField="note" style="vpadding:4" />
+      </VBox>
+      <HBox style="width:100%">
+        <HBox style="width:100%;hfill:true">
+          <TextBox sourceField="recipientSignLabel" font="size:10;bold:true" />
+          <HLine style="width:100%;height:100%;valign:bottom" />
+        </HBox>
+        <BoxItem style="width:10;height:100%" />
+        <HBox style="width:100%;hfill:true">
+          <TextBox sourceField="creatorSignLabel" font="size:10;bold:true" />
+          <HLine style="width:100%;height:100%;valign:bottom" />
+        </HBox>
+      </HBox>
+    </VBox>
+  </Section>
+  <Section type="PageFooter">
+    <HBox style="width:100%;height:50">
+      <TextBox sourceField="productId" font="italic:true" style="width:100%;height:100%;valign:center"/>
+      <HBox style="valign:center;height:100%;hpadding:10;hfill:true;halign:right">
+        <TextBox sourceField="%CurrentPage%" sourceFormat="currentPageFormat"/>
+        <TextBox sourceField="%TotalPages%" sourceFormat="totalPagesFormat" style="hpadding:2"/>
+      </HBox>
+    </HBox>
+  </Section>
+</Form>

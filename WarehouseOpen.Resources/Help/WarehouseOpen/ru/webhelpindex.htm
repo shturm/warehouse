@@ -1,0 +1,99 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>������������ WarehouseOpen</title>
+<meta http-equiv="Content-Type" content="text/html; charset=Windows-1251">
+<script>
+function window_resize(){
+if(navigator.userAgent.indexOf("MSIE")>-1){
+document.getElementById("Index").style.cssText = "height: " + (document.body.offsetHeight - 90) + "; width: " + (document.body.offsetWidth - 20);
+document.getElementById("keyword").style.cssText = "width: " + (document.body.offsetWidth - 20);
+}else{
+document.getElementById("Index").style.cssText = "height: " + (window.innerHeight- 95) + "; width: " + (window.innerWidth-20);
+document.getElementById("keyword").style.cssText = "width: " + (window.innerWidth-20);
+}
+}
+
+function keyword_change(k){
+	var i;
+	var str;
+	var found = false;
+	if(k.value!=""){
+		var re = new RegExp(k.value,"i");
+		var re1 = new RegExp(String.fromCharCode(160),"g");
+		for(i=0;i<document.getElementById("Index").options.length;i++){
+			str = document.getElementById("Index").options[i].text.replace(re1, " ");
+			 if(found == false && str.search(re) == 0){
+				document.getElementById("Index").options[i].selected = true;	
+				found = true;
+			 }
+		}
+	}
+}
+
+function writepage(list){
+if(list.length==1){
+	parent.content.document.location.href = list[0][1];	
+}else{
+	parent.content.document.write('<html><head><meta http-equiv="Content-Type" content="text/html; charset=Windows-1252"><style type="text/css"><!--div,body { font-family: Tahoma, Verdana; font-size: 12px; }--></style></h' + 'ead><bo' + 'dy>');
+	parent.content.document.write('<b>There are ' + list.length + ' topics for the keyword:</b><p>')
+	for(i=0;i<=list.length-1;i++){
+		parent.content.document.write((i + 1) + '. ' +'<a href="' + list[i][1] + '">' +  list[i][0] + '</a><p>');
+	}
+	parent.content.document.write('</body></html>');
+
+	parent.content.document.close();
+}
+return false;
+}
+
+function display_click(){
+	var i;
+	for(i=0;i<document.getElementById("Index").options.length;i++){
+		 if(document.getElementById("Index").options[i].selected){
+			eval(document.getElementById("Index").options[i].value);
+			break;
+		 }
+	}
+
+
+}
+
+function index_click(){
+	var i;
+	for(i=0;i<document.getElementById("Index").options.length;i++){
+		 if(document.getElementById("Index").options[i].selected){
+			document.getElementById("keyword").value = document.getElementById("Index").options[i].text;
+			break;
+		 }
+	}
+}
+
+</script>
+<link href="style.css" rel="stylesheet" type="text/css">
+
+
+</head>
+
+<body bgcolor="#DCDBD6" leftmargin="5" topmargin="5" marginwidth="5" marginheight="5" onload="window_resize();document.getElementById('keyword').focus();" onresize="window_resize();">
+<form name="form1" method="post" action="">
+  <table width="100%" border="0">
+    <tr>
+      <td><span class="label">Type in the keyword to find:</span><br>
+        
+        <input name="keyword" type="text" class="label" id="keyword"  onMouseUp="keyword_change(this);" onKeyUp="keyword_change(this);"> 
+      </td>
+    </tr>
+    <tr> 
+      <td><select name="Index" size="20" class="label" id="Index" onclick="index_click();" ondblclick="display_click();">
+<option value="writepage([['POS','scr/TradePoint.html']]);">POS</option><option value="writepage([['������������� ��������� ���������','scr/ChooseDebitNote.html']]);">������������� ��������� ���������</option><option value="writepage([['������������ ��������� ���������','scr/ChooseCreditNote.html']]);">������������ ��������� ���������</option><option value="writepage([['������� ����������','scr/Return.html']]);">�������</option><option value="writepage([['��������� ����','scr/NewInvoice.html']]);">������ �����-�������</option><option value="writepage([['�����','scr/UserLogin.html']]);">�����</option><option value="writepage([['������ ���','scr/ChooseEditVATGroup.html']]);">������ ���</option><option value="writepage([['�������� ���������','scr/DebitNote.html']]);">�������� ���������</option><option value="writepage([['�������� �������','scr/ReportDesigner.html']]);">�������� �������</option><option value="writepage([['�������� �������������','scr/TransformDocuments.html']]);">�������� �������������</option><option value="writepage([['������ ����������','scr/ReportAppLogEntries.html']]);">������ ����������</option><option value="writepage([['��������� ���','scr/EditPrices.html']]);">��������� ���</option><option value="writepage([['��������������','scr/StockTaking.html']]);">��������������</option><option value="writepage([['���������� �� �����������','scr/ChooseEditCompanyRecord.html']]);">���������� �� �����������</option><option value="writepage([['��������','scr/ChooseDate.html']]);">��������</option><option value="writepage([['��������� ���������','scr/CreditNote.html']]);">��������� ���������</option><option value="writepage([['���������','scr/Settings.html']]);">���������</option><option value="writepage([['����� �����������, �������������� � ��������','scr/EditNewCompanyRecord.html']]);">����� �����������, �������������� � ��������</option><option value="writepage([['����� ������ ���','scr/EditNewVATGroup.html']]);">����� ������ ���</option><option value="writepage([['����� �������, �������������� � ��������','scr/EditNewPartner.html']]);">����� �������, �������������� � ��������</option><option value="writepage([['����� ������������, �������������� � ��������','scr/EditNewUser.html']]);">����� ������������, �������������� � ��������</option><option value="writepage([['����� �����, �������������� � ��������','scr/EditnewGoods.html']]);">����� �����, �������������� � ��������</option><option value="writepage([['����� �������, �������������� � ��������','scr/EditNewPOS.html']]);">����� �������, �������������� � ��������</option><option value="writepage([['��������� ���������� �� ��������','scr/EditDocumentNumbersPerLocation.html']]);">��������� ���������� �� ��������</option><option value="writepage([['� ���������','scr/About.html']]);">� ���������</option><option value="writepage([['����� ���������� ������','scr/PrintPreview.html']]);">����� ���������� ������</option><option value="writepage([['������','scr/ChooseEditPayment.html']]);">������</option><option value="writepage([['������ ��������� �����-�������','scr/ChooseInvoice.html']]);">������ ��������� �������</option><option value="writepage([['������ ��������� �����-�������','scr/ChooseReceivedInvoice.html']]);">������ ��������� �������</option><option value="writepage([['��������','scr/ReportPartners.html'],['������������','scr/ReportUsers.html'],['�������','scr/ReportPointsOfSale.html'],['������','scr/ReportGoods.html']]);">�����</option><option value="writepage([['��������','scr/ReportReturns.html']]);">����� ��������</option><option value="writepage([['�������� �����-�������','scr/ReportInvoicesIssued.html']]);">����� �������� �����-�������</option><option value="writepage([['�������� ���������','scr/ReportDebitNotes.html']]);">����� �������� ���������</option><option value="writepage([['�����','scr/ReportIncome.html']]);">����� �����</option><option value="writepage([['������ �����','scr/ReportPaymentsHistory.html']]);">����� ������ �����</option><option value="writepage([['��������������','scr/ReportStockTakings.html']]);">����� ��������������</option><option value="writepage([['�������������� �� ������','scr/ReportStockTakingsByTotal.html']]);">����� �������������� �� ������</option><option value="writepage([['�������������� ������','scr/ReportGoodsStockTaking.html']]);">����� �������������� ������</option><option value="writepage([['��������� ���������','scr/ReportCreditNotes.html']]);">����� ��������� ���������</option><option value="writepage([['������� �������','scr/ReportGoodsQuantitiesAtDate.html']]);">����� ������� �������</option><option value="writepage([['������ �� ����������','scr/ReportPaymentsByDocuments.html']]);">����� ������ �� ����������</option><option value="writepage([['������ �� ���������','scr/ReportPaymentsByPartners.html']]);">����� ������ �� ���������</option><option value="writepage([['������� �� ������','scr/ReportGoodsQuantities.html']]);">����� ������� �� ������</option><option value="writepage([['����� � ������� �� ��������','scr/ReportPointsOfSaleByProfit.html']]);">����� ����� � ������� �� ��������</option><option value="writepage([['�����������','scr/ReportTransfers.html']]);">����� �����������</option><option value="writepage([['�������','scr/ReportPurchases.html']]);">����� �������</option><option value="writepage([['������� �� ���������','scr/ReportPurchasesByPartners.html']]);">����� ������� �� ���������</option><option value="writepage([['������� �� �����','scr/ReportPurchasesByTotal.html']]);">����� ������� �� �����</option><option value="writepage([['������� �� �������','scr/ReportPurchasesByGoods.html']]);">����� ������� �� �������</option><option value="writepage([['������� �� ��������','scr/ReportPurchasesByPointsOfSale.html']]);">����� ������� �� ��������</option><option value="writepage([['���������� �������','scr/ReportInvoicesReceived.html']]);">����� ���������� �������</option><option value="writepage([['������� �� ���������','scr/ReportPartnersByProfit.html']]);">����� ������� �� ���������</option><option value="writepage([['������� �� �������','scr/ReportGoodsByProfit.html']]);">����� ������� �� �������</option><option value="writepage([['�������','scr/ReportSales.html']]);">����� �������</option><option value="writepage([['������� �� ���������','scr/ReportSalesByPartners.html']]);">����� ������� �� ���������</option><option value="writepage([['������� �� ������','scr/ReportSalesByTotal.html']]);">����� ������� �� ������</option><option value="writepage([['������� �� �������','scr/ReportSalesByGoods.html']]);">����� ������� �� �������</option><option value="writepage([['������� �� ��������','scr/ReportSalesByPointsOfSale.html']]);">����� ������� �� ��������</option><option value="writepage([['������������','scr/ReportComplexProductions.html']]);">����� ������������</option><option value="writepage([['�������','scr/ReportComplexRecipes.html']]);">����� �������</option><option value="writepage([['��������','scr/ReportWastes.html']]);">����� ��������</option><option value="writepage([['����� �����','scr/ReportPaymentsDueDates.html']]);">����� ����� �����</option><option value="writepage([['�����-��������','scr/ReportProformaInvoicess.html']]);">����� �����-��������</option><option value="writepage([['������������','scr/ReportGoodsMovement.html']]);">����� ������������</option><option value="writepage([['������ � ��������','scr/ReportInvoicedGoods.html']]);">����� ������ � ��������</option><option value="writepage([['������ ������������','scr/ChooseEditReports.html']]);">������ ������������</option><option value="writepage([['��������','scr/ChooseEditPartner.html']]);">��������</option><option value="writepage([['�����������','scr/Transfer.html']]);">�����������</option><option value="writepage([['�������','scr/Purchase.html']]);">�������</option><option value="writepage([['����������� �� �����','scr/NewReceivedInvoice.html']]);">�������� ������</option><option value="writepage([['������������','scr/ChooseEditUser.html']]);">������������</option><option value="writepage([['����� �������','scr/EditUserRestrictions.html']]);">����� �������</option><option value="writepage([['����������� �� ��������','scr/EditNewPayment.html']]);">����������� �� ��������</option><option value="writepage([['�������','scr/Sale.html']]);">�������</option><option value="writepage([['������������','scr/Production.html']]);">������������</option><option value="writepage([['�������������� ��������','scr/EditNewComplexRecipe.html']]);">�������������� ��������</option><option value="writepage([['��������� ����������','scr/ChooseReturn.html']]);">�������� � ��������� ������ ���������</option><option value="writepage([['��������������','scr/ChooseStockTaking.html']]);">�������� � ��������� ������ ��������������</option><option value="writepage([['�����������','scr/ChooseTransfer.html']]);">�������� � ��������� ������ �����������</option><option value="writepage([['�������','scr/ChoosePurchase.html']]);">�������� � ��������� ������ �������</option><option value="writepage([['�������','scr/ChooseSale.html']]);">�������� � ��������� ������ �������</option><option value="writepage([['������������','scr/ChooseComplexProduction.html']]);">�������� � ��������� ������ ������������</option><option value="writepage([['�������� �� �����','scr/ChooseWaste.html']]);">�������� � ��������� ������ ��������</option><option value="writepage([['����-��������','scr/ChooseProformaInvoice.html']]);">�������� � ��������� ������ ����-��������</option><option value="writepage([['�������','scr/ChooseEditComplexRecipe.html']]);">�������</option><option value="writepage([['��������� �����','scr/TouchScreen.html']]);">��������� �����</option><option value="writepage([['����� ���� ������','scr/EditDBConnection.html']]);">����� ���� ������</option><option value="writepage([['�������� �� �����','scr/Waste.html']]);">��������</option><option value="writepage([['����-��������','scr/ProformaInvoice.html']]);">����-��������</option><option value="writepage([['�������������� ������','scr/Dashboard.html']]);">�����</option><option value="writepage([['���� ������','scr/ChooseEditPaymentType.html']]);">���� ������</option><option value="writepage([['������','scr/ChooseEditGoods.html']]);">������</option><option value="writepage([['����������','scr/ChooseEditDevice.html']]);">����������</option><option value="writepage([['�������','scr/ChooseEditPOS.html']]);">�������</option><option value="writepage([['������� �������','scr/ChooseEditPriceRule.html']]);">������� �������</option> 
+        </select></td>
+    </tr>
+    <tr> 
+      <td align="right"><input name="display" type="submit" class="label" id="display" onClick="display_click(); return false;" value="Display"></td>
+    </tr>
+  </table>
+
+  </form>
+</body>
+</html>

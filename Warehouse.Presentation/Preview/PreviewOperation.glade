@@ -1,0 +1,310 @@
+<?xml version="1.0"?>
+<glade-interface>
+<!-- interface-requires gtk+ 2.6 -->
+<!-- interface-naming-policy toplevel-contextual -->
+  <widget class="GtkWindow" id="wndOperation">
+    <property name="visible">True</property>
+    <property name="title" translatable="yes">window1</property>
+    <child>
+      <widget class="GtkVBox" id="vbxOperationRoot">
+        <property name="visible">True</property>
+        <child>
+          <widget class="GtkAlignment" id="algTop">
+            <property name="visible">True</property>
+            <property name="top_padding">4</property>
+            <property name="bottom_padding">4</property>
+            <property name="left_padding">4</property>
+            <property name="right_padding">4</property>
+            <child>
+              <widget class="GtkTable" id="table1">
+                <property name="visible">True</property>
+                <property name="n_columns">2</property>
+                <child>
+                  <widget class="GtkTable" id="tableOperation">
+                    <property name="visible">True</property>
+                    <property name="n_rows">5</property>
+                    <property name="n_columns">2</property>
+                    <child>
+                      <widget class="GtkLabel" id="lblLocation">
+                        <property name="xalign">0</property>
+                        <property name="label" translatable="yes">lblLocation</property>
+                        <property name="use_markup">True</property>
+                      </widget>
+                      <packing>
+                        <property name="top_attach">1</property>
+                        <property name="bottom_attach">2</property>
+                        <property name="x_options">GTK_FILL</property>
+                        <property name="y_options">GTK_FILL</property>
+                        <property name="x_padding">2</property>
+                        <property name="y_padding">1</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkLabel" id="lblSrcLocation">
+                        <property name="xalign">0</property>
+                        <property name="label" translatable="yes">lblSrcLocation</property>
+                        <property name="use_markup">True</property>
+                      </widget>
+                      <packing>
+                        <property name="top_attach">2</property>
+                        <property name="bottom_attach">3</property>
+                        <property name="x_options">GTK_FILL</property>
+                        <property name="y_options">GTK_FILL</property>
+                        <property name="x_padding">2</property>
+                        <property name="y_padding">1</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkLabel" id="lblDstLocation">
+                        <property name="xalign">0</property>
+                        <property name="label" translatable="yes">lblDstLocation</property>
+                        <property name="use_markup">True</property>
+                      </widget>
+                      <packing>
+                        <property name="top_attach">3</property>
+                        <property name="bottom_attach">4</property>
+                        <property name="x_options">GTK_FILL</property>
+                        <property name="y_options">GTK_FILL</property>
+                        <property name="x_padding">2</property>
+                        <property name="y_padding">1</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkLabel" id="lblUser">
+                        <property name="xalign">0</property>
+                        <property name="label" translatable="yes">lblUser</property>
+                        <property name="use_markup">True</property>
+                      </widget>
+                      <packing>
+                        <property name="top_attach">4</property>
+                        <property name="bottom_attach">5</property>
+                        <property name="x_options">GTK_FILL</property>
+                        <property name="y_options">GTK_FILL</property>
+                        <property name="x_padding">2</property>
+                        <property name="y_padding">1</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkLabel" id="lblPartner">
+                        <property name="xalign">0</property>
+                        <property name="label" translatable="yes">lblPartner</property>
+                        <property name="use_markup">True</property>
+                      </widget>
+                      <packing>
+                        <property name="x_options">GTK_FILL</property>
+                        <property name="y_options">GTK_FILL</property>
+                        <property name="x_padding">2</property>
+                        <property name="y_padding">1</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkLabel" id="lblPartnerValue">
+                        <property name="xalign">0</property>
+                        <property name="label" translatable="yes">&lt;span font_desc="bold"&gt;lblPartnerValue&lt;/span&gt;</property>
+                        <property name="use_markup">True</property>
+                        <property name="ellipsize">end</property>
+                      </widget>
+                      <packing>
+                        <property name="left_attach">1</property>
+                        <property name="right_attach">2</property>
+                        <property name="y_options">GTK_FILL</property>
+                        <property name="x_padding">2</property>
+                        <property name="y_padding">1</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkLabel" id="lblLocationValue">
+                        <property name="xalign">0</property>
+                        <property name="label" translatable="yes">&lt;span font_desc="bold"&gt;lblLocationValue&lt;/span&gt;</property>
+                        <property name="use_markup">True</property>
+                        <property name="ellipsize">end</property>
+                      </widget>
+                      <packing>
+                        <property name="left_attach">1</property>
+                        <property name="right_attach">2</property>
+                        <property name="top_attach">1</property>
+                        <property name="bottom_attach">2</property>
+                        <property name="y_options">GTK_FILL</property>
+                        <property name="x_padding">2</property>
+                        <property name="y_padding">1</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkLabel" id="lblSrcLocationValue">
+                        <property name="xalign">0</property>
+                        <property name="label" translatable="yes">&lt;span font_desc="bold"&gt;lblSrcLocationValue&lt;/span&gt;</property>
+                        <property name="use_markup">True</property>
+                        <property name="ellipsize">end</property>
+                      </widget>
+                      <packing>
+                        <property name="left_attach">1</property>
+                        <property name="right_attach">2</property>
+                        <property name="top_attach">2</property>
+                        <property name="bottom_attach">3</property>
+                        <property name="y_options">GTK_FILL</property>
+                        <property name="x_padding">2</property>
+                        <property name="y_padding">1</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkLabel" id="lblDstLocationValue">
+                        <property name="xalign">0</property>
+                        <property name="label" translatable="yes">&lt;span font_desc="bold"&gt;lblDstLocationValue&lt;/span&gt;</property>
+                        <property name="use_markup">True</property>
+                        <property name="ellipsize">end</property>
+                      </widget>
+                      <packing>
+                        <property name="left_attach">1</property>
+                        <property name="right_attach">2</property>
+                        <property name="top_attach">3</property>
+                        <property name="bottom_attach">4</property>
+                        <property name="y_options">GTK_FILL</property>
+                        <property name="x_padding">2</property>
+                        <property name="y_padding">1</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkLabel" id="lblUserValue">
+                        <property name="xalign">0</property>
+                        <property name="label" translatable="yes">&lt;span font_desc="bold"&gt;lblUserValue&lt;/span&gt;</property>
+                        <property name="use_markup">True</property>
+                        <property name="ellipsize">end</property>
+                      </widget>
+                      <packing>
+                        <property name="left_attach">1</property>
+                        <property name="right_attach">2</property>
+                        <property name="top_attach">4</property>
+                        <property name="bottom_attach">5</property>
+                        <property name="y_options">GTK_FILL</property>
+                        <property name="x_padding">2</property>
+                        <property name="y_padding">1</property>
+                      </packing>
+                    </child>
+                  </widget>
+                </child>
+                <child>
+                  <widget class="GtkVBox" id="vboxTotal">
+                    <property name="visible">True</property>
+                    <child>
+                      <placeholder/>
+                    </child>
+                    <child>
+                      <widget class="GtkHBox" id="hboxBigTotal">
+                        <property name="visible">True</property>
+                        <child>
+                          <widget class="GtkLabel" id="lblBigTotal">
+                            <property name="visible">True</property>
+                            <property name="xalign">0.94999998807907104</property>
+                            <property name="yalign">0.41999998688697815</property>
+                            <property name="xpad">5</property>
+                            <property name="label" translatable="yes">&lt;span font_desc="italic bold" size="x-large"&gt;lblTotal&lt;/span&gt;</property>
+                            <property name="use_markup">True</property>
+                          </widget>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">False</property>
+                            <property name="pack_type">end</property>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <widget class="GtkLabel" id="lblBigTotalValue">
+                            <property name="visible">True</property>
+                            <property name="xalign">0.94999998807907104</property>
+                            <property name="yalign">0.41999998688697815</property>
+                            <property name="xpad">5</property>
+                            <property name="label" translatable="yes">&lt;span font_desc="italic bold" size="x-large"&gt;0.00&lt;/span&gt;</property>
+                            <property name="use_markup">True</property>
+                            <property name="justify">right</property>
+                          </widget>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">False</property>
+                            <property name="pack_type">end</property>
+                            <property name="position">0</property>
+                          </packing>
+                        </child>
+                      </widget>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="pack_type">end</property>
+                        <property name="position">1</property>
+                      </packing>
+                    </child>
+                  </widget>
+                  <packing>
+                    <property name="left_attach">1</property>
+                    <property name="right_attach">2</property>
+                    <property name="x_options">GTK_FILL</property>
+                    <property name="y_options">GTK_FILL</property>
+                  </packing>
+                </child>
+              </widget>
+            </child>
+          </widget>
+          <packing>
+            <property name="expand">False</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="GtkVBox" id="vbox80">
+            <property name="visible">True</property>
+            <property name="orientation">vertical</property>
+            <property name="spacing">2</property>
+            <child>
+              <widget class="GtkLabel" id="lblGridDescription">
+                <property name="xalign">0</property>
+                <property name="xpad">5</property>
+                <property name="label" translatable="yes">&lt;span font_desc="bold" size="large" &gt;lblGridDescription&lt;/span&gt;</property>
+                <property name="use_markup">True</property>
+              </widget>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">False</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <widget class="GtkAlignment" id="algGrid">
+                <property name="visible">True</property>
+                <child>
+                  <placeholder/>
+                </child>
+              </widget>
+              <packing>
+                <property name="position">1</property>
+              </packing>
+            </child>
+            <child>
+              <widget class="GtkLabel" id="lblSecondGridDescription">
+                <property name="xalign">0</property>
+                <property name="xpad">5</property>
+                <property name="label" translatable="yes">&lt;span font_desc="bold" size="large" &gt;lblSecondGridDescription&lt;/span&gt;</property>
+                <property name="use_markup">True</property>
+              </widget>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">False</property>
+                <property name="position">2</property>
+              </packing>
+            </child>
+            <child>
+              <widget class="GtkAlignment" id="algSecondGrid">
+                <child>
+                  <placeholder/>
+                </child>
+              </widget>
+              <packing>
+                <property name="position">3</property>
+              </packing>
+            </child>
+          </widget>
+          <packing>
+            <property name="position">1</property>
+          </packing>
+        </child>
+      </widget>
+    </child>
+  </widget>
+</glade-interface>

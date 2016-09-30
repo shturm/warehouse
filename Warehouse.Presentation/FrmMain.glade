@@ -1,0 +1,1534 @@
+<?xml version="1.0"?>
+<glade-interface>
+  <!-- interface-requires gtk+ 2.6 -->
+  <!-- interface-naming-policy toplevel-contextual -->
+  <widget class="GtkWindow" id="frmMain">
+    <property name="width_request">640</property>
+    <property name="height_request">480</property>
+    <signal name="delete_event" handler="frmMain_Delete"/>
+    <child>
+      <widget class="GtkVBox" id="vbox1">
+        <property name="visible">True</property>
+        <child>
+          <widget class="GtkVBox" id="vbox2">
+            <property name="visible">True</property>
+            <child>
+              <widget class="GtkMenuBar" id="mbMain">
+                <property name="visible">True</property>
+                <child>
+                  <widget class="GtkImageMenuItem" id="mnuFile">
+                    <property name="label">_File</property>
+                    <property name="visible">True</property>
+                    <property name="use_underline">True</property>
+                    <property name="use_stock">True</property>
+                    <child>
+                      <widget class="GtkMenu" id="mnuFile_menu">
+                        <child>
+                          <widget class="GtkImageMenuItem" id="mnuEditAdminUserChange">
+                            <property name="label">Change active user ...</property>
+                            <property name="visible">True</property>
+                            <property name="use_underline">True</property>
+                            <property name="use_stock">True</property>
+                            <signal name="activate" handler="on_change_active_user_1_activate"/>
+                          </widget>
+                        </child>
+                        <child>
+                          <widget class="GtkImageMenuItem" id="mnuFileOpenBase">
+                            <property name="label">Change database ...</property>
+                            <property name="visible">True</property>
+                            <property name="use_underline">True</property>
+                            <property name="use_stock">True</property>
+                            <signal name="activate" handler="on_change_database_1_activate"/>
+                          </widget>
+                        </child>
+                        <child>
+                          <widget class="GtkImageMenuItem" id="mnuFileLoadSettings">
+                            <property name="label">Load Settings ...</property>
+                            <property name="visible">True</property>
+                            <property name="use_underline">True</property>
+                            <property name="use_stock">True</property>
+                            <signal name="activate" handler="on_load_settings_activate"/>
+                          </widget>
+                        </child>
+                        <child>
+                          <widget class="GtkImageMenuItem" id="mnuFileSaveSettings">
+                            <property name="label">Save Settings ...</property>
+                            <property name="visible">True</property>
+                            <property name="use_underline">True</property>
+                            <property name="use_stock">True</property>
+                            <signal name="activate" handler="on_save_settings_activate"/>
+                          </widget>
+                        </child>
+                        <child>
+                          <widget class="GtkSeparatorMenuItem" id="separatormenuitem1">
+                            <property name="visible">True</property>
+                          </widget>
+                        </child>
+                        <child>
+                          <widget class="GtkImageMenuItem" id="mnuFileExit">
+                            <property name="label">Exit</property>
+                            <property name="visible">True</property>
+                            <property name="use_underline">True</property>
+                            <property name="use_stock">True</property>
+                            <signal name="activate" handler="on_exit2_activate"/>
+                          </widget>
+                        </child>
+                      </widget>
+                    </child>
+                  </widget>
+                </child>
+                <child>
+                  <widget class="GtkImageMenuItem" id="mnuOperations">
+                    <property name="label">Operations</property>
+                    <property name="visible">True</property>
+                    <property name="use_underline">True</property>
+                    <property name="use_stock">True</property>
+                    <child>
+                      <widget class="GtkMenu" id="mnuOperations_menu">
+                        <child>
+                          <widget class="GtkImageMenuItem" id="mnuOperSales">
+                            <property name="label">Sale ...</property>
+                            <property name="visible">True</property>
+                            <property name="use_underline">True</property>
+                            <property name="use_stock">True</property>
+                            <signal name="activate" handler="on_sale_1_activate"/>
+                          </widget>
+                        </child>
+                        <child>
+                          <widget class="GtkImageMenuItem" id="mnuOperDeliveries">
+                            <property name="label">Purchase ...</property>
+                            <property name="visible">True</property>
+                            <property name="use_underline">True</property>
+                            <property name="use_stock">True</property>
+                            <signal name="activate" handler="on_purchase_1_activate"/>
+                          </widget>
+                        </child>
+                        <child>
+                          <widget class="GtkImageMenuItem" id="mnuOperProduction">
+                            <property name="label">Production</property>
+                            <property name="visible">True</property>
+                            <property name="use_underline">True</property>
+                            <property name="use_stock">True</property>
+                            <child>
+                              <widget class="GtkMenu" id="mnuOperProduction_menu">
+                                <child>
+                                  <widget class="GtkImageMenuItem" id="mnuOperProductionComplexRecipes">
+                                    <property name="label">Complex Recipies ...</property>
+                                    <property name="visible">True</property>
+                                    <property name="use_underline">True</property>
+                                    <property name="use_stock">True</property>
+                                    <signal name="activate" handler="on_complex_recipies_activate"/>
+                                  </widget>
+                                </child>
+                                <child>
+                                  <widget class="GtkImageMenuItem" id="mnuOperProductionComplexProducing">
+                                    <property name="label">Complex Production</property>
+                                    <property name="visible">True</property>
+                                    <property name="use_underline">True</property>
+                                    <property name="use_stock">True</property>
+                                    <signal name="activate" handler="on_complex_production1_activate"/>
+                                  </widget>
+                                </child>
+                              </widget>
+                            </child>
+                          </widget>
+                        </child>
+                        <child>
+                          <widget class="GtkImageMenuItem" id="mnuOperTransfer">
+                            <property name="label">Transfer ...</property>
+                            <property name="visible">True</property>
+                            <property name="use_underline">True</property>
+                            <property name="use_stock">True</property>
+                            <signal name="activate" handler="on_transfer_1_activate"/>
+                          </widget>
+                        </child>
+                        <child>
+                          <widget class="GtkImageMenuItem" id="mnuOperWaste">
+                            <property name="label">Waste ...</property>
+                            <property name="visible">True</property>
+                            <property name="use_underline">True</property>
+                            <property name="use_stock">True</property>
+                            <signal name="activate" handler="on_waste_1_activate"/>
+                          </widget>
+                        </child>
+                        <child>
+                          <widget class="GtkSeparatorMenuItem" id="separator2">
+                            <property name="visible">True</property>
+                          </widget>
+                        </child>
+                        <child>
+                          <widget class="GtkImageMenuItem" id="mnuOperInvoice">
+                            <property name="label">Invoice</property>
+                            <property name="visible">True</property>
+                            <property name="use_underline">True</property>
+                            <property name="use_stock">True</property>
+                            <child>
+                              <widget class="GtkMenu" id="mnuOperInvoice_menu">
+                                <child>
+                                  <widget class="GtkImageMenuItem" id="mnuOperInvoicePublish">
+                                    <property name="label">Create new invoice ...</property>
+                                    <property name="visible">True</property>
+                                    <property name="use_underline">True</property>
+                                    <property name="use_stock">True</property>
+                                    <signal name="activate" handler="on_create_new_invoice_1_activate"/>
+                                  </widget>
+                                </child>
+                                <child>
+                                  <widget class="GtkImageMenuItem" id="mnuOperInvoiceReceive">
+                                    <property name="label">Receive new invoice ...</property>
+                                    <property name="visible">True</property>
+                                    <property name="use_underline">True</property>
+                                    <property name="use_stock">True</property>
+                                    <signal name="activate" handler="on_receive_new_invoice_1_activate"/>
+                                  </widget>
+                                </child>
+                                <child>
+                                  <widget class="GtkSeparatorMenuItem" id="separator22">
+                                    <property name="visible">True</property>
+                                  </widget>
+                                </child>
+                                <child>
+                                  <widget class="GtkImageMenuItem" id="mnuOperInvoicePublishCancel">
+                                    <property name="label">Annul created invoice ...</property>
+                                    <property name="visible">True</property>
+                                    <property name="use_underline">True</property>
+                                    <property name="use_stock">True</property>
+                                    <signal name="activate" handler="on_annul_created_invoice_1_activate"/>
+                                  </widget>
+                                </child>
+                                <child>
+                                  <widget class="GtkImageMenuItem" id="mnuOperInvoiceReceiveCancel">
+                                    <property name="label">Annul received invoice ...</property>
+                                    <property name="visible">True</property>
+                                    <property name="use_underline">True</property>
+                                    <property name="use_stock">True</property>
+                                    <signal name="activate" handler="on_annul_received_invoice_1_activate"/>
+                                  </widget>
+                                </child>
+                              </widget>
+                            </child>
+                          </widget>
+                        </child>
+                        <child>
+                          <widget class="GtkSeparatorMenuItem" id="separator21">
+                            <property name="visible">True</property>
+                          </widget>
+                        </child>
+                        <child>
+                          <widget class="GtkImageMenuItem" id="mnuOperTradeObject">
+                            <property name="label">Trade screen ...</property>
+                            <property name="visible">True</property>
+                            <property name="use_underline">True</property>
+                            <property name="use_stock">True</property>
+                            <signal name="activate" handler="on_trade_screen_1_activate"/>
+                          </widget>
+                        </child>
+                      </widget>
+                    </child>
+                  </widget>
+                </child>
+                <child>
+                  <widget class="GtkImageMenuItem" id="mnuEdit">
+                    <property name="label">Edit</property>
+                    <property name="visible">True</property>
+                    <property name="use_underline">True</property>
+                    <property name="use_stock">True</property>
+                    <child>
+                      <widget class="GtkMenu" id="mnuEdit_menu">
+                        <child>
+                          <widget class="GtkImageMenuItem" id="mnuEditPartners">
+                            <property name="label">Partners...</property>
+                            <property name="visible">True</property>
+                            <property name="use_underline">True</property>
+                            <property name="use_stock">True</property>
+                            <signal name="activate" handler="on_partners_1_activate"/>
+                          </widget>
+                        </child>
+                        <child>
+                          <widget class="GtkImageMenuItem" id="mnuEditGoods">
+                            <property name="label">Items...</property>
+                            <property name="visible">True</property>
+                            <property name="use_underline">True</property>
+                            <property name="use_stock">True</property>
+                            <signal name="activate" handler="on_items_1_activate"/>
+                          </widget>
+                        </child>
+                        <child>
+                          <widget class="GtkImageMenuItem" id="mnuEditUsers">
+                            <property name="label">Users...</property>
+                            <property name="visible">True</property>
+                            <property name="use_underline">True</property>
+                            <property name="use_stock">True</property>
+                            <signal name="activate" handler="on_users_1_activate"/>
+                          </widget>
+                        </child>
+                        <child>
+                          <widget class="GtkImageMenuItem" id="mnuEditObjects">
+                            <property name="label">Locations...</property>
+                            <property name="visible">True</property>
+                            <property name="use_underline">True</property>
+                            <property name="use_stock">True</property>
+                            <signal name="activate" handler="on_locations_2_activate"/>
+                          </widget>
+                        </child>
+                        <child>
+                          <widget class="GtkImageMenuItem" id="mnuEditVATGroups">
+                            <property name="label">VAT Groups ...</property>
+                            <property name="visible">True</property>
+                            <property name="use_underline">True</property>
+                            <property name="use_stock">True</property>
+                            <signal name="activate" handler="on_vat_groups_activate"/>
+                          </widget>
+                        </child>
+                        <child>
+                          <widget class="GtkSeparatorMenuItem" id="separator3">
+                            <property name="visible">True</property>
+                          </widget>
+                        </child>
+                        <child>
+                          <widget class="GtkImageMenuItem" id="mnuEditDevices">
+                            <property name="label">Devices ...</property>
+                            <property name="visible">True</property>
+                            <property name="use_underline">True</property>
+                            <property name="use_stock">True</property>
+                            <signal name="activate" handler="on_devices_activate"/>
+                          </widget>
+                        </child>
+                        <child>
+                          <widget class="GtkImageMenuItem" id="mnuEditPayments">
+                            <property name="label">Payments</property>
+                            <property name="visible">True</property>
+                            <property name="use_underline">True</property>
+                            <property name="use_stock">True</property>
+                            <child>
+                              <widget class="GtkMenu" id="mnuEditPayments_menu">
+                                <child>
+                                  <widget class="GtkImageMenuItem" id="mnuEditPaysPayments">
+                                    <property name="label">Payments ...</property>
+                                    <property name="visible">True</property>
+                                    <property name="use_underline">True</property>
+                                    <property name="use_stock">True</property>
+                                    <signal name="activate" handler="OnEditPaysPaymentsActivate"/>
+                                  </widget>
+                                </child>
+                                <child>
+                                  <widget class="GtkImageMenuItem" id="mnuEditPaymentTypes">
+                                    <property name="label">Payment Types ...</property>
+                                    <property name="visible">True</property>
+                                    <property name="use_underline">True</property>
+                                    <property name="use_stock">True</property>
+                                    <signal name="activate" handler="on_payment_types_activate"/>
+                                  </widget>
+                                </child>
+                              </widget>
+                            </child>
+                          </widget>
+                        </child>
+                        <child>
+                          <widget class="GtkImageMenuItem" id="mnuEditDocuments">
+                            <property name="label">Documents</property>
+                            <property name="visible">True</property>
+                            <property name="use_underline">True</property>
+                            <property name="use_stock">True</property>
+                            <child>
+                              <widget class="GtkMenu" id="mnuEditDocuments_menu">
+                                <child>
+                                  <widget class="GtkImageMenuItem" id="mnuEditDocsSale">
+                                    <property name="label">Sales ...</property>
+                                    <property name="visible">True</property>
+                                    <property name="use_underline">True</property>
+                                    <property name="use_stock">True</property>
+                                    <signal name="activate" handler="on_sales_2_activate"/>
+                                  </widget>
+                                </child>
+                                <child>
+                                  <widget class="GtkImageMenuItem" id="mnuEditDocsDelivery">
+                                    <property name="label">Purchase ...</property>
+                                    <property name="visible">True</property>
+                                    <property name="use_underline">True</property>
+                                    <property name="use_stock">True</property>
+                                    <signal name="activate" handler="on_purchase_3_activate"/>
+                                  </widget>
+                                </child>
+                                <child>
+                                  <widget class="GtkImageMenuItem" id="mnuEditDocsComplexProduction">
+                                    <property name="label">Complex Production ...</property>
+                                    <property name="visible">True</property>
+                                    <property name="use_underline">True</property>
+                                    <property name="use_stock">True</property>
+                                    <signal name="activate" handler="on_complex_production_1_activate"/>
+                                  </widget>
+                                </child>
+                                <child>
+                                  <widget class="GtkImageMenuItem" id="mnuEditDocsTransfer">
+                                    <property name="label">Transfer ...</property>
+                                    <property name="visible">True</property>
+                                    <property name="use_underline">True</property>
+                                    <property name="use_stock">True</property>
+                                    <signal name="activate" handler="on_transfer_2_activate"/>
+                                  </widget>
+                                </child>
+                                <child>
+                                  <widget class="GtkImageMenuItem" id="mnuEditDocsWaste">
+                                    <property name="label">Waste ...</property>
+                                    <property name="visible">True</property>
+                                    <property name="use_underline">True</property>
+                                    <property name="use_stock">True</property>
+                                    <signal name="activate" handler="on_waste_2_activate"/>
+                                  </widget>
+                                </child>
+                                <child>
+                                  <widget class="GtkImageMenuItem" id="mnuEditDocsRevision">
+                                    <property name="label">Stock-taking ...</property>
+                                    <property name="visible">True</property>
+                                    <property name="use_underline">True</property>
+                                    <property name="use_stock">True</property>
+                                    <signal name="activate" handler="on_stockTaking_2_activate"/>
+                                  </widget>
+                                </child>
+                              </widget>
+                            </child>
+                          </widget>
+                        </child>
+                        <child>
+                          <widget class="GtkImageMenuItem" id="mnuEditPrintAgain">
+                            <property name="label">Print documents</property>
+                            <property name="visible">True</property>
+                            <property name="use_underline">True</property>
+                            <property name="use_stock">True</property>
+                            <child>
+                              <widget class="GtkMenu" id="mnuEditPrintAgain_menu">
+                                <child>
+                                  <widget class="GtkImageMenuItem" id="mnuEditPrintAgainSale">
+                                    <property name="label">Sales ...</property>
+                                    <property name="visible">True</property>
+                                    <property name="use_underline">True</property>
+                                    <property name="use_stock">True</property>
+                                    <signal name="activate" handler="on_sales_1_activate"/>
+                                  </widget>
+                                </child>
+                                <child>
+                                  <widget class="GtkImageMenuItem" id="mnuEditPrintAgainDelivery">
+                                    <property name="label">Purchase ...</property>
+                                    <property name="visible">True</property>
+                                    <property name="use_underline">True</property>
+                                    <property name="use_stock">True</property>
+                                    <signal name="activate" handler="on_purchase_2_activate"/>
+                                  </widget>
+                                </child>
+                                <child>
+                                  <widget class="GtkImageMenuItem" id="mnuEditPrintAgainComplexProductions">
+                                    <property name="label">Complex Production ...</property>
+                                    <property name="visible">True</property>
+                                    <property name="use_underline">True</property>
+                                    <property name="use_stock">True</property>
+                                    <signal name="activate" handler="on_complex_production_2_activate"/>
+                                  </widget>
+                                </child>
+                                <child>
+                                  <widget class="GtkImageMenuItem" id="mnuEditPrintAgainTransfer">
+                                    <property name="label">Transfer ...</property>
+                                    <property name="visible">True</property>
+                                    <property name="use_underline">True</property>
+                                    <property name="use_stock">True</property>
+                                    <signal name="activate" handler="on_transfer_3_activate"/>
+                                  </widget>
+                                </child>
+                                <child>
+                                  <widget class="GtkImageMenuItem" id="mnuEditPrintAgainWaste">
+                                    <property name="label">Waste ...</property>
+                                    <property name="visible">True</property>
+                                    <property name="use_underline">True</property>
+                                    <property name="use_stock">True</property>
+                                    <signal name="activate" handler="on_waste_3_activate"/>
+                                  </widget>
+                                </child>
+                                <child>
+                                  <widget class="GtkImageMenuItem" id="mnuEditPrintAgainTaxDocuments">
+                                    <property name="label">Invoicing</property>
+                                    <property name="visible">True</property>
+                                    <property name="use_underline">True</property>
+                                    <property name="use_stock">True</property>
+                                    <child>
+                                      <widget class="GtkMenu" id="mnuEditPrintAgainTaxDocuments_menu">
+                                        <child>
+                                          <widget class="GtkImageMenuItem" id="mnuEditPrintAgainTaxDocumentsInvoice">
+                                            <property name="label">Invoice</property>
+                                            <property name="visible">True</property>
+                                            <property name="use_underline">True</property>
+                                            <property name="use_stock">True</property>
+                                            <signal name="activate" handler="on_reprintInvoice_activate"/>
+                                          </widget>
+                                        </child>
+                                      </widget>
+                                    </child>
+                                  </widget>
+                                </child>
+                                <child>
+                                  <widget class="GtkImageMenuItem" id="mnuEditPrintAgainInspection">
+                                    <property name="label">Stock-taking ...</property>
+                                    <property name="visible">True</property>
+                                    <property name="use_underline">True</property>
+                                    <property name="use_stock">True</property>
+                                    <signal name="activate" handler="on_stockTaking_1_activate"/>
+                                  </widget>
+                                </child>
+                                <child>
+                                  <widget class="GtkImageMenuItem" id="mnuEditPrintAgainAdvancePayment">
+                                    <property name="visible">True</property>
+                                    <property name="use_underline">True</property>
+                                    <property name="use_stock">True</property>
+                                    <signal name="activate" handler="mnuEditPrintAgainAdvancePayment_Activate"/>
+                                  </widget>
+                                </child>
+                              </widget>
+                            </child>
+                          </widget>
+                        </child>
+                        <child>
+                          <widget class="GtkSeparatorMenuItem" id="separator4">
+                            <property name="visible">True</property>
+                          </widget>
+                        </child>
+                        <child>
+                          <widget class="GtkImageMenuItem" id="mnuEditAdministrate">
+                            <property name="label">Adminstration</property>
+                            <property name="visible">True</property>
+                            <property name="use_underline">True</property>
+                            <property name="use_stock">True</property>
+                            <child>
+                              <widget class="GtkMenu" id="mnuEditAdministrate_menu">
+                                <child>
+                                  <widget class="GtkImageMenuItem" id="mnuEditRegObjects">
+                                    <property name="label">Company information ...</property>
+                                    <property name="visible">True</property>
+                                    <property name="use_underline">True</property>
+                                    <property name="use_stock">True</property>
+                                    <signal name="activate" handler="on_company_information_1_activate"/>
+                                  </widget>
+                                </child>
+                                <child>
+                                  <widget class="GtkSeparatorMenuItem" id="separator20">
+                                    <property name="visible">True</property>
+                                  </widget>
+                                </child>
+                                <child>
+                                  <widget class="GtkImageMenuItem" id="mnuEditAdminPriceChange">
+                                    <property name="label">Change prices ...</property>
+                                    <property name="visible">True</property>
+                                    <property name="use_underline">True</property>
+                                    <property name="use_stock">True</property>
+                                    <signal name="activate" handler="on_change_prices_1_activate"/>
+                                  </widget>
+                                </child>
+                                <child>
+                                  <widget class="GtkImageMenuItem" id="mnuEditAdminPriceRules">
+                                    <property name="label">Change prices ...</property>
+                                    <property name="visible">True</property>
+                                    <property name="use_underline">True</property>
+                                    <property name="use_stock">True</property>
+                                    <signal name="activate" handler="on_price_rules_1_activate"/>
+                                  </widget>
+                                </child>
+                                <child>
+                                  <widget class="GtkSeparatorMenuItem" id="separator5">
+                                    <property name="visible">True</property>
+                                  </widget>
+                                </child>
+                                <child>
+                                  <widget class="GtkImageMenuItem" id="mnuEditAdminRevision">
+                                    <property name="label">Stock-taking ...</property>
+                                    <property name="visible">True</property>
+                                    <property name="use_underline">True</property>
+                                    <property name="use_stock">True</property>
+                                    <signal name="activate" handler="on_stockTaking_3_activate"/>
+                                  </widget>
+                                </child>
+                                <child>
+                                  <widget class="GtkImageMenuItem" id="mnuEditAdminPermissions">
+                                    <property name="label">User restriction ...</property>
+                                    <property name="visible">True</property>
+                                    <property name="use_underline">True</property>
+                                    <property name="use_stock">True</property>
+                                    <signal name="activate" handler="on_user_restriction_activate"/>
+                                  </widget>
+                                </child>
+                                <child>
+                                  <widget class="GtkSeparatorMenuItem" id="menuitem1">
+                                    <property name="visible">True</property>
+                                  </widget>
+                                </child>
+                                <child>
+                                  <widget class="GtkImageMenuItem" id="mnuEditAdminRegisterCash">
+                                    <property name="label">Register cash ...</property>
+                                    <property name="visible">True</property>
+                                    <property name="use_underline">True</property>
+                                    <property name="use_stock">True</property>
+                                    <signal name="activate" handler="on_register_cash_activate"/>
+                                  </widget>
+                                </child>
+                                <child>
+                                  <widget class="GtkImageMenuItem" id="mnuEditAdminFReports">
+                                    <property name="label">Fiscal Reports ...</property>
+                                    <property name="visible">True</property>
+                                    <property name="use_underline">True</property>
+                                    <property name="use_stock">True</property>
+                                    <signal name="activate" handler="on_fiscal_reports_activate"/>
+                                  </widget>
+                                </child>
+                                <child>
+                                  <widget class="GtkImageMenuItem" id="mnuEditAdminPrintDuplicateOfLastReceipt">
+                                    <property name="label">Print Duplicate of Last Receipt</property>
+                                    <property name="visible">True</property>
+                                    <property name="use_underline">True</property>
+                                    <property name="use_stock">True</property>
+                                    <signal name="activate" handler="on_print_duplicate_of_last_receipt_activate"/>
+                                  </widget>
+                                </child>
+                                <child>
+                                  <widget class="GtkSeparatorMenuItem" id="separator25">
+                                    <property name="visible">True</property>
+                                  </widget>
+                                </child>
+                                <child>
+                                  <widget class="GtkImageMenuItem" id="mnuEditAdminDocumentNumbersPerLocation">
+                                    <property name="label">Document Numbers per Location ...</property>
+                                    <property name="visible">True</property>
+                                    <property name="use_underline">True</property>
+                                    <property name="use_stock">True</property>
+                                    <signal name="activate" handler="on_document_numbers_by_locations_activate"/>
+                                  </widget>
+                                </child>
+                              </widget>
+                            </child>
+                          </widget>
+                        </child>
+                      </widget>
+                    </child>
+                  </widget>
+                </child>
+                <child>
+                  <widget class="GtkImageMenuItem" id="mnuView">
+                    <property name="label" translatable="yes">View</property>
+                    <property name="visible">True</property>
+                    <property name="use_stock">False</property>
+                    <child>
+                      <widget class="GtkMenu" id="mnuView_menu">
+                        <child>
+                          <widget class="GtkCheckMenuItem" id="mnuViewToolbar">
+                            <property name="visible">True</property>
+                            <property name="label" translatable="yes">Tool bar</property>
+                            <property name="use_underline">True</property>
+                            <property name="active">True</property>
+                            <signal name="activate" handler="on_tool_bar1_activate"/>
+                          </widget>
+                        </child>
+                        <child>
+                          <widget class="GtkCheckMenuItem" id="mnuViewShowTabs">
+                            <property name="visible">True</property>
+                            <property name="label" translatable="yes">Show tabs</property>
+                            <property name="use_underline">True</property>
+                            <signal name="activate" handler="on_show_tabs1_activate"/>
+                          </widget>
+                        </child>
+                        <child>
+                          <widget class="GtkCheckMenuItem" id="mnuViewStatusbar">
+                            <property name="visible">True</property>
+                            <property name="label" translatable="yes">Status bar</property>
+                            <property name="use_underline">True</property>
+                            <property name="active">True</property>
+                            <signal name="activate" handler="on_status_bar1_activate"/>
+                          </widget>
+                        </child>
+                      </widget>
+                    </child>
+                    <child internal-child="image">
+                      <widget class="GtkImage" id="image1">
+                        <property name="visible">True</property>
+                        <property name="stock">gtk-discard</property>
+                      </widget>
+                    </child>
+                  </widget>
+                </child>
+                <child>
+                  <widget class="GtkImageMenuItem" id="mnuReports">
+                    <property name="label">Reports</property>
+                    <property name="visible">True</property>
+                    <property name="use_underline">True</property>
+                    <property name="use_stock">True</property>
+                    <child>
+                      <widget class="GtkMenu" id="mnuReports_menu">
+                        <child>
+                          <widget class="GtkImageMenuItem" id="mnuRepSale">
+                            <property name="label">Sales ...</property>
+                            <property name="visible">True</property>
+                            <property name="use_underline">True</property>
+                            <property name="use_stock">True</property>
+                            <signal name="activate" handler="on_create_report_activate"/>
+                          </widget>
+                        </child>
+                        <child>
+                          <widget class="GtkImageMenuItem" id="mnuRepDelivery">
+                            <property name="label">Purchases ...</property>
+                            <property name="visible">True</property>
+                            <property name="use_underline">True</property>
+                            <property name="use_stock">True</property>
+                            <signal name="activate" handler="on_create_report_activate"/>
+                          </widget>
+                        </child>
+                        <child>
+                          <widget class="GtkImageMenuItem" id="mnuReportsProduction">
+                            <property name="label">Production</property>
+                            <property name="visible">True</property>
+                            <property name="use_underline">True</property>
+                            <property name="use_stock">True</property>
+                            <child>
+                              <widget class="GtkMenu" id="mnuReportsProduction_menu">
+                                <child>
+                                  <widget class="GtkImageMenuItem" id="mnuReportsProductionComplexRecipes">
+                                    <property name="label">Complex Recipes ...</property>
+                                    <property name="visible">True</property>
+                                    <property name="use_underline">True</property>
+                                    <property name="use_stock">True</property>
+                                    <signal name="activate" handler="on_create_report_activate"/>
+                                  </widget>
+                                </child>
+                                <child>
+                                  <widget class="GtkImageMenuItem" id="mnuReportsProductionComplexProducing">
+                                    <property name="label">Complex Production ...</property>
+                                    <property name="visible">True</property>
+                                    <property name="use_underline">True</property>
+                                    <property name="use_stock">True</property>
+                                    <signal name="activate" handler="on_create_report_activate"/>
+                                  </widget>
+                                </child>
+                              </widget>
+                            </child>
+                          </widget>
+                        </child>
+                        <child>
+                          <widget class="GtkImageMenuItem" id="mnuRepTransfer">
+                            <property name="label">Transfers ...</property>
+                            <property name="visible">True</property>
+                            <property name="use_underline">True</property>
+                            <property name="use_stock">True</property>
+                            <signal name="activate" handler="on_create_report_activate"/>
+                          </widget>
+                        </child>
+                        <child>
+                          <widget class="GtkImageMenuItem" id="mnuRepWaste">
+                            <property name="label">Wastes ...</property>
+                            <property name="visible">True</property>
+                            <property name="use_underline">True</property>
+                            <property name="use_stock">True</property>
+                            <signal name="activate" handler="on_create_report_activate"/>
+                          </widget>
+                        </child>
+                        <child>
+                          <widget class="GtkImageMenuItem" id="mnuRepRevision">
+                            <property name="label">Stock-takings ...</property>
+                            <property name="visible">True</property>
+                            <property name="use_underline">True</property>
+                            <property name="use_stock">True</property>
+                            <signal name="activate" handler="on_create_report_activate"/>
+                          </widget>
+                        </child>
+                        <child>
+                          <widget class="GtkImageMenuItem" id="mnuReportsAllOperations">
+                            <property name="label">Operations...</property>
+                            <property name="visible">True</property>
+                            <property name="use_underline">True</property>
+                            <property name="use_stock">True</property>
+                            <signal name="activate" handler="on_create_report_activate"/>
+                          </widget>
+                        </child>
+                        <child>
+                          <widget class="GtkImageMenuItem" id="mnuReportsAllDrafts">
+                            <property name="label">Drafts...</property>
+                            <property name="visible">True</property>
+                            <property name="use_underline">True</property>
+                            <property name="use_stock">True</property>
+                            <signal name="activate" handler="on_create_report_activate"/>
+                          </widget>
+                        </child>
+                        <child>
+                          <widget class="GtkSeparatorMenuItem" id="separator7">
+                            <property name="visible">True</property>
+                          </widget>
+                        </child>
+                        <child>
+                          <widget class="GtkImageMenuItem" id="mnuRepLast">
+                            <property name="label">Last report</property>
+                            <property name="visible">True</property>
+                            <property name="use_underline">True</property>
+                            <property name="use_stock">True</property>
+                            <child>
+                              <widget class="GtkMenu" id="mnuRepLast_menu">
+                                <child>
+                                  <widget class="GtkImageMenuItem" id="mnuRepLastName">
+                                    <property name="label">None</property>
+                                    <property name="visible">True</property>
+                                    <property name="use_underline">True</property>
+                                    <property name="use_stock">True</property>
+                                    <signal name="activate" handler="on_last_report_activate"/>
+                                  </widget>
+                                </child>
+                              </widget>
+                            </child>
+                          </widget>
+                        </child>
+                        <child>
+                          <widget class="GtkSeparatorMenuItem" id="separator19">
+                            <property name="visible">True</property>
+                          </widget>
+                        </child>
+                        <child>
+                          <widget class="GtkImageMenuItem" id="mnuRepNomenclatures">
+                            <property name="label">Nomenclatures</property>
+                            <property name="visible">True</property>
+                            <property name="use_underline">True</property>
+                            <property name="use_stock">True</property>
+                            <child>
+                              <widget class="GtkMenu" id="mnuRepNomenclatures_menu">
+                                <child>
+                                  <widget class="GtkImageMenuItem" id="mnuRepNomenclaturesPartners">
+                                    <property name="label">Partners ...</property>
+                                    <property name="visible">True</property>
+                                    <property name="use_underline">True</property>
+                                    <property name="use_stock">True</property>
+                                    <signal name="activate" handler="on_create_report_activate"/>
+                                  </widget>
+                                </child>
+                                <child>
+                                  <widget class="GtkImageMenuItem" id="mnuRepNomenclaturesGoodsByName">
+                                    <property name="label">Goods ...</property>
+                                    <property name="visible">True</property>
+                                    <property name="use_underline">True</property>
+                                    <property name="use_stock">True</property>
+                                    <signal name="activate" handler="on_create_report_activate"/>
+                                  </widget>
+                                </child>
+                                <child>
+                                  <widget class="GtkImageMenuItem" id="mnuRepNomenclaturesOperators">
+                                    <property name="label">Users ...</property>
+                                    <property name="visible">True</property>
+                                    <property name="use_underline">True</property>
+                                    <property name="use_stock">True</property>
+                                    <signal name="activate" handler="on_create_report_activate"/>
+                                  </widget>
+                                </child>
+                                <child>
+                                  <widget class="GtkImageMenuItem" id="mnuRepNomenclaturesObjects">
+                                    <property name="label">Locations ...</property>
+                                    <property name="visible">True</property>
+                                    <property name="use_underline">True</property>
+                                    <property name="use_stock">True</property>
+                                    <signal name="activate" handler="on_create_report_activate"/>
+                                  </widget>
+                                </child>
+                              </widget>
+                            </child>
+                          </widget>
+                        </child>
+                        <child>
+                          <widget class="GtkSeparatorMenuItem" id="separator18">
+                            <property name="visible">True</property>
+                          </widget>
+                        </child>
+                        <child>
+                          <widget class="GtkImageMenuItem" id="mnuRepGoods">
+                            <property name="label">Items</property>
+                            <property name="visible">True</property>
+                            <property name="use_underline">True</property>
+                            <property name="use_stock">True</property>
+                            <child>
+                              <widget class="GtkMenu" id="mnuRepGoods_menu">
+                                <child>
+                                  <widget class="GtkImageMenuItem" id="mnuRepGoogsPath">
+                                    <property name="label">Items flow...</property>
+                                    <property name="visible">True</property>
+                                    <property name="use_underline">True</property>
+                                    <property name="use_stock">True</property>
+                                    <signal name="activate" handler="on_create_report_activate"/>
+                                  </widget>
+                                </child>
+                                <child>
+                                  <widget class="GtkImageMenuItem" id="mnuRepGoodsQtty">
+                                    <property name="label">Items availability...</property>
+                                    <property name="visible">True</property>
+                                    <property name="use_underline">True</property>
+                                    <property name="use_stock">True</property>
+                                    <signal name="activate" handler="on_create_report_activate"/>
+                                  </widget>
+                                </child>
+                                <child>
+                                  <widget class="GtkImageMenuItem" id="mnuRepGoodsQttyInDate">
+                                    <property name="label">Goods quantities at date ...</property>
+                                    <property name="visible">True</property>
+                                    <property name="use_underline">True</property>
+                                    <property name="use_stock">True</property>
+                                    <signal name="activate" handler="on_create_report_activate"/>
+                                  </widget>
+                                </child>
+                                <child>
+                                  <widget class="GtkImageMenuItem" id="mnuRepGoodsLessMinQtty">
+                                    <property name="visible">True</property>
+                                    <property name="use_underline">True</property>
+                                    <property name="use_stock">True</property>
+                                    <signal name="activate" handler="on_create_report_activate"/>
+                                  </widget>
+                                </child>
+                                <child>
+                                  <widget class="GtkImageMenuItem" id="mnuRepGoodsStockTaking">
+                                    <property name="label">Items stock-taking ...</property>
+                                    <property name="visible">True</property>
+                                    <property name="use_underline">True</property>
+                                    <property name="use_stock">True</property>
+                                    <signal name="activate" handler="on_create_report_activate"/>
+                                  </widget>
+                                </child>
+                                <child>
+                                  <widget class="GtkImageMenuItem" id="mnuRepGoodsInvoicedGoods">
+                                    <property name="label">Invoiced goods ...</property>
+                                    <property name="visible">True</property>
+                                    <property name="use_underline">True</property>
+                                    <property name="use_stock">True</property>
+                                    <signal name="activate" handler="on_create_report_activate"/>
+                                  </widget>
+                                </child>
+                                <child>
+                                  <widget class="GtkSeparatorMenuItem" id="separator24">
+                                    <property name="visible">True</property>
+                                  </widget>
+                                </child>
+                                <child>
+                                  <widget class="GtkImageMenuItem" id="mnuRepGoodsDelivery">
+                                    <property name="label">Purchases by goods ...</property>
+                                    <property name="visible">True</property>
+                                    <property name="use_underline">True</property>
+                                    <property name="use_stock">True</property>
+                                    <signal name="activate" handler="on_create_report_activate"/>
+                                  </widget>
+                                </child>
+                                <child>
+                                  <widget class="GtkImageMenuItem" id="mnuRepGoodsSale">
+                                    <property name="label">Sales by goods ...</property>
+                                    <property name="visible">True</property>
+                                    <property name="use_underline">True</property>
+                                    <property name="use_stock">True</property>
+                                    <signal name="activate" handler="on_create_report_activate"/>
+                                  </widget>
+                                </child>
+                                <child>
+                                  <widget class="GtkImageMenuItem" id="mnuRepGoodsBestProfit">
+                                    <property name="label">Goods by profit ...</property>
+                                    <property name="visible">True</property>
+                                    <property name="use_underline">True</property>
+                                    <property name="use_stock">True</property>
+                                    <signal name="activate" handler="on_create_report_activate"/>
+                                  </widget>
+                                </child>
+                              </widget>
+                            </child>
+                          </widget>
+                        </child>
+                        <child>
+                          <widget class="GtkImageMenuItem" id="mnuRepPartners">
+                            <property name="label">Partners</property>
+                            <property name="visible">True</property>
+                            <property name="use_underline">True</property>
+                            <property name="use_stock">True</property>
+                            <child>
+                              <widget class="GtkMenu" id="mnuRepPartners_menu">
+                                <child>
+                                  <widget class="GtkImageMenuItem" id="mnuRepPartnersDeliveries">
+                                    <property name="label">Purchases by partners ...</property>
+                                    <property name="visible">True</property>
+                                    <property name="use_underline">True</property>
+                                    <property name="use_stock">True</property>
+                                    <signal name="activate" handler="on_create_report_activate"/>
+                                  </widget>
+                                </child>
+                                <child>
+                                  <widget class="GtkImageMenuItem" id="mnuRepPartnersSales">
+                                    <property name="label">Sales by partners ...</property>
+                                    <property name="visible">True</property>
+                                    <property name="use_underline">True</property>
+                                    <property name="use_stock">True</property>
+                                    <signal name="activate" handler="on_create_report_activate"/>
+                                  </widget>
+                                </child>
+                                <child>
+                                  <widget class="GtkImageMenuItem" id="mnuRepPartnersByProfit">
+                                    <property name="label">Partners by profit ...</property>
+                                    <property name="visible">True</property>
+                                    <property name="use_underline">True</property>
+                                    <property name="use_stock">True</property>
+                                    <signal name="activate" handler="on_create_report_activate"/>
+                                  </widget>
+                                </child>
+                                <child>
+                                  <widget class="GtkImageMenuItem" id="mnuRepPartnersDebt">
+                                    <property name="label">Partners debt ...</property>
+                                    <property name="visible">True</property>
+                                    <property name="use_underline">True</property>
+                                    <property name="use_stock">True</property>
+                                    <signal name="activate" handler="on_create_report_activate"/>
+                                  </widget>
+                                </child>
+                              </widget>
+                            </child>
+                          </widget>
+                        </child>
+                        <child>
+                          <widget class="GtkImageMenuItem" id="mnuReportsObjectsSep1">
+                            <property name="label">Locations</property>
+                            <property name="visible">True</property>
+                            <property name="use_underline">True</property>
+                            <property name="use_stock">True</property>
+                            <child>
+                              <widget class="GtkMenu" id="mnuReportsObjectsSep1_menu">
+                                <child>
+                                  <widget class="GtkImageMenuItem" id="mnuRepObjectsDeliveries">
+                                    <property name="label">Purchases by locations ...</property>
+                                    <property name="visible">True</property>
+                                    <property name="use_underline">True</property>
+                                    <property name="use_stock">True</property>
+                                    <signal name="activate" handler="on_create_report_activate"/>
+                                  </widget>
+                                </child>
+                                <child>
+                                  <widget class="GtkImageMenuItem" id="mnuRepObjectsSales">
+                                    <property name="label">Sales by locations ...</property>
+                                    <property name="visible">True</property>
+                                    <property name="use_underline">True</property>
+                                    <property name="use_stock">True</property>
+                                    <signal name="activate" handler="on_create_report_activate"/>
+                                  </widget>
+                                </child>
+                                <child>
+                                  <widget class="GtkImageMenuItem" id="mnuRepObjectsByProfit">
+                                    <property name="label">Locations by profit ...</property>
+                                    <property name="visible">True</property>
+                                    <property name="use_underline">True</property>
+                                    <property name="use_stock">True</property>
+                                    <signal name="activate" handler="on_create_report_activate"/>
+                                  </widget>
+                                </child>
+                              </widget>
+                            </child>
+                          </widget>
+                        </child>
+                        <child>
+                          <widget class="GtkImageMenuItem" id="mnuRepPayments">
+                            <property name="label">Payments</property>
+                            <property name="visible">True</property>
+                            <property name="use_underline">True</property>
+                            <property name="use_stock">True</property>
+                            <child>
+                              <widget class="GtkMenu" id="mnuRepPayments_menu">
+                                <child>
+                                  <widget class="GtkImageMenuItem" id="mnuRepPaymentsByDocuments">
+                                    <property name="label">Payments by Documents ...</property>
+                                    <property name="visible">True</property>
+                                    <property name="use_underline">True</property>
+                                    <property name="use_stock">True</property>
+                                    <signal name="activate" handler="on_create_report_activate"/>
+                                  </widget>
+                                </child>
+                                <child>
+                                  <widget class="GtkImageMenuItem" id="mnuRepPaymentsByPartners">
+                                    <property name="label">Payments by Partners ...</property>
+                                    <property name="visible">True</property>
+                                    <property name="use_underline">True</property>
+                                    <property name="use_stock">True</property>
+                                    <signal name="activate" handler="on_create_report_activate"/>
+                                  </widget>
+                                </child>
+                                <child>
+                                  <widget class="GtkImageMenuItem" id="mnuRepPaymentsDueDates">
+                                    <property name="label">Payments Due Dates ...</property>
+                                    <property name="visible">True</property>
+                                    <property name="use_underline">True</property>
+                                    <property name="use_stock">True</property>
+                                    <signal name="activate" handler="on_create_report_activate"/>
+                                  </widget>
+                                </child>
+                                <child>
+                                  <widget class="GtkImageMenuItem" id="mnuRepPaymentsChronology">
+                                    <property name="label">Payments history ...</property>
+                                    <property name="visible">True</property>
+                                    <property name="use_underline">True</property>
+                                    <property name="use_stock">True</property>
+                                    <signal name="activate" handler="on_create_report_activate"/>
+                                  </widget>
+                                </child>
+                                <child>
+                                  <widget class="GtkImageMenuItem" id="mnuRepPaymentsIncome">
+                                    <property name="label">Income ...</property>
+                                    <property name="visible">True</property>
+                                    <property name="use_underline">True</property>
+                                    <property name="use_stock">True</property>
+                                    <signal name="activate" handler="on_create_report_activate"/>
+                                  </widget>
+                                </child>
+                                <child>
+                                  <widget class="GtkImageMenuItem" id="mnuRepPaymentsAdvance">
+                                    <property name="label">Advance Payments ...</property>
+                                    <property name="visible">True</property>
+                                    <property name="use_underline">True</property>
+                                    <property name="use_stock">True</property>
+                                    <signal name="activate" handler="on_create_report_activate"/>
+                                  </widget>
+                                </child>
+                              </widget>
+                            </child>
+                          </widget>
+                        </child>
+                        <child>
+                          <widget class="GtkImageMenuItem" id="mnuRepDocuments">
+                            <property name="label">Documents</property>
+                            <property name="visible">True</property>
+                            <property name="use_underline">True</property>
+                            <property name="use_stock">True</property>
+                            <child>
+                              <widget class="GtkMenu" id="mnuRepDocuments_menu">
+                                <child>
+                                  <widget class="GtkImageMenuItem" id="mnuRepDocumentsSalesBySum">
+                                    <property name="label">Sales by total ...</property>
+                                    <property name="visible">True</property>
+                                    <property name="use_underline">True</property>
+                                    <property name="use_stock">True</property>
+                                    <signal name="activate" handler="on_create_report_activate"/>
+                                  </widget>
+                                </child>
+                                <child>
+                                  <widget class="GtkImageMenuItem" id="mnuRepDocumentsDeliveriesBySum">
+                                    <property name="label">Purchases by total ...</property>
+                                    <property name="visible">True</property>
+                                    <property name="use_underline">True</property>
+                                    <property name="use_stock">True</property>
+                                    <signal name="activate" handler="on_create_report_activate"/>
+                                  </widget>
+                                </child>
+                                <child>
+                                  <widget class="GtkImageMenuItem" id="mnuRepDocumentsRevisionsBySum">
+                                    <property name="label">Stock-takings by total ...</property>
+                                    <property name="visible">True</property>
+                                    <property name="use_underline">True</property>
+                                    <property name="use_stock">True</property>
+                                    <signal name="activate" handler="on_create_report_activate"/>
+                                  </widget>
+                                </child>
+                                <child>
+                                  <widget class="GtkSeparatorMenuItem" id="separator23">
+                                    <property name="visible">True</property>
+                                  </widget>
+                                </child>
+                                <child>
+                                  <widget class="GtkImageMenuItem" id="mnuRepDocumentsPublishedInvoices">
+                                    <property name="label">Issued Invoices ...</property>
+                                    <property name="visible">True</property>
+                                    <property name="use_underline">True</property>
+                                    <property name="use_stock">True</property>
+                                    <signal name="activate" handler="on_create_report_activate"/>
+                                  </widget>
+                                </child>
+                                <child>
+                                  <widget class="GtkImageMenuItem" id="mnuRepDocumentsReceivedInvoices">
+                                    <property name="label">Received Invoices ...</property>
+                                    <property name="visible">True</property>
+                                    <property name="use_underline">True</property>
+                                    <property name="use_stock">True</property>
+                                    <signal name="activate" handler="on_create_report_activate"/>
+                                  </widget>
+                                </child>
+                              </widget>
+                            </child>
+                          </widget>
+                        </child>
+                        <child>
+                          <widget class="GtkImageMenuItem" id="mnuRepAdministration">
+                            <property name="label">Administration</property>
+                            <property name="visible">True</property>
+                            <property name="use_underline">True</property>
+                            <property name="use_stock">True</property>
+                            <child>
+                              <widget class="GtkMenu" id="mnuRepAdministration_menu">
+                                <child>
+                                  <widget class="GtkImageMenuItem" id="mnuRepAdministrationAppLog">
+                                    <property name="label">Application log ...</property>
+                                    <property name="visible">True</property>
+                                    <property name="use_underline">True</property>
+                                    <property name="use_stock">True</property>
+                                    <signal name="activate" handler="on_create_report_activate"/>
+                                  </widget>
+                                </child>
+                              </widget>
+                            </child>
+                          </widget>
+                        </child>
+                      </widget>
+                    </child>
+                  </widget>
+                </child>
+                <child>
+                  <widget class="GtkImageMenuItem" id="mnuTools">
+                    <property name="label">Tools</property>
+                    <property name="visible">True</property>
+                    <property name="use_underline">True</property>
+                    <property name="use_stock">True</property>
+                    <child>
+                      <widget class="GtkMenu" id="mnuTools_menu">
+                        <child>
+                          <widget class="GtkImageMenuItem" id="mnuToolsSetup">
+                            <property name="label">Settings ...</property>
+                            <property name="visible">True</property>
+                            <property name="use_underline">True</property>
+                            <property name="use_stock">True</property>
+                            <signal name="activate" handler="on_settings_1_activate"/>
+                          </widget>
+                        </child>
+                        <child>
+                          <widget class="GtkImageMenuItem" id="mnuToolsKeyShortcuts">
+                            <property name="label">Key Shortcuts ...</property>
+                            <property name="visible">True</property>
+                            <property name="use_underline">True</property>
+                            <property name="use_stock">True</property>
+                            <signal name="activate" handler="on_key_shortcuts_activate"/>
+                          </widget>
+                        </child>
+                        <child>
+                          <widget class="GtkImageMenuItem" id="mnuToolsQuickItems">
+                            <property name="label">Quick Items ...</property>
+                            <property name="visible">True</property>
+                            <property name="use_underline">True</property>
+                            <property name="use_stock">True</property>
+                            <signal name="activate" handler="on_quick_items_activate"/>
+                          </widget>
+                        </child>
+                      </widget>
+                    </child>
+                  </widget>
+                </child>
+                <child>
+                  <widget class="GtkImageMenuItem" id="mnuWindow">
+                    <property name="label">Window</property>
+                    <property name="visible">True</property>
+                    <property name="use_underline">True</property>
+                    <property name="use_stock">True</property>
+                    <child>
+                      <widget class="GtkMenu" id="mnuWindow_menu">
+                        <child>
+                          <widget class="GtkImageMenuItem" id="mnuWinowClose">
+                            <property name="label">Close current window</property>
+                            <property name="visible">True</property>
+                            <property name="use_underline">True</property>
+                            <property name="use_stock">True</property>
+                            <signal name="activate" handler="on_close_current_window1_activate"/>
+                          </widget>
+                        </child>
+                        <child>
+                          <widget class="GtkImageMenuItem" id="mnuWinowCloseAll">
+                            <property name="label">Close all windows</property>
+                            <property name="visible">True</property>
+                            <property name="use_underline">True</property>
+                            <property name="use_stock">True</property>
+                            <signal name="activate" handler="on_close_all_windows1_activate"/>
+                          </widget>
+                        </child>
+                        <child>
+                          <widget class="GtkSeparatorMenuItem" id="sepWindowList">
+                            <property name="visible">True</property>
+                          </widget>
+                        </child>
+                      </widget>
+                    </child>
+                  </widget>
+                </child>
+                <child>
+                  <widget class="GtkImageMenuItem" id="mnuHelp">
+                    <property name="label">Help</property>
+                    <property name="visible">True</property>
+                    <property name="use_underline">True</property>
+                    <property name="use_stock">True</property>
+                    <child>
+                      <widget class="GtkMenu" id="mnuHelp_menu">
+                        <child>
+                          <widget class="GtkImageMenuItem" id="mnuHelpDocumentation">
+                            <property name="visible">True</property>
+                            <property name="label" translatable="yes">Documentation ...</property>
+                            <property name="use_underline">True</property>
+                            <signal name="activate" handler="on_documentation_activate"/>
+                          </widget>
+                        </child>
+                        <child>
+                          <widget class="GtkImageMenuItem" id="mnuHelpAbout">
+                            <property name="label">_About</property>
+                            <property name="visible">True</property>
+                            <property name="use_underline">True</property>
+                            <property name="use_stock">True</property>
+                            <signal name="activate" handler="on_about1_activate"/>
+                          </widget>
+                        </child>
+                      </widget>
+                    </child>
+                  </widget>
+                </child>
+              </widget>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">False</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <widget class="GtkToolbar" id="tbMain">
+                <property name="visible">True</property>
+                <property name="toolbar_style">icons</property>
+                <child>
+                  <widget class="GtkToolButton" id="btnQuit">
+                    <property name="visible">True</property>
+                    <property name="use_underline">True</property>
+                    <signal name="clicked" handler="btnQuit_Click"/>
+                  </widget>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="homogeneous">True</property>
+                  </packing>
+                </child>
+                <child>
+                  <widget class="GtkSeparatorToolItem" id="separatortoolitem1">
+                    <property name="visible">True</property>
+                  </widget>
+                  <packing>
+                    <property name="expand">False</property>
+                  </packing>
+                </child>
+                <child>
+                  <widget class="GtkToolButton" id="btnPurchase">
+                    <property name="visible">True</property>
+                    <property name="use_underline">True</property>
+                    <signal name="clicked" handler="btnPurchase_Click"/>
+                  </widget>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="homogeneous">True</property>
+                  </packing>
+                </child>
+                <child>
+                  <widget class="GtkToolButton" id="btnSale">
+                    <property name="visible">True</property>
+                    <property name="use_underline">True</property>
+                    <signal name="clicked" handler="btnSale_Click"/>
+                  </widget>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="homogeneous">True</property>
+                  </packing>
+                </child>
+                <child>
+                  <widget class="GtkToolButton" id="btnInvoice">
+                    <property name="visible">True</property>
+                    <property name="use_underline">True</property>
+                    <signal name="clicked" handler="btnInvoice_Click"/>
+                  </widget>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="homogeneous">True</property>
+                  </packing>
+                </child>
+                <child>
+                  <widget class="GtkToolButton" id="btnStockTaking">
+                    <property name="visible">True</property>
+                    <property name="use_underline">True</property>
+                    <signal name="clicked" handler="btnStockTaking_Click"/>
+                  </widget>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="homogeneous">True</property>
+                  </packing>
+                </child>
+                <child>
+                  <widget class="GtkSeparatorToolItem" id="separatortoolitem2">
+                    <property name="visible">True</property>
+                  </widget>
+                  <packing>
+                    <property name="expand">False</property>
+                  </packing>
+                </child>
+                <child>
+                  <widget class="GtkToolButton" id="btnItems">
+                    <property name="visible">True</property>
+                    <property name="use_underline">True</property>
+                    <signal name="clicked" handler="btnItems_Click"/>
+                  </widget>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="homogeneous">True</property>
+                  </packing>
+                </child>
+                <child>
+                  <widget class="GtkToolButton" id="btnPartners">
+                    <property name="visible">True</property>
+                    <property name="use_underline">True</property>
+                    <signal name="clicked" handler="btnPartners_Click"/>
+                  </widget>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="homogeneous">True</property>
+                  </packing>
+                </child>
+                <child>
+                  <widget class="GtkSeparatorToolItem" id="separatortoolitem3">
+                    <property name="visible">True</property>
+                  </widget>
+                  <packing>
+                    <property name="expand">False</property>
+                  </packing>
+                </child>
+                <child>
+                  <widget class="GtkToolButton" id="btnPurchasesReport">
+                    <property name="visible">True</property>
+                    <property name="use_underline">True</property>
+                    <signal name="clicked" handler="btnPurchasesReport_Click"/>
+                  </widget>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="homogeneous">True</property>
+                  </packing>
+                </child>
+                <child>
+                  <widget class="GtkToolButton" id="btnSalesReport">
+                    <property name="visible">True</property>
+                    <property name="use_underline">True</property>
+                    <signal name="clicked" handler="btnSalesReport_Click"/>
+                  </widget>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="homogeneous">True</property>
+                  </packing>
+                </child>
+                <child>
+                  <widget class="GtkToolButton" id="btnItemsQtyReport">
+                    <property name="visible">True</property>
+                    <property name="use_underline">True</property>
+                    <signal name="clicked" handler="btnItemsQtyReport_Click"/>
+                  </widget>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="homogeneous">True</property>
+                  </packing>
+                </child>
+                <child>
+                  <widget class="GtkSeparatorToolItem" id="separatortoolitem4">
+                    <property name="visible">True</property>
+                  </widget>
+                  <packing>
+                    <property name="expand">False</property>
+                  </packing>
+                </child>
+                <child>
+                  <widget class="GtkToolButton" id="btnSalesByItemsReport">
+                    <property name="visible">True</property>
+                    <property name="use_underline">True</property>
+                    <signal name="clicked" handler="btnSalesByItemsReport_Click"/>
+                  </widget>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="homogeneous">True</property>
+                  </packing>
+                </child>
+                <child>
+                  <widget class="GtkToolButton" id="btnPurchasesByItemsReport">
+                    <property name="visible">True</property>
+                    <property name="use_underline">True</property>
+                    <signal name="clicked" handler="btnPurchasesByItemsReport_Click"/>
+                  </widget>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="homogeneous">True</property>
+                  </packing>
+                </child>
+                <child>
+                  <widget class="GtkToolButton" id="btnSalesByPartnerReport">
+                    <property name="visible">True</property>
+                    <property name="use_underline">True</property>
+                    <signal name="clicked" handler="btnSalesByPartnerReport_Click"/>
+                  </widget>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="homogeneous">True</property>
+                  </packing>
+                </child>
+                <child>
+                  <widget class="GtkToolButton" id="btnItemsProfitReport">
+                    <property name="visible">True</property>
+                    <property name="use_underline">True</property>
+                    <signal name="clicked" handler="btnItemsProfitReport_Click"/>
+                  </widget>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="homogeneous">True</property>
+                  </packing>
+                </child>
+                <child>
+                  <widget class="GtkSeparatorToolItem" id="separatortoolitem5">
+                    <property name="visible">True</property>
+                  </widget>
+                  <packing>
+                    <property name="expand">False</property>
+                  </packing>
+                </child>
+                <child>
+                  <widget class="GtkToolButton" id="btnSettings">
+                    <property name="visible">True</property>
+                    <property name="use_underline">True</property>
+                    <signal name="clicked" handler="btnSettings_Click"/>
+                  </widget>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="homogeneous">True</property>
+                  </packing>
+                </child>
+              </widget>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">False</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+          </widget>
+          <packing>
+            <property name="expand">False</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="GtkAlignment" id="algWorkspace">
+            <property name="visible">True</property>
+            <child>
+              <placeholder/>
+            </child>
+          </widget>
+          <packing>
+            <property name="position">1</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="GtkAlignment" id="algStatus">
+            <property name="visible">True</property>
+            <child>
+              <placeholder/>
+            </child>
+          </widget>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">False</property>
+            <property name="position">2</property>
+          </packing>
+        </child>
+      </widget>
+    </child>
+  </widget>
+</glade-interface>
