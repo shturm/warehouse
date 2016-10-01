@@ -2,10 +2,10 @@
 
 POS software based on .NET, targeted for Mono
 
-![sale](https://raw.githubusercontent.com/shturm/warehouse/Screenshots/sale.png)
-![report](https://raw.githubusercontent.com/shturm/warehouse/Screenshots/report.png)
-![payments](https://raw.githubusercontent.com/shturm/warehouse/Screenshots/payments.png)
-![settings](https://raw.githubusercontent.com/shturm/warehouse/Screenshots/settings.png)
+![sale](https://raw.githubusercontent.com/shturm/master/warehouse/Screenshots/sale.png)
+![report](https://raw.githubusercontent.com/shturm/master/warehouse/Screenshots/report.png)
+![payments](https://raw.githubusercontent.com/shturm/master/warehouse/Screenshots/payments.png)
+![settings](https://raw.githubusercontent.com/shturm/master/warehouse/Screenshots/settings.png)
 
 - Mono and MonoDevelop ready
 - MySql and Sqlite support
