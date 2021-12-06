@@ -113,7 +113,7 @@ namespace Warehouse.Data.SQL
 
 		public override string GetSchemaVersion (int productId = 1)
 		{
-			return ExecuteScalar<string> ("SELECT Version FROM system WHERE ProductID = @productId LIMIT 1",
+			return ExecuteScalar<string> ("SELECT Version FROM "+this.Database+".system WHERE ProductID = @productId LIMIT 1",
 				new DbParam ("productId", productId));
 		}
 
